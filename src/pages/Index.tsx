@@ -109,11 +109,11 @@ const Index = () => {
       {/* Footer */}
       <footer className="border-t border-border/40 px-6 py-10 text-center">
         <p className="font-display text-lg font-bold text-foreground">
-          <span className="text-glow-magenta">HEAR</span>
+          <span className="text-glow-magenta">HEART</span>
           <span className="text-neon-cyan text-glow-cyan">BYTE</span>
         </p>
         <p className="mt-2 text-xs text-muted-foreground">
-          © {new Date().getFullYear()} HearByte · Listen louder, listen better.
+          © {new Date().getFullYear()} HeartByte · Listen louder, listen better.
         </p>
       </footer>
     </main>
