@@ -13,7 +13,7 @@ export interface PickGroup {
   items: Pick[];
 }
 
-// Headphones & earbuds — placeholder picks (swap in HearByte's real list)
+// Headphones & earbuds — placeholder picks (swap in HeartByte's real list)
 export const headphoneGroups: PickGroup[] = [
   {
     title: "Over-Ear",

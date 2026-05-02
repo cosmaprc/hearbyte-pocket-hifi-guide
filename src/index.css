@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* HearByte synthwave theme — dark by default */
+    /* HeartByte synthwave theme — dark by default */
     --background: 260 45% 5%;
     --foreground: 280 30% 96%;
 
