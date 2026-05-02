@@ -19,10 +19,12 @@ const Index = () => {
             How to use this guide
           </h2>
           <p className="mt-4 text-base text-muted-foreground sm:text-lg">
-            Great sound is a <span className="text-neon-cyan">chain</span>: the right
-            headphones, fed by a clean source, with a touch of well-aimed DSP. Pick one
-            from each section below and you'll be hearing your favorite tracks like
-            it's the first time again.
+            Great sound starts with <span className="text-neon-magenta">software</span>:
+            the right <span className="text-neon-cyan">DSP, EQ and player apps</span> do
+            more for your music than any cable or chassis swap. Decent headphones and a
+            clean source matter — but they're the supporting cast. Dial in the software
+            first and you'll be hearing your favorite tracks like it's the first time
+            again.
           </p>
         </div>
       </Section>
