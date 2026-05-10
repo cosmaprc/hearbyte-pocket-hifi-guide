@@ -203,8 +203,6 @@ const Index = () => {
             <Bullets
               items={[
                 <><ExtLink href="https://www.head-fi.org/" className="text-neon-cyan">Head-Fi</ExtLink> — the largest headphone enthusiast forum and discussion hub.</>,
-                <><ExtLink href="https://www.reddit.com/r/headphones/" className="text-neon-cyan">r/headphones</ExtLink> — busy subreddit with reviews, deals and Q&amp;A from listeners of every budget.</>,
-                <><ExtLink href="https://www.superbestaudiofriends.org/" className="text-neon-cyan">Super Best Audio Friends</ExtLink> — smaller, signal-rich community for measurement-minded headphone discussion.</>,
               ]}
             />
           </Card>
