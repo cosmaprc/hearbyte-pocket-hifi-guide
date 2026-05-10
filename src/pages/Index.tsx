@@ -115,7 +115,7 @@ const Index = () => {
               ]}
             />
           </Card>
-          <Card title="USB Audio Player Pro" href="https://www.extreamsd.com/index.php/products/uapp">
+          <Card title="USB Audio Player Pro" href="https://www.extreamsd.com/index.php/products/usb-audio-player-pro">
             <Bullets
               items={[
                 <><a href="https://play.google.com/store/apps/details?id=com.extreamsd.usbaudioplayerpro" target="_blank" rel="noopener noreferrer" className="text-neon-cyan underline-offset-4 hover:underline">Android</a> only</>,
