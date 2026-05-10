@@ -59,37 +59,43 @@ const Index = () => {
       <Hero />
 
       <Section id="source" icon={Smartphone} title="Source">
-        <Card title="Smartphone">
-          <p>Any iPhone or Android smartphone.</p>
+        <p className="mb-6 max-w-2xl text-base text-foreground/80">
+          You don't need exotic hardware. Any modern iPhone or Android phone is a perfectly good starting point — the magic happens in the software.
+        </p>
+        <Card title="Your Smartphone">
+          <p>Any iPhone or Android phone works. Pair it with a wired or wireless headphone of your choice and let the apps below do the heavy lifting.</p>
         </Card>
       </Section>
 
       <Section id="software" icon={Sliders} title="Software">
+        <p className="mb-6 max-w-2xl text-base text-foreground/80">
+          The right player and DSP chain shapes your sound far more than any cable or DAC. These three apps give you ReplayGain, preamp control and serious DSP power.
+        </p>
         <div className="grid gap-5 md:grid-cols-3">
           <Card title="JetAudio">
             <Bullets
               items={[
-                "Supports ReplayGain and preamp adjustment",
-                <>Supports several DSPs such as EQ, <span className="text-neon-cyan">AM3D</span> and <span className="text-neon-cyan">Bongiovi</span> — the last two make a huge difference in how your music sounds.</>,
-                "Works on both Android and iPhone",
+                "Available on both iOS and Android",
+                "ReplayGain support with manual preamp adjustment",
+                <>Bundled DSPs include a graphic EQ, <span className="text-neon-cyan">AM3D</span> and <span className="text-neon-cyan">Bongiovi DPS</span> — the last two transform how your music sounds.</>,
               ]}
             />
           </Card>
           <Card title="Neutron">
             <Bullets
               items={[
-                "Works on both iPhone and Android",
-                "Supports ReplayGain and preamp adjustment",
-                "Supports several DSPs such as Parametric EQ, Frequency Response Correction (AutoEQ), Crossfeed and Adaptive Loudness Compensation.",
+                "Available on both iOS and Android",
+                "ReplayGain support with manual preamp adjustment",
+                <>Deep DSP toolbox: <span className="text-neon-cyan">Parametric EQ</span>, Frequency Response Correction (AutoEQ), Crossfeed and Adaptive Loudness Compensation.</>,
               ]}
             />
           </Card>
-          <Card title="USB Audio Player">
+          <Card title="USB Audio Player Pro">
             <Bullets
               items={[
-                "Works only on Android",
-                "Supports ReplayGain and preamp adjustment",
-                <>Supports several DSPs such as Parametric EQ and <span className="text-neon-cyan">Toneboosters MorphIt</span>, which has presets you can apply to supported headphones — choose target curves like Harman or its own HiFi ones, and even make one headphone sound like another.</>,
+                "Android only",
+                "ReplayGain support with manual preamp adjustment",
+                <>Includes Parametric EQ and <span className="text-neon-cyan">ToneBoosters MorphIt</span> — apply target curves like Harman or HiFi to supported headphones, or make one headphone sound like another.</>,
               ]}
             />
           </Card>
@@ -97,18 +103,21 @@ const Index = () => {
       </Section>
 
       <Section id="headphones" icon={Headphones} title="Headphones & Earbuds">
+        <p className="mb-6 max-w-2xl text-base text-foreground/80">
+          A short list of headphones we keep coming back to, with the exact app, EQ and DSP settings that get the most fun out of each one.
+        </p>
         <div className="grid gap-5 md:grid-cols-3">
           <Card title="Moondrop Pill">
             <Bullets
               items={[
-                "On-ear design is more comfortable than headphones, earbuds or IEMs.",
-                "You can hear your surroundings, so for the best sound be in a quiet space — otherwise you'll still hear and chat with others while music plays in the background.",
+                "On-ear design is noticeably more comfortable than over-ears, earbuds or IEMs.",
+                "Open to your surroundings — best enjoyed in a quiet space. Handy when you still want to hear (or chat with) people around you while music plays in the background.",
               ]}
             />
             <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended config & pairings</p>
               <p className="mt-2 text-sm text-foreground/85">
-                Moondrop app set to <span className="text-neon-magenta">Herbert's B&amp;K InEar Style</span> official PEQ preset, iPhone, JetAudio with Bongiovi DPS set to <span className="text-neon-magenta">Atlanta Headphones</span> or AM3D on <span className="text-neon-magenta">Dance</span> preset with z-boost on.
+                In the Moondrop app, load the official <span className="text-neon-magenta">Herbert's B&amp;K InEar Style</span> PEQ preset. Feed it from an iPhone running JetAudio with Bongiovi DPS set to <span className="text-neon-magenta">Atlanta Headphones</span>, or AM3D on the <span className="text-neon-magenta">Dance</span> preset with z-Boost on.
               </p>
             </div>
           </Card>
@@ -117,7 +126,7 @@ const Index = () => {
             <div className="rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended config & pairings</p>
               <p className="mt-2 text-sm text-foreground/85">
-                Use the <span className="text-neon-magenta">Blues PEQ</span> profile in the Melomania app, with or without the Bongiovi DPS <span className="text-neon-magenta">Boston</span> or <span className="text-neon-magenta">Phoenix</span> profiles, or AM3D on <span className="text-neon-magenta">Ballad</span>.
+                Load the <span className="text-neon-magenta">Blues</span> PEQ profile in the Melomania app. Run it on its own, or stack with Bongiovi DPS on <span className="text-neon-magenta">Boston</span> or <span className="text-neon-magenta">Phoenix</span> — or AM3D on <span className="text-neon-magenta">Ballad</span>.
               </p>
             </div>
           </Card>
@@ -126,7 +135,7 @@ const Index = () => {
             <div className="rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended config & pairings</p>
               <p className="mt-2 text-sm text-foreground/85">
-                Melomania app on <span className="text-neon-magenta">Rock EQ</span> by itself, or on the <span className="text-neon-magenta">Blues</span> EQ preset with JetAudio Bongiovi DPS set to <span className="text-neon-magenta">London</span> or <span className="text-neon-magenta">Boston General</span>.
+                In the Melomania app, use the <span className="text-neon-magenta">Rock</span> EQ on its own — or switch to <span className="text-neon-magenta">Blues</span> and pair with JetAudio Bongiovi DPS set to <span className="text-neon-magenta">London</span> or <span className="text-neon-magenta">Boston General</span>.
               </p>
             </div>
           </Card>
