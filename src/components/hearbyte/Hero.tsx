@@ -27,7 +27,7 @@ const Hero = () => {
       <div className="relative z-10 mx-auto flex min-h-[92vh] max-w-5xl flex-col items-center justify-center px-6 py-20 text-center">
         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-neon-cyan/40 bg-background/40 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-neon-cyan backdrop-blur">
           <Headphones className="h-3.5 w-3.5" />
-          <span>HearByte // Pocket Hi-Fi Guide</span>
+          <span>HeartByte // Pocket Hi-Fi Guide</span>
         </div>
 
         <h1 className="font-display text-5xl font-black leading-[0.95] text-foreground sm:text-6xl md:text-7xl">
