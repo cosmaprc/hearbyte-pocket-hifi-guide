@@ -3,13 +3,21 @@ import { useEffect, useState } from "react";
 const sections = [
   { id: "source", label: "Source" },
   { id: "software", label: "Software" },
-  { id: "headphones", label: "Gear" },
+  { id: "headphones", label: "Headphones" },
   { id: "replaygain", label: "ReplayGain" },
   { id: "glossary", label: "Glossary" },
 ];
 
 const TableOfContents = () => {
   const [active, setActive] = useState<string>(sections[0].id);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 200);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   useEffect(() => {
     const els = sections
@@ -50,7 +58,10 @@ const TableOfContents = () => {
       {/* Desktop: vertical sticky nav on the right */}
       <nav
         aria-label="Page sections"
-        className="pointer-events-none fixed right-6 top-1/2 z-40 hidden -translate-y-1/2 lg:block"
+        className={`pointer-events-none fixed right-6 top-1/2 z-40 hidden -translate-y-1/2 transition-opacity duration-300 lg:block ${
+          scrolled ? "opacity-100" : "opacity-0"
+        }`}
+        aria-hidden={!scrolled}
       >
         <ul className="pointer-events-auto flex flex-col gap-3 rounded-full border border-neon-magenta/30 bg-background/60 px-3 py-4 backdrop-blur-md">
           {sections.map((s) => {
@@ -62,7 +73,7 @@ const TableOfContents = () => {
                   onClick={(e) => handleClick(e, s.id)}
                   aria-label={`Jump to ${s.label}`}
                   aria-current={isActive ? "true" : undefined}
-                  className="flex items-center gap-3"
+                  className="flex items-center gap-3 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon-magenta focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                 >
                   <span
                     className={`whitespace-nowrap rounded-md border border-neon-cyan/30 bg-background/80 px-2 py-1 text-xs font-semibold uppercase tracking-widest text-neon-cyan opacity-0 transition-opacity group-hover:opacity-100 ${
