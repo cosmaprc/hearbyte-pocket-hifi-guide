@@ -1,99 +1,21 @@
 import Hero from "@/components/hearbyte/Hero";
 import Footer from "@/components/hearbyte/Footer";
 import ExtLink from "@/components/hearbyte/ExtLink";
+import Section from "@/components/hearbyte/Section";
+import Card from "@/components/hearbyte/Card";
+import Bullets from "@/components/hearbyte/Bullets";
+import Divider from "@/components/hearbyte/Divider";
 import { Smartphone, Sliders, Headphones, Volume2, BookOpen } from "lucide-react";
-
-type Tone = "cyan" | "magenta" | "purple" | "orange";
-
-const toneClasses: Record<Tone, { border: string; text: string; glow: string }> = {
-  cyan: { border: "border-neon-cyan/50", text: "text-neon-cyan", glow: "text-glow-cyan" },
-  magenta: { border: "border-neon-magenta/50", text: "text-neon-magenta", glow: "text-glow-magenta" },
-  purple: { border: "border-neon-purple/50", text: "text-neon-purple", glow: "" },
-  orange: { border: "border-neon-orange/50", text: "text-neon-orange", glow: "" },
-};
-
-const Section = ({
-  id,
-  icon: Icon,
-  title,
-  tone = "cyan",
-  children,
-}: {
-  id?: string;
-  icon: React.ElementType;
-  title: string;
-  tone?: Tone;
-  children: React.ReactNode;
-}) => {
-  const t = toneClasses[tone];
-  return (
-    <section id={id} className="relative px-6 py-16 sm:py-20">
-      <div className="mx-auto max-w-5xl">
-        <div className="mb-8 flex items-center gap-3">
-          <div className={`flex h-10 w-10 items-center justify-center rounded-lg border ${t.border} bg-background/50 ${t.text}`}>
-            <Icon className="h-5 w-5" />
-          </div>
-          <h2 className={`font-display text-3xl font-black uppercase tracking-wide ${t.text} ${t.glow} sm:text-4xl`}>
-            {title}
-          </h2>
-        </div>
-        {children}
-      </div>
-    </section>
-  );
-};
-
-const Card = ({
-  title,
-  href,
-  children,
-}: {
-  title: string;
-  href?: string;
-  children?: React.ReactNode;
-}) => (
-  <article className="rounded-xl border border-border bg-card-gradient p-6 transition-smooth hover:border-neon-magenta/60 hover:shadow-card-glow">
-    <h3 className="font-display text-xl font-bold text-neon-magenta text-glow-magenta">
-      {href ? (
-        <ExtLink
-          href={href}
-          showIcon
-          className="text-neon-magenta underline-offset-4 hover:underline"
-        >
-          {title}
-        </ExtLink>
-      ) : (
-        title
-      )}
-    </h3>
-    {children && <div className="mt-4 space-y-2 text-sm leading-relaxed text-foreground/85">{children}</div>}
-  </article>
-);
-
-const Bullets = ({ items }: { items: React.ReactNode[] }) => (
-  <ul className="space-y-2">
-    {items.map((item, i) => (
-      <li key={i} className="flex gap-2">
-        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-neon-cyan" aria-hidden />
-        <span>{item}</span>
-      </li>
-    ))}
-  </ul>
-);
-
-const Divider = () => (
-  <div className="mx-auto max-w-5xl px-6">
-    <div className="section-divider" aria-hidden />
-  </div>
-);
 
 const Index = () => {
   return (
     <main className="min-h-screen bg-background text-foreground">
       <Hero />
 
+      <Divider />
+
       <Section id="source" icon={Smartphone} title="Source" tone="cyan">
-        <p className="max-w-2xl text-base text-foreground/80">
+        <p className="max-w-2xl text-base text-foreground/90">
           You don't need exotic hardware. Any modern <span className="text-neon-cyan">iPhone</span> or <span className="text-neon-cyan">Android</span> phone is a perfectly good starting point — pair it with a <span className="text-neon-cyan">wired</span> or <span className="text-neon-cyan">wireless</span> headphone of your choice and let the apps below do the heavy lifting. The magic happens in the <span className="text-neon-magenta">software</span>.
         </p>
       </Section>
@@ -101,7 +23,7 @@ const Index = () => {
       <Divider />
 
       <Section id="software" icon={Sliders} title="Software" tone="magenta">
-        <p className="mb-6 max-w-2xl text-base text-foreground/80">
+        <p className="mb-6 max-w-2xl text-base text-foreground/90">
           The right <span className="text-neon-cyan">player</span> and <span className="text-neon-magenta">DSP</span> chain shapes your sound far more than any <span className="text-neon-cyan">cable</span> or <span className="text-neon-cyan">DAC</span>. These three apps give you <span className="text-neon-cyan">ReplayGain support</span>, <span className="text-neon-cyan">Preamp control</span> and serious <span className="text-neon-magenta">DSP power</span>.
         </p>
         <div className="grid gap-5 md:grid-cols-3">
@@ -149,14 +71,14 @@ const Index = () => {
       <Divider />
 
       <Section id="headphones" icon={Headphones} title="Headphones & Earbuds" tone="purple">
-        <p className="mb-6 max-w-2xl text-base text-foreground/80">
-          A short list of headphones I keep coming back to, with the exact <span className="text-neon-cyan">app</span>, <span className="text-neon-cyan">EQ</span> and <span className="text-neon-magenta">DSP</span> settings that get the most fun out of each one.
+        <p className="mb-6 max-w-2xl text-base text-foreground/90">
+          A short list of <span className="text-neon-cyan">headphones</span> and <span className="text-neon-cyan">earbuds</span> I keep coming back to, with the exact <span className="text-neon-cyan">app</span>, <span className="text-neon-cyan">EQ</span> and <span className="text-neon-magenta">DSP</span> settings that get the most fun out of each one.
         </p>
         <div className="grid gap-5 md:grid-cols-3">
           <Card title="Moondrop Pill" href="https://moondroplab.com/en/products/pill">
             <Bullets
               items={[
-                <><span className="text-neon-cyan">On-ear</span> design is noticeably more comfortable than <span className="text-neon-cyan">over-ears</span>, <span className="text-neon-cyan">earbuds</span> or <span className="text-neon-cyan">IEMs</span>.</>,
+                <><span className="text-neon-cyan">On-ear earbud</span> design (not an in-ear/IEM) — noticeably more comfortable than <span className="text-neon-cyan">over-ears</span>, traditional <span className="text-neon-cyan">earbuds</span> or <span className="text-neon-cyan">IEMs</span>.</>,
                 <><span className="text-neon-magenta">Open</span> to your surroundings — best enjoyed in a <span className="text-neon-cyan">quiet space</span>. Handy when you still want to hear (or chat with) people around you while music plays in the background.</>,
               ]}
             />
@@ -203,11 +125,11 @@ const Index = () => {
       <Divider />
 
       <Section id="replaygain" icon={Volume2} title="Calculating & Applying ReplayGain" tone="orange">
-        <p className="mb-6 max-w-2xl text-base text-foreground/80">
-          <span className="text-neon-cyan">ReplayGain</span> is a form of <span className="text-neon-magenta">volume normalization</span> that, when applied correctly, does not affect the <span className="text-neon-magenta">dynamic range</span> of your music. Applying <span className="text-neon-cyan">ReplayGain tags</span> to your files lets you shuffle through tracks without manually adjusting the volume for each one.
+        <p className="mb-6 max-w-2xl text-base text-foreground/90">
+          <span className="text-neon-cyan">ReplayGain</span> is a form of <span className="text-neon-magenta">volume normalization</span> that, when applied correctly, does not affect the <span className="text-neon-magenta">dynamic range</span> of your music. Scan your files once to write <span className="text-neon-cyan">track</span> and <span className="text-neon-cyan">album</span> tags, and the players above will read them and level everything automatically — no more reaching for the volume between songs.
         </p>
-        <p className="mb-6 max-w-2xl text-base text-foreground/80">
-          You can scan your music files and apply <span className="text-neon-cyan">track</span> and <span className="text-neon-cyan">album</span> ReplayGain tags that are then read by the players above, which adjust the gain automatically. If you want to shuffle through any of your tracks regardless of artist or album, I recommend applying <span className="text-neon-magenta">track ReplayGain</span>.
+        <p className="mb-6 max-w-2xl text-base text-foreground/90">
+          If you mostly shuffle across artists and albums, prefer <span className="text-neon-magenta">track</span> mode; if you listen album-first, use <span className="text-neon-magenta">album</span> mode to preserve relative loudness within a record.
         </p>
         <div className="grid gap-5 md:grid-cols-2">
           <Card title="foobar2000 on Windows" href="https://www.foobar2000.org/">
@@ -235,7 +157,7 @@ const Index = () => {
       <Divider />
 
       <Section id="glossary" icon={BookOpen} title="Glossary" tone="cyan">
-        <p className="mb-6 max-w-2xl text-base text-foreground/80">
+        <p className="mb-6 max-w-2xl text-base text-foreground/90">
           A few quick definitions for the terms used above, in case anything is new to you.
         </p>
         <div className="grid gap-5 md:grid-cols-2">
@@ -245,11 +167,11 @@ const Index = () => {
           <Card title="EQ / PEQ">
             <p><span className="text-neon-cyan">EQ</span> is an equalizer that boosts or cuts frequency bands. <span className="text-neon-cyan">PEQ</span> (Parametric EQ) lets you control center frequency, gain and bandwidth (Q) per band — far more precise than a fixed graphic EQ.</p>
           </Card>
+          <Card title="FRC / AutoEQ">
+            <p><span className="text-neon-cyan">Frequency Response Correction</span> (Neutron's term) and <span className="text-neon-cyan">AutoEQ</span> both apply measured headphone-correction filters so a given headphone matches a chosen <span className="text-neon-cyan">target curve</span>.</p>
+          </Card>
           <Card title="ReplayGain">
             <p>A metadata-based <span className="text-neon-magenta">volume normalization</span> standard. Tracks are scanned for perceived loudness, and players use the resulting tags to play everything at a consistent level — without re-encoding or compressing the audio.</p>
-          </Card>
-          <Card title="AutoEQ">
-            <p>An open project (and Neutron feature) that applies measured headphone-correction filters so a given headphone matches a chosen <span className="text-neon-cyan">target curve</span>.</p>
           </Card>
           <Card title="Crossfeed">
             <p>Mixes a small amount of each stereo channel into the other to make headphone listening sound less "in-head" and closer to speakers.</p>

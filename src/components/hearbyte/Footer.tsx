@@ -6,7 +6,7 @@ const Footer = () => (
         <span className="text-neon-cyan text-glow-cyan">BYTE</span>
       </div>
       <p className="text-xs text-muted-foreground">
-        Tips for the best listening experience from your headphones &amp; earbuds.
+        Quick-pick gear and software pairings for the most engaging sound.
       </p>
       <p className="text-xs text-muted-foreground">
         © {new Date().getFullYear()} HeartByte
