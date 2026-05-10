@@ -32,16 +32,15 @@ const Hero = () => {
           <Headphones className="h-10 w-10 sm:h-12 sm:w-12" />
         </div>
 
-        <h1 className="whitespace-nowrap font-display text-5xl font-black leading-[0.95] tracking-tight text-foreground sm:text-6xl md:text-7xl">
-          <span className="text-glow-magenta">Heart</span>
-          <span className="text-neon-cyan text-glow-cyan">Byte</span>
-          <span
-            aria-hidden
-            className="ml-[0.04em] align-baseline text-[0.6em] font-bold text-neon-cyan text-glow-cyan-soft"
-          >
-            ’s
+        <h1 className="font-display text-5xl font-black leading-[0.95] tracking-tight text-foreground sm:text-6xl md:text-7xl">
+          <span aria-hidden className="text-glow-magenta">Heart</span>
+          <span aria-hidden className="whitespace-nowrap">
+            <span className="text-neon-cyan text-glow-cyan">Byte</span>
+            <span className="ml-[0.04em] align-baseline text-[0.6em] font-bold text-neon-cyan text-glow-cyan-soft">
+              ’s
+            </span>
           </span>
-          <span className="sr-only">Byte's Pocket Hi-Fi Guide</span>
+          <span className="sr-only">HeartByte’s Pocket Hi-Fi Guide</span>
         </h1>
 
         <p className="mt-4 text-sm font-semibold uppercase tracking-[0.35em] text-neon-cyan/90 sm:text-base">
@@ -60,7 +59,7 @@ const Hero = () => {
           className="mt-10 inline-flex items-center gap-2 rounded-full border border-neon-magenta/60 bg-primary/10 px-6 py-3 text-sm font-semibold uppercase tracking-widest text-foreground transition-smooth hover:bg-primary/20 hover:shadow-neon-magenta focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon-magenta/60"
         >
           Jump to gear
-          <ChevronDown className="h-4 w-4 motion-safe:animate-bounce" />
+          <ChevronDown aria-hidden className="h-4 w-4 motion-safe:animate-bounce" />
         </a>
       </div>
     </header>
