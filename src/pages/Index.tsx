@@ -93,12 +93,9 @@ const Index = () => {
       <Hero />
 
       <Section id="source" icon={Smartphone} title="Source" tone="cyan">
-        <p className="mb-6 max-w-2xl text-base text-foreground/80">
-          You don't need exotic hardware. Any modern <span className="text-neon-cyan">iPhone</span> or <span className="text-neon-cyan">Android</span> phone is a perfectly good starting point — the magic happens in the <span className="text-neon-magenta">software</span>.
+        <p className="max-w-2xl text-base text-foreground/80">
+          You don't need exotic hardware. Any modern <span className="text-neon-cyan">iPhone</span> or <span className="text-neon-cyan">Android</span> phone is a perfectly good starting point — pair it with a <span className="text-neon-cyan">wired</span> or <span className="text-neon-cyan">wireless</span> headphone of your choice and let the apps below do the heavy lifting. The magic happens in the <span className="text-neon-magenta">software</span>.
         </p>
-        <Card title="Your Smartphone">
-          <p>Any <span className="text-neon-cyan">iPhone</span> or <span className="text-neon-cyan">Android</span> phone works. Pair it with a <span className="text-neon-cyan">wired</span> or <span className="text-neon-cyan">wireless</span> headphone of your choice and let the apps below do the heavy lifting.</p>
-        </Card>
       </Section>
 
       <Divider />
