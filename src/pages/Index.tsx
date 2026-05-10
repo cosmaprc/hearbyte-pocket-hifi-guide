@@ -6,7 +6,7 @@ import Card from "@/components/hearbyte/Card";
 import Bullets from "@/components/hearbyte/Bullets";
 import Divider from "@/components/hearbyte/Divider";
 import TableOfContents from "@/components/hearbyte/TableOfContents";
-import { Smartphone, Sliders, Headphones, Volume2, BookOpen } from "lucide-react";
+import { Smartphone, Sliders, Headphones, Volume2, BookOpen, Link } from "lucide-react";
 
 const Index = () => {
   return (
@@ -177,6 +177,43 @@ const Index = () => {
           </Card>
           <Card title="Target curve">
             <p>The frequency response a headphone is tuned (or EQ'd) to match — e.g. the <span className="text-neon-cyan">Harman</span> curve or B&amp;K-style in-ear targets.</p>
+          </Card>
+        </div>
+      </Section>
+
+      <Divider />
+
+      <Section id="links" icon={Link} title="Useful Links" tone="magenta">
+        <p className="mb-6 max-w-2xl text-base text-foreground/90">
+          A curated set of external resources for diving deeper into headphone measurements, community discussion, and high-quality music purchases.
+        </p>
+        <div className="grid gap-5 md:grid-cols-3">
+          <Card title="Reviews & Measurements">
+            <Bullets
+              items={[
+                <><ExtLink href="https://www.pragmaticaudio.com/" className="text-neon-cyan">Pragmatic Audio</ExtLink> — in-depth headphone and IEM reviews with measurement data.</>,
+                <><ExtLink href="https://www.audiosciencereview.com/forum/index.php" className="text-neon-cyan">Audio Science Review</ExtLink> — objective measurements, DAC/amp testing and a lively forum.</>,
+                <><ExtLink href="https://squig.link/" className="text-neon-cyan">Squig.link</ExtLink> — browse and compare frequency-response graphs from a wide database.</>,
+                <><ExtLink href="https://autoeq.app/" className="text-neon-cyan">AutoEQ</ExtLink> — generate parametric EQ presets to match target curves from measurement data.</>,
+              ]}
+            />
+          </Card>
+          <Card title="Community">
+            <Bullets
+              items={[
+                <><ExtLink href="https://www.head-fi.org/" className="text-neon-cyan">Head-Fi</ExtLink> — the largest headphone enthusiast forum and discussion hub.</>,
+                <><ExtLink href="https://www.headphoneer.com/" className="text-neon-cyan">Headphoneer</ExtLink> — a community-driven space for headphone reviews and advice.</>,
+              ]}
+            />
+          </Card>
+          <Card title="Music Stores">
+            <Bullets
+              items={[
+                <><ExtLink href="https://www.qobuz.com/gb-en/shop" className="text-neon-cyan">Qobuz</ExtLink> — hi-res streaming and download store with lossless catalogue.</>,
+                <><ExtLink href="https://bandcamp.com/" className="text-neon-cyan">Bandcamp</ExtLink> — buy directly from artists, often in lossless FLAC.</>,
+                <><ExtLink href="https://uk.7digital.com/?utm_source=7digital.com" className="text-neon-cyan">7digital</ExtLink> — hi-res and lossless downloads from a large catalogue.</>,
+              ]}
+            />
           </Card>
         </div>
       </Section>
