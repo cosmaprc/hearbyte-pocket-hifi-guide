@@ -30,14 +30,27 @@ const Section = ({
 
 const Card = ({
   title,
+  href,
   children,
 }: {
   title: string;
+  href?: string;
   children?: React.ReactNode;
 }) => (
   <article className="rounded-xl border border-border bg-card-gradient p-6 transition-smooth hover:border-neon-magenta/60 hover:shadow-card-glow">
     <h3 className="font-display text-xl font-bold text-neon-magenta text-glow-magenta">
-      {title}
+      {href ? (
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline-offset-4 hover:underline"
+        >
+          {title}
+        </a>
+      ) : (
+        title
+      )}
     </h3>
     {children && <div className="mt-4 space-y-2 text-sm leading-relaxed text-foreground/85">{children}</div>}
   </article>
@@ -73,31 +86,41 @@ const Index = () => {
           The right player and DSP chain shapes your sound far more than any cable or DAC. These three apps give you <span className="text-neon-cyan">ReplayGain support</span>, <span className="text-neon-cyan">Preamp control</span> and serious <span className="text-neon-magenta">DSP power</span>.
         </p>
         <div className="grid gap-5 md:grid-cols-3">
-          <Card title="jetAudio">
+          <Card title="jetAudio" href="https://www.jetaudio.com/">
             <Bullets
               items={[
-                <>Available on both <span className="text-neon-cyan">iOS</span> and <span className="text-neon-cyan">Android</span></>,
+                <>
+                  Available on both{" "}
+                  <a href="https://apps.apple.com/us/app/jetaudio-hi-res-music-player/id894888135" target="_blank" rel="noopener noreferrer" className="text-neon-cyan underline-offset-4 hover:underline">iOS</a>
+                  {" "}and{" "}
+                  <a href="https://play.google.com/store/apps/details?id=com.jetappfactory.jetaudioplus" target="_blank" rel="noopener noreferrer" className="text-neon-cyan underline-offset-4 hover:underline">Android</a>
+                </>,
                 <><span className="text-neon-cyan">ReplayGain</span> support with manual <span className="text-neon-cyan">preamp</span> adjustment</>,
-                <>Bundled DSPs include a <span className="text-neon-cyan">graphic EQ</span>, <span className="text-neon-magenta">AM3D</span> and <span className="text-neon-magenta">Bongiovi DPS</span> — the last two transform how your music sounds.</>,
+                <>Bundled DSPs include a <span className="text-neon-cyan">graphic EQ</span>, <a href="https://www.am3d.com/" target="_blank" rel="noopener noreferrer" className="text-neon-magenta underline-offset-4 hover:underline">AM3D</a> and <a href="https://www.bongioviacoustics.com/" target="_blank" rel="noopener noreferrer" className="text-neon-magenta underline-offset-4 hover:underline">Bongiovi DPS</a> — the last two transform how your music sounds.</>,
                 <>Note: AM3D, Bongiovi DPS and Crystalizer are <span className="text-neon-magenta">paid in-app purchases</span>, not free with the app.</>,
               ]}
             />
           </Card>
-          <Card title="Neutron">
+          <Card title="Neutron" href="https://neutronmp.com/">
             <Bullets
               items={[
-                <>Available on both <span className="text-neon-cyan">iOS</span> and <span className="text-neon-cyan">Android</span></>,
+                <>
+                  Available on both{" "}
+                  <a href="https://apps.apple.com/us/app/neutron-music-player/id978831442" target="_blank" rel="noopener noreferrer" className="text-neon-cyan underline-offset-4 hover:underline">iOS</a>
+                  {" "}and{" "}
+                  <a href="https://play.google.com/store/apps/details?id=com.neutroncode.mp" target="_blank" rel="noopener noreferrer" className="text-neon-cyan underline-offset-4 hover:underline">Android</a>
+                </>,
                 <><span className="text-neon-cyan">ReplayGain</span> support with manual <span className="text-neon-cyan">preamp</span> adjustment</>,
                 <>Deep DSP toolbox: <span className="text-neon-magenta">Parametric EQ</span>, <span className="text-neon-magenta">Frequency Response Correction</span> (AutoEQ), <span className="text-neon-magenta">Crossfeed</span> and <span className="text-neon-magenta">Adaptive Loudness Compensation</span>.</>,
               ]}
             />
           </Card>
-          <Card title="USB Audio Player Pro">
+          <Card title="USB Audio Player Pro" href="https://www.extreamsd.com/index.php/products/uapp">
             <Bullets
               items={[
-                <><span className="text-neon-cyan">Android</span> only</>,
+                <><a href="https://play.google.com/store/apps/details?id=com.extreamsd.usbaudioplayerpro" target="_blank" rel="noopener noreferrer" className="text-neon-cyan underline-offset-4 hover:underline">Android</a> only</>,
                 <><span className="text-neon-cyan">ReplayGain</span> support with manual <span className="text-neon-cyan">preamp</span> adjustment</>,
-                <>Includes <span className="text-neon-magenta">Parametric EQ</span> and <span className="text-neon-magenta">ToneBoosters MorphIt</span> — apply target curves like <span className="text-neon-cyan">Harman</span> or <span className="text-neon-cyan">HiFi</span> to supported headphones, or make one headphone sound like another.</>,
+                <>Includes <span className="text-neon-magenta">Parametric EQ</span> and <a href="https://www.toneboosters.com/tb_morphit_v1.html" target="_blank" rel="noopener noreferrer" className="text-neon-magenta underline-offset-4 hover:underline">ToneBoosters MorphIt</a> — apply target curves like <span className="text-neon-cyan">Harman</span> or <span className="text-neon-cyan">HiFi</span> to supported headphones, or make one headphone sound like another.</>,
               ]}
             />
           </Card>
@@ -112,7 +135,7 @@ const Index = () => {
           You can scan your music files and apply <span className="text-neon-cyan">track</span> and <span className="text-neon-cyan">album</span> ReplayGain tags that are then read by the players above, which adjust the gain automatically. If you want to shuffle through any of your tracks regardless of artist or album, I recommend applying <span className="text-neon-magenta">track ReplayGain</span>.
         </p>
         <div className="grid gap-5 md:grid-cols-2">
-          <Card title="Foobar2000 on Windows">
+          <Card title="Foobar2000 on Windows" href="https://www.foobar2000.org/">
             <Bullets
               items={[
                 <>Free, powerful audio player and toolkit — primarily for <span className="text-neon-cyan">Windows</span>, with official <span className="text-neon-cyan">macOS</span> and beta <span className="text-neon-cyan">iOS</span> / <span className="text-neon-cyan">Android</span> builds.</>,
@@ -121,11 +144,11 @@ const Index = () => {
               ]}
             />
           </Card>
-          <Card title="rsgain on Android (via Termux)">
+          <Card title="rsgain on Android (via Termux)" href="https://github.com/complexlogic/rsgain">
             <Bullets
               items={[
                 <>A fast, <span className="text-neon-magenta">open-source</span> command-line ReplayGain 2.0 scanner (no standalone Android app).</>,
-                <>On Android, install <span className="text-neon-magenta">Termux</span> from F-Droid, then run <span className="text-neon-cyan">pkg install rsgain</span>.</>,
+                <>On Android, install <a href="https://f-droid.org/packages/com.termux/" target="_blank" rel="noopener noreferrer" className="text-neon-magenta underline-offset-4 hover:underline">Termux</a> from F-Droid, then run <span className="text-neon-cyan">pkg install rsgain</span>.</>,
                 <>Point it at your music folder and let it write <span className="text-neon-cyan">track</span> and <span className="text-neon-cyan">album</span> gain tags directly on the device.</>,
                 <>Great for tagging files <span className="text-neon-cyan">on-device</span> before loading them into your player of choice.</>,
               ]}
