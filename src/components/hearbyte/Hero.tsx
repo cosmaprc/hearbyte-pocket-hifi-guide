@@ -37,7 +37,7 @@ const Hero = () => {
           <span className="text-neon-cyan text-glow-cyan">Byte</span>
           <span
             aria-hidden
-            className="ml-[0.04em] align-baseline text-[0.6em] font-bold text-neon-cyan/70 [text-shadow:none]"
+            className="ml-[0.04em] align-baseline text-[0.6em] font-bold text-neon-cyan text-glow-cyan-soft"
           >
             ’s
           </span>
