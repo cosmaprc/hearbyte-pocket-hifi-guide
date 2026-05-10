@@ -1,6 +1,6 @@
 import Hero from "@/components/hearbyte/Hero";
 import Footer from "@/components/hearbyte/Footer";
-import { Smartphone, Sliders, Headphones } from "lucide-react";
+import { Smartphone, Sliders, Headphones, Volume2 } from "lucide-react";
 
 const Section = ({
   id,
