@@ -5,12 +5,14 @@ import Section from "@/components/hearbyte/Section";
 import Card from "@/components/hearbyte/Card";
 import Bullets from "@/components/hearbyte/Bullets";
 import Divider from "@/components/hearbyte/Divider";
+import TableOfContents from "@/components/hearbyte/TableOfContents";
 import { Smartphone, Sliders, Headphones, Volume2, BookOpen } from "lucide-react";
 
 const Index = () => {
   return (
     <main className="min-h-screen bg-background text-foreground">
       <Hero />
+      <TableOfContents />
 
       <Divider />
 
