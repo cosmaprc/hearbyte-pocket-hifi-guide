@@ -1,4 +1,5 @@
 import Hero from "@/components/hearbyte/Hero";
+import Footer from "@/components/hearbyte/Footer";
 import { Smartphone, Sliders, Headphones } from "lucide-react";
 
 const Section = ({
@@ -141,6 +142,8 @@ const Index = () => {
           </Card>
         </div>
       </Section>
+
+      <Footer />
     </main>
   );
 };
