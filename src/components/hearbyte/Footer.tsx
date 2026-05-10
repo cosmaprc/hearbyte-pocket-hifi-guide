@@ -9,7 +9,7 @@ const Footer = () => (
         Tips for the best listening experience from your headphones &amp; earbuds.
       </p>
       <p className="text-xs text-muted-foreground">
-        © {new Date().getFullYear()} HearByte
+        © {new Date().getFullYear()} HeartByte
       </p>
     </div>
   </footer>
