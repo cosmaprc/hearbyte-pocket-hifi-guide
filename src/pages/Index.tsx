@@ -134,7 +134,7 @@ const Index = () => {
 
       <Section id="headphones" icon={Headphones} title="Headphones & Earbuds">
         <p className="mb-6 max-w-2xl text-base text-foreground/80">
-          A short list of headphones we keep coming back to, with the exact <span className="text-neon-cyan">app</span>, <span className="text-neon-cyan">EQ</span> and <span className="text-neon-magenta">DSP</span> settings that get the most fun out of each one.
+          A short list of headphones I keep coming back to, with the exact <span className="text-neon-cyan">app</span>, <span className="text-neon-cyan">EQ</span> and <span className="text-neon-magenta">DSP</span> settings that get the most fun out of each one.
         </p>
         <div className="grid gap-5 md:grid-cols-3">
           <Card title="Moondrop Pill">
