@@ -38,8 +38,7 @@ const Hero = () => {
         <p className="mt-6 max-w-2xl text-balance text-lg text-foreground/80 sm:text-xl">
           Quick-pick gear and software pairings to get the most{" "}
           <span className="text-neon-magenta">fun</span> and{" "}
-          <span className="text-neon-cyan">engaging</span> sound out of your headphones —
-          tuned for pop, synthwave and metal.
+          <span className="text-neon-cyan">engaging</span> sound out of your music.
         </p>
 
         <a
