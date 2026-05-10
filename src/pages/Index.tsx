@@ -125,7 +125,6 @@ const Index = () => {
               items={[
                 <>A fast, <span className="text-neon-magenta">open-source</span> ReplayGain scanner that runs directly on <span className="text-neon-cyan">Android</span>.</>,
                 <>Point it at your music folder and let it write <span className="text-neon-cyan">track</span> and <span className="text-neon-cyan">album</span> gain tags.</>,
-                <>Compatible with the same tag format <span className="text-neon-magenta">JetAudio</span>, <span className="text-neon-magenta">Neutron</span> and <span className="text-neon-magenta">USB Audio Player Pro</span> expect.</>,
                 <>Great for tagging files <span className="text-neon-cyan">on-device</span> before loading them into your player of choice.</>,
               ]}
             />
