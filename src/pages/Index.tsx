@@ -133,6 +133,8 @@ const Index = () => {
           </Card>
         </div>
       </Section>
+
+      <Section id="headphones" icon={Headphones} title="Headphones & Earbuds">
         <p className="mb-6 max-w-2xl text-base text-foreground/80">
           A short list of headphones we keep coming back to, with the exact app, EQ and DSP settings that get the most fun out of each one.
         </p>
