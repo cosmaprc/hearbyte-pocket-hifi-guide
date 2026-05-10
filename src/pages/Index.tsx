@@ -103,7 +103,36 @@ const Index = () => {
         </div>
       </Section>
 
-      <Section id="headphones" icon={Headphones} title="Headphones & Earbuds">
+      <Section id="replaygain" icon={Volume2} title="Calculating & Applying ReplayGain">
+        <p className="mb-6 max-w-2xl text-base text-foreground/80">
+          ReplayGain is a form of volume normalization that, when applied correctly, does not affect the dynamic range of your music. Applying ReplayGain tags to your files lets you shuffle through tracks without manually adjusting volume for each one.
+        </p>
+        <p className="mb-6 max-w-2xl text-base text-foreground/80">
+          You can scan your music files and apply track and album ReplayGain tags that are then read by the players above, which adjust the gain automatically. If you want to shuffle through any of your tracks regardless of artist or album, we recommend applying track ReplayGain.
+        </p>
+        <div className="grid gap-5 md:grid-cols-2">
+          <Card title="Foobar2000 on Windows">
+            <Bullets
+              items={[
+                "Free, powerful audio player and toolkit for Windows.",
+                <>Install the <span className="text-neon-cyan">ReplayGain Scanner</span> component (usually included by default).</>,
+                "Right-click your music library or playlist → Utilities → ReplayGain Scanner.",
+                "Choose Track or Album scanning mode, then apply tags to the files.",
+              ]}
+            />
+          </Card>
+          <Card title="rsgain on Android">
+            <Bullets
+              items={[
+                "A fast, open-source ReplayGain scanner that runs directly on Android.",
+                "Point it at your music folder and let it write track and album gain tags.",
+                "Compatible with the same tag format JetAudio, Neutron and USB Audio Player Pro expect.",
+                "Great for tagging files on-device before loading them into your player of choice.",
+              ]}
+            />
+          </Card>
+        </div>
+      </Section>
         <p className="mb-6 max-w-2xl text-base text-foreground/80">
           A short list of headphones we keep coming back to, with the exact app, EQ and DSP settings that get the most fun out of each one.
         </p>
