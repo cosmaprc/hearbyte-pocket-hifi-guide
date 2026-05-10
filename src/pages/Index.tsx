@@ -61,42 +61,42 @@ const Index = () => {
 
       <Section id="source" icon={Smartphone} title="Source">
         <p className="mb-6 max-w-2xl text-base text-foreground/80">
-          You don't need exotic hardware. Any modern iPhone or Android phone is a perfectly good starting point — the magic happens in the software.
+          You don't need exotic hardware. Any modern <span className="text-neon-cyan">iPhone</span> or <span className="text-neon-cyan">Android</span> phone is a perfectly good starting point — the magic happens in the <span className="text-neon-magenta">software</span>.
         </p>
         <Card title="Your Smartphone">
-          <p>Any iPhone or Android phone works. Pair it with a wired or wireless headphone of your choice and let the apps below do the heavy lifting.</p>
+          <p>Any <span className="text-neon-cyan">iPhone</span> or <span className="text-neon-cyan">Android</span> phone works. Pair it with a wired or wireless headphone of your choice and let the apps below do the heavy lifting.</p>
         </Card>
       </Section>
 
       <Section id="software" icon={Sliders} title="Software">
         <p className="mb-6 max-w-2xl text-base text-foreground/80">
-          The right player and DSP chain shapes your sound far more than any cable or DAC. These three apps give you ReplayGain support, Preamp control and serious DSP power.
+          The right player and DSP chain shapes your sound far more than any cable or DAC. These three apps give you <span className="text-neon-cyan">ReplayGain support</span>, <span className="text-neon-cyan">Preamp control</span> and serious <span className="text-neon-magenta">DSP power</span>.
         </p>
         <div className="grid gap-5 md:grid-cols-3">
           <Card title="JetAudio">
             <Bullets
               items={[
-                "Available on both iOS and Android",
-                "ReplayGain support with manual preamp adjustment",
-                <>Bundled DSPs include a graphic EQ, <span className="text-neon-cyan">AM3D</span> and <span className="text-neon-cyan">Bongiovi DPS</span> — the last two transform how your music sounds.</>,
+                <>Available on both <span className="text-neon-cyan">iOS</span> and <span className="text-neon-cyan">Android</span></>,
+                <><span className="text-neon-cyan">ReplayGain</span> support with manual <span className="text-neon-cyan">preamp</span> adjustment</>,
+                <>Bundled DSPs include a <span className="text-neon-cyan">graphic EQ</span>, <span className="text-neon-magenta">AM3D</span> and <span className="text-neon-magenta">Bongiovi DPS</span> — the last two transform how your music sounds.</>,
               ]}
             />
           </Card>
           <Card title="Neutron">
             <Bullets
               items={[
-                "Available on both iOS and Android",
-                "ReplayGain support with manual preamp adjustment",
-                <>Deep DSP toolbox: <span className="text-neon-cyan">Parametric EQ</span>, Frequency Response Correction (AutoEQ), Crossfeed and Adaptive Loudness Compensation.</>,
+                <>Available on both <span className="text-neon-cyan">iOS</span> and <span className="text-neon-cyan">Android</span></>,
+                <><span className="text-neon-cyan">ReplayGain</span> support with manual <span className="text-neon-cyan">preamp</span> adjustment</>,
+                <>Deep DSP toolbox: <span className="text-neon-magenta">Parametric EQ</span>, <span className="text-neon-magenta">Frequency Response Correction</span> (AutoEQ), <span className="text-neon-magenta">Crossfeed</span> and <span className="text-neon-magenta">Adaptive Loudness Compensation</span>.</>,
               ]}
             />
           </Card>
           <Card title="USB Audio Player Pro">
             <Bullets
               items={[
-                "Android only",
-                "ReplayGain support with manual preamp adjustment",
-                <>Includes Parametric EQ and <span className="text-neon-cyan">ToneBoosters MorphIt</span> — apply target curves like Harman or HiFi to supported headphones, or make one headphone sound like another.</>,
+                <><span className="text-neon-cyan">Android</span> only</>,
+                <><span className="text-neon-cyan">ReplayGain</span> support with manual <span className="text-neon-cyan">preamp</span> adjustment</>,
+                <>Includes <span className="text-neon-magenta">Parametric EQ</span> and <span className="text-neon-magenta">ToneBoosters MorphIt</span> — apply target curves like <span className="text-neon-cyan">Harman</span> or <span className="text-neon-cyan">HiFi</span> to supported headphones, or make one headphone sound like another.</>,
               ]}
             />
           </Card>
@@ -105,29 +105,29 @@ const Index = () => {
 
       <Section id="replaygain" icon={Volume2} title="Calculating & Applying ReplayGain">
         <p className="mb-6 max-w-2xl text-base text-foreground/80">
-          ReplayGain is a form of volume normalization that, when applied correctly, does not affect the dynamic range of your music. Applying ReplayGain tags to your files lets you shuffle through tracks without manually adjusting volume for each one.
+          <span className="text-neon-cyan">ReplayGain</span> is a form of <span className="text-neon-magenta">volume normalization</span> that, when applied correctly, does not affect the <span className="text-neon-magenta">dynamic range</span> of your music. Applying <span className="text-neon-cyan">ReplayGain tags</span> to your files lets you shuffle through tracks without manually adjusting volume for each one.
         </p>
         <p className="mb-6 max-w-2xl text-base text-foreground/80">
-          You can scan your music files and apply track and album ReplayGain tags that are then read by the players above, which adjust the gain automatically. If you want to shuffle through any of your tracks regardless of artist or album, we recommend applying track ReplayGain.
+          You can scan your music files and apply <span className="text-neon-cyan">track</span> and <span className="text-neon-cyan">album</span> ReplayGain tags that are then read by the players above, which adjust the gain automatically. If you want to shuffle through any of your tracks regardless of artist or album, we recommend applying <span className="text-neon-magenta">track ReplayGain</span>.
         </p>
         <div className="grid gap-5 md:grid-cols-2">
           <Card title="Foobar2000 on Windows">
             <Bullets
               items={[
-                "Free, powerful audio player and toolkit for Windows.",
-                <>Install the <span className="text-neon-cyan">ReplayGain Scanner</span> component (usually included by default).</>,
-                "Right-click your music library or playlist → Utilities → ReplayGain Scanner.",
-                "Choose Track or Album scanning mode, then apply tags to the files.",
+                <>Free, powerful audio player and toolkit for <span className="text-neon-cyan">Windows</span>.</>,
+                <>Install the <span className="text-neon-magenta">ReplayGain Scanner</span> component (usually included by default).</>,
+                <>Right-click your music library or playlist → <span className="text-neon-cyan">Utilities</span> → <span className="text-neon-magenta">ReplayGain Scanner</span>.</>,
+                <>Choose <span className="text-neon-cyan">Track</span> or <span className="text-neon-cyan">Album</span> scanning mode, then apply tags to the files.</>,
               ]}
             />
           </Card>
           <Card title="rsgain on Android">
             <Bullets
               items={[
-                "A fast, open-source ReplayGain scanner that runs directly on Android.",
-                "Point it at your music folder and let it write track and album gain tags.",
-                "Compatible with the same tag format JetAudio, Neutron and USB Audio Player Pro expect.",
-                "Great for tagging files on-device before loading them into your player of choice.",
+                <>A fast, <span className="text-neon-magenta">open-source</span> ReplayGain scanner that runs directly on <span className="text-neon-cyan">Android</span>.</>,
+                <>Point it at your music folder and let it write <span className="text-neon-cyan">track</span> and <span className="text-neon-cyan">album</span> gain tags.</>,
+                <>Compatible with the same tag format <span className="text-neon-magenta">JetAudio</span>, <span className="text-neon-magenta">Neutron</span> and <span className="text-neon-magenta">USB Audio Player Pro</span> expect.</>,
+                <>Great for tagging files <span className="text-neon-cyan">on-device</span> before loading them into your player of choice.</>,
               ]}
             />
           </Card>
@@ -136,14 +136,14 @@ const Index = () => {
 
       <Section id="headphones" icon={Headphones} title="Headphones & Earbuds">
         <p className="mb-6 max-w-2xl text-base text-foreground/80">
-          A short list of headphones we keep coming back to, with the exact app, EQ and DSP settings that get the most fun out of each one.
+          A short list of headphones we keep coming back to, with the exact <span className="text-neon-cyan">app</span>, <span className="text-neon-cyan">EQ</span> and <span className="text-neon-magenta">DSP</span> settings that get the most fun out of each one.
         </p>
         <div className="grid gap-5 md:grid-cols-3">
           <Card title="Moondrop Pill">
             <Bullets
               items={[
-                "On-ear design is noticeably more comfortable than over-ears, earbuds or IEMs.",
-                "Open to your surroundings — best enjoyed in a quiet space. Handy when you still want to hear (or chat with) people around you while music plays in the background.",
+                <><span className="text-neon-cyan">On-ear</span> design is noticeably more comfortable than over-ears, earbuds or IEMs.</>,
+                <><span className="text-neon-magenta">Open</span> to your surroundings — best enjoyed in a quiet space. Handy when you still want to hear (or chat with) people around you while music plays in the background.</>,
               ]}
             />
             <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
