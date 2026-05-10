@@ -33,8 +33,8 @@ const Hero = () => {
         </div>
 
         <h1 className="font-display text-5xl font-black leading-[0.95] text-foreground sm:text-6xl md:text-7xl">
-          <span className="text-glow-magenta">Heart</span><span className="text-neon-cyan text-glow-cyan">Byte</span>
-          <span className="sr-only"> — Pocket Hi-Fi Guide</span>
+          <span className="text-glow-magenta">Heart</span><span className="text-neon-cyan text-glow-cyan">Byte’s</span>
+          <span className="sr-only"> Pocket Hi-Fi Guide</span>
         </h1>
 
         <p className="mt-4 text-sm font-semibold uppercase tracking-[0.35em] text-neon-cyan/90 sm:text-base">
