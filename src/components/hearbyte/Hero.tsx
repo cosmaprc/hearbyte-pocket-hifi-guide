@@ -25,16 +25,21 @@ const Hero = () => {
       <div className="pointer-events-none absolute inset-x-0 top-0 z-[3] h-24 bg-gradient-to-b from-background to-transparent" aria-hidden />
 
       <div className="relative z-10 mx-auto flex min-h-[92vh] max-w-5xl flex-col items-center justify-center px-6 py-20 text-center">
-        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-neon-cyan/40 bg-background/40 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-neon-cyan backdrop-blur">
-          <Headphones className="h-3.5 w-3.5" />
-          <span aria-hidden>HeartByte's Pocket Hi-Fi Guide</span>
+        <div
+          className="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl border border-neon-cyan/40 bg-background/40 text-neon-cyan shadow-neon-cyan backdrop-blur sm:h-24 sm:w-24"
+          aria-hidden
+        >
+          <Headphones className="h-10 w-10 sm:h-12 sm:w-12" />
         </div>
 
         <h1 className="font-display text-5xl font-black leading-[0.95] text-foreground sm:text-6xl md:text-7xl">
-          <span className="block text-glow-magenta">HEART</span>
-          <span className="block text-neon-cyan text-glow-cyan">BYTE</span>
-          <span className="sr-only">HeartByte's Pocket Hi-Fi Guide</span>
+          <span className="text-glow-magenta">Heart</span><span className="text-neon-cyan text-glow-cyan">Byte</span>
+          <span className="sr-only"> — Pocket Hi-Fi Guide</span>
         </h1>
+
+        <p className="mt-4 text-sm font-semibold uppercase tracking-[0.35em] text-neon-cyan/90 sm:text-base">
+          Pocket Hi-Fi Guide
+        </p>
 
         <p className="mt-6 max-w-2xl text-balance text-lg text-foreground/80 sm:text-xl">
           Quick-pick gear and software pairings to get the most{" "}
