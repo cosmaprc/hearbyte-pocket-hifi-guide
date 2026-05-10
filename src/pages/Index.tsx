@@ -70,7 +70,7 @@ const Index = () => {
 
       <Section id="software" icon={Sliders} title="Software">
         <p className="mb-6 max-w-2xl text-base text-foreground/80">
-          The right player and DSP chain shapes your sound far more than any cable or DAC. These three apps give you ReplayGain, preamp control and serious DSP power.
+          The right player and DSP chain shapes your sound far more than any cable or DAC. These three apps give you ReplayGain support, Preamp control and serious DSP power.
         </p>
         <div className="grid gap-5 md:grid-cols-3">
           <Card title="JetAudio">
