@@ -108,7 +108,7 @@ const Index = () => {
           <span className="text-neon-cyan">ReplayGain</span> is a form of <span className="text-neon-magenta">volume normalization</span> that, when applied correctly, does not affect the <span className="text-neon-magenta">dynamic range</span> of your music. Applying <span className="text-neon-cyan">ReplayGain tags</span> to your files lets you shuffle through tracks without manually adjusting the volume for each one.
         </p>
         <p className="mb-6 max-w-2xl text-base text-foreground/80">
-          You can scan your music files and apply <span className="text-neon-cyan">track</span> and <span className="text-neon-cyan">album</span> ReplayGain tags that are then read by the players above, which adjust the gain automatically. If you want to shuffle through any of your tracks regardless of artist or album, we recommend applying <span className="text-neon-magenta">track ReplayGain</span>.
+          You can scan your music files and apply <span className="text-neon-cyan">track</span> and <span className="text-neon-cyan">album</span> ReplayGain tags that are then read by the players above, which adjust the gain automatically. If you want to shuffle through any of your tracks regardless of artist or album, I recommend applying <span className="text-neon-magenta">track ReplayGain</span>.
         </p>
         <div className="grid gap-5 md:grid-cols-2">
           <Card title="Foobar2000 on Windows">
