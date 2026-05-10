@@ -6,6 +6,7 @@ const sections = [
   { id: "headphones", label: "Headphones" },
   { id: "replaygain", label: "ReplayGain" },
   { id: "glossary", label: "Glossary" },
+  { id: "links", label: "Links" },
 ];
 
 const TableOfContents = () => {
