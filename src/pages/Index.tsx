@@ -183,7 +183,7 @@ const Index = () => {
 
       <Divider />
 
-      <Section id="links" icon={Link} title="Useful Links" tone="magenta">
+      <Section id="links" icon={Link} title="Links" tone="magenta">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
           A curated set of external resources for diving deeper into headphone measurements, community discussion, and high-quality music purchases.
         </p>
@@ -203,6 +203,8 @@ const Index = () => {
             <Bullets
               items={[
                 <><ExtLink href="https://www.head-fi.org/" className="text-neon-cyan">Head-Fi</ExtLink> — the largest headphone enthusiast forum and discussion hub.</>,
+                <><ExtLink href="https://www.reddit.com/r/headphones/" className="text-neon-cyan">r/headphones</ExtLink> — busy subreddit with reviews, deals and Q&amp;A from listeners of every budget.</>,
+                <><ExtLink href="https://www.superbestaudiofriends.org/" className="text-neon-cyan">Super Best Audio Friends</ExtLink> — smaller, signal-rich community for measurement-minded headphone discussion.</>,
               ]}
             />
           </Card>
@@ -211,7 +213,7 @@ const Index = () => {
               items={[
                 <><ExtLink href="https://www.qobuz.com/gb-en/shop" className="text-neon-cyan">Qobuz</ExtLink> — hi-res streaming and download store with lossless catalogue.</>,
                 <><ExtLink href="https://bandcamp.com/" className="text-neon-cyan">Bandcamp</ExtLink> — buy directly from artists, often in lossless FLAC.</>,
-                <><ExtLink href="https://uk.7digital.com/?utm_source=7digital.com" className="text-neon-cyan">7digital</ExtLink> — hi-res and lossless downloads from a large catalogue.</>,
+                <><ExtLink href="https://uk.7digital.com/" className="text-neon-cyan">7digital</ExtLink> — hi-res and lossless downloads from a large catalogue.</>,
               ]}
             />
           </Card>
