@@ -32,9 +32,16 @@ const Hero = () => {
           <Headphones className="h-10 w-10 sm:h-12 sm:w-12" />
         </div>
 
-        <h1 className="font-display text-5xl font-black leading-[0.95] text-foreground sm:text-6xl md:text-7xl">
-          <span className="text-glow-magenta">Heart</span><span className="text-neon-cyan text-glow-cyan">Byte’s</span>
-          <span className="sr-only"> Pocket Hi-Fi Guide</span>
+        <h1 className="whitespace-nowrap font-display text-5xl font-black leading-[0.95] tracking-tight text-foreground sm:text-6xl md:text-7xl">
+          <span className="text-glow-magenta">Heart</span>
+          <span className="text-neon-cyan text-glow-cyan">Byte</span>
+          <span
+            aria-hidden
+            className="ml-[0.04em] align-baseline text-[0.6em] font-bold text-neon-cyan/70 [text-shadow:none]"
+          >
+            ’s
+          </span>
+          <span className="sr-only">Byte's Pocket Hi-Fi Guide</span>
         </h1>
 
         <p className="mt-4 text-sm font-semibold uppercase tracking-[0.35em] text-neon-cyan/90 sm:text-base">
