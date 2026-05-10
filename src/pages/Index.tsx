@@ -128,10 +128,7 @@ const Index = () => {
 
       <Section id="replaygain" icon={Volume2} title="Calculating & Applying ReplayGain" tone="orange">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          <span className="text-neon-cyan">ReplayGain</span> is a form of <span className="text-neon-magenta">volume normalization</span> that, when applied correctly, does not affect the <span className="text-neon-magenta">dynamic range</span> of your music. Scan your files once to write <span className="text-neon-cyan">track</span> and <span className="text-neon-cyan">album</span> tags, and the players above will read them and level everything automatically — no more reaching for the volume between songs.
-        </p>
-        <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          If you mostly shuffle across artists and albums, prefer <span className="text-neon-magenta">track</span> mode; if you listen album-first, use <span className="text-neon-magenta">album</span> mode to preserve relative loudness within a record.
+          <span className="text-neon-cyan">ReplayGain</span> is a form of <span className="text-neon-magenta">volume normalization</span> that, when applied correctly, does not affect the <span className="text-neon-magenta">dynamic range</span> of your music. Scan your files once to write <span className="text-neon-cyan">track</span> and <span className="text-neon-cyan">album</span> tags, and the players above will read them and level everything automatically — no more reaching for the volume between songs. If you mostly shuffle across artists, prefer <span className="text-neon-magenta">track</span> mode; if you listen album-first, use <span className="text-neon-magenta">album</span> mode to preserve relative loudness within a record.
         </p>
         <div className="grid gap-5 md:grid-cols-2">
           <Card title="foobar2000 on Windows" href="https://www.foobar2000.org/">
@@ -164,7 +161,7 @@ const Index = () => {
         </p>
         <div className="grid gap-5 md:grid-cols-2">
           <Card title="DSP">
-            <p>Digital Signal Processing — software that reshapes audio in real time (EQ, reverb, crossfeed, dynamics).</p>
+            <p><span className="text-neon-cyan">Digital Signal Processing</span> — software that reshapes audio in real time (<span className="text-neon-cyan">EQ</span>, <span className="text-neon-cyan">reverb</span>, <span className="text-neon-cyan">crossfeed</span>, <span className="text-neon-cyan">dynamics</span>).</p>
           </Card>
           <Card title="EQ / PEQ">
             <p><span className="text-neon-cyan">EQ</span> is an equalizer that boosts or cuts frequency bands. <span className="text-neon-cyan">PEQ</span> (Parametric EQ) lets you control center frequency, gain and bandwidth (Q) per band — far more precise than a fixed graphic EQ.</p>
