@@ -115,7 +115,6 @@ const Index = () => {
             <Bullets
               items={[
                 <>Free, powerful audio player and toolkit for <span className="text-neon-cyan">Windows</span>.</>,
-                <>Install the <span className="text-neon-magenta">ReplayGain Scanner</span> component (usually included by default).</>,
                 <>Right-click your music library or playlist → <span className="text-neon-cyan">Utilities</span> → <span className="text-neon-magenta">ReplayGain Scanner</span>.</>,
                 <>Choose <span className="text-neon-cyan">Track</span> or <span className="text-neon-cyan">Album</span> scanning mode, then apply tags to the files.</>,
               ]}
