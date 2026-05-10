@@ -73,12 +73,13 @@ const Index = () => {
           The right player and DSP chain shapes your sound far more than any cable or DAC. These three apps give you <span className="text-neon-cyan">ReplayGain support</span>, <span className="text-neon-cyan">Preamp control</span> and serious <span className="text-neon-magenta">DSP power</span>.
         </p>
         <div className="grid gap-5 md:grid-cols-3">
-          <Card title="JetAudio">
+          <Card title="jetAudio">
             <Bullets
               items={[
                 <>Available on both <span className="text-neon-cyan">iOS</span> and <span className="text-neon-cyan">Android</span></>,
                 <><span className="text-neon-cyan">ReplayGain</span> support with manual <span className="text-neon-cyan">preamp</span> adjustment</>,
                 <>Bundled DSPs include a <span className="text-neon-cyan">graphic EQ</span>, <span className="text-neon-magenta">AM3D</span> and <span className="text-neon-magenta">Bongiovi DPS</span> — the last two transform how your music sounds.</>,
+                <>Note: AM3D, Bongiovi DPS and Crystalizer are <span className="text-neon-magenta">paid in-app purchases</span>, not free with the app.</>,
               ]}
             />
           </Card>
@@ -114,17 +115,18 @@ const Index = () => {
           <Card title="Foobar2000 on Windows">
             <Bullets
               items={[
-                <>Free, powerful audio player and toolkit for <span className="text-neon-cyan">Windows</span>.</>,
+                <>Free, powerful audio player and toolkit — primarily for <span className="text-neon-cyan">Windows</span>, with official <span className="text-neon-cyan">macOS</span> and beta <span className="text-neon-cyan">iOS</span> / <span className="text-neon-cyan">Android</span> builds.</>,
                 <>Right-click your music library or playlist → <span className="text-neon-cyan">Utilities</span> → <span className="text-neon-magenta">ReplayGain Scanner</span>.</>,
                 <>Choose <span className="text-neon-cyan">Track</span> or <span className="text-neon-cyan">Album</span> scanning mode, then apply tags to the files.</>,
               ]}
             />
           </Card>
-          <Card title="rsgain on Android">
+          <Card title="rsgain on Android (via Termux)">
             <Bullets
               items={[
-                <>A fast, <span className="text-neon-magenta">open-source</span> ReplayGain scanner that runs directly on <span className="text-neon-cyan">Android</span>.</>,
-                <>Point it at your music folder and let it write <span className="text-neon-cyan">track</span> and <span className="text-neon-cyan">album</span> gain tags.</>,
+                <>A fast, <span className="text-neon-magenta">open-source</span> command-line ReplayGain 2.0 scanner (no standalone Android app).</>,
+                <>On Android, install <span className="text-neon-magenta">Termux</span> from F-Droid, then run <span className="text-neon-cyan">pkg install rsgain</span>.</>,
+                <>Point it at your music folder and let it write <span className="text-neon-cyan">track</span> and <span className="text-neon-cyan">album</span> gain tags directly on the device.</>,
                 <>Great for tagging files <span className="text-neon-cyan">on-device</span> before loading them into your player of choice.</>,
               ]}
             />
