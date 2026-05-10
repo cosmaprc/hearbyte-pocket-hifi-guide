@@ -80,7 +80,7 @@ const Index = () => {
           <Card title="Moondrop Pill" href="https://moondroplab.com/en/products/pill">
             <Bullets
               items={[
-                <><span className="text-neon-cyan">On-ear earbud</span> design (not an in-ear/IEM) — noticeably more comfortable than <span className="text-neon-cyan">over-ears</span>, traditional <span className="text-neon-cyan">earbuds</span> or <span className="text-neon-cyan">IEMs</span>.</>,
+                <><span className="text-neon-cyan">Ear-clip / open-ear earbud</span> (OWS) design — not an in-ear/IEM. Noticeably more comfortable than <span className="text-neon-cyan">over-ears</span>, traditional <span className="text-neon-cyan">earbuds</span> or <span className="text-neon-cyan">IEMs</span>.</>,
                 <><span className="text-neon-magenta">Open</span> to your surroundings — best enjoyed in a <span className="text-neon-cyan">quiet space</span>. Handy when you still want to hear (or chat with) people around you while music plays in the background.</>,
               ]}
             />
@@ -110,7 +110,7 @@ const Index = () => {
           <Card title="Cambridge Audio P100SE" href="https://www.cambridgeaudio.com/usa/en/products/melomania/melomania-p100-se">
             <Bullets
               items={[
-                <><span className="text-neon-cyan">Over-ear</span> wireless with <span className="text-neon-cyan">ANC</span>, hi-res Bluetooth codecs and a user-replaceable battery — built to last.</>,
+                <><span className="text-neon-cyan">Over-ear</span> wireless with <span className="text-neon-cyan">ANC</span>, hi-res Bluetooth codecs and <span className="text-neon-cyan">user-replaceable battery and earcups</span> — built to last.</>,
                 <>Comfortable for long sessions; tuning is warm and <span className="text-neon-magenta">musical</span> rather than analytical.</>,
               ]}
             />
