@@ -77,13 +77,13 @@ const Index = () => {
           You don't need exotic hardware. Any modern <span className="text-neon-cyan">iPhone</span> or <span className="text-neon-cyan">Android</span> phone is a perfectly good starting point — the magic happens in the <span className="text-neon-magenta">software</span>.
         </p>
         <Card title="Your Smartphone">
-          <p>Any <span className="text-neon-cyan">iPhone</span> or <span className="text-neon-cyan">Android</span> phone works. Pair it with a wired or wireless headphone of your choice and let the apps below do the heavy lifting.</p>
+          <p>Any <span className="text-neon-cyan">iPhone</span> or <span className="text-neon-cyan">Android</span> phone works. Pair it with a <span className="text-neon-cyan">wired</span> or <span className="text-neon-cyan">wireless</span> headphone of your choice and let the apps below do the heavy lifting.</p>
         </Card>
       </Section>
 
       <Section id="software" icon={Sliders} title="Software">
         <p className="mb-6 max-w-2xl text-base text-foreground/80">
-          The right player and DSP chain shapes your sound far more than any cable or DAC. These three apps give you <span className="text-neon-cyan">ReplayGain support</span>, <span className="text-neon-cyan">Preamp control</span> and serious <span className="text-neon-magenta">DSP power</span>.
+          The right <span className="text-neon-cyan">player</span> and <span className="text-neon-magenta">DSP</span> chain shapes your sound far more than any <span className="text-neon-cyan">cable</span> or <span className="text-neon-cyan">DAC</span>. These three apps give you <span className="text-neon-cyan">ReplayGain support</span>, <span className="text-neon-cyan">Preamp control</span> and serious <span className="text-neon-magenta">DSP power</span>.
         </p>
         <div className="grid gap-5 md:grid-cols-3">
           <Card title="jetAudio" href="https://www.jetaudio.com/">
@@ -165,14 +165,14 @@ const Index = () => {
           <Card title="Moondrop Pill" href="https://moondroplab.com/en/products/pill">
             <Bullets
               items={[
-                <><span className="text-neon-cyan">On-ear</span> design is noticeably more comfortable than over-ears, earbuds or IEMs.</>,
-                <><span className="text-neon-magenta">Open</span> to your surroundings — best enjoyed in a quiet space. Handy when you still want to hear (or chat with) people around you while music plays in the background.</>,
+                <><span className="text-neon-cyan">On-ear</span> design is noticeably more comfortable than <span className="text-neon-cyan">over-ears</span>, <span className="text-neon-cyan">earbuds</span> or <span className="text-neon-cyan">IEMs</span>.</>,
+                <><span className="text-neon-magenta">Open</span> to your surroundings — best enjoyed in a <span className="text-neon-cyan">quiet space</span>. Handy when you still want to hear (or chat with) people around you while music plays in the background.</>,
               ]}
             />
             <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended config & pairings</p>
               <p className="mt-2 text-sm text-foreground/85">
-                In the Moondrop app, load the official <span className="text-neon-magenta">Herbert's B&amp;K InEar Style</span> PEQ preset. Feed it from an iPhone running JetAudio with Bongiovi DPS set to <span className="text-neon-magenta">Atlanta Headphones</span>, or AM3D on the <span className="text-neon-magenta">Dance</span> preset with z-Boost on.
+                In the <span className="text-neon-cyan">Moondrop app</span>, load the official <span className="text-neon-magenta">Herbert's B&amp;K InEar Style</span> <span className="text-neon-cyan">PEQ preset</span>. Feed it from an <span className="text-neon-cyan">iPhone</span> running <span className="text-neon-cyan">jetAudio</span> with <span className="text-neon-cyan">Bongiovi DPS</span> set to <span className="text-neon-magenta">Atlanta Headphones</span>, or <span className="text-neon-cyan">AM3D</span> on the <span className="text-neon-magenta">Dance</span> preset with <span className="text-neon-cyan">z-Boost</span> on.
               </p>
             </div>
           </Card>
@@ -181,7 +181,7 @@ const Index = () => {
             <div className="rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended config & pairings</p>
               <p className="mt-2 text-sm text-foreground/85">
-                In the Melomania app, use the <span className="text-neon-magenta">Rock</span> EQ on its own — or switch to <span className="text-neon-magenta">Blues</span> and pair with JetAudio Bongiovi DPS set to <span className="text-neon-magenta">London</span> or <span className="text-neon-magenta">Boston General</span>.
+                In the <span className="text-neon-cyan">Melomania app</span>, use the <span className="text-neon-magenta">Rock</span> <span className="text-neon-cyan">EQ</span> on its own — or switch to <span className="text-neon-magenta">Blues</span> and pair with <span className="text-neon-cyan">jetAudio</span> <span className="text-neon-cyan">Bongiovi DPS</span> set to <span className="text-neon-magenta">London</span> or <span className="text-neon-magenta">Boston General</span>.
               </p>
             </div>
           </Card>
@@ -190,7 +190,7 @@ const Index = () => {
             <div className="rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended config & pairings</p>
               <p className="mt-2 text-sm text-foreground/85">
-                Load the <span className="text-neon-magenta">Blues</span> PEQ profile in the Melomania app. Run it on its own, or stack with Bongiovi DPS on <span className="text-neon-magenta">Boston</span> or <span className="text-neon-magenta">Phoenix</span> — or AM3D on <span className="text-neon-magenta">Ballad</span>.
+                Load the <span className="text-neon-magenta">Blues</span> <span className="text-neon-cyan">PEQ profile</span> in the <span className="text-neon-cyan">Melomania app</span>. Run it on its own, or stack with <span className="text-neon-cyan">Bongiovi DPS</span> on <span className="text-neon-magenta">Boston</span> or <span className="text-neon-magenta">Phoenix</span> — or <span className="text-neon-cyan">AM3D</span> on <span className="text-neon-magenta">Ballad</span>.
               </p>
             </div>
           </Card>
