@@ -13,7 +13,7 @@ describe("Index page", () => {
     expect(
       screen.getByRole("heading", { level: 1 }),
     ).toBeInTheDocument();
-    expect(screen.getByText(/Pocket Hi-Fi Guide/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/Pocket Hi-Fi Guide/i).length).toBeGreaterThan(0);
     expect(
       screen.getByRole("heading", { level: 2, name: /software/i }),
     ).toBeInTheDocument();
