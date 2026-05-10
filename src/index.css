@@ -85,11 +85,24 @@ All colors MUST be HSL.
   }
 
   .text-glow-magenta {
-    text-shadow: 0 0 12px hsl(var(--neon-magenta) / 0.8), 0 0 28px hsl(var(--neon-magenta) / 0.4);
+    text-shadow:
+      0 0 1px hsl(var(--neon-magenta) / 0.95),
+      0 0 8px hsl(var(--neon-magenta) / 0.55),
+      0 0 22px hsl(var(--neon-magenta) / 0.3);
   }
 
   .text-glow-cyan {
-    text-shadow: 0 0 12px hsl(var(--neon-cyan) / 0.8), 0 0 28px hsl(var(--neon-cyan) / 0.4);
+    text-shadow:
+      0 0 1px hsl(var(--neon-cyan) / 0.95),
+      0 0 8px hsl(var(--neon-cyan) / 0.55),
+      0 0 22px hsl(var(--neon-cyan) / 0.3);
+  }
+
+  /* Tight halo for thin glyphs (apostrophes, punctuation) — keeps shape crisp */
+  .text-glow-cyan-soft {
+    text-shadow:
+      0 0 1px hsl(var(--neon-cyan) / 0.9),
+      0 0 4px hsl(var(--neon-cyan) / 0.35);
   }
 
   .bg-hero-gradient {
