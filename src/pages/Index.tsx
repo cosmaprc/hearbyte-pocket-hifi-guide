@@ -162,7 +162,7 @@ const Index = () => {
           A short list of headphones I keep coming back to, with the exact <span className="text-neon-cyan">app</span>, <span className="text-neon-cyan">EQ</span> and <span className="text-neon-magenta">DSP</span> settings that get the most fun out of each one.
         </p>
         <div className="grid gap-5 md:grid-cols-3">
-          <Card title="Moondrop Pill">
+          <Card title="Moondrop Pill" href="https://moondroplab.com/en/products/pill">
             <Bullets
               items={[
                 <><span className="text-neon-cyan">On-ear</span> design is noticeably more comfortable than over-ears, earbuds or IEMs.</>,
@@ -177,7 +177,7 @@ const Index = () => {
             </div>
           </Card>
 
-          <Card title="Cambridge Audio P100SE">
+          <Card title="Cambridge Audio P100SE" href="https://www.cambridgeaudio.com/usa/en/products/melomania/melomania-p100-se">
             <div className="rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended config & pairings</p>
               <p className="mt-2 text-sm text-foreground/85">
@@ -186,7 +186,7 @@ const Index = () => {
             </div>
           </Card>
 
-          <Card title="Cambridge Audio A100">
+          <Card title="Cambridge Audio A100" href="https://www.cambridgeaudio.com/usa/en/products/melomania/melomania-a100">
             <div className="rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended config & pairings</p>
               <p className="mt-2 text-sm text-foreground/85">
