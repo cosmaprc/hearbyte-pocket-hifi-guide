@@ -30,9 +30,8 @@ jobs:
         run: bun install --frozen-lockfile
 
       - name: Build
-        env:
-          # Project Pages are served from /<repo-name>/, so set Vite base accordingly.
-          GITHUB_PAGES_BASE: /${{ github.event.repository.name }}/
+        # Custom domain (pockethifiguide.heartbyte.website) serves from root,
+        # so we leave GITHUB_PAGES_BASE unset and Vite uses base "/".
         run: bun run build
 
       - name: SPA fallback (copy index.html to 404.html)
