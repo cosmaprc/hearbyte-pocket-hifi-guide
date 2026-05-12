@@ -126,7 +126,7 @@ const Index = () => {
 
       <Divider />
 
-      <Section id="replaygain" icon={Volume2} title="Calculating & Applying ReplayGain" tone="orange">
+      <Section id="replaygain" icon={Volume2} title="Using ReplayGain" tone="orange">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
           <span className="text-neon-cyan">ReplayGain</span> is a form of <span className="text-neon-magenta">volume normalization</span> that, when applied correctly, does not affect the <span className="text-neon-magenta">dynamic range</span> of your music. Scan your files once to write <span className="text-neon-cyan">track</span> and <span className="text-neon-cyan">album</span> tags, and the players above will read them and level everything automatically — no more reaching for the volume between songs. If you mostly shuffle across artists, prefer <span className="text-neon-magenta">track</span> mode; if you listen album-first, use <span className="text-neon-magenta">album</span> mode to preserve relative loudness within a record.
         </p>
