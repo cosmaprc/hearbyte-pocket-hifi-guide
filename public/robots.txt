@@ -5,4 +5,4 @@ User-agent: *
 Allow: /
 Disallow:
 
-Sitemap: https://heartbyte.lovable.app/sitemap.xml
+Sitemap: https://pockethifiguide.heartbyte.website/sitemap.xml
