@@ -2,7 +2,7 @@
 
 A single-page guide to budget-friendly pocket hi-fi gear. Built with Vite, React, TypeScript, Tailwind CSS, and shadcn/ui.
 
-- Live: https://hearbyte-pocket-hifi-guide.lovable.app
+- Live: https://pockethifiguide.heartbyte.website/
 - Built and maintained in [Lovable](https://lovable.dev)
 
 ## Tech Stack
