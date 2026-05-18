@@ -95,7 +95,7 @@ Deploys are handled by the `.github/workflows/deploy.yml` GitHub Actions workflo
   git push
   ```
 
-- The workflow also supports manual runs via **Actions → Deploy to GitHub Pages → Run workflow**.
+- The workflow also supports manual runs via **Actions → Deploy to GitHub Pages → Run workflow**. View its runs here: [Deploy to GitHub Pages workflow](https://github.com/cosmaprc/hearbyte-pocket-hifi-guide/actions/workflows/deploy.yml).
 
 Note: the `github-pages` environment must allow the `release` branch under **Settings → Environments → github-pages → Deployment branches and tags**.
 
