@@ -107,6 +107,21 @@ const Index = () => {
             </div>
           </Card>
 
+          <Card title="Audio Technica ATH-M50x BT2" href="https://www.audio-technica.com/en-us/ath-m50xbt2">
+            <Bullets
+              items={[
+                <><span className="text-neon-cyan">Closed-back over-ear</span> with both <span className="text-neon-cyan">Bluetooth</span> and <span className="text-neon-cyan">wired</span> playback via a detachable <span className="text-neon-cyan">3.5mm</span> cable — handy when the battery dies or you want a pure wired chain.</>,
+                <><span className="text-neon-magenta">No ANC</span>, but the closed cups offer solid passive isolation. Studio-leaning tuning that responds very well to <span className="text-neon-magenta">DSP</span>.</>,
+              ]}
+            />
+            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
+              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended config & pairings</p>
+              <p className="mt-2 text-sm text-foreground/85">
+                Pair with <span className="text-neon-cyan">jetAudio</span> and switch <span className="text-neon-cyan">Bongiovi DPS</span> to the <span className="text-neon-magenta">London</span> profile for an open, lively presentation that lifts the M50x's slightly dark stock signature.
+              </p>
+            </div>
+          </Card>
+
           <Card title="Cambridge Audio P100SE" href="https://www.cambridgeaudio.com/usa/en/products/melomania/melomania-p100-se">
             <Bullets
               items={[
