@@ -99,9 +99,6 @@ Deploys are handled by the `.github/workflows/deploy.yml` GitHub Actions workflo
 
 Note: the `github-pages` environment must allow the `release` branch under **Settings → Environments → github-pages → Deployment branches and tags**.
 
-### PR previews
-
-Pull requests trigger `.github/workflows/pr-preview.yml`, which deploys a per-PR preview to a separate repo (configured via the `PREVIEW_REPO` variable and `PREVIEW_DEPLOY_TOKEN` secret) under `/pr-preview/pr-<N>/`.
 
 ### Self-hosting
 
