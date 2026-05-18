@@ -126,6 +126,7 @@ const Index = () => {
             <Bullets
               items={[
                 <><span className="text-neon-cyan">Over-ear</span> wireless with <span className="text-neon-cyan">ANC</span>, hi-res Bluetooth codecs and <span className="text-neon-cyan">user-replaceable battery and earcups</span> — built to last.</>,
+                <>Can also be used <span className="text-neon-cyan">wired</span> via either a <span className="text-neon-cyan">3.5mm</span> jack or <span className="text-neon-cyan">USB-C</span> cable.</>,
                 <>Comfortable for long sessions; tuning is warm and <span className="text-neon-magenta">musical</span> rather than analytical.</>,
               ]}
             />
