@@ -1,5 +1,7 @@
 # Hearbyte — Pocket Hi-Fi Guide
 
+[![Deploy to GitHub Pages](https://github.com/cosmaprc/hearbyte-pocket-hifi-guide/actions/workflows/deploy.yml/badge.svg?branch=release)](https://github.com/cosmaprc/hearbyte-pocket-hifi-guide/actions/workflows/deploy.yml)
+
 A single-page guide to budget-friendly pocket hi-fi gear. Built with Vite, React, TypeScript, Tailwind CSS, and shadcn/ui.
 
 - Live: https://pockethifiguide.heartbyte.website/
