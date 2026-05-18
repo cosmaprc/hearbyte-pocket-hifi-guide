@@ -48,3 +48,9 @@ jobs:
           preview-branch: gh-pages-previews
           umbrella-dir: pr-preview
           action: auto
+          # Deploy to a SEPARATE repo so production Pages on this repo is
+          # untouched. Set PREVIEW_REPO (e.g. "owner/pockethifi-previews")
+          # as a repo variable, and PREVIEW_DEPLOY_TOKEN as a secret
+          # (fine-grained PAT with Contents: read/write on the preview repo).
+          deploy-repository: ${{ vars.PREVIEW_REPO }}
+          token: ${{ secrets.PREVIEW_DEPLOY_TOKEN }}
