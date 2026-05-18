@@ -77,8 +77,33 @@ vite.config.ts       Vite config (port, aliases, plugins)
 
 ## Deployment
 
-- **Lovable:** open the project and click **Publish** (top-right).
-- **Self-host:** run `npm run build` and serve the static `dist/` folder from any static host (Vercel, Netlify, Cloudflare Pages, S3+CloudFront, Nginx, etc.).
+Production is served by **GitHub Pages** at https://pockethifiguide.heartbyte.website/ (custom domain configured via `public/CNAME`).
+
+Deploys are handled by the `.github/workflows/deploy.yml` GitHub Actions workflow, which builds with Bun and publishes `dist/` to the `github-pages` environment.
+
+### Release flow
+
+- Day-to-day edits (via Lovable, local IDE, or GitHub) land on `main`. Pushes to `main` do **not** deploy.
+- To ship, fast-forward the `release` branch to the commit you want live and push it:
+
+  ```bash
+  git fetch origin
+  git checkout release
+  git merge --ff-only origin/main
+  git push
+  ```
+
+- The workflow also supports manual runs via **Actions → Deploy to GitHub Pages → Run workflow**.
+
+Note: the `github-pages` environment must allow the `release` branch under **Settings → Environments → github-pages → Deployment branches and tags**.
+
+### PR previews
+
+Pull requests trigger `.github/workflows/pr-preview.yml`, which deploys a per-PR preview to a separate repo (configured via the `PREVIEW_REPO` variable and `PREVIEW_DEPLOY_TOKEN` secret) under `/pr-preview/pr-<N>/`.
+
+### Self-hosting
+
+Run `npm run build` and serve the static `dist/` folder from any static host (Vercel, Netlify, Cloudflare Pages, S3+CloudFront, Nginx, etc.).
 
 ## Editing the Code
 
