@@ -135,6 +135,9 @@ const Index = () => {
               <p className="mt-2 text-sm text-foreground/85">
                 Load the <span className="text-neon-magenta">Blues</span> <span className="text-neon-cyan">PEQ profile</span> in the <span className="text-neon-cyan">Melomania app</span>. Run it on its own, or stack with <span className="text-neon-cyan">Bongiovi DPS</span> on <span className="text-neon-magenta">Boston</span> or <span className="text-neon-magenta">Phoenix</span> — or <span className="text-neon-cyan">AM3D</span> on <span className="text-neon-magenta">Ballad</span>.
               </p>
+              <p className="mt-3 text-sm text-foreground/85">
+                If the <span className="text-neon-magenta">sub-bass</span> feels overwhelming, drop the <span className="text-neon-cyan">leftmost slider</span> of the <span className="text-neon-cyan">Melomania app</span>'s EQ — you'll tame the rumble while keeping plenty of punch. Especially handy on the <span className="text-neon-magenta">Flat</span>, <span className="text-neon-magenta">Electronic</span> and <span className="text-neon-magenta">Rock</span> presets.
+              </p>
             </div>
           </Card>
         </div>
