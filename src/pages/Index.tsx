@@ -6,7 +6,6 @@ import Card from "@/components/hearbyte/Card";
 import Bullets from "@/components/hearbyte/Bullets";
 import Divider from "@/components/hearbyte/Divider";
 import TableOfContents from "@/components/hearbyte/TableOfContents";
-import Tag from "@/components/hearbyte/Tag";
 import { Smartphone, Sliders, Headphones, Volume2, BookOpen, Link } from "lucide-react";
 
 const Index = () => {
@@ -207,17 +206,31 @@ const Index = () => {
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
           A curated set of external resources for diving deeper into headphone measurements, community discussion, and high-quality music purchases.
         </p>
-        <div className="grid gap-5 md:grid-cols-2">
-          <Card title="Useful Links">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <Card title="Reviews">
             <Bullets
               items={[
-                <><ExtLink href="https://www.audiosciencereview.com/forum/index.php" className="text-neon-cyan">Audio Science Review</ExtLink><Tag kind="reviews" /><Tag kind="measurements" /><Tag kind="forum" /> — objective measurements, DAC/amp testing and a lively forum.</>,
-                <><ExtLink href="https://autoeq.app/" className="text-neon-cyan">AutoEQ</ExtLink><Tag kind="measurements" /> — generate parametric EQ presets to match target curves from measurement data.</>,
-                <><ExtLink href="https://www.head-fi.org/" className="text-neon-cyan">Head-Fi</ExtLink><Tag kind="reviews" /><Tag kind="forum" /> — the largest headphone enthusiast forum and discussion hub.</>,
-                <><ExtLink href="https://www.headphoneer.com/" className="text-neon-cyan">Headphoneer</ExtLink><Tag kind="reviews" /> — written reviews of headphones, IEMs, amps and DACs.</>,
-                <><ExtLink href="https://peqdb.com/" className="text-neon-cyan">PEQdb</ExtLink><Tag kind="measurements" /> — searchable database of parametric EQ presets for headphones and IEMs.</>,
-                <><ExtLink href="https://www.pragmaticaudio.com/" className="text-neon-cyan">Pragmatic Audio</ExtLink><Tag kind="reviews" /><Tag kind="measurements" /> — in-depth headphone and IEM reviews with measurement data.</>,
-                <><ExtLink href="https://squig.link/" className="text-neon-cyan">Squig.link</ExtLink><Tag kind="measurements" /> — browse and compare frequency-response graphs from a wide database.</>,
+                <><ExtLink href="https://www.pragmaticaudio.com/" className="text-neon-cyan">Pragmatic Audio</ExtLink> — in-depth headphone and IEM reviews with measurement data.</>,
+                <><ExtLink href="https://www.headphoneer.com/" className="text-neon-cyan">Headphoneer</ExtLink> — written reviews of headphones, IEMs, amps and DACs.</>,
+                <><ExtLink href="https://www.head-fi.org/" className="text-neon-cyan">Head-Fi</ExtLink> — long-running headphone enthusiast reviews.</>,
+                <><ExtLink href="https://www.audiosciencereview.com/forum/index.php" className="text-neon-cyan">Audio Science Review</ExtLink> — objective, measurement-led gear reviews.</>,
+              ]}
+            />
+          </Card>
+          <Card title="Measurements & EQ tools">
+            <Bullets
+              items={[
+                <><ExtLink href="https://squig.link/" className="text-neon-cyan">Squig.link</ExtLink> — browse and compare frequency-response graphs from a wide database.</>,
+                <><ExtLink href="https://autoeq.app/" className="text-neon-cyan">AutoEQ</ExtLink> — generate parametric EQ presets to match target curves from measurement data.</>,
+                <><ExtLink href="https://peqdb.com/" className="text-neon-cyan">PEQdb</ExtLink> — searchable database of parametric EQ presets for headphones and IEMs.</>,
+              ]}
+            />
+          </Card>
+          <Card title="Community">
+            <Bullets
+              items={[
+                <><ExtLink href="https://www.head-fi.org/" className="text-neon-cyan">Head-Fi</ExtLink> — the largest headphone enthusiast forum and discussion hub.</>,
+                <><ExtLink href="https://www.audiosciencereview.com/forum/index.php" className="text-neon-cyan">Audio Science Review</ExtLink> — active forum focused on objective audio measurements.</>,
               ]}
             />
           </Card>
