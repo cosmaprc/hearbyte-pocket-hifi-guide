@@ -6,6 +6,7 @@ import Card from "@/components/hearbyte/Card";
 import Bullets from "@/components/hearbyte/Bullets";
 import Divider from "@/components/hearbyte/Divider";
 import TableOfContents from "@/components/hearbyte/TableOfContents";
+import Tag from "@/components/hearbyte/Tag";
 import { Smartphone, Sliders, Headphones, Volume2, BookOpen, Link } from "lucide-react";
 
 const Index = () => {
