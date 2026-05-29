@@ -6,7 +6,7 @@ import Card from "@/components/hearbyte/Card";
 import Bullets from "@/components/hearbyte/Bullets";
 import Divider from "@/components/hearbyte/Divider";
 import TableOfContents from "@/components/hearbyte/TableOfContents";
-import { Smartphone, Sliders, Headphones, Volume2, BookOpen, Link } from "lucide-react";
+import { Smartphone, Sliders, Headphones, Volume2, BookOpen, Link, FolderInput } from "lucide-react";
 
 const Index = () => {
   return (
@@ -17,9 +17,38 @@ const Index = () => {
       <Divider />
 
       <Section id="source" icon={Smartphone} title="Source" tone="cyan">
-        <p className="max-w-2xl text-base text-foreground/90">
+        <p className="mb-6 max-w-2xl text-base text-foreground/90">
           You don't need exotic hardware. Any modern <span className="text-neon-cyan">iPhone</span> or <span className="text-neon-cyan">Android</span> phone is a perfectly good starting point — pair it with a <span className="text-neon-cyan">wired</span> or <span className="text-neon-cyan">wireless</span> headphone of your choice and let the apps below do the heavy lifting. The magic happens in the <span className="text-neon-magenta">software</span>.
         </p>
+        <div className="grid gap-5 md:grid-cols-3">
+          <Card title="Bluetooth codecs">
+            <Bullets
+              items={[
+                <>The common ones, from lossy to effectively lossless: <span className="text-neon-cyan">AAC</span>, <span className="text-neon-cyan">aptX HD</span>, <span className="text-neon-cyan">aptX Lossless</span> and <span className="text-neon-cyan">LDAC</span>.</>,
+                <>In honest blind listening, most people — and most headphones — <span className="text-neon-magenta">can't reliably tell them apart</span>, or tell any of them from a <span className="text-neon-cyan">wired</span> connection.</>,
+                <>Pick whatever your phone and headphones both support and stop worrying. Tuning and EQ matter far more than codec.</>,
+              ]}
+            />
+          </Card>
+          <Card title="USB DAC & BT dongles">
+            <Bullets
+              items={[
+                <>Missing a codec you want (typically <span className="text-neon-cyan">LDAC</span> or <span className="text-neon-cyan">aptX Lossless</span>)? A small Bluetooth transmitter like the <ExtLink href="https://www.fiio.com/airlink" className="text-neon-magenta">FiiO Air-style adapters</ExtLink> adds it over USB-C. That said, even budget Androids ship with LDAC these days.</>,
+                <>No headphone jack, or want a better <span className="text-neon-cyan">DAC</span> with higher sample-rate support? A USB-C dongle DAC like the <ExtLink href="https://www.fiio.com/ka11" className="text-neon-magenta">FiiO KA11</ExtLink> is cheap and excellent.</>,
+                <>Apps like <span className="text-neon-cyan">UAPP</span> and <span className="text-neon-cyan">Neutron</span> can stream <span className="text-neon-magenta">bit-perfect</span> hi-res PCM/DSD straight to the dongle, bypassing Android's system mixer and resampling.</>,
+              ]}
+            />
+          </Card>
+          <Card title="Dolby Atmos on phones">
+            <Bullets
+              items={[
+                <>Many <span className="text-neon-cyan">Android</span> phones (and <span className="text-neon-cyan">iPhone</span> with Apple Music spatial tracks) include a system-level <span className="text-neon-magenta">Dolby Atmos</span> / spatial processor.</>,
+                <>It's a worthwhile bonus — widens the stage and can make stock-tuned headphones sound more <span className="text-neon-magenta">open and immersive</span>.</>,
+                <>Treat it as another DSP layer to A/B against <span className="text-neon-cyan">Bongiovi DPS</span> or <span className="text-neon-cyan">AM3D</span> in jetAudio, not a replacement.</>,
+              ]}
+            />
+          </Card>
+        </div>
       </Section>
 
       <Divider />
@@ -149,7 +178,7 @@ const Index = () => {
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
           <span className="text-neon-cyan">ReplayGain</span> is a form of <span className="text-neon-magenta">volume normalization</span> that, when applied correctly, does not affect the <span className="text-neon-magenta">dynamic range</span> of your music. Scan your files once to write <span className="text-neon-cyan">track</span> and <span className="text-neon-cyan">album</span> tags, and the players above will read them and level everything automatically — no more reaching for the volume between songs. If you mostly shuffle across artists, prefer <span className="text-neon-magenta">track</span> mode; if you listen album-first, use <span className="text-neon-magenta">album</span> mode to preserve relative loudness within a record.
         </p>
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid gap-5 md:grid-cols-3">
           <Card title="foobar2000 on Windows" href="https://www.foobar2000.org/">
             <Bullets
               items={[
@@ -166,6 +195,43 @@ const Index = () => {
                 <>On Android, install <ExtLink href="https://f-droid.org/packages/com.termux/" className="text-neon-magenta">Termux</ExtLink> from F-Droid, then run <span className="text-neon-cyan">pkg install rsgain</span>.</>,
                 <>Point it at your music folder and let it write <span className="text-neon-cyan">track</span> and <span className="text-neon-cyan">album</span> gain tags directly on the device.</>,
                 <>Great for tagging files <span className="text-neon-cyan">on-device</span> before loading them into your player of choice.</>,
+              ]}
+            />
+          </Card>
+          <Card title="Neutron Volume Normalization" href="https://neutroncode.com/feature_normalization">
+            <Bullets
+              items={[
+                <>Built into <span className="text-neon-cyan">Neutron</span>: scans your library and writes <span className="text-neon-cyan">ReplayGain</span>-compatible tags <span className="text-neon-magenta">on-device</span>, no PC required.</>,
+                <>Configurable target loudness — set <span className="text-neon-cyan">-14 LUFS</span> to match <span className="text-neon-magenta">Tidal</span>, <span className="text-neon-magenta">Spotify</span> and <span className="text-neon-magenta">YouTube</span>, <span className="text-neon-cyan">-16 LUFS</span> for <span className="text-neon-magenta">Apple Music</span>, or the classic <span className="text-neon-cyan">-18 LUFS</span> ReplayGain default.</>,
+                <>The simplest path if you only listen in Neutron and don't want a separate scanner. See the <ExtLink href="https://neutroncode.com/feature_normalization" className="text-neon-magenta">official guide</ExtLink> for the full options.</>,
+              ]}
+            />
+          </Card>
+        </div>
+      </Section>
+
+      <Divider />
+
+      <Section id="transfer" icon={FolderInput} title="Getting music onto your phone" tone="purple">
+        <p className="mb-6 max-w-2xl text-base text-foreground/90">
+          Once your files are tagged and gain-scanned, you need them on the device. The Android story is boring — drag and drop to internal storage or an SD card with any file manager. iPhone takes one extra step.
+        </p>
+        <div className="grid gap-5 md:grid-cols-2">
+          <Card title="iPhone via iTunes on Windows" href="https://www.apple.com/itunes/">
+            <Bullets
+              items={[
+                <>Plug the iPhone in and open <span className="text-neon-cyan">iTunes</span> (still the supported path on Windows; macOS uses Finder's device view).</>,
+                <>Select the device, open the <span className="text-neon-cyan">Files</span> tab, then <span className="text-neon-magenta">drag a folder of music straight onto one of the player apps</span> — <span className="text-neon-cyan">jetAudio</span>, <span className="text-neon-cyan">Neutron</span> or <span className="text-neon-cyan">UAPP</span>.</>,
+                <>The files land inside that app's sandboxed Documents folder, where it can scan and play them directly — no library import, no conversion.</>,
+                <>You can later move or copy files between apps from the iOS <span className="text-neon-cyan">Files</span> app — handy for trying the same album in a different player.</>,
+              ]}
+            />
+          </Card>
+          <Card title="Android">
+            <Bullets
+              items={[
+                <>Connect over USB in <span className="text-neon-cyan">MTP</span> mode and copy folders to internal storage or an <span className="text-neon-cyan">SD card</span> with any file manager.</>,
+                <>All three players above will pick the files up from anywhere they have read access — no app-specific sandbox dance.</>,
               ]}
             />
           </Card>
