@@ -5,6 +5,7 @@ const sections = [
   { id: "software", label: "Software" },
   { id: "headphones", label: "Headphones" },
   { id: "replaygain", label: "ReplayGain" },
+  { id: "transfer", label: "Transfer" },
   { id: "glossary", label: "Glossary" },
   { id: "links", label: "Links" },
 ];
