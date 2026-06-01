@@ -105,6 +105,9 @@ const Index = () => {
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
           A short list of <span className="text-neon-cyan">headphones</span> and <span className="text-neon-cyan">earbuds</span> I keep coming back to, with the exact <span className="text-neon-cyan">app</span>, <span className="text-neon-cyan">EQ</span> and <span className="text-neon-magenta">DSP</span> settings that get the most fun out of each one.
         </p>
+        <p className="mb-6 max-w-2xl text-sm text-foreground/70">
+          Legend: Bongiovi DPS city profiles come in two flavours — <span className="text-neon-cyan">H</span> (Headphones) and <span className="text-neon-cyan">G</span> (General). Both are worth A/B'ing; G often has nicer highs, H is usually safer.
+        </p>
         <div className="grid gap-5 md:grid-cols-3">
           <Card title="Moondrop Pill" href="https://moondroplab.com/en/products/pill">
             <Bullets
@@ -116,8 +119,18 @@ const Index = () => {
             <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended config & pairings</p>
               <p className="mt-2 text-sm text-foreground/85">
-                In the <span className="text-neon-cyan">Moondrop app</span>, load the official <span className="text-neon-magenta">Herbert's B&amp;K InEar Style</span> <span className="text-neon-cyan">PEQ preset</span>. Feed it from an <span className="text-neon-cyan">iPhone</span> running <span className="text-neon-cyan">jetAudio</span> with <span className="text-neon-cyan">Bongiovi DPS</span> set to <span className="text-neon-magenta">Atlanta Headphones</span>, or <span className="text-neon-cyan">AM3D</span> on the <span className="text-neon-magenta">Dance</span> preset with <span className="text-neon-cyan">z-Boost</span> on.
+                In the <span className="text-neon-cyan">Moondrop app</span>, load the official <span className="text-neon-magenta">Herbert's B&amp;K InEar Style</span> <span className="text-neon-cyan">PEQ preset</span>, then stack one of the jetAudio DSP chains below.
               </p>
+              <dl className="mt-3 space-y-2 text-sm">
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">InEar EQ</dt>
+                  <dd className="text-foreground/85"><span className="text-neon-magenta">AM3D:</span> Dance · <span className="text-neon-magenta">Bongiovi:</span> Atlanta H</dd>
+                </div>
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Reference EQ</dt>
+                  <dd className="text-foreground/85"><span className="text-neon-magenta">AM3D:</span> Rock, Dance · <span className="text-neon-magenta">Bongiovi:</span> London H, Atlanta G, Huadu G, Phoenix G, Portland G</dd>
+                </div>
+              </dl>
             </div>
           </Card>
 
@@ -131,8 +144,18 @@ const Index = () => {
             <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended config & pairings</p>
               <p className="mt-2 text-sm text-foreground/85">
-                In the <span className="text-neon-cyan">Melomania app</span>, use the <span className="text-neon-magenta">Rock</span> <span className="text-neon-cyan">EQ</span> on its own — or switch to <span className="text-neon-magenta">Blues</span> and pair with <span className="text-neon-cyan">jetAudio</span> <span className="text-neon-cyan">Bongiovi DPS</span> set to <span className="text-neon-magenta">London</span> or <span className="text-neon-magenta">Boston General</span>.
+                Set the EQ in the <span className="text-neon-cyan">Melomania app</span>, then stack with <span className="text-neon-cyan">jetAudio</span> <span className="text-neon-cyan">Bongiovi DPS</span>.
               </p>
+              <dl className="mt-3 space-y-2 text-sm">
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Blues EQ</dt>
+                  <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> London H</dd>
+                </div>
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Rock EQ</dt>
+                  <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> Boston G, Las Vegas G</dd>
+                </div>
+              </dl>
             </div>
           </Card>
 
@@ -146,8 +169,18 @@ const Index = () => {
             <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended config & pairings</p>
               <p className="mt-2 text-sm text-foreground/85">
-                Pair with <span className="text-neon-cyan">jetAudio</span> and switch <span className="text-neon-cyan">Bongiovi DPS</span> to the <span className="text-neon-magenta">London</span> profile for an open, lively presentation that lifts the M50x's slightly dark stock signature.
+                Drive it from <span className="text-neon-cyan">jetAudio</span> and pick a DSP chain by connection.
               </p>
+              <dl className="mt-3 space-y-2 text-sm">
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Bluetooth</dt>
+                  <dd className="text-foreground/85"><span className="text-neon-magenta">AM3D:</span> Dance, Rock · <span className="text-neon-magenta">Bongiovi:</span> London H, Atlanta H, Boston G, Portland G, New Orleans G, Phoenix G/H (G has nicer highs)</dd>
+                </div>
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Wired</dt>
+                  <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> Atlanta H</dd>
+                </div>
+              </dl>
             </div>
           </Card>
 
@@ -162,11 +195,57 @@ const Index = () => {
             <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended config & pairings</p>
               <p className="mt-2 text-sm text-foreground/85">
-                Load the <span className="text-neon-magenta">Blues</span> <span className="text-neon-cyan">PEQ profile</span> in the <span className="text-neon-cyan">Melomania app</span>. Run it on its own, or stack with <span className="text-neon-cyan">Bongiovi DPS</span> on <span className="text-neon-magenta">Boston</span> or <span className="text-neon-magenta">Phoenix</span> — or <span className="text-neon-cyan">AM3D</span> on <span className="text-neon-magenta">Ballad</span>.
+                Over Bluetooth, set the <span className="text-neon-cyan">Melomania app</span> EQ to <span className="text-neon-magenta">Normal</span> and toggle between the <span className="text-neon-magenta">Blues</span> and <span className="text-neon-magenta">Voice</span> tone presets, then stack a jetAudio chain.
               </p>
+              <dl className="mt-3 space-y-2 text-sm">
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Normal + Blues</dt>
+                  <dd className="text-foreground/85"><span className="text-neon-magenta">AM3D:</span> Ballad · <span className="text-neon-magenta">Bongiovi:</span> New York H</dd>
+                </div>
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Normal + Voice</dt>
+                  <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> London H, Atlanta H, New York H</dd>
+                </div>
+              </dl>
               <p className="mt-3 text-sm text-foreground/85">
                 If the <span className="text-neon-magenta">sub-bass</span> feels overwhelming, drop the <span className="text-neon-cyan">leftmost slider</span> of the <span className="text-neon-cyan">Melomania app</span>'s EQ — you'll tame the rumble while keeping plenty of punch. Especially handy on the <span className="text-neon-magenta">Flat</span>, <span className="text-neon-magenta">Electronic</span> and <span className="text-neon-magenta">Rock</span> presets.
               </p>
+            </div>
+          </Card>
+
+          <Card title="AirPods Pro 2" href="https://www.apple.com/airpods-pro/">
+            <Bullets
+              items={[
+                <><span className="text-neon-cyan">True wireless</span> in-ear with class-leading <span className="text-neon-cyan">ANC</span> and tight Apple-ecosystem integration.</>,
+                <>Stock tuning is fine; the fun starts when you switch <span className="text-neon-magenta">ANC off</span> and let Bongiovi do its thing.</>,
+              ]}
+            />
+            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
+              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended config & pairings</p>
+              <dl className="mt-3 space-y-2 text-sm">
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">ANC Off</dt>
+                  <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> AirPods Pro</dd>
+                </div>
+              </dl>
+            </div>
+          </Card>
+
+          <Card title="AKG K371" href="https://www.akg.com/Headphones/Professional%20Headphones/K371.html">
+            <Bullets
+              items={[
+                <><span className="text-neon-cyan">Closed-back over-ear</span>, wired only. Famously close to the <span className="text-neon-cyan">Harman</span> target out of the box — one of the safest budget picks.</>,
+                <>Slightly polite up top; a touch of Bongiovi opens it up nicely.</>,
+              ]}
+            />
+            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
+              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended config & pairings</p>
+              <dl className="mt-3 space-y-2 text-sm">
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Default</dt>
+                  <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> London H</dd>
+                </div>
+              </dl>
             </div>
           </Card>
         </div>
