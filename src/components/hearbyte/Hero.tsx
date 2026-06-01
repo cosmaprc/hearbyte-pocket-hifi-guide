@@ -37,10 +37,10 @@ const Hero = () => {
           <span aria-hidden className="whitespace-nowrap">
             <span className="text-neon-cyan text-glow-cyan">Byte</span>
             <span className="ml-[0.04em] align-baseline text-[0.6em] font-bold text-neon-cyan text-glow-cyan-soft">
-              ’s
+              's
             </span>
           </span>
-          <span className="sr-only">HeartByte’s Pocket Hi-Fi Guide</span>
+          <span className="sr-only">HeartByte's Pocket Hi-Fi Guide</span>
         </h1>
 
         <p className="mt-4 text-sm font-semibold uppercase tracking-[0.35em] text-neon-cyan/90 sm:text-base">
