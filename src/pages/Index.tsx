@@ -30,14 +30,30 @@ const Index = () => {
               ]}
             />
           </Card>
-          <Card title="USB DAC & BT dongles">
+          <Card title="USB Dongle DAC">
             <Bullets
               items={[
+                <>Paired with an app such as <ExtLink href="https://www.extreamsd.com/index.php/products/usb-audio-player-pro" className="text-neon-cyan">USB Audio Player Pro</ExtLink> or <ExtLink href="https://neutronmp.com/" className="text-neon-cyan">Neutron</ExtLink>, a USB DAC can receive audio <span className="text-neon-magenta">directly and bit-perfect</span> — letting you play hi-res tracks at their full resolution (e.g. <span className="text-neon-cyan">24-bit / 192 kHz</span>), bypassing Android's system mixer and <span className="text-neon-magenta">SRC resampling</span>.</>,
                 <>Missing a codec you want (typically <span className="text-neon-cyan">LDAC</span> or <span className="text-neon-cyan">aptX Lossless</span>)? A small Bluetooth transmitter like the <ExtLink href="https://www.fiio.com/airlink" className="text-neon-magenta">FiiO Air-style adapters</ExtLink> adds it over USB-C. That said, even budget Androids ship with LDAC these days.</>,
-                <>No headphone jack, or want a better <span className="text-neon-cyan">DAC</span> with higher sample-rate support? A USB-C dongle DAC like the <ExtLink href="https://www.fiio.com/ka11" className="text-neon-magenta">FiiO KA11</ExtLink> is cheap and excellent.</>,
-                <>Apps like <span className="text-neon-cyan">UAPP</span> and <span className="text-neon-cyan">Neutron</span> can stream <span className="text-neon-magenta">bit-perfect</span> hi-res PCM/DSD straight to the dongle, bypassing Android's system mixer and resampling.</>,
               ]}
             />
+            <div className="mt-3 rounded-lg border border-neon-cyan/20 bg-neon-cyan/5 p-3">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-neon-cyan">Suggested DACs</p>
+              <dl className="space-y-2 text-sm leading-relaxed text-foreground/90">
+                <div>
+                  <dt className="font-semibold text-neon-magenta">
+                    <ExtLink href="https://www.fiio.com/newsinfo/893399.html" className="text-neon-magenta">FiiO KA11</ExtLink>
+                  </dt>
+                  <dd>A powerful single-piece dongle DAC (fixed cable) with incredible audio quality at a very low price.</dd>
+                </div>
+                <div>
+                  <dt className="font-semibold text-neon-magenta">
+                    <ExtLink href="https://neutronhifi.com/devices/dac/v1/details" className="text-neon-magenta">Neutron HiFi DAC V1</ExtLink>
+                  </dt>
+                  <dd>A pioneer in bringing DSP to dongle DACs — includes almost every DSP from the Neutron Player plus extras like <span className="text-neon-cyan">THD Compensation</span>. Read the incredibly well-written manual to discover everything it can do.</dd>
+                </div>
+              </dl>
+            </div>
           </Card>
           <Card title="Dolby Atmos on phones">
             <Bullets
