@@ -132,7 +132,6 @@ const Index = () => {
             <Bullets
               items={[
                 <><span className="text-neon-cyan">True wireless</span> in-ear with class-leading <span className="text-neon-cyan">ANC</span> and tight Apple-ecosystem integration.</>,
-                <>Stock tuning is fine; the fun starts when you switch <span className="text-neon-magenta">ANC off</span> and let Bongiovi do its thing.</>,
               ]}
             />
             <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
