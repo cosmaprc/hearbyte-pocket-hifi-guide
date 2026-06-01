@@ -265,7 +265,7 @@ const Index = () => {
                   <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> London H</dd>
                 </div>
                 <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Neutron HiFi DAC V1</dt>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Neutron Player / HiFi DAC V1</dt>
                   <dd className="text-foreground/85"><span className="text-neon-magenta">FRC:</span> Rtings on HMS II.3 preset · <span className="text-neon-magenta">Crossfeed:</span> jMeier · <span className="text-neon-magenta">EQ:</span> Deep</dd>
                 </div>
               </dl>
