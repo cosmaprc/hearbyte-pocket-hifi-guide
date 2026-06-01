@@ -124,27 +124,23 @@ const Index = () => {
         <p className="mb-6 max-w-2xl text-sm text-foreground/70">
           Legend: Bongiovi DPS city profiles come in two flavours — <span className="text-neon-cyan">H</span> (Headphones) and <span className="text-neon-cyan">G</span> (General). Both are worth A/B'ing; G often has nicer highs, H is usually safer.
         </p>
+        <p className="mb-6 max-w-2xl text-sm text-foreground/70">
+          Ordered by <span className="text-neon-cyan">form factor</span> — in-ear / open-ear first, then wireless over-ear, then wired over-ear — and <span className="text-neon-cyan">alphabetically</span> within each group.
+        </p>
         <div className="grid gap-5 md:grid-cols-3">
-          <Card title="Moondrop Pill" href="https://moondroplab.com/en/products/pill">
+          <Card title="AirPods Pro 2" href="https://www.apple.com/airpods-pro/">
             <Bullets
               items={[
-                <><span className="text-neon-cyan">Ear-clip / open-ear earbud</span> (OWS) design — not an in-ear/IEM. Noticeably more comfortable than <span className="text-neon-cyan">over-ears</span>, traditional <span className="text-neon-cyan">earbuds</span> or <span className="text-neon-cyan">IEMs</span>.</>,
-                <><span className="text-neon-magenta">Open</span> to your surroundings — best enjoyed in a <span className="text-neon-cyan">quiet space</span>. Handy when you still want to hear (or chat with) people around you while music plays in the background.</>,
+                <><span className="text-neon-cyan">True wireless</span> in-ear with class-leading <span className="text-neon-cyan">ANC</span> and tight Apple-ecosystem integration.</>,
+                <>Stock tuning is fine; the fun starts when you switch <span className="text-neon-magenta">ANC off</span> and let Bongiovi do its thing.</>,
               ]}
             />
             <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended config & pairings</p>
-              <p className="mt-2 text-sm text-foreground/85">
-                In the <span className="text-neon-cyan">Moondrop app</span>, load the official <span className="text-neon-magenta">Herbert's B&amp;K InEar Style</span> <span className="text-neon-cyan">PEQ preset</span>, then stack one of the jetAudio DSP chains below.
-              </p>
               <dl className="mt-3 space-y-2 text-sm">
                 <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">InEar EQ</dt>
-                  <dd className="text-foreground/85"><span className="text-neon-magenta">AM3D:</span> Dance · <span className="text-neon-magenta">Bongiovi:</span> Atlanta H</dd>
-                </div>
-                <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Reference EQ</dt>
-                  <dd className="text-foreground/85"><span className="text-neon-magenta">AM3D:</span> Rock, Dance · <span className="text-neon-magenta">Bongiovi:</span> London H, Atlanta G, Huadu G, Phoenix G, Portland G</dd>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">ANC Off</dt>
+                  <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> AirPods Pro</dd>
                 </div>
               </dl>
             </div>
@@ -170,6 +166,31 @@ const Index = () => {
                 <div>
                   <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Rock EQ</dt>
                   <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> Boston G, Las Vegas G</dd>
+                </div>
+              </dl>
+            </div>
+          </Card>
+
+          <Card title="Moondrop Pill" href="https://moondroplab.com/en/products/pill">
+            <Bullets
+              items={[
+                <><span className="text-neon-cyan">Ear-clip / open-ear earbud</span> (OWS) design — not an in-ear/IEM. Noticeably more comfortable than <span className="text-neon-cyan">over-ears</span>, traditional <span className="text-neon-cyan">earbuds</span> or <span className="text-neon-cyan">IEMs</span>.</>,
+                <><span className="text-neon-magenta">Open</span> to your surroundings — best enjoyed in a <span className="text-neon-cyan">quiet space</span>. Handy when you still want to hear (or chat with) people around you while music plays in the background.</>,
+              ]}
+            />
+            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
+              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended config & pairings</p>
+              <p className="mt-2 text-sm text-foreground/85">
+                In the <span className="text-neon-cyan">Moondrop app</span>, load the official <span className="text-neon-magenta">Herbert's B&amp;K InEar Style</span> <span className="text-neon-cyan">PEQ preset</span>, then stack one of the jetAudio DSP chains below.
+              </p>
+              <dl className="mt-3 space-y-2 text-sm">
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">InEar EQ</dt>
+                  <dd className="text-foreground/85"><span className="text-neon-magenta">AM3D:</span> Dance · <span className="text-neon-magenta">Bongiovi:</span> Atlanta H</dd>
+                </div>
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Reference EQ</dt>
+                  <dd className="text-foreground/85"><span className="text-neon-magenta">AM3D:</span> Rock, Dance · <span className="text-neon-magenta">Bongiovi:</span> London H, Atlanta G, Huadu G, Phoenix G, Portland G</dd>
                 </div>
               </dl>
             </div>
@@ -226,24 +247,6 @@ const Index = () => {
               <p className="mt-3 text-sm text-foreground/85">
                 If the <span className="text-neon-magenta">sub-bass</span> feels overwhelming, drop the <span className="text-neon-cyan">leftmost slider</span> of the <span className="text-neon-cyan">Melomania app</span>'s EQ — you'll tame the rumble while keeping plenty of punch. Especially handy on the <span className="text-neon-magenta">Flat</span>, <span className="text-neon-magenta">Electronic</span> and <span className="text-neon-magenta">Rock</span> presets.
               </p>
-            </div>
-          </Card>
-
-          <Card title="AirPods Pro 2" href="https://www.apple.com/airpods-pro/">
-            <Bullets
-              items={[
-                <><span className="text-neon-cyan">True wireless</span> in-ear with class-leading <span className="text-neon-cyan">ANC</span> and tight Apple-ecosystem integration.</>,
-                <>Stock tuning is fine; the fun starts when you switch <span className="text-neon-magenta">ANC off</span> and let Bongiovi do its thing.</>,
-              ]}
-            />
-            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
-              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended config & pairings</p>
-              <dl className="mt-3 space-y-2 text-sm">
-                <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">ANC Off</dt>
-                  <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> AirPods Pro</dd>
-                </div>
-              </dl>
             </div>
           </Card>
 
