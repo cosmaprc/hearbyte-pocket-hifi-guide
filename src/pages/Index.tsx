@@ -142,6 +142,10 @@ const Index = () => {
                   <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">ANC Off</dt>
                   <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> AirPods Pro</dd>
                 </div>
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Neutron Player / HiFi DAC V1</dt>
+                  <dd className="text-foreground/85"><span className="text-neon-magenta">FRC:</span> Crinacle on 711 (passive mode) preset · <span className="text-neon-magenta">Crossfeed:</span> jMeier · <span className="text-neon-magenta">EQ:</span> Deep · <span className="text-neon-magenta">ALC:</span> preset #3 (optional)</dd>
+                </div>
               </dl>
             </div>
           </Card>
