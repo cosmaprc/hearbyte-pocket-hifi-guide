@@ -121,28 +121,31 @@ const Index = () => {
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
           A short list of <span className="text-neon-cyan">headphones</span> and <span className="text-neon-cyan">earbuds</span> I keep coming back to, with the exact <span className="text-neon-cyan">app</span>, <span className="text-neon-cyan">EQ</span> and <span className="text-neon-magenta">DSP</span> settings that get the most fun out of each one.
         </p>
-        <p className="mb-6 max-w-2xl text-sm text-foreground/70">
-          Legend: Bongiovi DPS city profiles come in two flavours — <span className="text-neon-cyan">H</span> (Headphones) and <span className="text-neon-cyan">G</span> (General). Both are worth A/B'ing; G often has nicer highs, H is usually safer.
-        </p>
-        <p className="mb-6 max-w-2xl text-sm text-foreground/70">
-          Ordered by <span className="text-neon-cyan">form factor</span> — in-ear / open-ear first, then wireless over-ear, then wired over-ear — and <span className="text-neon-cyan">alphabetically</span> within each group.
-        </p>
+        <div className="mb-6 max-w-2xl space-y-2 rounded-lg border border-neon-cyan/20 bg-neon-cyan/5 p-4 text-sm text-foreground/80">
+          <p>
+            <span className="font-semibold text-neon-cyan">Order:</span> by <span className="text-neon-cyan">form factor</span> — in-ear / open-ear first, then wireless over-ear, then wired over-ear — and <span className="text-neon-cyan">alphabetically</span> within each group.
+          </p>
+          <p>
+            <span className="font-semibold text-neon-cyan">Legend:</span> Bongiovi DPS city profiles come in two flavours — <span className="text-neon-cyan">H</span> (Headphones) and <span className="text-neon-cyan">G</span> (General). Both are worth A/B'ing; G often has nicer highs, H is usually safer.
+          </p>
+        </div>
         <div className="grid gap-5 md:grid-cols-3">
           <Card title="AirPods Pro 2" href="https://www.apple.com/airpods-pro/">
             <Bullets
               items={[
                 <><span className="text-neon-cyan">True wireless</span> in-ear with class-leading <span className="text-neon-cyan">ANC</span> and tight Apple-ecosystem integration.</>,
+                <>Included here because, with <span className="text-neon-cyan">ANC off</span> and the right DSP, it punches well above its travel-friendly form factor.</>,
               ]}
             />
             <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
-              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended config & pairings</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
               <dl className="mt-3 space-y-2 text-sm">
                 <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">ANC Off</dt>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Mode: ANC Off</dt>
                   <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> AirPods Pro</dd>
                 </div>
                 <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Neutron Player / HiFi DAC V1</dt>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Source: Neutron Player / HiFi DAC V1</dt>
                   <dd className="text-foreground/85"><span className="text-neon-magenta">FRC:</span> Crinacle on 711 (passive mode) preset · <span className="text-neon-magenta">Crossfeed:</span> jMeier · <span className="text-neon-magenta">EQ:</span> Deep · <span className="text-neon-magenta">ALC:</span> preset #3 (optional)</dd>
                 </div>
               </dl>
@@ -157,17 +160,17 @@ const Index = () => {
               ]}
             />
             <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
-              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended config & pairings</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
               <p className="mt-2 text-sm text-foreground/85">
                 Set the EQ in the <span className="text-neon-cyan">Melomania app</span>, then stack with <span className="text-neon-cyan">jetAudio</span> <span className="text-neon-cyan">Bongiovi DPS</span>.
               </p>
               <dl className="mt-3 space-y-2 text-sm">
                 <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Blues EQ</dt>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">EQ: Blues</dt>
                   <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> London H</dd>
                 </div>
                 <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Rock EQ</dt>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">EQ: Rock</dt>
                   <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> Boston G, Las Vegas G</dd>
                 </div>
               </dl>
@@ -182,17 +185,17 @@ const Index = () => {
               ]}
             />
             <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
-              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended config & pairings</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
               <p className="mt-2 text-sm text-foreground/85">
                 In the <span className="text-neon-cyan">Moondrop app</span>, load the official <span className="text-neon-magenta">Herbert's B&amp;K InEar Style</span> <span className="text-neon-cyan">PEQ preset</span>, then stack one of the jetAudio DSP chains below.
               </p>
               <dl className="mt-3 space-y-2 text-sm">
                 <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">InEar EQ</dt>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">EQ: InEar</dt>
                   <dd className="text-foreground/85"><span className="text-neon-magenta">AM3D:</span> Dance · <span className="text-neon-magenta">Bongiovi:</span> Atlanta H</dd>
                 </div>
                 <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Reference EQ</dt>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">EQ: Reference</dt>
                   <dd className="text-foreground/85"><span className="text-neon-magenta">AM3D:</span> Rock, Dance · <span className="text-neon-magenta">Bongiovi:</span> London H, Atlanta G, Huadu G, Phoenix G, Portland G</dd>
                 </div>
               </dl>
@@ -207,17 +210,17 @@ const Index = () => {
               ]}
             />
             <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
-              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended config & pairings</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
               <p className="mt-2 text-sm text-foreground/85">
                 Drive it from <span className="text-neon-cyan">jetAudio</span> and pick a DSP chain by connection.
               </p>
               <dl className="mt-3 space-y-2 text-sm">
                 <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Bluetooth</dt>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Connection: Bluetooth</dt>
                   <dd className="text-foreground/85"><span className="text-neon-magenta">AM3D:</span> Dance, Rock · <span className="text-neon-magenta">Bongiovi:</span> London H, Atlanta H, Boston G, Portland G, New Orleans G, Phoenix G/H (G has nicer highs)</dd>
                 </div>
                 <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Wired</dt>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Connection: Wired</dt>
                   <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> Atlanta H</dd>
                 </div>
               </dl>
@@ -233,17 +236,17 @@ const Index = () => {
               ]}
             />
             <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
-              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended config & pairings</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
               <p className="mt-2 text-sm text-foreground/85">
                 Over Bluetooth, set the <span className="text-neon-cyan">Melomania app</span> EQ to <span className="text-neon-magenta">Normal</span> and toggle between the <span className="text-neon-magenta">Blues</span> and <span className="text-neon-magenta">Voice</span> tone presets, then stack a jetAudio chain.
               </p>
               <dl className="mt-3 space-y-2 text-sm">
                 <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Normal + Blues</dt>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">EQ: Normal + Blues</dt>
                   <dd className="text-foreground/85"><span className="text-neon-magenta">AM3D:</span> Ballad · <span className="text-neon-magenta">Bongiovi:</span> New York H</dd>
                 </div>
                 <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Normal + Voice</dt>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">EQ: Normal + Voice</dt>
                   <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> London H, Atlanta H, New York H</dd>
                 </div>
               </dl>
@@ -261,14 +264,14 @@ const Index = () => {
               ]}
             />
             <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
-              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended config & pairings</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
               <dl className="mt-3 space-y-2 text-sm">
                 <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Default</dt>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Mode: Default</dt>
                   <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> London H</dd>
                 </div>
                 <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Neutron Player / HiFi DAC V1</dt>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Source: Neutron Player / HiFi DAC V1</dt>
                   <dd className="text-foreground/85"><span className="text-neon-magenta">FRC:</span> Rtings on HMS II.3 preset · <span className="text-neon-magenta">Crossfeed:</span> jMeier · <span className="text-neon-magenta">EQ:</span> Deep</dd>
                 </div>
               </dl>
