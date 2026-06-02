@@ -107,7 +107,7 @@ const Index = () => {
               <dl className="space-y-2 text-sm leading-relaxed text-foreground/90">
                 <div>
                   <dt className="font-semibold text-neon-magenta">
-                    <ExtLink href="https://www.fiio.com/airlink" className="text-neon-magenta">FiiO BT11 / LA11 / Air-style adapters</ExtLink>
+                    <ExtLink href="https://www.fiio.com/airlink" className="text-neon-magenta">FiiO Air Link style adapters</ExtLink>
                   </dt>
                   <dd>Small USB-C dongles that transmit high-quality Bluetooth codecs from any phone or laptop to your wireless headphones.</dd>
                 </div>
