@@ -482,6 +482,16 @@ const Index = () => {
               ]}
             />
           </Card>
+          <Card title="Streaming & Playlists">
+            <Bullets
+              items={[
+                <>Tidal is my preferred streaming and music discovery app — its suggestions helped me put together my best playlists.</>,
+                <>Great hi-res quality music with volume normalization using -14 LUFS ReplayGain.</>,
+                <><ExtLink href="https://tidal.com/playlist/f7c41ec8-151c-4eed-a3b4-7857c4efc798" className="text-neon-cyan">Deze Beats is Twistin Me Brainz</ExtLink></>,
+                <><ExtLink href="https://tidal.com/playlist/fe5d55f1-d901-4027-9dd0-ff2af2b5515b" className="text-neon-cyan">Face Meltin Synths</ExtLink></>,
+              ]}
+            />
+          </Card>
         </div>
       </Section>
 
