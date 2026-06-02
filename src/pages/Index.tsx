@@ -6,7 +6,7 @@ import Card from "@/components/hearbyte/Card";
 import Bullets from "@/components/hearbyte/Bullets";
 import Divider from "@/components/hearbyte/Divider";
 import TableOfContents from "@/components/hearbyte/TableOfContents";
-import { Smartphone, Sliders, Headphones, Volume2, BookOpen, Link, FolderInput } from "lucide-react";
+import { Smartphone, Sliders, Headphones, Volume2, BookOpen, Link, FolderInput, Cpu } from "lucide-react";
 
 const Index = () => {
   return (
@@ -34,11 +34,53 @@ const Index = () => {
             <Bullets
               items={[
                 <>Paired with an app such as <ExtLink href="https://www.extreamsd.com/index.php/products/usb-audio-player-pro" className="text-neon-cyan">USB Audio Player Pro</ExtLink> or <ExtLink href="https://neutronmp.com/" className="text-neon-cyan">Neutron</ExtLink>, a USB DAC can receive audio <span className="text-neon-magenta">directly and bit-perfect</span> — letting you play hi-res tracks at their full resolution (e.g. <span className="text-neon-cyan">24-bit / 192 kHz</span>), bypassing Android's system mixer and <span className="text-neon-magenta">SRC resampling</span>.</>,
-                <>Missing a codec you want (typically <span className="text-neon-cyan">LDAC</span> or <span className="text-neon-cyan">aptX Lossless</span>)? A small Bluetooth transmitter like the <ExtLink href="https://www.fiio.com/airlink" className="text-neon-magenta">FiiO Air-style adapters</ExtLink> adds it over USB-C. That said, even budget Androids ship with LDAC these days.</>,
+                <>Missing a codec you want (typically <span className="text-neon-cyan">LDAC</span> or <span className="text-neon-cyan">aptX Lossless</span>)? A small <span className="text-neon-magenta">Bluetooth transmitter dongle</span> can add it over USB-C. That said, even budget Androids ship with LDAC these days.</>,
+                <>See <span className="text-neon-cyan">Suggested gear</span> below for specific picks.</>,
+              ]}
+            />
+          </Card>
+          <Card title="Dolby Atmos on phones">
+            <Bullets
+              items={[
+                <>Many <span className="text-neon-cyan">Android</span> phones include a system-level <span className="text-neon-magenta">Dolby Atmos</span> / spatial processor.</>,
+                <>It's a worthwhile bonus — widens the stage and can make stock-tuned headphones sound more <span className="text-neon-magenta">open and immersive</span>.</>,
+                <>Treat it as another DSP layer to A/B against <span className="text-neon-cyan">Bongiovi DPS</span> or <span className="text-neon-cyan">AM3D</span> in jetAudio, not a replacement.</>,
+              ]}
+            />
+          </Card>
+        </div>
+      </Section>
+
+      <Divider />
+
+      <Section id="gear" icon={Cpu} title="Suggested gear" tone="magenta">
+        <p className="mb-6 max-w-2xl text-base text-foreground/90">
+          What to actually buy. Your <span className="text-neon-cyan">phone</span> decides whether you even need a dongle — start there, then pick a <span className="text-neon-magenta">DAC</span> or <span className="text-neon-magenta">Bluetooth transmitter</span> only if you need one.
+        </p>
+        <div className="grid gap-5 md:grid-cols-2">
+          <Card title="Android phones">
+            <Bullets
+              items={[
+                <>Many mid-range Androids (<span className="text-neon-cyan">Motorola</span>, for example) ship with <span className="text-neon-magenta">Dolby Atmos</span>, <span className="text-neon-cyan">aptX HD</span> or better, and occasionally a <span className="text-neon-cyan">24-bit / 192 kHz</span>-capable <span className="text-neon-cyan">3.5 mm</span> jack.</>,
+                <>Worth checking the spec sheet before assuming you need a dongle — you may already have everything you need.</>,
+              ]}
+            />
+          </Card>
+          <Card title="iPhones">
+            <Bullets
+              items={[
+                <>Get a <span className="text-neon-cyan">USB-C iPhone</span> (15 and later) if you can — it can feed a USB DAC <span className="text-neon-magenta">directly</span> for hi-res playback.</>,
+                <>Older <span className="text-neon-cyan">Lightning</span> iPhones need a <span className="text-neon-cyan">Camera Connection Kit</span> or a Lightning DAC, which is clunkier and pricier.</>,
+              ]}
+            />
+          </Card>
+          <Card title="USB-C DAC dongles">
+            <Bullets
+              items={[
+                <>For phones without a headphone jack, or when you want bit-perfect hi-res out to wired headphones.</>,
               ]}
             />
             <div className="mt-3 rounded-lg border border-neon-cyan/20 bg-neon-cyan/5 p-3">
-              <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-neon-cyan">Suggested DACs</p>
               <dl className="space-y-2 text-sm leading-relaxed text-foreground/90">
                 <div>
                   <dt className="font-semibold text-neon-magenta">
@@ -55,14 +97,22 @@ const Index = () => {
               </dl>
             </div>
           </Card>
-          <Card title="Dolby Atmos on phones">
+          <Card title="Bluetooth transmitters">
             <Bullets
               items={[
-                <>Many <span className="text-neon-cyan">Android</span> phones include a system-level <span className="text-neon-magenta">Dolby Atmos</span> / spatial processor.</>,
-                <>It's a worthwhile bonus — widens the stage and can make stock-tuned headphones sound more <span className="text-neon-magenta">open and immersive</span>.</>,
-                <>Treat it as another DSP layer to A/B against <span className="text-neon-cyan">Bongiovi DPS</span> or <span className="text-neon-cyan">AM3D</span> in jetAudio, not a replacement.</>,
+                <>Plug into the phone's USB-C port to add a codec it doesn't natively support — typically <span className="text-neon-cyan">LDAC</span> or <span className="text-neon-cyan">aptX Lossless</span>.</>,
               ]}
             />
+            <div className="mt-3 rounded-lg border border-neon-cyan/20 bg-neon-cyan/5 p-3">
+              <dl className="space-y-2 text-sm leading-relaxed text-foreground/90">
+                <div>
+                  <dt className="font-semibold text-neon-magenta">
+                    <ExtLink href="https://www.fiio.com/airlink" className="text-neon-magenta">FiiO BT11 / LA11 / Air-style adapters</ExtLink>
+                  </dt>
+                  <dd>Small USB-C dongles that transmit high-quality Bluetooth codecs from any phone or laptop to your wireless headphones.</dd>
+                </div>
+              </dl>
+            </div>
           </Card>
         </div>
       </Section>
