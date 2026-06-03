@@ -309,8 +309,7 @@ const Index = () => {
           <Card title="AKG K371" href="https://www.akg.com/Headphones/Professional%20Headphones/K371.html">
             <Bullets
               items={[
-                <><span className="text-neon-cyan">Closed-back over-ear</span>, wired only. Famously close to the <span className="text-neon-cyan">Harman</span> target out of the box — one of the safest budget picks.</>,
-                <>Slightly polite up top; a touch of Bongiovi opens it up nicely.</>,
+                <><span className="text-neon-cyan">Closed-back over-ear</span>, wired only. Famously close to the <span className="text-neon-cyan">Harman</span> target out of the box — one of the safest budget picks.</>
               ]}
             />
             <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
