@@ -173,7 +173,7 @@ const Index = () => {
         </p>
         <div className="mb-6 max-w-2xl space-y-2 rounded-lg border border-neon-cyan/20 bg-neon-cyan/5 p-4 text-sm text-foreground/80">
           <p>
-            <span className="font-semibold text-neon-cyan">Order:</span> by <span className="text-neon-cyan">form factor</span> — in-ear / open-ear first, then wireless over-ear, then wired over-ear — and <span className="text-neon-cyan">alphabetically</span> within each group.
+            <span className="font-semibold text-neon-cyan">Order:</span> <span className="text-neon-cyan">alphabetical</span> by model name.
           </p>
           <p>
             <span className="font-semibold text-neon-cyan">Legend:</span> Bongiovi DPS city profiles come in two flavours — <span className="text-neon-cyan">H</span> (Headphones) and <span className="text-neon-cyan">G</span> (General). Both are worth A/B'ing; G often has nicer highs, H is usually safer.
@@ -183,8 +183,10 @@ const Index = () => {
           <Card title="AirPods Pro 2" href="https://www.apple.com/airpods-pro/">
             <Bullets
               items={[
-                <><span className="text-neon-cyan">True wireless</span> in-ear with class-leading <span className="text-neon-cyan">ANC</span> and tight Apple-ecosystem integration.</>,
-                <>Included here because, with <span className="text-neon-cyan">ANC off</span> and the right DSP, it punches well above its travel-friendly form factor.</>,
+                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">in-ear</span> (true wireless)</>,
+                <><span className="text-neon-magenta">ANC:</span> Yes</>,
+                <><span className="text-neon-magenta">Wired:</span> N/A</>,
+                <><span className="text-neon-magenta">Others:</span> tight Apple-ecosystem integration, hearing health features.</>,
               ]}
             />
             <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
@@ -202,51 +204,25 @@ const Index = () => {
             </div>
           </Card>
 
-          <Card title="Cambridge Audio A100" href="https://www.cambridgeaudio.com/usa/en/products/melomania/melomania-a100">
+          <Card title="AKG K371" href="https://www.akg.com/Headphones/Professional%20Headphones/K371.html">
             <Bullets
               items={[
-                <><span className="text-neon-cyan">True wireless</span> in-ear with <span className="text-neon-cyan">ANC</span> and an unusually neutral, detailed tuning for the price.</>,
-                <>Great for commutes — pocketable, long battery life and an <span className="text-neon-magenta">open, lively</span> top end once EQ'd.</>,
+                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">wired over-ear</span></>,
+                <><span className="text-neon-magenta">ANC:</span> No</>,
+                <><span className="text-neon-magenta">Wired:</span> 3.5mm</>,
+                <><span className="text-neon-magenta">Others:</span> famously close to the Harman target out of the box.</>,
               ]}
             />
             <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
-              <p className="mt-2 text-sm text-foreground/85">
-                Set the EQ in the <span className="text-neon-cyan">Melomania app</span>, then stack with <span className="text-neon-cyan">jetAudio</span> <span className="text-neon-cyan">Bongiovi DPS</span>.
-              </p>
               <dl className="mt-3 space-y-2 text-sm">
                 <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">EQ: Blues</dt>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Mode: Default</dt>
                   <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> London H</dd>
                 </div>
                 <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">EQ: Rock</dt>
-                  <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> Boston G, Las Vegas G</dd>
-                </div>
-              </dl>
-            </div>
-          </Card>
-
-          <Card title="Moondrop Pill" href="https://moondroplab.com/en/products/pill">
-            <Bullets
-              items={[
-                <><span className="text-neon-cyan">Ear-clip / open-ear earbud</span> (OWS) design — not an in-ear/IEM. Noticeably more comfortable than <span className="text-neon-cyan">over-ears</span>, traditional <span className="text-neon-cyan">earbuds</span> or <span className="text-neon-cyan">IEMs</span>.</>,
-                <><span className="text-neon-magenta">Open</span> to your surroundings — best enjoyed in a <span className="text-neon-cyan">quiet space</span>. Handy when you still want to hear (or chat with) people around you while music plays in the background.</>,
-              ]}
-            />
-            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
-              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
-              <p className="mt-2 text-sm text-foreground/85">
-                In the <span className="text-neon-cyan">Moondrop app</span>, load the official <span className="text-neon-magenta">Herbert's B&amp;K InEar Style</span> <span className="text-neon-cyan">PEQ preset</span>, then stack one of the jetAudio DSP chains below.
-              </p>
-              <dl className="mt-3 space-y-2 text-sm">
-                <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">EQ: InEar</dt>
-                  <dd className="text-foreground/85"><span className="text-neon-magenta">AM3D:</span> Dance · <span className="text-neon-magenta">Bongiovi:</span> Huadu G, Atlanta H</dd>
-                </div>
-                <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">EQ: Reference</dt>
-                  <dd className="text-foreground/85"><span className="text-neon-magenta">AM3D:</span> Rock, Dance · <span className="text-neon-magenta">Bongiovi:</span> London H, Atlanta G, Huadu G, Phoenix G, Portland G</dd>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Source: Neutron Player / HiFi DAC V1</dt>
+                  <dd className="text-foreground/85"><span className="text-neon-magenta">FRC:</span> Rtings on HMS II.3 preset · <span className="text-neon-magenta">Crossfeed:</span> jMeier · <span className="text-neon-magenta">EQ:</span> Deep</dd>
                 </div>
               </dl>
             </div>
@@ -255,8 +231,10 @@ const Index = () => {
           <Card title="Audio Technica ATH-M50x BT2" href="https://www.audio-technica.com/en-us/ath-m50xbt2">
             <Bullets
               items={[
-                <><span className="text-neon-cyan">Closed-back over-ear</span> with both <span className="text-neon-cyan">Bluetooth</span> and <span className="text-neon-cyan">wired</span> playback via a detachable <span className="text-neon-cyan">3.5mm</span> cable — handy when the battery dies or you want a pure wired chain.</>,
-                <><span className="text-neon-magenta">No ANC</span>, but the closed cups offer solid passive isolation. Studio-leaning tuning that responds very well to <span className="text-neon-magenta">DSP</span>.</>,
+                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">wireless over-ear</span> (closed-back)</>,
+                <><span className="text-neon-magenta">ANC:</span> No</>,
+                <><span className="text-neon-magenta">Wired:</span> 3.5mm</>,
+                <><span className="text-neon-magenta">Others:</span> the same sonic signature of the legendary ATH-M50x studio headphones, multipoint connection, large-aperture drivers deliver deep and accurate bass response, AK4331 advanced audio DAC and dedicated internal headphone amp, LDAC.</>,
               ]}
             />
             <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
@@ -277,12 +255,40 @@ const Index = () => {
             </div>
           </Card>
 
+          <Card title="Cambridge Audio A100" href="https://www.cambridgeaudio.com/usa/en/products/melomania/melomania-a100">
+            <Bullets
+              items={[
+                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">in-ear</span> (true wireless)</>,
+                <><span className="text-neon-magenta">ANC:</span> Yes</>,
+                <><span className="text-neon-magenta">Wired:</span> N/A</>,
+                <><span className="text-neon-magenta">Others:</span> Class A/B hi-fi grade amplification, LDAC, aptX Lossless, 7-band EQ, DynamEQ.</>,
+              ]}
+            />
+            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
+              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
+              <p className="mt-2 text-sm text-foreground/85">
+                Set the EQ in the <span className="text-neon-cyan">Melomania app</span>, then stack with <span className="text-neon-cyan">jetAudio</span> <span className="text-neon-cyan">Bongiovi DPS</span>.
+              </p>
+              <dl className="mt-3 space-y-2 text-sm">
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">EQ: Blues</dt>
+                  <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> London H</dd>
+                </div>
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">EQ: Rock</dt>
+                  <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> Boston G, Las Vegas G</dd>
+                </div>
+              </dl>
+            </div>
+          </Card>
+
           <Card title="Cambridge Audio P100SE" href="https://www.cambridgeaudio.com/usa/en/products/melomania/melomania-p100-se">
             <Bullets
               items={[
-                <><span className="text-neon-cyan">Over-ear</span> wireless with <span className="text-neon-cyan">ANC</span>, hi-res Bluetooth codecs and <span className="text-neon-cyan">user-replaceable battery and earcups</span> — built to last.</>,
-                <>Can also be used <span className="text-neon-cyan">wired</span> via either a <span className="text-neon-cyan">3.5mm</span> jack or <span className="text-neon-cyan">USB-C</span> cable.</>,
-                <>Comfortable for long sessions; tuning is warm and <span className="text-neon-magenta">musical</span> rather than analytical.</>,
+                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">wireless over-ear</span></>,
+                <><span className="text-neon-magenta">ANC:</span> Yes</>,
+                <><span className="text-neon-magenta">Wired:</span> 3.5mm / USB-C</>,
+                <><span className="text-neon-magenta">Others:</span> Class A/B hi-fi grade amplification, aptX Lossless, user replaceable battery and earcups, DynamEQ, 7-band EQ, multipoint connection, fast charge.</>,
               ]}
             />
             <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
@@ -306,22 +312,28 @@ const Index = () => {
             </div>
           </Card>
 
-          <Card title="AKG K371" href="https://www.akg.com/Headphones/Professional%20Headphones/K371.html">
+          <Card title="Moondrop Pill" href="https://moondroplab.com/en/products/pill">
             <Bullets
               items={[
-                <><span className="text-neon-cyan">Closed-back over-ear</span>, wired only. Famously close to the <span className="text-neon-cyan">Harman</span> target out of the box — one of the safest budget picks.</>
+                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">open-ear</span> (ear-clip / OWS)</>,
+                <><span className="text-neon-magenta">ANC:</span> No</>,
+                <><span className="text-neon-magenta">Wired:</span> N/A</>,
+                <><span className="text-neon-magenta">Others:</span> Bluetooth 6.0, dual device connectivity, one-click auto EQ with community-driven EQ profiles.</>,
               ]}
             />
             <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
+              <p className="mt-2 text-sm text-foreground/85">
+                In the <span className="text-neon-cyan">Moondrop app</span>, load the official <span className="text-neon-magenta">Herbert's B&amp;K InEar Style</span> <span className="text-neon-cyan">PEQ preset</span>, then stack one of the jetAudio DSP chains below.
+              </p>
               <dl className="mt-3 space-y-2 text-sm">
                 <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Mode: Default</dt>
-                  <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> London H</dd>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">EQ: InEar</dt>
+                  <dd className="text-foreground/85"><span className="text-neon-magenta">AM3D:</span> Dance · <span className="text-neon-magenta">Bongiovi:</span> Huadu G, Atlanta H</dd>
                 </div>
                 <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Source: Neutron Player / HiFi DAC V1</dt>
-                  <dd className="text-foreground/85"><span className="text-neon-magenta">FRC:</span> Rtings on HMS II.3 preset · <span className="text-neon-magenta">Crossfeed:</span> jMeier · <span className="text-neon-magenta">EQ:</span> Deep</dd>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">EQ: Reference</dt>
+                  <dd className="text-foreground/85"><span className="text-neon-magenta">AM3D:</span> Rock, Dance · <span className="text-neon-magenta">Bongiovi:</span> London H, Atlanta G, Huadu G, Phoenix G, Portland G</dd>
                 </div>
               </dl>
             </div>
