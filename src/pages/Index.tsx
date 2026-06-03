@@ -6,7 +6,7 @@ import Card from "@/components/hearbyte/Card";
 import Bullets from "@/components/hearbyte/Bullets";
 import Divider from "@/components/hearbyte/Divider";
 import TableOfContents from "@/components/hearbyte/TableOfContents";
-import { Smartphone, Sliders, Headphones, Volume2, BookOpen, Link, FolderInput, Cpu } from "lucide-react";
+import { Smartphone, Sliders, Headphones, Volume2, BookOpen, Link, FolderInput } from "lucide-react";
 
 const Index = () => {
   return (
@@ -16,46 +16,9 @@ const Index = () => {
 
       <Divider />
 
-      <Section id="source" icon={Smartphone} title="Source" tone="cyan">
+      <Section id="phones" icon={Smartphone} title="Phones & Accessories" tone="cyan">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          You don't need exotic hardware. Any modern <span className="text-neon-cyan">iPhone</span> or <span className="text-neon-cyan">Android</span> phone is a perfectly good starting point — pair it with a <span className="text-neon-cyan">wired</span> or <span className="text-neon-cyan">wireless</span> headphone of your choice and let the apps below do the heavy lifting. The magic happens in the <span className="text-neon-magenta">software</span>.
-        </p>
-        <div className="grid gap-5 md:grid-cols-3">
-          <Card title="Bluetooth codecs">
-            <Bullets
-              items={[
-                <>The common ones, from lossy to effectively lossless: <span className="text-neon-cyan">AAC</span>, <span className="text-neon-cyan">aptX HD</span>, <span className="text-neon-cyan">aptX Lossless</span> and <span className="text-neon-cyan">LDAC</span>.</>,
-                <>In honest blind listening, most people — and most headphones — <span className="text-neon-magenta">can't reliably tell them apart</span>, or tell any of them from a <span className="text-neon-cyan">wired</span> connection.</>,
-                <>Pick whatever your phone and headphones both support and stop worrying. Tuning and EQ matter far more than codec.</>,
-              ]}
-            />
-          </Card>
-          <Card title="USB Dongle DAC">
-            <Bullets
-              items={[
-                <>Paired with an app such as <ExtLink href="https://www.extreamsd.com/index.php/products/usb-audio-player-pro" className="text-neon-cyan">USB Audio Player Pro</ExtLink> or <ExtLink href="https://neutronmp.com/" className="text-neon-cyan">Neutron</ExtLink>, a USB DAC can receive audio <span className="text-neon-magenta">directly and bit-perfect</span> — letting you play hi-res tracks at their full resolution (e.g. <span className="text-neon-cyan">24-bit / 192 kHz</span>), bypassing Android's system mixer and <span className="text-neon-magenta">SRC resampling</span>.</>,
-                <>Missing a codec you want (typically <span className="text-neon-cyan">LDAC</span> or <span className="text-neon-cyan">aptX Lossless</span>)? A small <span className="text-neon-magenta">Bluetooth transmitter dongle</span> can add it over USB-C. That said, even budget Androids ship with LDAC these days.</>,
-                <>See <span className="text-neon-cyan">Suggested gear</span> below for specific picks.</>,
-              ]}
-            />
-          </Card>
-          <Card title="Dolby Atmos on phones">
-            <Bullets
-              items={[
-                <>Many <span className="text-neon-cyan">Android</span> phones include a system-level <span className="text-neon-magenta">Dolby Atmos</span> / spatial processor.</>,
-                <>It's a worthwhile bonus — widens the stage and can make stock-tuned headphones sound more <span className="text-neon-magenta">open and immersive</span>.</>,
-                <>Treat it as another DSP layer to A/B against <span className="text-neon-cyan">Bongiovi DPS</span> or <span className="text-neon-cyan">AM3D</span> in jetAudio, not a replacement.</>,
-              ]}
-            />
-          </Card>
-        </div>
-      </Section>
-
-      <Divider />
-
-      <Section id="gear" icon={Cpu} title="Suggested gear" tone="magenta">
-        <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          What to actually buy. Your <span className="text-neon-cyan">phone</span> decides whether you even need a dongle — start there, then pick a <span className="text-neon-magenta">DAC</span> or <span className="text-neon-magenta">Bluetooth transmitter</span> only if you need one.
+          You don't need exotic hardware. Any modern <span className="text-neon-cyan">iPhone</span> or <span className="text-neon-cyan">Android</span> phone is a perfectly good starting point — pair it with a <span className="text-neon-cyan">wired</span> or <span className="text-neon-cyan">wireless</span> headphone of your choice and let the apps below do the heavy lifting. The magic happens in the <span className="text-neon-magenta">software</span>. Your <span className="text-neon-cyan">phone</span> decides whether you even need a dongle — start there, then pick a <span className="text-neon-magenta">DAC</span> or <span className="text-neon-magenta">Bluetooth transmitter</span> only if you need one.
         </p>
         <div className="grid gap-5 md:grid-cols-2">
           <Card title="Android phones">
@@ -74,10 +37,32 @@ const Index = () => {
               ]}
             />
           </Card>
+        </div>
+        <div className="mt-5 grid gap-5 md:grid-cols-2">
+          <Card title="Bluetooth codecs">
+            <Bullets
+              items={[
+                <>The common ones, from lossy to effectively lossless: <span className="text-neon-cyan">AAC</span>, <span className="text-neon-cyan">aptX HD</span>, <span className="text-neon-cyan">aptX Lossless</span> and <span className="text-neon-cyan">LDAC</span>.</>,
+                <>In honest blind listening, most people — and most headphones — <span className="text-neon-magenta">can't reliably tell them apart</span>, or tell any of them from a <span className="text-neon-cyan">wired</span> connection.</>,
+                <>Pick whatever your phone and headphones both support and stop worrying. Tuning and EQ matter far more than codec.</>,
+              ]}
+            />
+          </Card>
+          <Card title="Dolby Atmos on phones">
+            <Bullets
+              items={[
+                <>Many <span className="text-neon-cyan">Android</span> phones include a system-level <span className="text-neon-magenta">Dolby Atmos</span> / spatial processor.</>,
+                <>It's a worthwhile bonus — widens the stage and can make stock-tuned headphones sound more <span className="text-neon-magenta">open and immersive</span>.</>,
+                <>Treat it as another DSP layer to A/B against <span className="text-neon-cyan">Bongiovi DPS</span> or <span className="text-neon-cyan">AM3D</span> in jetAudio, not a replacement.</>,
+              ]}
+            />
+          </Card>
+        </div>
+        <div className="mt-5 grid gap-5 md:grid-cols-2">
           <Card title="USB-C DAC dongles">
             <Bullets
               items={[
-                <>For phones without a headphone jack, or when you want bit-perfect hi-res out to wired headphones.</>,
+                <>For phones without a headphone jack, or when you want bit-perfect hi-res out to wired headphones. Paired with <ExtLink href="https://www.extreamsd.com/index.php/products/usb-audio-player-pro" className="text-neon-cyan">USB Audio Player Pro</ExtLink> or <ExtLink href="https://neutronmp.com/" className="text-neon-cyan">Neutron</ExtLink>, a USB DAC receives audio <span className="text-neon-magenta">directly and bit-perfect</span> at full resolution (e.g. <span className="text-neon-cyan">24-bit / 192 kHz</span>), bypassing Android's system mixer and <span className="text-neon-magenta">SRC resampling</span>.</>,
               ]}
             />
             <div className="mt-3 rounded-lg border border-neon-cyan/20 bg-neon-cyan/5 p-3">
@@ -100,7 +85,7 @@ const Index = () => {
           <Card title="Bluetooth transmitters">
             <Bullets
               items={[
-                <>Plug into the phone's USB-C port to add a codec it doesn't natively support — typically <span className="text-neon-cyan">LDAC</span> or <span className="text-neon-cyan">aptX Lossless</span>.</>,
+                <>Plug into the phone's USB-C port to add a codec it doesn't natively support — typically <span className="text-neon-cyan">LDAC</span> or <span className="text-neon-cyan">aptX Lossless</span>. That said, even budget Androids ship with LDAC these days.</>,
               ]}
             />
             <div className="mt-3 rounded-lg border border-neon-cyan/20 bg-neon-cyan/5 p-3">
