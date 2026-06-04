@@ -246,7 +246,7 @@ const Index = () => {
                 <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">in-ear</span> (true wireless)</>,
                 <><span className="text-neon-magenta">ANC:</span> Yes</>,
                 <><span className="text-neon-magenta">Wired:</span> N/A</>,
-                <><span className="text-neon-magenta">Others:</span> Class A/B hi-fi grade amplification, LDAC, aptX Lossless, 7-band EQ, DynamEQ.</>,
+                <><span className="text-neon-magenta">Others:</span> Class A/B hi-fi grade amplification, LDAC, aptX Lossless, 7-band EQ, DynamEQ. I prefer the sound of these on the Rock EQ preset with DynamEQ turned on and without any other DSP more than any other item on this list.</>,
               ]}
             />
             <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
