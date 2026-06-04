@@ -54,8 +54,8 @@ const Hero = () => {
         </p>
 
         <a
-          href="#source"
-          aria-label="Jump to gear section"
+          href="#phones"
+          aria-label="Jump to phones and accessories section"
           className="mt-10 inline-flex items-center gap-2 rounded-full border border-neon-magenta/60 bg-primary/10 px-6 py-3 text-sm font-semibold uppercase tracking-widest text-foreground transition-smooth hover:bg-primary/20 hover:shadow-neon-magenta focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon-magenta/60"
         >
           Jump to gear
