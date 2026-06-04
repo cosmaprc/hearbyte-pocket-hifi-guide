@@ -246,7 +246,7 @@ const Index = () => {
                 <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">in-ear</span> (true wireless)</>,
                 <><span className="text-neon-magenta">ANC:</span> Yes</>,
                 <><span className="text-neon-magenta">Wired:</span> N/A</>,
-                <><span className="text-neon-magenta">Others:</span> Class A/B hi-fi grade amplification, LDAC, aptX Lossless, 7-band EQ, DynamEQ. I prefer the sound of these on the Rock EQ preset with DynamEQ turned on and without any other DSP more than any other item on this list.</>,
+                <><span className="text-neon-magenta">Others:</span> Class A/B hi-fi grade amplification, LDAC, aptX Lossless, 7-band EQ, DynamEQ.</>,
               ]}
             />
             <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
@@ -255,6 +255,10 @@ const Index = () => {
                 Set the EQ in the <span className="text-neon-cyan">Melomania app</span>, then stack with <span className="text-neon-cyan">jetAudio</span> <span className="text-neon-cyan">Bongiovi DPS</span>.
               </p>
               <dl className="mt-3 space-y-2 text-sm">
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Note</dt>
+                  <dd className="text-foreground/85">I prefer the sound of these on the <span className="text-neon-magenta">Rock EQ preset</span> with <span className="text-neon-magenta">DynamEQ</span> turned on and without any other DSP more than any other item on this list.</dd>
+                </div>
                 <div>
                   <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">EQ: Blues</dt>
                   <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> London H</dd>
