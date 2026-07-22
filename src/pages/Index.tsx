@@ -84,6 +84,9 @@ const Index = () => {
                 items={[
                   <>Reference <span className="text-neon-cyan">USB DAC</span> and <span className="text-neon-cyan">Bluetooth receiver</span> in one, with a first-class <span className="text-neon-magenta">20-band parametric EQ</span> app that stores presets on the device itself.</>,
                   <>Supports <span className="text-neon-cyan">LDAC</span>, <span className="text-neon-cyan">aptX Adaptive</span> and every mainstream codec over Bluetooth, plus <span className="text-neon-cyan">3.5mm</span> and <span className="text-neon-cyan">2.5mm balanced</span> outputs.</>,
+                  <>Supports <span className="text-neon-cyan">AutoEQ</span> and ships with a list of <span className="text-neon-magenta">AutoEQ profiles</span> out of the box.</>,
+                  <>Has <span className="text-neon-cyan">independent hardware volume control</span>.</>,
+                  <>The companion app is the <span className="text-neon-magenta">best and most responsive</span> I have ever used.</>,
                   <>The pick if you only buy one — it covers the wired and wireless cases and travels well.</>,
                 ]}
               />
@@ -101,7 +104,12 @@ const Index = () => {
               <p>A pioneer in bringing <span className="text-neon-cyan">DSP</span> to dongle DACs — includes almost every DSP from the Neutron Player plus extras like <span className="text-neon-cyan">THD Compensation</span>. Read the incredibly well-written manual to discover everything it can do.</p>
             </Card>
             <Card title="Hidizs S9 Pro Plus Martha" href="https://www.hidizs.net/products/hidizs-s9pro-plus-martha-balanced-mini-hifi-dac-amp">
-              <p>Dual <span className="text-neon-cyan">ES9038Q2M</span> DAC chips with both <span className="text-neon-cyan">3.5mm single-ended</span> and <span className="text-neon-cyan">4.4mm balanced</span> outputs — plenty of power for a dongle.</p>
+              <Bullets
+                items={[
+                  <>Dual <span className="text-neon-cyan">ES9038Q2M</span> DAC chips with both <span className="text-neon-cyan">3.5mm single-ended</span> and <span className="text-neon-cyan">4.4mm balanced</span> outputs — plenty of power for a dongle.</>,
+                  <>Has <span className="text-neon-cyan">independent volume control</span>.</>,
+                ]}
+              />
             </Card>
           </div>
         </div>
