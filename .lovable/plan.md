@@ -1,55 +1,36 @@
 ## Goal
 
-Restructure the Headphones section into curated tiers, split DACs and Bluetooth receivers out of "Phones & Accessories" into their own tiered subsections, and swap Tidal for Apple Music in the Streaming card.
+Add a new section titled **“My preferred audio chain”** that summarizes the user’s go-to personal setup in a single card, placed between the existing **Headphones & Earbuds** and **ReplayGain** sections.
 
-## 1. Headphones & Earbuds — split into two subsections
+## Changes
 
-Inside the existing `#headphones` Section, add a short intro paragraph directly under the existing legend/ordering panel (before either subsection heading) that recommends trying the **AKG K371** (closed-back, Harman) and **Sennheiser HD 560S** (open-back, diffuse-field / flat) via **USB Audio Player Pro**'s **ToneBoosters MorphIt** plugin to figure out your own preferences (open vs closed, Harman vs diffuse-field / flat) before investing further.
+### 1. Update `src/components/hearbyte/TableOfContents.tsx`
 
-Then group cards under two labeled subsections (h3-style headings matching the "Playlists" sub-heading pattern already used in the Streaming card):
+Insert a new entry `{ id: "chain", label: "My chain" }` between **Headphones** and **ReplayGain** so the TOC remains ordered and the new anchor is reachable.
 
-- **Recommended headphones / earbuds**
-  - **Creative Aurvana Ace 3** — new Card. Bullets: Form Factor `in-ear (true wireless)`; ANC `Yes`; Wired `N/A`; Others `xMEMS solid-state tweeters, LDAC, aptX Lossless, Mimi sound personalisation`. "How I run it": the **Mimi sound personalisation** in the Creative app makes a huge difference — run the hearing test once and leave it on; stack a light jetAudio Bongiovi chain only if desired.
-  - **Sennheiser HD 560S** — new Card. Bullets: Form Factor `wired over-ear (open-back)`; ANC `No`; Wired `3.5mm (6.3mm adapter)`; Others `diffuse-field / neutral tuning, open-back soundstage, easy to drive`. "How I run it": pair with **USB Audio Player Pro** + **ToneBoosters MorphIt** to try target curves; otherwise stock is already reference-flat.
+### 2. Update `src/pages/Index.tsx`
 
-- **Other pairings** — everything currently in the section stays here unchanged, including **AKG K371**: AirPods Pro 2, AKG K371, ATH-M50x BT2, Cambridge Audio A100, Cambridge Audio P100SE, Moondrop Pill.
+Add a new `Section` after the `#headphones` `Section` and before the `#replaygain` `Section`:
 
-Alphabetical order preserved within each subsection. The existing legend/order panel stays at the top of the section; its ordering note is tweaked to say "alphabetical within each subsection".
+- **id:** `chain`
+- **title:** `My preferred audio chain`
+- **tone:** `cyan` (or another unused tone if preferred; the current site uses cyan, magenta, purple, orange — `cyan` is still appropriate here).
+- **icon:** Import a suitable `lucide-react` icon such as `Zap` or `Music`.
+- **Intro paragraph:** One sentence explaining that this is the setup the guide author reaches for when everything else is stripped away.
+- **Card:** A single `Card` titled something like `The chain` or `Go-to setup`, containing a `Bullets` list with the following items, linking known products to their existing URLs:
+  1. **Source:** Android phone with LDAC.
+  2. **App:** Apple Music — Sound Check on, all other DSP (including Dolby Atmos) off.
+  3. **Headphones:** Sennheiser HD 560S — no EQ of any kind (link to the existing Sennheiser HD 560S product URL).
+  4. **DAC / Bluetooth receiver:** Qudelix 5K — either Bluetooth via LDAC at 990 kbps, or wired (link to the existing Qudelix 5K product URL).
 
-## 2. Phones & Accessories — extract DACs and Bluetooth receivers
+### 3. Styling / behavior
 
-Current "USB-C DAC dongles" and "Bluetooth transmitters" cards get slimmed to conceptual explanations only (no product picks). Product picks move to new subsections rendered inside the same `#phones` Section, below the current grid, using the same sub-heading pattern:
-
-### Recommended DACs
-- **Qudelix 5K** — new Card, linked to `https://www.qudelix.com/products/qudelix-5k-dac-amp`. Reference USB-DAC + Bluetooth receiver with a first-class 20-band PEQ app; the pick if you only buy one.
-
-### Other DACs
-- **FiiO KA11** — moved from existing "USB-C DAC dongles" box.
-- **Neutron HiFi DAC V1** — moved from existing box.
-- **Hidizs S9 Pro Plus Martha** — new entry, linked to `https://www.hidizs.net/products/hidizs-s9pro-plus-martha-balanced-mini-hifi-dac-amp`. Dual ES9038Q2M, 3.5mm SE + 4.4mm balanced out, powerful for a dongle.
-
-### Recommended Bluetooth receivers
-- **Qudelix 5K** — same product, listed here too because it doubles as a BT receiver (LDAC, aptX Adaptive, on-device PEQ over Bluetooth).
-
-The existing "Bluetooth transmitters" card (FiiO Air Link) stays as-is under the concept card — transmitters and receivers are different use cases, so no merge.
-
-## 3. Streaming & Playlists card — swap Tidal → Apple Music
-
-In the Links section's "Streaming & Playlists" card:
-- Replace the Tidal blurb with Apple Music: preferred streaming and music discovery app, hi-res / lossless catalogue, spatial audio, volume normalization at **-16 LUFS**.
-- Replace both playlist links with the Apple Music equivalents:
-  - `https://music.apple.com/gb/playlist/deze-beats-is-twistin-me-brainz/pl.u-gxblgE4C5ve93Gz` — "Deze Beats is Twistin Me Brainz"
-  - `https://music.apple.com/gb/playlist/face-meltin-synths/pl.u-jV890p9Cd6ExlpN` — "Face Meltin Synths"
-
-Also update the ReplayGain "Neutron Volume Normalization" card copy: `-14 LUFS` example currently says "match Tidal, Spotify and YouTube" — swap to "Spotify, YouTube and Tidal" (drop Tidal-first framing), keep `-16 LUFS` labelled as Apple Music.
+- Reuse the existing `Section`, `Card`, `Bullets`, and `ExtLink` components.
+- Keep the section visually consistent with the rest of the page: single card inside a `md:grid-cols-1` or `md:grid-cols-2` grid, matching the existing spacing and typography.
+- No new route or TOC navigation changes beyond the single new entry.
 
 ## Technical notes
 
-- All edits in `src/pages/Index.tsx`. No new components, no TOC changes.
-- Subsection headings use the existing pattern: `<p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">…</p>` above each grid. Grids stay `md:grid-cols-3` (headphones) / `md:grid-cols-2` (DACs, BT receivers).
-- Reuse `Card`, `Bullets`, `ExtLink`. Existing imported icons are sufficient.
-
-## Open questions
-
-1. For **Other DACs**, prefer `md:grid-cols-3` of three Cards (KA11, Neutron V1, Martha), or a single Card with a definition list? Default: three Cards.
-2. For **Aurvana Ace 3** and **HD 560S**, add Bongiovi/AM3D pairing rows now, or leave "How I run it" as the short note until dialed in? Default: short note only.
+- Only `src/pages/Index.tsx` and `src/components/hearbyte/TableOfContents.tsx` need changes.
+- No new components are required.
+- The new section will appear after the Headphones section and before the ReplayGain section, so the existing `<Divider />` between Headphones and ReplayGain will be replaced with the new section followed by a fresh `<Divider />`.
