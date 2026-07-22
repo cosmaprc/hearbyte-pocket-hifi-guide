@@ -1,44 +1,55 @@
 ## Goal
 
-Weave six new pieces of advice into the existing single-page guide so each one lands in the most relevant section, rather than adding one big "tips" dump at the bottom.
+Restructure the Headphones section into curated tiers, split DACs and Bluetooth receivers out of "Phones & Accessories" into their own tiered subsections, and swap Tidal for Apple Music in the Streaming card.
 
-## Where each note goes
+## 1. Headphones & Earbuds — split into two subsections
 
-### 1. Source section — expand into "Source & Connection"
+Inside the existing `#headphones` Section, add a short intro paragraph directly under the existing legend/ordering panel (before either subsection heading) that recommends trying the **AKG K371** (closed-back, Harman) and **Sennheiser HD 560S** (open-back, diffuse-field / flat) via **USB Audio Player Pro**'s **ToneBoosters MorphIt** plugin to figure out your own preferences (open vs closed, Harman vs diffuse-field / flat) before investing further.
 
-The current Source section is a single sentence. Expand it (still concise) with three sub-topics, presented as short Cards in a `md:grid-cols-3`:
+Then group cards under two labeled subsections (h3-style headings matching the "Playlists" sub-heading pattern already used in the Streaming card):
 
-- **Bluetooth codecs** — Card explaining AAC, aptX HD, aptX Lossless, LDAC. Note that they range from lossy to effectively lossless, but in blind listening most people (and most headphones) won't reliably tell them apart, nor reliably tell them from a wired connection. Pick what your phone and headphones both support; don't lose sleep over it.
+- **Recommended headphones / earbuds**
+  - **Creative Aurvana Ace 3** — new Card. Bullets: Form Factor `in-ear (true wireless)`; ANC `Yes`; Wired `N/A`; Others `xMEMS solid-state tweeters, LDAC, aptX Lossless, Mimi sound personalisation`. "How I run it": the **Mimi sound personalisation** in the Creative app makes a huge difference — run the hearing test once and leave it on; stack a light jetAudio Bongiovi chain only if desired.
+  - **Sennheiser HD 560S** — new Card. Bullets: Form Factor `wired over-ear (open-back)`; ANC `No`; Wired `3.5mm (6.3mm adapter)`; Others `diffuse-field / neutral tuning, open-back soundstage, easy to drive`. "How I run it": pair with **USB Audio Player Pro** + **ToneBoosters MorphIt** to try target curves; otherwise stock is already reference-flat.
 
-- **USB DAC dongles** — Card covering two related cases:
-  - Phone missing the codec you want (especially LDAC or aptX Lossless): a Bluetooth transmitter dongle like the **FiiO BT11 / LA11 / Air-style adapters** can add it, though today even budget Androids ship with LDAC.
-  - Phone missing a headphone jack, or you want a better DAC with higher sample-rate support: a USB-C DAC dongle like the **FiiO KA11** is cheap and excellent. Mention that **UAPP** and **Neutron** can stream hi-res PCM/DSD straight to the DAC bit-perfect (no Android resampling).
+- **Other pairings** — everything currently in the section stays here unchanged, including **AKG K371**: AirPods Pro 2, AKG K371, ATH-M50x BT2, Cambridge Audio A100, Cambridge Audio P100SE, Moondrop Pill.
 
-- **Dolby Atmos on phones** — Short Card. On many Android phones (and on iPhone with Apple Music spatial tracks) the system-level Dolby Atmos / spatial processor is a worthwhile bonus — it widens the stage and can make stock-tuned headphones sound more open. Treat it as another DSP layer to A/B against jetAudio's Bongiovi/AM3D, not a replacement.
+Alphabetical order preserved within each subsection. The existing legend/order panel stays at the top of the section; its ordering note is tweaked to say "alphabetical within each subsection".
 
-### 2. ReplayGain section — add a third Card
+## 2. Phones & Accessories — extract DACs and Bluetooth receivers
 
-Currently two cards (foobar2000, rsgain). Add a third:
+Current "USB-C DAC dongles" and "Bluetooth transmitters" cards get slimmed to conceptual explanations only (no product picks). Product picks move to new subsections rendered inside the same `#phones` Section, below the current grid, using the same sub-heading pattern:
 
-- **Neutron's built-in Volume Normalization** — Neutron can compute and apply ReplayGain-style tags on-device with a configurable target LUFS (e.g. -14 LUFS to match Tidal/Spotify/YouTube, -16 for Apple Music, -18 for the classic ReplayGain default). Link to the official guide: `https://neutroncode.com/feature_normalization`. This is the easiest path for users who only listen in Neutron and don't want a separate scanner.
+### Recommended DACs
+- **Qudelix 5K** — new Card, linked to `https://www.qudelix.com/products/qudelix-5k-dac-amp`. Reference USB-DAC + Bluetooth receiver with a first-class 20-band PEQ app; the pick if you only buy one.
 
-Grid becomes `md:grid-cols-3`.
+### Other DACs
+- **FiiO KA11** — moved from existing "USB-C DAC dongles" box.
+- **Neutron HiFi DAC V1** — moved from existing box.
+- **Hidizs S9 Pro Plus Martha** — new entry, linked to `https://www.hidizs.net/products/hidizs-s9pro-plus-martha-balanced-mini-hifi-dac-amp`. Dual ES9038Q2M, 3.5mm SE + 4.4mm balanced out, powerful for a dongle.
 
-### 3. New short section — "Getting music onto your phone"
+### Recommended Bluetooth receivers
+- **Qudelix 5K** — same product, listed here too because it doubles as a BT receiver (LDAC, aptX Adaptive, on-device PEQ over Bluetooth).
 
-Insert between **ReplayGain** and **Glossary**, with its own icon (e.g. `FolderInput` or `Smartphone`) and a single Card (or two if Android grows later):
+The existing "Bluetooth transmitters" card (FiiO Air Link) stays as-is under the concept card — transmitters and receivers are different use cases, so no merge.
 
-- **iPhone (via iTunes on Windows)** — Plug the iPhone in, open iTunes, go to the device's **Files** tab, and drag a folder of music straight onto one of the player apps listed above (jetAudio, Neutron, UAPP). The files land in that app's sandboxed Documents folder where it can play them. You can also move files between apps later from the iOS Files app — handy for trying the same album in different players.
-- (Optional future bullet for Android: just copy to internal storage or SD card with any file manager — no dance required.)
+## 3. Streaming & Playlists card — swap Tidal → Apple Music
+
+In the Links section's "Streaming & Playlists" card:
+- Replace the Tidal blurb with Apple Music: preferred streaming and music discovery app, hi-res / lossless catalogue, spatial audio, volume normalization at **-16 LUFS**.
+- Replace both playlist links with the Apple Music equivalents:
+  - `https://music.apple.com/gb/playlist/deze-beats-is-twistin-me-brainz/pl.u-gxblgE4C5ve93Gz` — "Deze Beats is Twistin Me Brainz"
+  - `https://music.apple.com/gb/playlist/face-meltin-synths/pl.u-jV890p9Cd6ExlpN` — "Face Meltin Synths"
+
+Also update the ReplayGain "Neutron Volume Normalization" card copy: `-14 LUFS` example currently says "match Tidal, Spotify and YouTube" — swap to "Spotify, YouTube and Tidal" (drop Tidal-first framing), keep `-16 LUFS` labelled as Apple Music.
 
 ## Technical notes
 
-- All new content lives in `src/pages/Index.tsx`, using existing `Section`, `Card`, `Bullets`, `ExtLink` components — no new components needed.
-- Add the new section id (e.g. `transfer`) to `TableOfContents.tsx` so it appears in the TOC.
-- Pick icons from `lucide-react` already imported pattern: e.g. `Radio` or `Bluetooth` for codecs, `Usb` for DAC, `Sparkles` for Atmos, `FolderInput` for transfer.
-- Keep the neon-cyan / neon-magenta highlight pattern consistent with the rest of the page.
-- No business logic, no new dependencies.
+- All edits in `src/pages/Index.tsx`. No new components, no TOC changes.
+- Subsection headings use the existing pattern: `<p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">…</p>` above each grid. Grids stay `md:grid-cols-3` (headphones) / `md:grid-cols-2` (DACs, BT receivers).
+- Reuse `Card`, `Bullets`, `ExtLink`. Existing imported icons are sufficient.
 
-## Open question
+## Open questions
 
-Should the three Source sub-topics be **three Cards in a grid** (matches the Software/Headphones sections visually) or kept as **inline prose paragraphs** (matches the current minimal Source section)? My default is grid of Cards for scannability — confirm if you'd prefer prose.
+1. For **Other DACs**, prefer `md:grid-cols-3` of three Cards (KA11, Neutron V1, Martha), or a single Card with a definition list? Default: three Cards.
+2. For **Aurvana Ace 3** and **HD 560S**, add Bongiovi/AM3D pairing rows now, or leave "How I run it" as the short note until dialed in? Default: short note only.

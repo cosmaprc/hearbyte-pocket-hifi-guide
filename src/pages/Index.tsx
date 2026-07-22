@@ -65,40 +65,54 @@ const Index = () => {
                 <>For phones without a headphone jack, or when you want bit-perfect hi-res out to wired headphones. Paired with <ExtLink href="https://www.extreamsd.com/index.php/products/usb-audio-player-pro" className="text-neon-cyan">USB Audio Player Pro</ExtLink> or <ExtLink href="https://neutronmp.com/" className="text-neon-cyan">Neutron</ExtLink>, a USB DAC receives audio <span className="text-neon-magenta">directly and bit-perfect</span> at full resolution (e.g. <span className="text-neon-cyan">24-bit / 192 kHz</span>), bypassing Android's system mixer and <span className="text-neon-magenta">SRC resampling</span>.</>,
               ]}
             />
-            <div className="mt-3 rounded-lg border border-neon-cyan/20 bg-neon-cyan/5 p-3">
-              <dl className="space-y-2 text-sm leading-relaxed text-foreground/90">
-                <div>
-                  <dt className="font-semibold text-neon-magenta">
-                    <ExtLink href="https://www.fiio.com/newsinfo/893399.html" className="text-neon-magenta">FiiO KA11</ExtLink>
-                  </dt>
-                  <dd>A powerful single-piece dongle DAC (fixed cable) with incredible audio quality at a very low price.</dd>
-                </div>
-                <div>
-                  <dt className="font-semibold text-neon-magenta">
-                    <ExtLink href="https://neutronhifi.com/devices/dac/v1/details" className="text-neon-magenta">Neutron HiFi DAC V1</ExtLink>
-                  </dt>
-                  <dd>A pioneer in bringing DSP to dongle DACs — includes almost every DSP from the Neutron Player plus extras like <span className="text-neon-cyan">THD Compensation</span>. Read the incredibly well-written manual to discover everything it can do.</dd>
-                </div>
-              </dl>
-            </div>
           </Card>
           <Card title="Bluetooth transmitters">
             <Bullets
               items={[
                 <>Plug into the phone's USB-C port to add a codec it doesn't natively support — typically <span className="text-neon-cyan">LDAC</span> or <span className="text-neon-cyan">aptX Lossless</span>. That said, even budget Androids ship with LDAC these days.</>,
+                <>Small USB-C dongles like <ExtLink href="https://www.fiio.com/airlink" className="text-neon-cyan">FiiO Air Link style adapters</ExtLink> can transmit high-quality Bluetooth codecs from any phone or laptop to your wireless headphones.</>,
               ]}
             />
-            <div className="mt-3 rounded-lg border border-neon-cyan/20 bg-neon-cyan/5 p-3">
-              <dl className="space-y-2 text-sm leading-relaxed text-foreground/90">
-                <div>
-                  <dt className="font-semibold text-neon-magenta">
-                    <ExtLink href="https://www.fiio.com/airlink" className="text-neon-magenta">FiiO Air Link style adapters</ExtLink>
-                  </dt>
-                  <dd>Small USB-C dongles that transmit high-quality Bluetooth codecs from any phone or laptop to your wireless headphones.</dd>
-                </div>
-              </dl>
-            </div>
           </Card>
+        </div>
+
+        <div className="mt-10">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended DACs</p>
+          <div className="grid gap-5 md:grid-cols-2">
+            <Card title="Qudelix 5K" href="https://www.qudelix.com/products/qudelix-5k-dac-amp">
+              <Bullets
+                items={[
+                  <>Reference <span className="text-neon-cyan">USB DAC</span> and <span className="text-neon-cyan">Bluetooth receiver</span> in one, with a first-class <span className="text-neon-magenta">20-band parametric EQ</span> app that stores presets on the device itself.</>,
+                  <>Supports <span className="text-neon-cyan">LDAC</span>, <span className="text-neon-cyan">aptX Adaptive</span> and every mainstream codec over Bluetooth, plus <span className="text-neon-cyan">3.5mm</span> and <span className="text-neon-cyan">2.5mm balanced</span> outputs.</>,
+                  <>The pick if you only buy one — it covers the wired and wireless cases and travels well.</>,
+                ]}
+              />
+            </Card>
+          </div>
+        </div>
+
+        <div className="mt-8">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-neon-cyan">Other DACs</p>
+          <div className="grid gap-5 md:grid-cols-3">
+            <Card title="FiiO KA11" href="https://www.fiio.com/newsinfo/893399.html">
+              <p>A powerful single-piece dongle DAC (fixed cable) with incredible audio quality at a very low price.</p>
+            </Card>
+            <Card title="Neutron HiFi DAC V1" href="https://neutronhifi.com/devices/dac/v1/details">
+              <p>A pioneer in bringing <span className="text-neon-cyan">DSP</span> to dongle DACs — includes almost every DSP from the Neutron Player plus extras like <span className="text-neon-cyan">THD Compensation</span>. Read the incredibly well-written manual to discover everything it can do.</p>
+            </Card>
+            <Card title="Hidizs S9 Pro Plus Martha" href="https://www.hidizs.net/products/hidizs-s9pro-plus-martha-balanced-mini-hifi-dac-amp">
+              <p>Dual <span className="text-neon-cyan">ES9038Q2M</span> DAC chips with both <span className="text-neon-cyan">3.5mm single-ended</span> and <span className="text-neon-cyan">4.4mm balanced</span> outputs — plenty of power for a dongle.</p>
+            </Card>
+          </div>
+        </div>
+
+        <div className="mt-8">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended Bluetooth receivers</p>
+          <div className="grid gap-5 md:grid-cols-2">
+            <Card title="Qudelix 5K" href="https://www.qudelix.com/products/qudelix-5k-dac-amp">
+              <p>Doubles as a top-tier <span className="text-neon-cyan">Bluetooth receiver</span>: <span className="text-neon-cyan">LDAC</span>, <span className="text-neon-cyan">aptX Adaptive</span> and on-device <span className="text-neon-magenta">20-band PEQ</span> that applies to whatever source is streaming to it — turn any wired headphone into a well-tuned wireless one.</p>
+            </Card>
+          </div>
         </div>
       </Section>
 
@@ -158,12 +172,54 @@ const Index = () => {
         </p>
         <div className="mb-6 max-w-2xl space-y-2 rounded-lg border border-neon-cyan/20 bg-neon-cyan/5 p-4 text-sm text-foreground/80">
           <p>
-            <span className="font-semibold text-neon-cyan">Order:</span> <span className="text-neon-cyan">alphabetical</span> by model name.
+            <span className="font-semibold text-neon-cyan">Order:</span> <span className="text-neon-cyan">alphabetical</span> by model name within each subsection.
           </p>
           <p>
             <span className="font-semibold text-neon-cyan">Legend:</span> Bongiovi DPS city profiles come in two flavours — <span className="text-neon-cyan">H</span> (Headphones) and <span className="text-neon-cyan">G</span> (General). Both are worth A/B'ing; G often has nicer highs, H is usually safer.
           </p>
         </div>
+        <p className="mb-8 max-w-2xl text-base text-foreground/90">
+          If you're new to this and want to figure out your own preferences before spending big, try the <ExtLink href="https://www.akg.com/Headphones/Professional%20Headphones/K371.html" className="text-neon-cyan">AKG K371</ExtLink> (<span className="text-neon-magenta">closed-back</span>, tuned to the <span className="text-neon-cyan">Harman</span> target) alongside the <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink> (<span className="text-neon-magenta">open-back</span>, <span className="text-neon-cyan">diffuse-field</span> / flat). Load them into <ExtLink href="https://www.extreamsd.com/index.php/products/usb-audio-player-pro" className="text-neon-cyan">USB Audio Player Pro</ExtLink> with <ExtLink href="https://www.toneboosters.com/tb_morphit_v1.html" className="text-neon-cyan">ToneBoosters MorphIt</ExtLink> and A/B different target curves — you'll quickly work out whether you prefer open vs closed, and Harman vs diffuse-field.
+        </p>
+
+        <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended headphones / earbuds</p>
+        <div className="grid gap-5 md:grid-cols-2">
+          <Card title="Creative Aurvana Ace 3" href="https://us.creative.com/p/headphones-headsets/creative-aurvana-ace-3">
+            <Bullets
+              items={[
+                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">in-ear</span> (true wireless)</>,
+                <><span className="text-neon-magenta">ANC:</span> Yes</>,
+                <><span className="text-neon-magenta">Wired:</span> N/A</>,
+                <><span className="text-neon-magenta">Others:</span> xMEMS solid-state tweeters, LDAC, aptX Lossless, Mimi sound personalisation.</>,
+              ]}
+            />
+            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
+              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
+              <p className="mt-2 text-sm text-foreground/85">
+                Run the <span className="text-neon-magenta">Mimi sound personalisation</span> hearing test in the <span className="text-neon-cyan">Creative app</span> once and leave it on — it's the single biggest change you can make to how these sound. Stack a light <span className="text-neon-cyan">jetAudio</span> Bongiovi chain only if you want extra flavour on top.
+              </p>
+            </div>
+          </Card>
+
+          <Card title="Sennheiser HD 560S" href="https://en-uk.sennheiser.com/hd-560s">
+            <Bullets
+              items={[
+                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">wired over-ear</span> (open-back)</>,
+                <><span className="text-neon-magenta">ANC:</span> No</>,
+                <><span className="text-neon-magenta">Wired:</span> 3.5mm (6.3mm adapter)</>,
+                <><span className="text-neon-magenta">Others:</span> diffuse-field / neutral tuning, open-back soundstage, easy to drive.</>,
+              ]}
+            />
+            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
+              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
+              <p className="mt-2 text-sm text-foreground/85">
+                Pair with <span className="text-neon-cyan">USB Audio Player Pro</span> + <span className="text-neon-magenta">ToneBoosters MorphIt</span> to audition different target curves; otherwise the stock tuning is already reference-flat and needs nothing.
+              </p>
+            </div>
+          </Card>
+        </div>
+
+        <p className="mb-4 mt-10 text-xs font-semibold uppercase tracking-widest text-neon-cyan">Other pairings</p>
         <div className="grid gap-5 md:grid-cols-3">
           <Card title="AirPods Pro 2" href="https://www.apple.com/airpods-pro/">
             <Bullets
@@ -360,7 +416,7 @@ const Index = () => {
             <Bullets
               items={[
                 <>Built into <span className="text-neon-cyan">Neutron</span>: scans your library and writes <span className="text-neon-cyan">ReplayGain</span>-compatible tags <span className="text-neon-magenta">on-device</span>, no PC required.</>,
-                <>Configurable target loudness — set <span className="text-neon-cyan">-14 LUFS</span> to match <span className="text-neon-magenta">Tidal</span>, <span className="text-neon-magenta">Spotify</span> and <span className="text-neon-magenta">YouTube</span>, <span className="text-neon-cyan">-16 LUFS</span> for <span className="text-neon-magenta">Apple Music</span>, or the classic <span className="text-neon-cyan">-18 LUFS</span> ReplayGain default.</>,
+                <>Configurable target loudness — set <span className="text-neon-cyan">-16 LUFS</span> for <span className="text-neon-magenta">Apple Music</span>, <span className="text-neon-cyan">-14 LUFS</span> to match <span className="text-neon-magenta">Spotify</span>, <span className="text-neon-magenta">YouTube</span> and <span className="text-neon-magenta">Tidal</span>, or the classic <span className="text-neon-cyan">-18 LUFS</span> ReplayGain default.</>,
                 <>The simplest path if you only listen in Neutron and don't want a separate scanner. See the <ExtLink href="https://neutroncode.com/feature_normalization" className="text-neon-magenta">official guide</ExtLink> for the full options.</>,
               ]}
             />
@@ -485,16 +541,16 @@ const Index = () => {
           <Card title="Streaming & Playlists">
             <Bullets
               items={[
-                <>Tidal is my preferred streaming and music discovery app — its suggestions helped me put together my best playlists.</>,
-                <>Great hi-res quality music with volume normalization using -14 LUFS ReplayGain.</>,
+                <><ExtLink href="https://music.apple.com/" className="text-neon-cyan">Apple Music</ExtLink> is my preferred streaming and music discovery app — its suggestions helped me put together my best playlists.</>,
+                <>Huge <span className="text-neon-cyan">hi-res</span> / <span className="text-neon-cyan">lossless</span> catalogue with <span className="text-neon-magenta">Spatial Audio</span> and volume normalization at <span className="text-neon-cyan">-16 LUFS</span>.</>,
               ]}
             />
             <div className="mt-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan mb-2">Playlists</p>
               <Bullets
                 items={[
-                  <><ExtLink href="https://tidal.com/playlist/f7c41ec8-151c-4eed-a3b4-7857c4efc798" className="text-neon-cyan">Deze Beats is Twistin Me Brainz</ExtLink></>,
-                  <><ExtLink href="https://tidal.com/playlist/fe5d55f1-d901-4027-9dd0-ff2af2b5515b" className="text-neon-cyan">Face Meltin Synths</ExtLink></>,
+                  <><ExtLink href="https://music.apple.com/gb/playlist/deze-beats-is-twistin-me-brainz/pl.u-gxblgE4C5ve93Gz" className="text-neon-cyan">Deze Beats is Twistin Me Brainz</ExtLink></>,
+                  <><ExtLink href="https://music.apple.com/gb/playlist/face-meltin-synths/pl.u-jV890p9Cd6ExlpN" className="text-neon-cyan">Face Meltin Synths</ExtLink></>,
                 ]}
               />
             </div>
