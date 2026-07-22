@@ -172,12 +172,54 @@ const Index = () => {
         </p>
         <div className="mb-6 max-w-2xl space-y-2 rounded-lg border border-neon-cyan/20 bg-neon-cyan/5 p-4 text-sm text-foreground/80">
           <p>
-            <span className="font-semibold text-neon-cyan">Order:</span> <span className="text-neon-cyan">alphabetical</span> by model name.
+            <span className="font-semibold text-neon-cyan">Order:</span> <span className="text-neon-cyan">alphabetical</span> by model name within each subsection.
           </p>
           <p>
             <span className="font-semibold text-neon-cyan">Legend:</span> Bongiovi DPS city profiles come in two flavours — <span className="text-neon-cyan">H</span> (Headphones) and <span className="text-neon-cyan">G</span> (General). Both are worth A/B'ing; G often has nicer highs, H is usually safer.
           </p>
         </div>
+        <p className="mb-8 max-w-2xl text-base text-foreground/90">
+          If you're new to this and want to figure out your own preferences before spending big, try the <ExtLink href="https://www.akg.com/Headphones/Professional%20Headphones/K371.html" className="text-neon-cyan">AKG K371</ExtLink> (<span className="text-neon-magenta">closed-back</span>, tuned to the <span className="text-neon-cyan">Harman</span> target) alongside the <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink> (<span className="text-neon-magenta">open-back</span>, <span className="text-neon-cyan">diffuse-field</span> / flat). Load them into <ExtLink href="https://www.extreamsd.com/index.php/products/usb-audio-player-pro" className="text-neon-cyan">USB Audio Player Pro</ExtLink> with <ExtLink href="https://www.toneboosters.com/tb_morphit_v1.html" className="text-neon-cyan">ToneBoosters MorphIt</ExtLink> and A/B different target curves — you'll quickly work out whether you prefer open vs closed, and Harman vs diffuse-field.
+        </p>
+
+        <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended headphones / earbuds</p>
+        <div className="grid gap-5 md:grid-cols-2">
+          <Card title="Creative Aurvana Ace 3" href="https://us.creative.com/p/headphones-headsets/creative-aurvana-ace-3">
+            <Bullets
+              items={[
+                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">in-ear</span> (true wireless)</>,
+                <><span className="text-neon-magenta">ANC:</span> Yes</>,
+                <><span className="text-neon-magenta">Wired:</span> N/A</>,
+                <><span className="text-neon-magenta">Others:</span> xMEMS solid-state tweeters, LDAC, aptX Lossless, Mimi sound personalisation.</>,
+              ]}
+            />
+            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
+              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
+              <p className="mt-2 text-sm text-foreground/85">
+                Run the <span className="text-neon-magenta">Mimi sound personalisation</span> hearing test in the <span className="text-neon-cyan">Creative app</span> once and leave it on — it's the single biggest change you can make to how these sound. Stack a light <span className="text-neon-cyan">jetAudio</span> Bongiovi chain only if you want extra flavour on top.
+              </p>
+            </div>
+          </Card>
+
+          <Card title="Sennheiser HD 560S" href="https://en-uk.sennheiser.com/hd-560s">
+            <Bullets
+              items={[
+                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">wired over-ear</span> (open-back)</>,
+                <><span className="text-neon-magenta">ANC:</span> No</>,
+                <><span className="text-neon-magenta">Wired:</span> 3.5mm (6.3mm adapter)</>,
+                <><span className="text-neon-magenta">Others:</span> diffuse-field / neutral tuning, open-back soundstage, easy to drive.</>,
+              ]}
+            />
+            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
+              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
+              <p className="mt-2 text-sm text-foreground/85">
+                Pair with <span className="text-neon-cyan">USB Audio Player Pro</span> + <span className="text-neon-magenta">ToneBoosters MorphIt</span> to audition different target curves; otherwise the stock tuning is already reference-flat and needs nothing.
+              </p>
+            </div>
+          </Card>
+        </div>
+
+        <p className="mb-4 mt-10 text-xs font-semibold uppercase tracking-widest text-neon-cyan">Other pairings</p>
         <div className="grid gap-5 md:grid-cols-3">
           <Card title="AirPods Pro 2" href="https://www.apple.com/airpods-pro/">
             <Bullets
