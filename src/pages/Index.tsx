@@ -65,40 +65,54 @@ const Index = () => {
                 <>For phones without a headphone jack, or when you want bit-perfect hi-res out to wired headphones. Paired with <ExtLink href="https://www.extreamsd.com/index.php/products/usb-audio-player-pro" className="text-neon-cyan">USB Audio Player Pro</ExtLink> or <ExtLink href="https://neutronmp.com/" className="text-neon-cyan">Neutron</ExtLink>, a USB DAC receives audio <span className="text-neon-magenta">directly and bit-perfect</span> at full resolution (e.g. <span className="text-neon-cyan">24-bit / 192 kHz</span>), bypassing Android's system mixer and <span className="text-neon-magenta">SRC resampling</span>.</>,
               ]}
             />
-            <div className="mt-3 rounded-lg border border-neon-cyan/20 bg-neon-cyan/5 p-3">
-              <dl className="space-y-2 text-sm leading-relaxed text-foreground/90">
-                <div>
-                  <dt className="font-semibold text-neon-magenta">
-                    <ExtLink href="https://www.fiio.com/newsinfo/893399.html" className="text-neon-magenta">FiiO KA11</ExtLink>
-                  </dt>
-                  <dd>A powerful single-piece dongle DAC (fixed cable) with incredible audio quality at a very low price.</dd>
-                </div>
-                <div>
-                  <dt className="font-semibold text-neon-magenta">
-                    <ExtLink href="https://neutronhifi.com/devices/dac/v1/details" className="text-neon-magenta">Neutron HiFi DAC V1</ExtLink>
-                  </dt>
-                  <dd>A pioneer in bringing DSP to dongle DACs — includes almost every DSP from the Neutron Player plus extras like <span className="text-neon-cyan">THD Compensation</span>. Read the incredibly well-written manual to discover everything it can do.</dd>
-                </div>
-              </dl>
-            </div>
           </Card>
           <Card title="Bluetooth transmitters">
             <Bullets
               items={[
                 <>Plug into the phone's USB-C port to add a codec it doesn't natively support — typically <span className="text-neon-cyan">LDAC</span> or <span className="text-neon-cyan">aptX Lossless</span>. That said, even budget Androids ship with LDAC these days.</>,
+                <>Small USB-C dongles like <ExtLink href="https://www.fiio.com/airlink" className="text-neon-cyan">FiiO Air Link style adapters</ExtLink> can transmit high-quality Bluetooth codecs from any phone or laptop to your wireless headphones.</>,
               ]}
             />
-            <div className="mt-3 rounded-lg border border-neon-cyan/20 bg-neon-cyan/5 p-3">
-              <dl className="space-y-2 text-sm leading-relaxed text-foreground/90">
-                <div>
-                  <dt className="font-semibold text-neon-magenta">
-                    <ExtLink href="https://www.fiio.com/airlink" className="text-neon-magenta">FiiO Air Link style adapters</ExtLink>
-                  </dt>
-                  <dd>Small USB-C dongles that transmit high-quality Bluetooth codecs from any phone or laptop to your wireless headphones.</dd>
-                </div>
-              </dl>
-            </div>
           </Card>
+        </div>
+
+        <div className="mt-10">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended DACs</p>
+          <div className="grid gap-5 md:grid-cols-2">
+            <Card title="Qudelix 5K" href="https://www.qudelix.com/products/qudelix-5k-dac-amp">
+              <Bullets
+                items={[
+                  <>Reference <span className="text-neon-cyan">USB DAC</span> and <span className="text-neon-cyan">Bluetooth receiver</span> in one, with a first-class <span className="text-neon-magenta">20-band parametric EQ</span> app that stores presets on the device itself.</>,
+                  <>Supports <span className="text-neon-cyan">LDAC</span>, <span className="text-neon-cyan">aptX Adaptive</span> and every mainstream codec over Bluetooth, plus <span className="text-neon-cyan">3.5mm</span> and <span className="text-neon-cyan">2.5mm balanced</span> outputs.</>,
+                  <>The pick if you only buy one — it covers the wired and wireless cases and travels well.</>,
+                ]}
+              />
+            </Card>
+          </div>
+        </div>
+
+        <div className="mt-8">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-neon-cyan">Other DACs</p>
+          <div className="grid gap-5 md:grid-cols-3">
+            <Card title="FiiO KA11" href="https://www.fiio.com/newsinfo/893399.html">
+              <p>A powerful single-piece dongle DAC (fixed cable) with incredible audio quality at a very low price.</p>
+            </Card>
+            <Card title="Neutron HiFi DAC V1" href="https://neutronhifi.com/devices/dac/v1/details">
+              <p>A pioneer in bringing <span className="text-neon-cyan">DSP</span> to dongle DACs — includes almost every DSP from the Neutron Player plus extras like <span className="text-neon-cyan">THD Compensation</span>. Read the incredibly well-written manual to discover everything it can do.</p>
+            </Card>
+            <Card title="Hidizs S9 Pro Plus Martha" href="https://www.hidizs.net/products/hidizs-s9pro-plus-martha-balanced-mini-hifi-dac-amp">
+              <p>Dual <span className="text-neon-cyan">ES9038Q2M</span> DAC chips with both <span className="text-neon-cyan">3.5mm single-ended</span> and <span className="text-neon-cyan">4.4mm balanced</span> outputs — plenty of power for a dongle.</p>
+            </Card>
+          </div>
+        </div>
+
+        <div className="mt-8">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended Bluetooth receivers</p>
+          <div className="grid gap-5 md:grid-cols-2">
+            <Card title="Qudelix 5K" href="https://www.qudelix.com/products/qudelix-5k-dac-amp">
+              <p>Doubles as a top-tier <span className="text-neon-cyan">Bluetooth receiver</span>: <span className="text-neon-cyan">LDAC</span>, <span className="text-neon-cyan">aptX Adaptive</span> and on-device <span className="text-neon-magenta">20-band PEQ</span> that applies to whatever source is streaming to it — turn any wired headphone into a well-tuned wireless one.</p>
+            </Card>
+          </div>
         </div>
       </Section>
 
