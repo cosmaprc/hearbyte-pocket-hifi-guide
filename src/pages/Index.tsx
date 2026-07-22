@@ -416,7 +416,7 @@ const Index = () => {
             <Bullets
               items={[
                 <>Built into <span className="text-neon-cyan">Neutron</span>: scans your library and writes <span className="text-neon-cyan">ReplayGain</span>-compatible tags <span className="text-neon-magenta">on-device</span>, no PC required.</>,
-                <>Configurable target loudness — set <span className="text-neon-cyan">-14 LUFS</span> to match <span className="text-neon-magenta">Tidal</span>, <span className="text-neon-magenta">Spotify</span> and <span className="text-neon-magenta">YouTube</span>, <span className="text-neon-cyan">-16 LUFS</span> for <span className="text-neon-magenta">Apple Music</span>, or the classic <span className="text-neon-cyan">-18 LUFS</span> ReplayGain default.</>,
+                <>Configurable target loudness — set <span className="text-neon-cyan">-16 LUFS</span> for <span className="text-neon-magenta">Apple Music</span>, <span className="text-neon-cyan">-14 LUFS</span> to match <span className="text-neon-magenta">Spotify</span>, <span className="text-neon-magenta">YouTube</span> and <span className="text-neon-magenta">Tidal</span>, or the classic <span className="text-neon-cyan">-18 LUFS</span> ReplayGain default.</>,
                 <>The simplest path if you only listen in Neutron and don't want a separate scanner. See the <ExtLink href="https://neutroncode.com/feature_normalization" className="text-neon-magenta">official guide</ExtLink> for the full options.</>,
               ]}
             />
@@ -541,16 +541,16 @@ const Index = () => {
           <Card title="Streaming & Playlists">
             <Bullets
               items={[
-                <>Tidal is my preferred streaming and music discovery app — its suggestions helped me put together my best playlists.</>,
-                <>Great hi-res quality music with volume normalization using -14 LUFS ReplayGain.</>,
+                <><ExtLink href="https://music.apple.com/" className="text-neon-cyan">Apple Music</ExtLink> is my preferred streaming and music discovery app — its suggestions helped me put together my best playlists.</>,
+                <>Huge <span className="text-neon-cyan">hi-res</span> / <span className="text-neon-cyan">lossless</span> catalogue with <span className="text-neon-magenta">Spatial Audio</span> and volume normalization at <span className="text-neon-cyan">-16 LUFS</span>.</>,
               ]}
             />
             <div className="mt-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan mb-2">Playlists</p>
               <Bullets
                 items={[
-                  <><ExtLink href="https://tidal.com/playlist/f7c41ec8-151c-4eed-a3b4-7857c4efc798" className="text-neon-cyan">Deze Beats is Twistin Me Brainz</ExtLink></>,
-                  <><ExtLink href="https://tidal.com/playlist/fe5d55f1-d901-4027-9dd0-ff2af2b5515b" className="text-neon-cyan">Face Meltin Synths</ExtLink></>,
+                  <><ExtLink href="https://music.apple.com/gb/playlist/deze-beats-is-twistin-me-brainz/pl.u-gxblgE4C5ve93Gz" className="text-neon-cyan">Deze Beats is Twistin Me Brainz</ExtLink></>,
+                  <><ExtLink href="https://music.apple.com/gb/playlist/face-meltin-synths/pl.u-jV890p9Cd6ExlpN" className="text-neon-cyan">Face Meltin Synths</ExtLink></>,
                 ]}
               />
             </div>
