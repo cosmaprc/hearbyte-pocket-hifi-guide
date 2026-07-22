@@ -6,7 +6,7 @@ import Card from "@/components/hearbyte/Card";
 import Bullets from "@/components/hearbyte/Bullets";
 import Divider from "@/components/hearbyte/Divider";
 import TableOfContents from "@/components/hearbyte/TableOfContents";
-import { Smartphone, Sliders, Headphones, Volume2, BookOpen, Link, FolderInput } from "lucide-react";
+import { Smartphone, Sliders, Headphones, Volume2, BookOpen, Link, FolderInput, Zap } from "lucide-react";
 
 const Index = () => {
   return (
@@ -382,6 +382,26 @@ const Index = () => {
                 </div>
               </dl>
             </div>
+          </Card>
+        </div>
+      </Section>
+
+      <Divider />
+
+      <Section id="chain" icon={Zap} title="My preferred audio chain" tone="cyan">
+        <p className="mb-6 max-w-2xl text-base text-foreground/90">
+          When I want to stop experimenting and just listen, this is the chain I reach for.
+        </p>
+        <div className="grid gap-5 md:grid-cols-2">
+          <Card title="The chain">
+            <Bullets
+              items={[
+                <><span className="text-neon-magenta">Source:</span> Android phone with <span className="text-neon-cyan">LDAC</span>.</>,
+                <><span className="text-neon-magenta">App:</span> <ExtLink href="https://music.apple.com/" className="text-neon-cyan">Apple Music</ExtLink> — <span className="text-neon-cyan">Sound Check</span> on, every other DSP including <span className="text-neon-cyan">Dolby Atmos</span> off.</>,
+                <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink> — no EQ of any kind.</>,
+                <><span className="text-neon-magenta">DAC / Bluetooth receiver:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k-dac-amp" className="text-neon-cyan">Qudelix 5K</ExtLink> — either wireless over Bluetooth at <span className="text-neon-cyan">LDAC 990 kbps</span>, or wired.</>,
+              ]}
+            />
           </Card>
         </div>
       </Section>
