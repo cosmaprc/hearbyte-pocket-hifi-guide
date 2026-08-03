@@ -411,6 +411,14 @@ const Index = () => {
               target: "High continuous current output at low loads",
               wrongAmp: "Soft/compressed bass, harsh transients, amp clipping",
               examples: "Hifiman Edition XS, Dan Clark Audio Aeon 2",
+              sources: (
+                <>
+                  <GearLink>Qudelix 5K</GearLink> on 2.5 mm balanced (240 mW/ch) or{" "}
+                  <GearLink>Hidizs Martha</GearLink> on 4.4 mm balanced (180 mW into 32 Ω) —{" "}
+                  <GearLink>FiiO KA11</GearLink> (200 mW into 32 Ω) also has the muscle. Single-ended
+                  outputs run out of headroom first.
+                </>
+              ),
             },
             {
               profile: "High Impedance + Low Sensitivity",
@@ -419,6 +427,13 @@ const Index = () => {
               target: "High voltage swing (VRMS) at high loads",
               wrongAmp: "Quiet, dry, thin, lifeless sound",
               examples: "Sennheiser HD600, Beyerdynamic DT 880",
+              sources: (
+                <>
+                  <GearLink>Qudelix 5K</GearLink> on 2.5 mm balanced, or{" "}
+                  <GearLink>Neutron HiFi DAC V1</GearLink> at its 2 VRMS output level. Small
+                  single-ended dongles will play, but volume-limited.
+                </>
+              ),
             },
             {
               profile: "Low Impedance + High Sensitivity",
@@ -433,6 +448,13 @@ const Index = () => {
                     AKG K371
                   </a>{" "}
                   (32 Ω / 114 dB/mW)
+                </>
+              ),
+              sources: (
+                <>
+                  <GearLink>Neutron HiFi DAC V1</GearLink> (&lt; 0.5 Ω output impedance, switchable
+                  1 VRMS level) or <GearLink>Qudelix 5K</GearLink> (&lt; 1 Ω, hardware volume) are the
+                  safe picks. Use low gain and skip high-power balanced outputs.
                 </>
               ),
             },
@@ -450,6 +472,13 @@ const Index = () => {
                   (120 Ω / 110 dB/V)
                 </>
               ),
+              sources: (
+                <>
+                  Anything here works: <GearLink>Qudelix 5K</GearLink> (wired or LDAC),{" "}
+                  <GearLink>FiiO KA11</GearLink>, <GearLink>Neutron HiFi DAC V1</GearLink> or{" "}
+                  <GearLink>Hidizs Martha</GearLink>.
+                </>
+              ),
             },
             {
               profile: "High Impedance + High Sensitivity",
@@ -458,6 +487,13 @@ const Index = () => {
               target: "Clean, linear voltage delivery",
               wrongAmp: "Slightly restricted volume on weak sources",
               examples: "Audio-Technica ATH-R70x",
+              sources: (
+                <>
+                  <GearLink>Qudelix 5K</GearLink> on balanced or{" "}
+                  <GearLink>Neutron HiFi DAC V1</GearLink> at 2 VRMS. A phone jack alone will feel
+                  quiet.
+                </>
+              ),
             },
           ]}
         />
