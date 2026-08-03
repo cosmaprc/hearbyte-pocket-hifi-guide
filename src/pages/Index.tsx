@@ -8,8 +8,8 @@ import Divider from "@/components/hearbyte/Divider";
 import DataTable from "@/components/hearbyte/DataTable";
 import TableOfContents from "@/components/hearbyte/TableOfContents";
 import { Smartphone, Sliders, Headphones, Volume2, BookOpen, Link, FolderInput, Zap, Gauge } from "lucide-react";
-import hd560sQudelixHeadband from "@/assets/hd560s-qudelix-headband.jpeg.asset.json";
-import hd560sQudelixFront from "@/assets/hd560s-qudelix-front.jpeg.asset.json";
+import hd560sQudelixHeadband from "@/assets/hd560s-qudelix-headband.jpg";
+import hd560sQudelixFront from "@/assets/hd560s-qudelix-front.jpg";
 
 const GearLink = ({ children }: { children: React.ReactNode }) => (
   <a href="#phones" className="text-neon-cyan underline-offset-4 hover:underline">
@@ -285,13 +285,13 @@ const Index = () => {
             </div>
             <div className="mt-4 grid grid-cols-2 gap-3">
               <img
-                src={hd560sQudelixHeadband.url}
+                src={hd560sQudelixHeadband}
                 alt="Sennheiser HD 560S with a Qudelix 5K and its cable velcro-strapped to the headband"
                 loading="lazy"
                 className="h-40 w-full rounded-lg border border-border object-cover"
               />
               <img
-                src={hd560sQudelixFront.url}
+                src={hd560sQudelixFront}
                 alt="Sennheiser HD 560S held up front-on with the Qudelix 5K mounted on the headband"
                 loading="lazy"
                 className="h-40 w-full rounded-lg border border-border object-cover"
