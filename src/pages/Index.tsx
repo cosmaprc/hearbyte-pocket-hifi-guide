@@ -5,8 +5,10 @@ import Section from "@/components/hearbyte/Section";
 import Card from "@/components/hearbyte/Card";
 import Bullets from "@/components/hearbyte/Bullets";
 import Divider from "@/components/hearbyte/Divider";
+import DataTable from "@/components/hearbyte/DataTable";
 import TableOfContents from "@/components/hearbyte/TableOfContents";
-import { Smartphone, Sliders, Headphones, Volume2, BookOpen, Link, FolderInput, Zap } from "lucide-react";
+import { Smartphone, Sliders, Headphones, Volume2, BookOpen, Link, FolderInput, Zap, Gauge } from "lucide-react";
+
 
 const Index = () => {
   return (
@@ -396,7 +398,75 @@ const Index = () => {
 
       <Divider />
 
+      <Section id="demands" icon={Gauge} title="Headphone electrical demands" tone="purple">
+        <p className="mb-6 max-w-2xl text-base text-foreground/90">
+          Two numbers decide how picky a headphone is about its source: <span className="text-neon-cyan">impedance</span> (Ω) and <span className="text-neon-cyan">sensitivity</span> (dB/mW or dB/V). Match them to the right amplifier or DAC and the headphone sings; mismatch them and you get hiss, thin bass, or not enough volume headroom.
+        </p>
+        <DataTable
+          rows={[
+            {
+              profile: "Low Impedance + Low Sensitivity",
+              specs: "< 32 Ω, < 96 dB/mW",
+              demand: "High Current (I)",
+              target: "High continuous current output at low loads",
+              wrongAmp: "Soft/compressed bass, harsh transients, amp clipping",
+              examples: "Hifiman Edition XS, Dan Clark Audio Aeon 2",
+            },
+            {
+              profile: "High Impedance + Low Sensitivity",
+              specs: "> 150 Ω, < 96 dB/mW",
+              demand: "High Voltage (V)",
+              target: "High voltage swing (VRMS) at high loads",
+              wrongAmp: "Quiet, dry, thin, lifeless sound",
+              examples: "Sennheiser HD600, Beyerdynamic DT 880",
+            },
+            {
+              profile: "Low Impedance + High Sensitivity",
+              specs: "< 32 Ω, > 100 dB/mW",
+              demand: "Ultra-low Noise Floor",
+              target: "Near-zero output impedance (< 1 Ω) & high SNR",
+              wrongAmp: "Hiss/static; bloated/loose bass",
+              examples: (
+                <>
+                  Campfire Andromeda, Shure SE846,{" "}
+                  <a href="#headphones" className="text-neon-cyan underline-offset-4 hover:underline">
+                    AKG K371
+                  </a>{" "}
+                  (32 Ω / 114 dB/mW)
+                </>
+              ),
+            },
+            {
+              profile: "Medium Impedance + High Sensitivity",
+              specs: "~120 Ω, ~101 dB/mW",
+              demand: "Moderate Voltage & Clean Current",
+              target: "Clean, linear delivery with low output impedance",
+              wrongAmp: "May need a bit more volume than a phone gives; otherwise easy to drive",
+              examples: (
+                <>
+                  <a href="#headphones" className="text-neon-cyan underline-offset-4 hover:underline">
+                    Sennheiser HD 560S
+                  </a>{" "}
+                  (120 Ω / 110 dB/V)
+                </>
+              ),
+            },
+            {
+              profile: "High Impedance + High Sensitivity",
+              specs: "> 150 Ω, > 100 dB/mW",
+              demand: "Moderate Voltage (V)",
+              target: "Clean, linear voltage delivery",
+              wrongAmp: "Slightly restricted volume on weak sources",
+              examples: "Audio-Technica ATH-R70x",
+            },
+          ]}
+        />
+      </Section>
+
+      <Divider />
+
       <Section id="chain" icon={Zap} title="My preferred audio chain" tone="cyan">
+
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
           When I want to stop experimenting and just listen, this is the chain I reach for.
         </p>

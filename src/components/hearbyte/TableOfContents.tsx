@@ -4,12 +4,14 @@ const sections = [
   { id: "phones", label: "Phones & Accessories" },
   { id: "software", label: "Software" },
   { id: "headphones", label: "Headphones" },
+  { id: "demands", label: "Electrical demands" },
   { id: "chain", label: "My chain" },
   { id: "replaygain", label: "ReplayGain" },
   { id: "transfer", label: "Transfer" },
   { id: "glossary", label: "Glossary" },
   { id: "links", label: "Links" },
 ];
+
 
 const TableOfContents = () => {
   const [active, setActive] = useState<string>(sections[0].id);
