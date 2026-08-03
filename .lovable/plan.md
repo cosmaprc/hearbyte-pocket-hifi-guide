@@ -1,6 +1,7 @@
 ## Goal
 
-Add a "Headphone Electrical Demands" reference table to the site, using the user's provided CSV as the initial data, so readers can match a headphone profile to the right amplifier/DAC requirement.
+Add a "Headphone Electrical Demands" reference table to the site, using the user's provided CSV as the initial data, so readers can match a headphone profile to the right amplifier/DAC requirement. The table will also include the **Sennheiser HD 560S** and **AKG K371** headphones already reviewed on the site.
+
 
 ## Changes
 
