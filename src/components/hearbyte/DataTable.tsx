@@ -7,6 +7,7 @@ type Row = {
   target: string;
   wrongAmp: string;
   examples: React.ReactNode;
+  sources: React.ReactNode;
 };
 
 type Props = {
@@ -16,7 +17,7 @@ type Props = {
 const DataTable = ({ rows }: Props) => {
   return (
     <div className="w-full overflow-x-auto rounded-xl border border-border bg-card-gradient">
-      <table className="w-full min-w-[56rem] border-collapse text-left">
+      <table className="w-full min-w-[68rem] border-collapse text-left">
         <thead>
           <tr className="border-b border-border bg-background/60">
             <th scope="col" className="px-4 py-3 text-xs font-semibold uppercase tracking-widest text-neon-cyan">
@@ -36,6 +37,9 @@ const DataTable = ({ rows }: Props) => {
             </th>
             <th scope="col" className="px-4 py-3 text-xs font-semibold uppercase tracking-widest text-neon-cyan">
               Common examples
+            </th>
+            <th scope="col" className="px-4 py-3 text-xs font-semibold uppercase tracking-widest text-neon-cyan">
+              Sources that drive it
             </th>
           </tr>
         </thead>
@@ -68,6 +72,9 @@ const DataTable = ({ rows }: Props) => {
               </td>
               <td className="px-4 py-4 align-top text-sm text-foreground/90">
                 {row.examples}
+              </td>
+              <td className="px-4 py-4 align-top text-sm text-foreground/90">
+                {row.sources}
               </td>
             </tr>
           ))}
