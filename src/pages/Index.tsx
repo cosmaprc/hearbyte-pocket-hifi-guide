@@ -8,6 +8,8 @@ import Divider from "@/components/hearbyte/Divider";
 import DataTable from "@/components/hearbyte/DataTable";
 import TableOfContents from "@/components/hearbyte/TableOfContents";
 import { Smartphone, Sliders, Headphones, Volume2, BookOpen, Link, FolderInput, Zap, Gauge } from "lucide-react";
+import hd560sQudelixHeadband from "@/assets/hd560s-qudelix-headband.jpeg.asset.json";
+import hd560sQudelixFront from "@/assets/hd560s-qudelix-front.jpeg.asset.json";
 
 const GearLink = ({ children }: { children: React.ReactNode }) => (
   <a href="#phones" className="text-neon-cyan underline-offset-4 hover:underline">
