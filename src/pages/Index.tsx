@@ -456,14 +456,15 @@ const Index = () => {
               specs: "< 32 Ω, < 96 dB/mW",
               demand: "High Current (I)",
               target: "High continuous current output at low loads",
-              wrongAmp: "Soft/compressed bass, harsh transients, amp clipping",
+              wrongAmp:
+                "Soft or compressed bass, harsh transients, extreme amp heat, rapid battery drain, amp clipping",
               examples: "Hifiman Edition XS, Dan Clark Audio Aeon 2",
               sources: (
                 <>
-                  <GearLink>Qudelix 5K</GearLink> on 2.5 mm balanced (240 mW/ch) or{" "}
-                  <GearLink>Hidizs Martha</GearLink> on 4.4 mm balanced (180 mW into 32 Ω) —{" "}
-                  <GearLink>FiiO KA11</GearLink> (200 mW into 32 Ω) also has the muscle. Single-ended
-                  outputs run out of headroom first.
+                  <GearLink>Qudelix 5K</GearLink> on balanced (it hits current saturation limits under
+                  20 Ω, like the Aeon 2) or <GearLink>Hidizs Martha</GearLink> on balanced.{" "}
+                  <GearLink>FiiO KA11</GearLink> has the raw power but runs intensely hot and drains
+                  the device battery rapidly under continuous current draw.
                 </>
               ),
             },
@@ -472,13 +473,14 @@ const Index = () => {
               specs: "> 150 Ω, < 96 dB/mW",
               demand: "High Voltage (V)",
               target: "High voltage swing (VRMS) at high loads",
-              wrongAmp: "Quiet, dry, thin, lifeless sound",
-              examples: "Sennheiser HD600, Beyerdynamic DT 880",
+              wrongAmp:
+                "Quiet, dry, thin, lifeless sound; not enough volume headroom once EQ is applied",
+              examples: "Sennheiser HD600, Beyerdynamic DT 880, Audio-Technica ATH-R70x",
               sources: (
                 <>
-                  <GearLink>Qudelix 5K</GearLink> on 2.5 mm balanced, or{" "}
-                  <GearLink>Neutron HiFi DAC V1</GearLink> at its 2 VRMS output level. Small
-                  single-ended dongles will play, but volume-limited.
+                  Desktop amplifiers or powerful balanced portables. <GearLink>Qudelix 5K</GearLink> on
+                  balanced provides decent swing. <GearLink>Neutron HiFi DAC V1</GearLink> runs cleanly
+                  at 2 VRMS but lacks headroom once you apply negative pre-amp gain for EQ.
                 </>
               ),
             },
@@ -486,8 +488,8 @@ const Index = () => {
               profile: "Low Impedance + High Sensitivity",
               specs: "< 32 Ω, > 100 dB/mW",
               demand: "Ultra-low Noise Floor",
-              target: "Near-zero output impedance (< 1 Ω) & high SNR",
-              wrongAmp: "Hiss/static; bloated/loose bass",
+              target: "Near-zero output impedance (< 1 Ω) and high SNR",
+              wrongAmp: "Audible background hiss or static; bloated, loose, or muddy bass response",
               examples: (
                 <>
                   Campfire Andromeda, Shure SE846,{" "}
@@ -499,9 +501,9 @@ const Index = () => {
               ),
               sources: (
                 <>
-                  <GearLink>Neutron HiFi DAC V1</GearLink> (&lt; 0.5 Ω output impedance, switchable
-                  1 VRMS level) or <GearLink>Qudelix 5K</GearLink> (&lt; 1 Ω, hardware volume) are the
-                  safe picks. Use low gain and skip high-power balanced outputs.
+                  <GearLink>Neutron HiFi DAC V1</GearLink> (&lt; 0.6 Ω output impedance, switchable
+                  1 VRMS mode) or <GearLink>Qudelix 5K</GearLink> (&lt; 1 Ω, precise hardware volume
+                  control). Use low gain and avoid high-power balanced ports.
                 </>
               ),
             },
@@ -510,7 +512,8 @@ const Index = () => {
               specs: "~120 Ω, ~101 dB/mW",
               demand: "Moderate Voltage & Clean Current",
               target: "Clean, linear delivery with low output impedance",
-              wrongAmp: "May need a bit more volume than a phone gives; otherwise easy to drive",
+              wrongAmp:
+                "May need slightly more volume than a standard phone jack provides; otherwise easy to drive",
               examples: (
                 <>
                   <a href="#headphones" className="text-neon-cyan underline-offset-4 hover:underline">
@@ -521,9 +524,10 @@ const Index = () => {
               ),
               sources: (
                 <>
-                  Anything here works: <GearLink>Qudelix 5K</GearLink> (wired or LDAC),{" "}
+                  Highly versatile: <GearLink>Qudelix 5K</GearLink> (wired or LDAC),{" "}
                   <GearLink>FiiO KA11</GearLink>, <GearLink>Neutron HiFi DAC V1</GearLink> or{" "}
-                  <GearLink>Hidizs Martha</GearLink>.
+                  <GearLink>Hidizs Martha</GearLink> all perform cleanly without bottlenecking
+                  dynamics.
                 </>
               ),
             },
@@ -532,13 +536,13 @@ const Index = () => {
               specs: "> 150 Ω, > 100 dB/mW",
               demand: "Moderate Voltage (V)",
               target: "Clean, linear voltage delivery",
-              wrongAmp: "Slightly restricted volume on weak sources",
-              examples: "Audio-Technica ATH-R70x",
+              wrongAmp: "Slightly restricted volume peaks on weak sources; compressed dynamics",
+              examples: "Beyerdynamic DT 990 Pro (250 Ω)",
               sources: (
                 <>
                   <GearLink>Qudelix 5K</GearLink> on balanced or{" "}
-                  <GearLink>Neutron HiFi DAC V1</GearLink> at 2 VRMS. A phone jack alone will feel
-                  quiet.
+                  <GearLink>Neutron HiFi DAC V1</GearLink> in its 2 VRMS mode. A legacy smartphone
+                  headphone jack will feel restricted and quiet.
                 </>
               ),
             },
