@@ -350,33 +350,6 @@ const Index = () => {
             </div>
           </Card>
 
-          <Card title="Audio Technica ATH-M50x BT2" href="https://www.audio-technica.com/en-us/ath-m50xbt2">
-            <Bullets
-              items={[
-                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">wireless over-ear</span> (closed-back)</>,
-                <><span className="text-neon-magenta">ANC:</span> No</>,
-                <><span className="text-neon-magenta">Wired:</span> 3.5mm</>,
-                <><span className="text-neon-magenta">Others:</span> the same sonic signature of the legendary ATH-M50x studio headphones, multipoint connection, large-aperture drivers deliver deep and accurate bass response, AK4331 advanced audio DAC and dedicated internal headphone amp, LDAC.</>,
-              ]}
-            />
-            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
-              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
-              <p className="mt-2 text-sm text-foreground/85">
-                Drive it from <span className="text-neon-cyan">jetAudio</span> and pick a DSP chain by connection.
-              </p>
-              <dl className="mt-3 space-y-2 text-sm">
-                <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Connection: Bluetooth</dt>
-                  <dd className="text-foreground/85"><span className="text-neon-magenta">AM3D:</span> Dance, Rock · <span className="text-neon-magenta">Bongiovi:</span> London H, Atlanta H, Boston G, Portland G, New Orleans G, Phoenix G/H (G has nicer highs)</dd>
-                </div>
-                <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Connection: Wired</dt>
-                  <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> Atlanta H</dd>
-                </div>
-              </dl>
-            </div>
-          </Card>
-
           <Card title="Cambridge Audio A100" href="https://www.cambridgeaudio.com/usa/en/products/melomania/melomania-a100">
             <Bullets
               items={[
