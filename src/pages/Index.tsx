@@ -8,6 +8,8 @@ import Divider from "@/components/hearbyte/Divider";
 import DataTable from "@/components/hearbyte/DataTable";
 import TableOfContents from "@/components/hearbyte/TableOfContents";
 import { Smartphone, Sliders, Headphones, Volume2, BookOpen, Link, FolderInput, Zap, Gauge } from "lucide-react";
+import hd560sQudelixHeadband from "@/assets/hd560s-qudelix-headband.jpeg.asset.json";
+import hd560sQudelixFront from "@/assets/hd560s-qudelix-front.jpeg.asset.json";
 
 const GearLink = ({ children }: { children: React.ReactNode }) => (
   <a href="#phones" className="text-neon-cyan underline-offset-4 hover:underline">
@@ -197,7 +199,7 @@ const Index = () => {
           If you're new to this and want to figure out your own preferences before spending big, try the <ExtLink href="https://www.akg.com/Headphones/Professional%20Headphones/K371.html" className="text-neon-cyan">AKG K371</ExtLink> (<span className="text-neon-magenta">closed-back</span>, tuned to the <span className="text-neon-cyan">Harman</span> target) alongside the <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink> (<span className="text-neon-magenta">open-back</span>, <span className="text-neon-cyan">diffuse-field</span> / flat). Load them into <ExtLink href="https://www.extreamsd.com/index.php/products/usb-audio-player-pro" className="text-neon-cyan">USB Audio Player Pro</ExtLink> with <ExtLink href="https://www.toneboosters.com/tb_morphit_v1.html" className="text-neon-cyan">ToneBoosters MorphIt</ExtLink> and A/B different target curves — you'll quickly work out whether you prefer open vs closed, and Harman vs diffuse-field.
         </p>
 
-        <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended headphones / earbuds</p>
+        <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended · Bluetooth earbuds</p>
         <div className="grid gap-5 md:grid-cols-2">
           <Card title="Creative Aurvana Ace 3" href="https://us.creative.com/p/headphones-headsets/creative-aurvana-ace-3">
             <Bullets
@@ -215,7 +217,10 @@ const Index = () => {
               </p>
             </div>
           </Card>
+        </div>
 
+        <p className="mb-4 mt-10 text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended · Wired headphones</p>
+        <div className="grid gap-5 md:grid-cols-2">
           <Card title="Sennheiser HD 560S" href="https://en-uk.sennheiser.com/hd-560s">
             <Bullets
               items={[
@@ -230,6 +235,67 @@ const Index = () => {
               <p className="mt-2 text-sm text-foreground/85">
                 Pair with <span className="text-neon-cyan">USB Audio Player Pro</span> + <span className="text-neon-magenta">ToneBoosters MorphIt</span> to audition different target curves; otherwise the stock tuning is already reference-flat and needs nothing.
               </p>
+            </div>
+          </Card>
+        </div>
+
+        <p className="mb-4 mt-10 text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended · Bluetooth headphones</p>
+        <div className="grid gap-5 md:grid-cols-2">
+          <Card title="Audio Technica ATH-M50x BT2" href="https://www.audio-technica.com/en-us/ath-m50xbt2">
+            <Bullets
+              items={[
+                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">wireless over-ear</span> (closed-back)</>,
+                <><span className="text-neon-magenta">ANC:</span> No</>,
+                <><span className="text-neon-magenta">Wired:</span> 3.5mm</>,
+                <><span className="text-neon-magenta">Others:</span> the same sonic signature of the legendary ATH-M50x studio headphones, multipoint connection, large-aperture drivers deliver deep and accurate bass response, AK4331 advanced audio DAC and dedicated internal headphone amp, LDAC.</>,
+              ]}
+            />
+            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
+              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
+              <p className="mt-2 text-sm text-foreground/85">
+                Drive it from <span className="text-neon-cyan">jetAudio</span> and pick a DSP chain by connection.
+              </p>
+              <dl className="mt-3 space-y-2 text-sm">
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Connection: Bluetooth</dt>
+                  <dd className="text-foreground/85"><span className="text-neon-magenta">AM3D:</span> Dance, Rock · <span className="text-neon-magenta">Bongiovi:</span> London H, Atlanta H, Boston G, Portland G, New Orleans G, Phoenix G/H (G has nicer highs)</dd>
+                </div>
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Connection: Wired</dt>
+                  <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> Atlanta H</dd>
+                </div>
+              </dl>
+            </div>
+          </Card>
+
+          <Card title="Sennheiser HD 560S + Qudelix 5K">
+            <Bullets
+              items={[
+                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">wired open-back over-ear</span> made wireless with a clip-on <span className="text-neon-cyan">Bluetooth DAC/amp</span></>,
+                <><span className="text-neon-magenta">ANC:</span> No</>,
+                <><span className="text-neon-magenta">Wired:</span> 3.5mm into the <GearLink>Qudelix 5K</GearLink>, or USB-C from the phone for bit-perfect playback</>,
+                <><span className="text-neon-magenta">Others:</span> <span className="text-neon-cyan">LDAC up to 990 kbps</span>, independent hardware volume, <span className="text-neon-cyan">AutoEQ</span> profiles in the Qudelix app, balanced output for extra headroom.</>,
+              ]}
+            />
+            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
+              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
+              <p className="mt-2 text-sm text-foreground/85">
+                Velcro the 5K to the headband, run <span className="text-neon-cyan">LDAC 990 kbps</span> and leave the tuning stock — <span className="text-neon-magenta">no EQ of any kind</span>. Use the balanced output when you want more headroom, or plug in over USB when you want it wired and bit-perfect. See the <a href="#demands" className="text-neon-cyan underline-offset-4 hover:underline">electrical demands table</a> for why this pairing has plenty of margin.
+              </p>
+            </div>
+            <div className="mt-4 grid grid-cols-2 gap-3">
+              <img
+                src={hd560sQudelixHeadband.url}
+                alt="Sennheiser HD 560S with a Qudelix 5K and its cable velcro-strapped to the headband"
+                loading="lazy"
+                className="h-40 w-full rounded-lg border border-border object-cover"
+              />
+              <img
+                src={hd560sQudelixFront.url}
+                alt="Sennheiser HD 560S held up front-on with the Qudelix 5K mounted on the headband"
+                loading="lazy"
+                className="h-40 w-full rounded-lg border border-border object-cover"
+              />
             </div>
           </Card>
         </div>
@@ -279,33 +345,6 @@ const Index = () => {
                 <div>
                   <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Source: Neutron Player / HiFi DAC V1</dt>
                   <dd className="text-foreground/85"><span className="text-neon-magenta">FRC:</span> Rtings on HMS II.3 preset · <span className="text-neon-magenta">Crossfeed:</span> jMeier · <span className="text-neon-magenta">EQ:</span> Deep</dd>
-                </div>
-              </dl>
-            </div>
-          </Card>
-
-          <Card title="Audio Technica ATH-M50x BT2" href="https://www.audio-technica.com/en-us/ath-m50xbt2">
-            <Bullets
-              items={[
-                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">wireless over-ear</span> (closed-back)</>,
-                <><span className="text-neon-magenta">ANC:</span> No</>,
-                <><span className="text-neon-magenta">Wired:</span> 3.5mm</>,
-                <><span className="text-neon-magenta">Others:</span> the same sonic signature of the legendary ATH-M50x studio headphones, multipoint connection, large-aperture drivers deliver deep and accurate bass response, AK4331 advanced audio DAC and dedicated internal headphone amp, LDAC.</>,
-              ]}
-            />
-            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
-              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
-              <p className="mt-2 text-sm text-foreground/85">
-                Drive it from <span className="text-neon-cyan">jetAudio</span> and pick a DSP chain by connection.
-              </p>
-              <dl className="mt-3 space-y-2 text-sm">
-                <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Connection: Bluetooth</dt>
-                  <dd className="text-foreground/85"><span className="text-neon-magenta">AM3D:</span> Dance, Rock · <span className="text-neon-magenta">Bongiovi:</span> London H, Atlanta H, Boston G, Portland G, New Orleans G, Phoenix G/H (G has nicer highs)</dd>
-                </div>
-                <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Connection: Wired</dt>
-                  <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> Atlanta H</dd>
                 </div>
               </dl>
             </div>
