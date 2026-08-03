@@ -1,6 +1,7 @@
 ## Goal
 
-Add a "Headphone Electrical Demands" reference table to the site, using the user's provided CSV as the initial data, so readers can match a headphone profile to the right amplifier/DAC requirement.
+Add a "Headphone Electrical Demands" reference table to the site, using the user's provided CSV as the initial data, so readers can match a headphone profile to the right amplifier/DAC requirement. The table will also include the **Sennheiser HD 560S** and **AKG K371** headphones already reviewed on the site.
+
 
 ## Changes
 
@@ -31,14 +32,18 @@ Run the existing `bun run build` and `bun run test` commands to confirm the new 
 
 ## Table data
 
-The table will use the data from the uploaded CSV:
+The table will use the data from the uploaded CSV, plus two rows for the headphones already reviewed on the site:
 
 | Headphone Profile | Key Specifications | Primary Electrical Demand | Amplifier Target Spec | What Happens with the Wrong Amp | Common Examples |
 |---|---|---|---|---|---|
 | Low Impedance + Low Sensitivity | < 32 Ω, < 96 dB/mW | High Current (I) | High continuous current output at low loads | Soft/compressed bass, harsh transients, amp clipping | Hifiman Edition XS, Dan Clark Audio Aeon 2 |
 | High Impedance + Low Sensitivity | > 150 Ω, < 96 dB/mW | High Voltage (V) | High voltage swing (VRMS) at high loads | Quiet, dry, thin, lifeless sound | Sennheiser HD600, Beyerdynamic DT 880 |
-| Low Impedance + High Sensitivity | < 32 Ω, > 100 dB/mW | Ultra-low Noise Floor | Near-zero output impedance (< 1 Ω) & high SNR | Hiss/static; bloated/loose bass | Campfire Andromeda, Shure SE846 |
+| Low Impedance + High Sensitivity | < 32 Ω, > 100 dB/mW | Ultra-low Noise Floor | Near-zero output impedance (< 1 Ω) & high SNR | Hiss/static; bloated/loose bass | Campfire Andromeda, Shure SE846, **AKG K371** (32 Ω / 114 dB/mW) |
+| Medium Impedance + High Sensitivity | ~120 Ω, ~101 dB/mW | Moderate Voltage & Clean Current | Clean, linear delivery with low output impedance | May need a bit more volume than a phone gives; otherwise easy to drive | **Sennheiser HD 560S** (120 Ω / 110 dB/V) |
 | High Impedance + High Sensitivity | > 150 Ω, > 100 dB/mW | Moderate Voltage (V) | Clean, linear voltage delivery | Slightly restricted volume on weak sources | Audio-Technica ATH-R70x |
+
+The HD 560S and AKG K371 rows will link to their existing headphone cards in the **Headphones** section, so readers can jump from the electrical-demand table back to the listening recommendations.
+
 
 ## Technical notes
 
