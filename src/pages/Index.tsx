@@ -407,6 +407,9 @@ const Index = () => {
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
           Two numbers decide how picky a headphone is about its source: <span className="text-neon-cyan">impedance</span> (Ω) and <span className="text-neon-cyan">sensitivity</span> (dB/mW or dB/V). Match them to the right amplifier or DAC and the headphone sings; mismatch them and you get hiss, thin bass, or not enough volume headroom.
         </p>
+        <p className="mb-6 max-w-2xl text-sm text-foreground/80">
+          The last column only covers the <a href="#phones" className="text-neon-cyan underline-offset-4 hover:underline">gear recommended on this page</a>, using each vendor's published output figures. <span className="text-neon-magenta">FiiO Air Link style adapters</span> are missing on purpose: they transmit Bluetooth to wireless headphones rather than amplifying wired ones, so they don't drive any of these profiles directly.
+        </p>
         <DataTable
           rows={[
             {
