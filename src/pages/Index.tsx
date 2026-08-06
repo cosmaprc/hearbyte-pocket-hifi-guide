@@ -562,7 +562,7 @@ const Index = () => {
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Source:</span> Android phone with <span className="text-neon-cyan">LDAC</span>.</>,
-                <><span className="text-neon-magenta">App:</span> <ExtLink href="https://www.deezer.com/" className="text-neon-cyan">Deezer</ExtLink> — <span className="text-neon-cyan">Normalize audio</span> on, every other DSP including <span className="text-neon-cyan">Dolby Atmos</span> off.</>,
+                <><span className="text-neon-magenta">App:</span> <ExtLink href="https://music.apple.com/" className="text-neon-cyan">Apple Music</ExtLink> — <span className="text-neon-cyan">Sound Check</span> on, every other DSP including <span className="text-neon-cyan">Dolby Atmos</span> off.</>,
                 <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink> — no EQ of any kind.</>,
                 <><span className="text-neon-magenta">DAC / Bluetooth receiver:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k-dac-amp" className="text-neon-cyan">Qudelix 5K</ExtLink> — either wireless over Bluetooth at <span className="text-neon-cyan">LDAC 990 kbps</span>, or wired.</>,
               ]}
@@ -601,7 +601,7 @@ const Index = () => {
             <Bullets
               items={[
                 <>Built into <span className="text-neon-cyan">Neutron</span>: scans your library and writes <span className="text-neon-cyan">ReplayGain</span>-compatible tags <span className="text-neon-magenta">on-device</span>, no PC required.</>,
-                <>Configurable target loudness — set <span className="text-neon-cyan">-15 LUFS</span> for <span className="text-neon-magenta">Deezer</span>, <span className="text-neon-cyan">-14 LUFS</span> to match <span className="text-neon-magenta">Spotify</span>, <span className="text-neon-magenta">YouTube</span> and <span className="text-neon-magenta">Tidal</span>, or the classic <span className="text-neon-cyan">-18 LUFS</span> ReplayGain default.</>,
+                <>Configurable target loudness — set <span className="text-neon-cyan">-16 LUFS</span> for <span className="text-neon-magenta">Apple Music</span>, <span className="text-neon-cyan">-14 LUFS</span> to match <span className="text-neon-magenta">Spotify</span>, <span className="text-neon-magenta">YouTube</span> and <span className="text-neon-magenta">Tidal</span>, or the classic <span className="text-neon-cyan">-18 LUFS</span> ReplayGain default.</>,
                 <>The simplest path if you only listen in Neutron and don't want a separate scanner. See the <ExtLink href="https://neutroncode.com/feature_normalization" className="text-neon-magenta">official guide</ExtLink> for the full options.</>,
               ]}
             />
@@ -726,16 +726,16 @@ const Index = () => {
           <Card title="Streaming & Playlists">
             <Bullets
               items={[
-                <><ExtLink href="https://www.deezer.com/" className="text-neon-cyan">Deezer</ExtLink> is my preferred streaming and music discovery app — its suggestions helped me put together my best playlists.</>,
-                <>Large <span className="text-neon-cyan">hi-res</span> / <span className="text-neon-cyan">lossless</span> <span className="text-neon-cyan">FLAC</span> catalogue, with <span className="text-neon-magenta">Flow</span> and <span className="text-neon-magenta">Mixes</span> for discovery and built-in audio normalization at roughly <span className="text-neon-cyan">-15 LUFS</span>.</>,
+                <><ExtLink href="https://music.apple.com/" className="text-neon-cyan">Apple Music</ExtLink> is my preferred streaming and music discovery app — its suggestions helped me put together my best playlists.</>,
+                <>Large <span className="text-neon-cyan">hi-res</span> / <span className="text-neon-cyan">lossless</span> catalogue with <span className="text-neon-magenta">Spatial Audio</span> tracks and built-in audio normalization at roughly <span className="text-neon-cyan">-16 LUFS</span>.</>,
               ]}
             />
             <div className="mt-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan mb-2">Playlists</p>
               <Bullets
                 items={[
-                  <><ExtLink href="https://www.deezer.com/playlist/15583940003" className="text-neon-cyan">Deze Beats Is Twistin Me Brainz</ExtLink></>,
-                  <><ExtLink href="https://www.deezer.com/playlist/15569033283" className="text-neon-cyan">Face Meltin Synths</ExtLink></>,
+                  <><ExtLink href="https://music.apple.com/gb/playlist/deze-beats-is-twistin-me-brainz/pl.u-kv9lbpjC7GxrejK" className="text-neon-cyan">Deze Beats Is Twistin Me Brainz</ExtLink></>,
+                  <><ExtLink href="https://music.apple.com/gb/playlist/face-meltin-synths/pl.u-jV890p9Cd6ExlpN" className="text-neon-cyan">Face Meltin Synths</ExtLink></>,
                 ]}
               />
             </div>
