@@ -360,13 +360,13 @@ const Index = () => {
                 src={hd560sQudelixHeadband}
                 alt="Sennheiser HD 560S with a Qudelix 5K and its cable velcro-strapped to the headband"
                 loading="lazy"
-                className="h-40 w-full rounded-lg border border-border object-cover"
+                className="h-40 w-full rounded-lg border border-border object-cover object-top md:h-48"
               />
               <img
                 src={hd560sQudelixFront}
                 alt="Sennheiser HD 560S held up front-on with the Qudelix 5K mounted on the headband"
                 loading="lazy"
-                className="h-40 w-full rounded-lg border border-border object-cover"
+                className="h-40 w-full rounded-lg border border-border object-cover object-top md:h-48"
               />
             </div>
           </Card>
