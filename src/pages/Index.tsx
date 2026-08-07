@@ -530,6 +530,9 @@ const Index = () => {
         <p className="mb-6 max-w-2xl text-sm text-foreground/80">
           The last column only covers the <a href="#phones" className="text-neon-cyan underline-offset-4 hover:underline">gear recommended on this page</a>, using each vendor's published <span className="text-neon-cyan">single-ended</span> and <span className="text-neon-cyan">balanced</span> output figures — which is why the same dongle can appear in two rows depending on which output you plug into. <span className="text-neon-magenta">FiiO Air Link style adapters</span> are missing on purpose: they transmit Bluetooth to wireless headphones rather than amplifying wired ones, so they don't drive any of these profiles directly.
         </p>
+        <div className="mb-6 max-w-2xl rounded-lg border border-neon-magenta/40 bg-neon-magenta/5 p-4 text-sm text-foreground/85">
+          <span className="font-semibold text-neon-magenta">If you only read one line:</span> every headphone recommended on this page is driven comfortably by the sources recommended above — the <GearLink>Qudelix 5K</GearLink> covers all of them. The table below is for the edge cases: hard-to-drive planars, 300 Ω classics and hiss-prone sensitive IEMs.
+        </div>
         <DataTable
           rows={[
             {
