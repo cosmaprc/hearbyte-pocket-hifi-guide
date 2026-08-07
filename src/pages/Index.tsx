@@ -268,7 +268,7 @@ const Index = () => {
           If you're new to this and want to figure out your own preferences before spending big, try the <ExtLink href="https://www.akg.com/Headphones/Professional%20Headphones/K371.html" className="text-neon-cyan">AKG K371</ExtLink> (<span className="text-neon-magenta">closed-back</span>, tuned to the <span className="text-neon-cyan">Harman</span> target) alongside the <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink> (<span className="text-neon-magenta">open-back</span>, <span className="text-neon-cyan">diffuse-field</span> / flat). Load them into <ExtLink href="https://www.extreamsd.com/index.php/products/usb-audio-player-pro" className="text-neon-cyan">USB Audio Player Pro</ExtLink> with <ExtLink href="https://www.toneboosters.com/tb_morphit_v1.html" className="text-neon-cyan">ToneBoosters MorphIt</ExtLink> and A/B different target curves — you'll quickly work out whether you prefer open vs closed, and Harman vs diffuse-field.
         </p>
 
-        <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended · Bluetooth earbuds</p>
+        <SubHeading spaced={false}>Recommended · Bluetooth earbuds</SubHeading>
         <div className="grid gap-5 md:grid-cols-2">
           <Card title="Creative Aurvana Ace 3" href="https://us.creative.com/p/headphones-headsets/creative-aurvana-ace-3">
             <Bullets
@@ -279,7 +279,7 @@ const Index = () => {
                 <><span className="text-neon-magenta">Others:</span> xMEMS solid-state tweeters, LDAC, aptX Lossless, Mimi sound personalisation.</>,
               ]}
             />
-            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
+            <div className="mt-4 rounded-lg border border-neon-magenta/40 bg-neon-magenta/5 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
               <p className="mt-2 text-sm text-foreground/85">
                 Run the <span className="text-neon-magenta">Mimi sound personalisation</span> hearing test in the <span className="text-neon-cyan">Creative app</span> once and leave it on — it's the single biggest change you can make to how these sound. Stack a light <span className="text-neon-cyan">jetAudio</span> Bongiovi chain only if you want extra flavour on top.
@@ -288,7 +288,7 @@ const Index = () => {
           </Card>
         </div>
 
-        <p className="mb-4 mt-10 text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended · Wired headphones</p>
+        <SubHeading>Recommended · Wired headphones</SubHeading>
         <div className="grid gap-5 md:grid-cols-2">
           <Card title="Sennheiser HD 560S" href="https://en-uk.sennheiser.com/hd-560s">
             <Bullets
@@ -299,7 +299,7 @@ const Index = () => {
                 <><span className="text-neon-magenta">Others:</span> diffuse-field / neutral tuning, open-back soundstage, easy to drive.</>,
               ]}
             />
-            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
+            <div className="mt-4 rounded-lg border border-neon-magenta/40 bg-neon-magenta/5 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
               <p className="mt-2 text-sm text-foreground/85">
                 Pair with <span className="text-neon-cyan">USB Audio Player Pro</span> + <span className="text-neon-magenta">ToneBoosters MorphIt</span> to audition different target curves; otherwise the stock tuning is already reference-flat and needs nothing.
@@ -308,7 +308,7 @@ const Index = () => {
           </Card>
         </div>
 
-        <p className="mb-4 mt-10 text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended · Bluetooth headphones</p>
+        <SubHeading>Recommended · Bluetooth headphones</SubHeading>
         <div className="grid gap-5 md:grid-cols-2">
           <Card title="Audio Technica ATH-M50x BT2" href="https://www.audio-technica.com/en-us/ath-m50xbt2">
             <Bullets
@@ -319,7 +319,7 @@ const Index = () => {
                 <><span className="text-neon-magenta">Others:</span> the same sonic signature of the legendary ATH-M50x studio headphones, multipoint connection, large-aperture drivers deliver deep and accurate bass response, AK4331 advanced audio DAC and dedicated internal headphone amp, LDAC.</>,
               ]}
             />
-            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
+            <div className="mt-4 rounded-lg border border-neon-magenta/40 bg-neon-magenta/5 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
               <p className="mt-2 text-sm text-foreground/85">
                 Drive it from <span className="text-neon-cyan">jetAudio</span> and pick a DSP chain by connection.
@@ -346,7 +346,7 @@ const Index = () => {
                 <><span className="text-neon-magenta">Others:</span> <span className="text-neon-cyan">LDAC up to 990 kbps</span>, independent hardware volume, <span className="text-neon-cyan">AutoEQ</span> profiles in the Qudelix app, balanced output for extra headroom.</>,
               ]}
             />
-            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
+            <div className="mt-4 rounded-lg border border-neon-magenta/40 bg-neon-magenta/5 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
               <p className="mt-2 text-sm text-foreground/85">
                 Velcro the 5K to the headband, run <span className="text-neon-cyan">LDAC 990 kbps</span> and leave the tuning stock — <span className="text-neon-magenta">no EQ of any kind</span>. Use the balanced output when you want more headroom, or plug in over USB when you want it wired and bit-perfect. See the <a href="#demands" className="text-neon-cyan underline-offset-4 hover:underline">electrical demands table</a> for why this pairing has plenty of margin.
@@ -369,7 +369,7 @@ const Index = () => {
           </Card>
         </div>
 
-        <p className="mb-4 mt-10 text-xs font-semibold uppercase tracking-widest text-neon-cyan">Other pairings</p>
+        <SubHeading>Also owned and tested · in-ear and open-ear</SubHeading>
         <div className="grid gap-5 md:grid-cols-3">
           <Card title="AirPods Pro 2" href="https://www.apple.com/airpods-pro/">
             <Bullets
@@ -380,7 +380,7 @@ const Index = () => {
                 <><span className="text-neon-magenta">Others:</span> tight Apple-ecosystem integration, hearing health features.</>,
               ]}
             />
-            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
+            <div className="mt-4 rounded-lg border border-border bg-background/40 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
               <dl className="mt-3 space-y-2 text-sm">
                 <div>
@@ -404,7 +404,7 @@ const Index = () => {
                 <><span className="text-neon-magenta">Others:</span> famously close to the Harman target out of the box.</>,
               ]}
             />
-            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
+            <div className="mt-4 rounded-lg border border-border bg-background/40 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
               <dl className="mt-3 space-y-2 text-sm">
                 <div>
@@ -428,7 +428,7 @@ const Index = () => {
                 <><span className="text-neon-magenta">Others:</span> Class A/B hi-fi grade amplification, LDAC, aptX Lossless, 7-band EQ, DynamEQ.</>,
               ]}
             />
-            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
+            <div className="mt-4 rounded-lg border border-border bg-background/40 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
               <p className="mt-2 text-sm text-foreground/85">
                 Set the EQ in the <span className="text-neon-cyan">Melomania app</span>, then stack with <span className="text-neon-cyan">jetAudio</span> <span className="text-neon-cyan">Bongiovi DPS</span>.
@@ -459,7 +459,7 @@ const Index = () => {
                 <><span className="text-neon-magenta">Others:</span> Class A/B hi-fi grade amplification, aptX Lossless, user replaceable battery and earcups, DynamEQ, 7-band EQ, multipoint connection, fast charge.</>,
               ]}
             />
-            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
+            <div className="mt-4 rounded-lg border border-border bg-background/40 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
               <p className="mt-2 text-sm text-foreground/85">
                 Over Bluetooth, set the <span className="text-neon-cyan">Melomania app</span> EQ to <span className="text-neon-magenta">Normal</span> and toggle between the <span className="text-neon-magenta">Blues</span> and <span className="text-neon-magenta">Voice</span> tone presets, then stack a jetAudio chain.
@@ -489,7 +489,7 @@ const Index = () => {
                 <><span className="text-neon-magenta">Others:</span> Bluetooth 6.0, dual device connectivity, one-click auto EQ with community-driven EQ profiles.</>,
               ]}
             />
-            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
+            <div className="mt-4 rounded-lg border border-border bg-background/40 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
               <p className="mt-2 text-sm text-foreground/85">
                 In the <span className="text-neon-cyan">Moondrop app</span>, load the official <span className="text-neon-magenta">Herbert's B&amp;K InEar Style</span> <span className="text-neon-cyan">PEQ preset</span>, then stack one of the jetAudio DSP chains below.
