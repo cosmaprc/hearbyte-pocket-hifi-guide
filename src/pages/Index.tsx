@@ -50,6 +50,47 @@ const Index = () => {
 
       <Divider />
 
+      <Section id="start" icon={ListOrdered} title="Start here" tone="cyan">
+        <p className="mb-6 max-w-2xl text-base text-foreground/90">
+          Three steps, in this order. Everything else on this page is detail you can come back for.
+        </p>
+        <ol className="grid gap-5 md:grid-cols-3">
+          {startSteps.map((s) => (
+            <li key={s.href}>
+              <a
+                href={s.href}
+                className="flex h-full flex-col rounded-xl border border-border bg-card-gradient p-6 transition-smooth hover:border-neon-cyan/60 hover:shadow-card-glow"
+              >
+                <span className="font-display text-lg font-bold text-neon-cyan">{s.title}</span>
+                <span className="mt-3 text-sm leading-relaxed text-foreground/85">{s.body}</span>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </Section>
+
+      <Divider />
+
+      <Section id="chain" icon={Zap} title="My preferred audio chain" tone="magenta">
+        <p className="mb-6 max-w-2xl text-base text-foreground/90">
+          When I want to stop experimenting and just listen, this is the chain I reach for. If you copy one thing off this page, copy this.
+        </p>
+        <div className="grid gap-5 md:grid-cols-2">
+          <Card title="The chain">
+            <Bullets
+              items={[
+                <><span className="text-neon-magenta">Source:</span> Android phone with <GlossaryLink term="ldac">LDAC</GlossaryLink>.</>,
+                <><span className="text-neon-magenta">App:</span> <ExtLink href="https://music.apple.com/" className="text-neon-cyan">Apple Music</ExtLink> — <GlossaryLink term="soundcheck">Sound Check</GlossaryLink> on, every other DSP including <span className="text-neon-cyan">Dolby Atmos</span> off.</>,
+                <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink> — no EQ of any kind.</>,
+                <><span className="text-neon-magenta">DAC / Bluetooth receiver:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k-dac-amp" className="text-neon-cyan">Qudelix 5K</ExtLink> — either wireless over Bluetooth at <span className="text-neon-cyan">LDAC 990 kbps</span>, or wired.</>,
+              ]}
+            />
+          </Card>
+        </div>
+      </Section>
+
+      <Divider />
+
       <Section id="phones" icon={Smartphone} title="Phones & Accessories" tone="cyan">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
           You don't need exotic hardware. Any modern <span className="text-neon-cyan">iPhone</span> or <span className="text-neon-cyan">Android</span> phone is a perfectly good starting point — pair it with a <span className="text-neon-cyan">wired</span> or <span className="text-neon-cyan">wireless</span> headphone of your choice and let the apps below do the heavy lifting. The magic happens in the <span className="text-neon-magenta">software</span>. Your <span className="text-neon-cyan">phone</span> decides whether you even need a dongle — start there, then pick a <span className="text-neon-magenta">DAC</span> or <span className="text-neon-magenta">Bluetooth transmitter</span> only if you need one.
