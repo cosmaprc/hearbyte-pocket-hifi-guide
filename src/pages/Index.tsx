@@ -200,14 +200,6 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="mt-8">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended Bluetooth receivers</p>
-          <div className="grid gap-5 md:grid-cols-2">
-            <Card title="Qudelix 5K" href="https://www.qudelix.com/products/qudelix-5k-dac-amp">
-              <p>Doubles as a top-tier <span className="text-neon-cyan">Bluetooth receiver</span>: <span className="text-neon-cyan">LDAC</span>, <span className="text-neon-cyan">aptX Adaptive</span> and on-device <span className="text-neon-magenta">20-band PEQ</span> that applies to whatever source is streaming to it — turn any wired headphone into a well-tuned wireless one.</p>
-            </Card>
-          </div>
-        </div>
       </Section>
 
       <Divider />
