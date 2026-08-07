@@ -117,7 +117,7 @@ const Index = () => {
           <Card title="Bluetooth codecs">
             <Bullets
               items={[
-                <>The common ones, from lossy to effectively lossless: <span className="text-neon-cyan">AAC</span>, <span className="text-neon-cyan">aptX HD</span>, <span className="text-neon-cyan">aptX Lossless</span> and <span className="text-neon-cyan">LDAC</span>.</>,
+                <>The common <GlossaryLink term="ldac">codecs</GlossaryLink>, from lossy to effectively lossless: <span className="text-neon-cyan">AAC</span>, <span className="text-neon-cyan">aptX HD</span>, <span className="text-neon-cyan">aptX Lossless</span> and <span className="text-neon-cyan">LDAC</span>.</>,
                 <>In honest blind listening, most people — and most headphones — <span className="text-neon-magenta">can't reliably tell them apart</span>, or tell any of them from a <span className="text-neon-cyan">wired</span> connection.</>,
                 <>Pick whatever your phone and headphones both support and stop worrying. Tuning and EQ matter far more than codec.</>,
               ]}
@@ -137,7 +137,7 @@ const Index = () => {
           <Card title="USB-C DAC dongles">
             <Bullets
               items={[
-                <>For phones without a headphone jack, or when you want bit-perfect hi-res out to wired headphones. Paired with <ExtLink href="https://www.extreamsd.com/index.php/products/usb-audio-player-pro" className="text-neon-cyan">USB Audio Player Pro</ExtLink> or <ExtLink href="https://neutronmp.com/" className="text-neon-cyan">Neutron</ExtLink>, a USB DAC receives audio <span className="text-neon-magenta">directly and bit-perfect</span> at full resolution (e.g. <span className="text-neon-cyan">24-bit / 192 kHz</span>), bypassing Android's system mixer and <span className="text-neon-magenta">SRC resampling</span>.</>,
+                <>For phones without a headphone jack, or when you want bit-perfect hi-res out to wired headphones. Paired with <ExtLink href="https://www.extreamsd.com/index.php/products/usb-audio-player-pro" className="text-neon-cyan">USB Audio Player Pro</ExtLink> or <ExtLink href="https://neutronmp.com/" className="text-neon-cyan">Neutron</ExtLink>, a USB DAC receives audio <span className="text-neon-magenta">directly and bit-perfect</span> at full resolution (e.g. <span className="text-neon-cyan">24-bit / 192 kHz</span>), bypassing Android's system mixer and <GlossaryLink term="src">SRC resampling</GlossaryLink>.</>,
               ]}
             />
           </Card>
@@ -206,7 +206,7 @@ const Index = () => {
 
       <Section id="software" icon={Sliders} title="Software" tone="magenta">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          The right <span className="text-neon-cyan">player</span> and <span className="text-neon-magenta">DSP</span> chain shapes your sound far more than any <span className="text-neon-cyan">cable</span> or <span className="text-neon-cyan">DAC</span>. These three apps give you <span className="text-neon-cyan">ReplayGain support</span>, <span className="text-neon-cyan">Preamp control</span> and serious <span className="text-neon-magenta">DSP power</span>.
+          The right <span className="text-neon-cyan">player</span> and <GlossaryLink term="dsp">DSP</GlossaryLink> chain shapes your sound far more than any <span className="text-neon-cyan">cable</span> or <span className="text-neon-cyan">DAC</span>. These three apps give you <span className="text-neon-cyan">ReplayGain support</span>, <span className="text-neon-cyan">Preamp control</span> and serious <span className="text-neon-magenta">DSP power</span>.
         </p>
         <div className="grid gap-5 md:grid-cols-3">
           <Card title="jetAudio" href="https://www.jetaudio.com/">
@@ -234,7 +234,7 @@ const Index = () => {
                   <ExtLink href="https://play.google.com/store/apps/details?id=com.neutroncode.mp" className="text-neon-cyan">Android</ExtLink>
                 </>,
                 <><span className="text-neon-cyan">ReplayGain</span> support with manual <span className="text-neon-cyan">preamp</span> adjustment</>,
-                <>Deep DSP toolbox: <span className="text-neon-magenta">Parametric EQ</span>, <span className="text-neon-magenta">Frequency Response Correction</span> (AutoEQ), <span className="text-neon-magenta">Crossfeed</span> and <span className="text-neon-magenta">Adaptive Loudness Compensation</span>.</>,
+                <>Deep DSP toolbox: <span className="text-neon-magenta">Parametric EQ</span>, <span className="text-neon-magenta">Frequency Response Correction</span> (AutoEQ), <GlossaryLink term="crossfeed">Crossfeed</GlossaryLink> and <span className="text-neon-magenta">Adaptive Loudness Compensation</span>.</>,
               ]}
             />
           </Card>
@@ -392,7 +392,7 @@ const Index = () => {
                 </div>
                 <div>
                   <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Source: Neutron Player / HiFi DAC V1</dt>
-                  <dd className="text-foreground/85"><span className="text-neon-magenta">FRC:</span> Crinacle on 711 (passive mode) preset · <span className="text-neon-magenta">Crossfeed:</span> jMeier · <span className="text-neon-magenta">EQ:</span> Deep · <span className="text-neon-magenta">ALC:</span> preset #3 (optional)</dd>
+                  <dd className="text-foreground/85"><span className="text-neon-magenta">FRC:</span> Crinacle on 711 (passive mode) preset · <span className="text-neon-magenta">Crossfeed:</span> jMeier · <span className="text-neon-magenta">EQ:</span> Deep · <span className="text-neon-magenta"><GlossaryLink term="alc">ALC</GlossaryLink>:</span> preset #3 (optional)</dd>
                 </div>
               </dl>
             </div>
@@ -404,7 +404,7 @@ const Index = () => {
                 <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">in-ear</span> (true wireless)</>,
                 <><span className="text-neon-magenta">ANC:</span> Yes</>,
                 <><span className="text-neon-magenta">Wired:</span> N/A</>,
-                <><span className="text-neon-magenta">Others:</span> Class A/B hi-fi grade amplification, LDAC, aptX Lossless, 7-band EQ, DynamEQ.</>,
+                <><span className="text-neon-magenta">Others:</span> Class A/B hi-fi grade amplification, LDAC, aptX Lossless, 7-band EQ, <GlossaryLink term="dynameq">DynamEQ</GlossaryLink>.</>,
               ]}
             />
             <div className="mt-4 rounded-lg border border-border bg-background/40 p-4">
@@ -519,7 +519,7 @@ const Index = () => {
 
       <Section id="demands" icon={Gauge} title="Headphone electrical demands" tone="purple">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          Two numbers decide how picky a headphone is about its source: <span className="text-neon-cyan">impedance</span> (Ω) and <span className="text-neon-cyan">sensitivity</span> (dB/mW or dB/V). Match them to the right amplifier or DAC and the headphone sings; mismatch them and you get hiss, clipping, or not enough volume headroom.
+          Two numbers decide how picky a headphone is about its source: <span className="text-neon-cyan">impedance</span> (Ω) and <GlossaryLink term="sensitivity">sensitivity</GlossaryLink> (dB/mW or dB/V). Match them to the right amplifier or DAC and the headphone sings; mismatch them and you get hiss, clipping, or not enough volume headroom.
         </p>
         <p className="mb-6 max-w-2xl text-sm text-foreground/80">
           One correction first, because almost every guide gets it wrong: impedance is simply the <span className="text-neon-cyan">ratio of voltage to current</span>, and that ratio does not change with level. A headphone therefore does not need proportionally more current in the bass. If it plays <span className="text-neon-magenta">loud enough, it produces enough bass</span> — and if it produces enough bass, it plays loud enough. Running short of current shows up as <span className="text-neon-magenta">clipping on peaks</span> across the whole signal, not as weak or thin bass. That claim is one of the most repeated ideas in audio writing and in AI-generated text, and it is still wrong.
@@ -652,7 +652,7 @@ const Index = () => {
 
       <Section id="replaygain" icon={Volume2} title="Using ReplayGain" tone="orange">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          <span className="text-neon-cyan">ReplayGain</span> is a form of <span className="text-neon-magenta">volume normalization</span> that, when applied correctly, does not affect the <span className="text-neon-magenta">dynamic range</span> of your music. Scan your files once to write <span className="text-neon-cyan">track</span> and <span className="text-neon-cyan">album</span> tags, and the players above will read them and level everything automatically — no more reaching for the volume between songs. If you mostly shuffle across artists, prefer <span className="text-neon-magenta">track</span> mode; if you listen album-first, use <span className="text-neon-magenta">album</span> mode to preserve relative loudness within a record.
+          <GlossaryLink term="replaygain">ReplayGain</GlossaryLink> is a form of <span className="text-neon-magenta">volume normalization</span> that, when applied correctly, does not affect the <span className="text-neon-magenta">dynamic range</span> of your music. Scan your files once to write <span className="text-neon-cyan">track</span> and <span className="text-neon-cyan">album</span> tags, and the players above will read them and level everything automatically — no more reaching for the volume between songs. If you mostly shuffle across artists, prefer <span className="text-neon-magenta">track</span> mode; if you listen album-first, use <span className="text-neon-magenta">album</span> mode to preserve relative loudness within a record.
         </p>
         <div className="grid gap-5 md:grid-cols-3">
           <Card title="foobar2000 on Windows" href="https://www.foobar2000.org/">
@@ -678,7 +678,7 @@ const Index = () => {
             <Bullets
               items={[
                 <>Built into <span className="text-neon-cyan">Neutron</span>: scans your library and writes <span className="text-neon-cyan">ReplayGain</span>-compatible tags <span className="text-neon-magenta">on-device</span>, no PC required.</>,
-                <>Configurable target loudness — set <span className="text-neon-cyan">-16 LUFS</span> for <span className="text-neon-magenta">Apple Music</span>, <span className="text-neon-cyan">-14 LUFS</span> to match <span className="text-neon-magenta">Spotify</span>, <span className="text-neon-magenta">YouTube</span> and <span className="text-neon-magenta">Tidal</span>, or the classic <span className="text-neon-cyan">-18 LUFS</span> ReplayGain default.</>,
+                <>Configurable target loudness — set <GlossaryLink term="lufs">-16 LUFS</GlossaryLink> for <span className="text-neon-magenta">Apple Music</span>, <span className="text-neon-cyan">-14 LUFS</span> to match <span className="text-neon-magenta">Spotify</span>, <span className="text-neon-magenta">YouTube</span> and <span className="text-neon-magenta">Tidal</span>, or the classic <span className="text-neon-cyan">-18 LUFS</span> ReplayGain default.</>,
                 <>The simplest path if you only listen in Neutron and don't want a separate scanner. See the <ExtLink href="https://neutroncode.com/feature_normalization" className="text-neon-magenta">official guide</ExtLink> for the full options.</>,
               ]}
             />
@@ -706,7 +706,7 @@ const Index = () => {
           <Card title="Android">
             <Bullets
               items={[
-                <>Connect over USB in <span className="text-neon-cyan">MTP</span> mode and copy folders to internal storage or an <span className="text-neon-cyan">SD card</span> with any file manager.</>,
+                <>Connect over USB in <GlossaryLink term="mtp">MTP</GlossaryLink> mode and copy folders to internal storage or an <span className="text-neon-cyan">SD card</span> with any file manager.</>,
                 <>All three players above will pick the files up from anywhere they have read access — no app-specific sandbox dance.</>,
               ]}
             />
