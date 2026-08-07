@@ -324,6 +324,9 @@ const Index = () => {
               <p className="mt-2 text-sm text-foreground/85">
                 Drive it from <span className="text-neon-cyan">jetAudio</span> and pick a DSP chain by connection.
               </p>
+              <p className="mt-2 text-xs text-foreground/60">
+                Bongiovi city profiles: <span className="text-neon-cyan">H</span> = Headphones (safer), <span className="text-neon-cyan">G</span> = General (often nicer highs).
+              </p>
               <dl className="mt-3 space-y-2 text-sm">
                 <div>
                   <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Connection: Bluetooth</dt>
