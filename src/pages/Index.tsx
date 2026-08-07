@@ -447,7 +447,10 @@ const Index = () => {
           Two numbers decide how picky a headphone is about its source: <span className="text-neon-cyan">impedance</span> (Ω) and <span className="text-neon-cyan">sensitivity</span> (dB/mW or dB/V). Match them to the right amplifier or DAC and the headphone sings; mismatch them and you get hiss, thin bass, or not enough volume headroom.
         </p>
         <p className="mb-6 max-w-2xl text-sm text-foreground/80">
-          The last column only covers the <a href="#phones" className="text-neon-cyan underline-offset-4 hover:underline">gear recommended on this page</a>, using each vendor's published output figures. <span className="text-neon-magenta">FiiO Air Link style adapters</span> are missing on purpose: they transmit Bluetooth to wireless headphones rather than amplifying wired ones, so they don't drive any of these profiles directly.
+          Watch the units: <span className="text-neon-magenta">dB/mW</span> and <span className="text-neon-magenta">dB/V</span> are not interchangeable, and manufacturers publish whichever flatters the product — a 32 Ω headphone rated 114 dB/V is only about 99 dB/mW. Note too that <span className="text-neon-cyan">planar magnetic</span> headphones have an essentially flat, resistive impedance, so a mediocre output impedance does not colour their tone the way it does dynamic or multi-driver balanced-armature designs; it just wastes power. Planars care about <span className="text-neon-magenta">current</span>, not damping factor.
+        </p>
+        <p className="mb-6 max-w-2xl text-sm text-foreground/80">
+          The last column only covers the <a href="#phones" className="text-neon-cyan underline-offset-4 hover:underline">gear recommended on this page</a>, using each vendor's published <span className="text-neon-cyan">single-ended</span> and <span className="text-neon-cyan">balanced</span> output figures — which is why the same dongle can appear in two rows depending on which output you plug into. <span className="text-neon-magenta">FiiO Air Link style adapters</span> are missing on purpose: they transmit Bluetooth to wireless headphones rather than amplifying wired ones, so they don't drive any of these profiles directly.
         </p>
         <DataTable
           rows={[
@@ -458,29 +461,38 @@ const Index = () => {
               target: "High continuous current output at low loads",
               wrongAmp:
                 "Soft or compressed bass, harsh transients, extreme amp heat, rapid battery drain, amp clipping",
-              examples: "Hifiman Edition XS, Dan Clark Audio Aeon 2",
+              examples:
+                "Hifiman Edition XS (18 Ω / 92 dB/mW), Dan Clark Audio Aeon 2 (13 Ω / ~92 dB/mW)",
               sources: (
                 <>
-                  <GearLink>Qudelix 5K</GearLink> on balanced (it hits current saturation limits under
-                  20 Ω, like the Aeon 2) or <GearLink>Hidizs Martha</GearLink> on balanced.{" "}
-                  <GearLink>FiiO KA11</GearLink> has the raw power but runs intensely hot and drains
-                  the device battery rapidly under continuous current draw.
+                  <GearLink>FiiO KA11</GearLink> (~200 mW into 32 Ω) and{" "}
+                  <GearLink>Hidizs Martha</GearLink> on 4.4mm balanced (~230 mW into 32 Ω) supply the
+                  most current, though the KA11 runs intensely hot and drains the phone battery under
+                  continuous draw. The <GearLink>Qudelix 5K</GearLink> only on 2.5mm balanced
+                  (~240 mW into 32 Ω) — its single-ended output (~80 mW into 32 Ω) runs short. The{" "}
+                  <GearLink>Neutron HiFi DAC V1</GearLink> is the wrong tool here: voltage-clean but
+                  current-light. All four are compromises versus a desktop amp for this profile.
                 </>
               ),
             },
             {
               profile: "High Impedance + Low Sensitivity",
-              specs: "> 150 Ω, < 96 dB/mW",
+              specs: "> 150 Ω, ≲ 97 dB/mW",
               demand: "High Voltage (V)",
               target: "High voltage swing (VRMS) at high loads",
               wrongAmp:
                 "Quiet, dry, thin, lifeless sound; not enough volume headroom once EQ is applied",
-              examples: "Sennheiser HD600, Beyerdynamic DT 880, Audio-Technica ATH-R70x",
+              examples:
+                "Sennheiser HD 600 (300 Ω / ~97 dB/mW), Beyerdynamic DT 880 (250 Ω / 96 dB/mW), Beyerdynamic DT 990 Pro (250 Ω / 96 dB/mW)",
               sources: (
                 <>
-                  Desktop amplifiers or powerful balanced portables. <GearLink>Qudelix 5K</GearLink> on
-                  balanced provides decent swing. <GearLink>Neutron HiFi DAC V1</GearLink> runs cleanly
-                  at 2 VRMS but lacks headroom once you apply negative pre-amp gain for EQ.
+                  This row is about volts, not milliwatts: 2 VRMS into 300 Ω is only ~13 mW — fine for
+                  average listening, tight on peaks. <GearLink>Qudelix 5K</GearLink> on balanced roughly
+                  doubles the swing and is the best of the four.{" "}
+                  <GearLink>Neutron HiFi DAC V1</GearLink> runs cleanly at 2 VRMS but lacks headroom
+                  once you apply negative pre-amp gain for EQ. The <GearLink>FiiO KA11</GearLink>'s
+                  200 mW rating is irrelevant here — it cannot supply the voltage. Desktop amps still
+                  win.
                 </>
               ),
             },
@@ -489,21 +501,23 @@ const Index = () => {
               specs: "< 32 Ω, > 100 dB/mW",
               demand: "Ultra-low Noise Floor",
               target: "Near-zero output impedance (< 1 Ω) and high SNR",
-              wrongAmp: "Audible background hiss or static; bloated, loose, or muddy bass response",
+              wrongAmp:
+                "Audible background hiss or static; on dynamic and multi-driver balanced-armature loads, bloated, loose or muddy bass from a low damping factor",
               examples: (
                 <>
-                  Campfire Andromeda, Shure SE846,{" "}
+                  Campfire Andromeda (~12.8 Ω / ~113 dB/mW), Shure SE846 (~9 Ω / ~114 dB/mW),{" "}
                   <a href="#headphones" className="text-neon-cyan underline-offset-4 hover:underline">
                     AKG K371
                   </a>{" "}
-                  (32 Ω / 114 dB/mW)
+                  (32 Ω / 114 dB/V, ~99 dB/mW)
                 </>
               ),
               sources: (
                 <>
                   <GearLink>Neutron HiFi DAC V1</GearLink> (&lt; 0.6 Ω output impedance, switchable
-                  1 VRMS mode) or <GearLink>Qudelix 5K</GearLink> (&lt; 1 Ω, precise hardware volume
-                  control). Use low gain and avoid high-power balanced ports.
+                  1 VRMS mode) first, then <GearLink>Qudelix 5K</GearLink> (&lt; 1 Ω, precise hardware
+                  volume control) on single-ended. The risk here is hiss and coarse volume steps, not a
+                  lack of power: stay in low gain and off the high-power balanced ports.
                 </>
               ),
             },
@@ -524,7 +538,9 @@ const Index = () => {
               ),
               sources: (
                 <>
-                  Highly versatile: <GearLink>Qudelix 5K</GearLink> (wired or LDAC),{" "}
+                  Highly versatile — 120 Ω at 110 dB/V needs only a fraction of a volt to play loud, so
+                  the choice comes down to features rather than power.{" "}
+                  <GearLink>Qudelix 5K</GearLink> (wired or LDAC),{" "}
                   <GearLink>FiiO KA11</GearLink>, <GearLink>Neutron HiFi DAC V1</GearLink> or{" "}
                   <GearLink>Hidizs Martha</GearLink> all perform cleanly without bottlenecking
                   dynamics.
@@ -537,12 +553,13 @@ const Index = () => {
               demand: "Moderate Voltage (V)",
               target: "Clean, linear voltage delivery",
               wrongAmp: "Slightly restricted volume peaks on weak sources; compressed dynamics",
-              examples: "Beyerdynamic DT 990 Pro (250 Ω)",
+              examples: "Audio-Technica ATH-R70x (470 Ω / 99 dB/mW, ~102 dB/V)",
               sources: (
                 <>
                   <GearLink>Qudelix 5K</GearLink> on balanced or{" "}
-                  <GearLink>Neutron HiFi DAC V1</GearLink> in its 2 VRMS mode. A legacy smartphone
-                  headphone jack will feel restricted and quiet.
+                  <GearLink>Neutron HiFi DAC V1</GearLink> in its 2 VRMS mode are both adequate. The{" "}
+                  <GearLink>FiiO KA11</GearLink> is voltage-limited despite its power rating, and a
+                  legacy smartphone headphone jack will feel restricted and quiet.
                 </>
               ),
             },
