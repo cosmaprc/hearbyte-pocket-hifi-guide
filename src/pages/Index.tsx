@@ -444,7 +444,10 @@ const Index = () => {
 
       <Section id="demands" icon={Gauge} title="Headphone electrical demands" tone="purple">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          Two numbers decide how picky a headphone is about its source: <span className="text-neon-cyan">impedance</span> (Ω) and <span className="text-neon-cyan">sensitivity</span> (dB/mW or dB/V). Match them to the right amplifier or DAC and the headphone sings; mismatch them and you get hiss, thin bass, or not enough volume headroom.
+          Two numbers decide how picky a headphone is about its source: <span className="text-neon-cyan">impedance</span> (Ω) and <span className="text-neon-cyan">sensitivity</span> (dB/mW or dB/V). Match them to the right amplifier or DAC and the headphone sings; mismatch them and you get hiss, clipping, or not enough volume headroom.
+        </p>
+        <p className="mb-6 max-w-2xl text-sm text-foreground/80">
+          One correction first, because almost every guide gets it wrong: impedance is simply the <span className="text-neon-cyan">ratio of voltage to current</span>, and that ratio does not change with level. A headphone therefore does not need proportionally more current in the bass. If it plays <span className="text-neon-magenta">loud enough, it produces enough bass</span> — and if it produces enough bass, it plays loud enough. Running short of current shows up as <span className="text-neon-magenta">clipping on peaks</span> across the whole signal, not as weak or thin bass. That claim is one of the most repeated ideas in audio writing and in AI-generated text, and it is still wrong.
         </p>
         <p className="mb-6 max-w-2xl text-sm text-foreground/80">
           Watch the units: <span className="text-neon-magenta">dB/mW</span> and <span className="text-neon-magenta">dB/V</span> are not interchangeable, and manufacturers publish whichever flatters the product — a 32 Ω headphone rated 114 dB/V is only about 99 dB/mW. Note too that <span className="text-neon-cyan">planar magnetic</span> headphones have an essentially flat, resistive impedance, so a mediocre output impedance does not colour their tone the way it does dynamic or multi-driver balanced-armature designs; it just wastes power. Planars care about <span className="text-neon-magenta">current</span>, not damping factor.
@@ -460,7 +463,7 @@ const Index = () => {
               demand: "High Current (I)",
               target: "High continuous current output at low loads",
               wrongAmp:
-                "Soft or compressed bass, harsh transients, extreme amp heat, rapid battery drain, amp clipping",
+                "The amp hits its current limit and clips on peaks — distortion and compressed dynamics across the whole signal, not just the bass — plus significant amp heat and rapid battery drain",
               examples:
                 "Hifiman Edition XS (18 Ω / 92 dB/mW), Dan Clark Audio Aeon 2 (13 Ω / ~92 dB/mW)",
               sources: (
@@ -481,7 +484,7 @@ const Index = () => {
               demand: "High Voltage (V)",
               target: "High voltage swing (VRMS) at high loads",
               wrongAmp:
-                "Quiet, dry, thin, lifeless sound; not enough volume headroom once EQ is applied",
+                "Simply too quiet: you run out of volume before the music is loud enough, and there is no headroom left once EQ applies negative pre-amp gain",
               examples:
                 "Sennheiser HD 600 (300 Ω / ~97 dB/mW), Beyerdynamic DT 880 (250 Ω / 96 dB/mW), Beyerdynamic DT 990 Pro (250 Ω / 96 dB/mW)",
               sources: (
