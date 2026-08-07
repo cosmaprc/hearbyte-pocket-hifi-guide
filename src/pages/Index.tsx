@@ -461,29 +461,38 @@ const Index = () => {
               target: "High continuous current output at low loads",
               wrongAmp:
                 "Soft or compressed bass, harsh transients, extreme amp heat, rapid battery drain, amp clipping",
-              examples: "Hifiman Edition XS, Dan Clark Audio Aeon 2",
+              examples:
+                "Hifiman Edition XS (18 Ω / 92 dB/mW), Dan Clark Audio Aeon 2 (13 Ω / ~92 dB/mW)",
               sources: (
                 <>
-                  <GearLink>Qudelix 5K</GearLink> on balanced (it hits current saturation limits under
-                  20 Ω, like the Aeon 2) or <GearLink>Hidizs Martha</GearLink> on balanced.{" "}
-                  <GearLink>FiiO KA11</GearLink> has the raw power but runs intensely hot and drains
-                  the device battery rapidly under continuous current draw.
+                  <GearLink>FiiO KA11</GearLink> (~200 mW into 32 Ω) and{" "}
+                  <GearLink>Hidizs Martha</GearLink> on 4.4mm balanced (~230 mW into 32 Ω) supply the
+                  most current, though the KA11 runs intensely hot and drains the phone battery under
+                  continuous draw. The <GearLink>Qudelix 5K</GearLink> only on 2.5mm balanced
+                  (~240 mW into 32 Ω) — its single-ended output (~80 mW into 32 Ω) runs short. The{" "}
+                  <GearLink>Neutron HiFi DAC V1</GearLink> is the wrong tool here: voltage-clean but
+                  current-light. All four are compromises versus a desktop amp for this profile.
                 </>
               ),
             },
             {
               profile: "High Impedance + Low Sensitivity",
-              specs: "> 150 Ω, < 96 dB/mW",
+              specs: "> 150 Ω, ≲ 97 dB/mW",
               demand: "High Voltage (V)",
               target: "High voltage swing (VRMS) at high loads",
               wrongAmp:
                 "Quiet, dry, thin, lifeless sound; not enough volume headroom once EQ is applied",
-              examples: "Sennheiser HD600, Beyerdynamic DT 880, Audio-Technica ATH-R70x",
+              examples:
+                "Sennheiser HD 600 (300 Ω / ~97 dB/mW), Beyerdynamic DT 880 (250 Ω / 96 dB/mW), Beyerdynamic DT 990 Pro (250 Ω / 96 dB/mW)",
               sources: (
                 <>
-                  Desktop amplifiers or powerful balanced portables. <GearLink>Qudelix 5K</GearLink> on
-                  balanced provides decent swing. <GearLink>Neutron HiFi DAC V1</GearLink> runs cleanly
-                  at 2 VRMS but lacks headroom once you apply negative pre-amp gain for EQ.
+                  This row is about volts, not milliwatts: 2 VRMS into 300 Ω is only ~13 mW — fine for
+                  average listening, tight on peaks. <GearLink>Qudelix 5K</GearLink> on balanced roughly
+                  doubles the swing and is the best of the four.{" "}
+                  <GearLink>Neutron HiFi DAC V1</GearLink> runs cleanly at 2 VRMS but lacks headroom
+                  once you apply negative pre-amp gain for EQ. The <GearLink>FiiO KA11</GearLink>'s
+                  200 mW rating is irrelevant here — it cannot supply the voltage. Desktop amps still
+                  win.
                 </>
               ),
             },
