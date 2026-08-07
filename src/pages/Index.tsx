@@ -501,21 +501,23 @@ const Index = () => {
               specs: "< 32 Ω, > 100 dB/mW",
               demand: "Ultra-low Noise Floor",
               target: "Near-zero output impedance (< 1 Ω) and high SNR",
-              wrongAmp: "Audible background hiss or static; bloated, loose, or muddy bass response",
+              wrongAmp:
+                "Audible background hiss or static; on dynamic and multi-driver balanced-armature loads, bloated, loose or muddy bass from a low damping factor",
               examples: (
                 <>
-                  Campfire Andromeda, Shure SE846,{" "}
+                  Campfire Andromeda (~12.8 Ω / ~113 dB/mW), Shure SE846 (~9 Ω / ~114 dB/mW),{" "}
                   <a href="#headphones" className="text-neon-cyan underline-offset-4 hover:underline">
                     AKG K371
                   </a>{" "}
-                  (32 Ω / 114 dB/mW)
+                  (32 Ω / 114 dB/V, ~99 dB/mW)
                 </>
               ),
               sources: (
                 <>
                   <GearLink>Neutron HiFi DAC V1</GearLink> (&lt; 0.6 Ω output impedance, switchable
-                  1 VRMS mode) or <GearLink>Qudelix 5K</GearLink> (&lt; 1 Ω, precise hardware volume
-                  control). Use low gain and avoid high-power balanced ports.
+                  1 VRMS mode) first, then <GearLink>Qudelix 5K</GearLink> (&lt; 1 Ω, precise hardware
+                  volume control) on single-ended. The risk here is hiss and coarse volume steps, not a
+                  lack of power: stay in low gain and off the high-power balanced ports.
                 </>
               ),
             },
@@ -536,7 +538,9 @@ const Index = () => {
               ),
               sources: (
                 <>
-                  Highly versatile: <GearLink>Qudelix 5K</GearLink> (wired or LDAC),{" "}
+                  Highly versatile — 120 Ω at 110 dB/V needs only a fraction of a volt to play loud, so
+                  the choice comes down to features rather than power.{" "}
+                  <GearLink>Qudelix 5K</GearLink> (wired or LDAC),{" "}
                   <GearLink>FiiO KA11</GearLink>, <GearLink>Neutron HiFi DAC V1</GearLink> or{" "}
                   <GearLink>Hidizs Martha</GearLink> all perform cleanly without bottlenecking
                   dynamics.
@@ -549,12 +553,13 @@ const Index = () => {
               demand: "Moderate Voltage (V)",
               target: "Clean, linear voltage delivery",
               wrongAmp: "Slightly restricted volume peaks on weak sources; compressed dynamics",
-              examples: "Beyerdynamic DT 990 Pro (250 Ω)",
+              examples: "Audio-Technica ATH-R70x (470 Ω / 99 dB/mW, ~102 dB/V)",
               sources: (
                 <>
                   <GearLink>Qudelix 5K</GearLink> on balanced or{" "}
-                  <GearLink>Neutron HiFi DAC V1</GearLink> in its 2 VRMS mode. A legacy smartphone
-                  headphone jack will feel restricted and quiet.
+                  <GearLink>Neutron HiFi DAC V1</GearLink> in its 2 VRMS mode are both adequate. The{" "}
+                  <GearLink>FiiO KA11</GearLink> is voltage-limited despite its power rating, and a
+                  legacy smartphone headphone jack will feel restricted and quiet.
                 </>
               ),
             },
