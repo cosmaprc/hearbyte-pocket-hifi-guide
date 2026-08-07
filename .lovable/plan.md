@@ -32,3 +32,22 @@ I checked every headphone and spec claim in the table against manufacturer figur
 ## Technical notes
 
 All changes are confined to the `rows` array passed to `DataTable` and the two intro paragraphs inside the `#demands` section of `src/pages/Index.tsx` (lines ~445-551). No component, schema or styling changes; existing `GearLink` and `#headphones` anchors are preserved.
+
+## Dongle and receiver specs: audit and corrections
+
+The current "Sources that drive it" column mostly describes the four sources qualitatively and only quotes hard numbers for the Neutron V1. I will pin every recommendation to the vendor-published output figure that actually matters for that row (mW at low impedance, VRMS at high impedance), re-verifying each against the vendor pages already linked on the page before writing:
+
+- **Qudelix 5K** — ~2 VRMS / ~80 mW into 32 Ω single-ended (3.5mm), roughly double the voltage and ~240 mW into 32 Ω on 2.5mm balanced, output impedance under 1 Ω. Balanced is what makes it viable for demanding loads; single-ended is the one that runs short.
+- **FiiO KA11** — 3.5mm only, ~200 mW into 32 Ω, no balanced output, low output impedance. Strongest current per pound of the four, but voltage-limited, so it is the wrong pick for 250-600 Ω headphones and it does run hot.
+- **Hidizs S9 Pro Plus Martha** — ~125 mW into 32 Ω on 3.5mm and ~230 mW into 32 Ω on 4.4mm balanced, dual ES9038Q2M, independent volume.
+- **Neutron HiFi DAC V1** — 3.5mm only, switchable ~1 VRMS / ~2 VRMS output, output impedance under 0.6 Ω. The cleanest, quietest of the four and the best match for sensitive low-impedance loads; the least current for planars.
+
+### How this changes each row
+
+- **Low Z + low sensitivity (Edition XS, Aeon 2)** — lead with the KA11 and Martha balanced as the highest-current portables, note the 5K only on balanced, mark the Neutron V1 as not the right tool here, and say plainly that all four are compromises versus a desktop amp. Replaces the unpublished "current saturation under 20 Ω" claim.
+- **High Z + low sensitivity (HD 600, DT 880, DT 990 Pro)** — this row is about voltage, so frame it that way: 2 VRMS into 300 Ω is only ~13 mW, which is enough for average listening but leaves little for peaks or EQ. The 5K on balanced roughly doubles the swing and is the best of the four; the KA11's 200 mW rating is irrelevant here because it cannot supply the voltage.
+- **Low Z + high sensitivity (Andromeda, SE846, K371)** — keep the Neutron V1 first for its sub-0.6 Ω output and 1 VRMS low-gain mode, and the 5K second, and add the explicit warning to stay off the high-power balanced ports and out of high gain, since here the risk is hiss and too-coarse volume steps, not lack of power.
+- **Medium Z + high sensitivity (HD 560S)** — keep "all four work", but say why: 120 Ω at 110 dB/V needs only a fraction of a volt for loud listening, so this is the profile where the choice is about features rather than power.
+- **High Z + high sensitivity (ATH-R70x)** — 5K balanced or Neutron V1 at 2 VRMS, both adequate; note the KA11 is voltage-limited and a legacy phone jack will feel quiet.
+
+I will also make the note above the table say that the figures are the vendors' published single-ended versus balanced ratings, so readers understand a single dongle can appear in two different rows depending on which output they plug into.
