@@ -447,7 +447,10 @@ const Index = () => {
           Two numbers decide how picky a headphone is about its source: <span className="text-neon-cyan">impedance</span> (Ω) and <span className="text-neon-cyan">sensitivity</span> (dB/mW or dB/V). Match them to the right amplifier or DAC and the headphone sings; mismatch them and you get hiss, thin bass, or not enough volume headroom.
         </p>
         <p className="mb-6 max-w-2xl text-sm text-foreground/80">
-          The last column only covers the <a href="#phones" className="text-neon-cyan underline-offset-4 hover:underline">gear recommended on this page</a>, using each vendor's published output figures. <span className="text-neon-magenta">FiiO Air Link style adapters</span> are missing on purpose: they transmit Bluetooth to wireless headphones rather than amplifying wired ones, so they don't drive any of these profiles directly.
+          Watch the units: <span className="text-neon-magenta">dB/mW</span> and <span className="text-neon-magenta">dB/V</span> are not interchangeable, and manufacturers publish whichever flatters the product — a 32 Ω headphone rated 114 dB/V is only about 99 dB/mW. Note too that <span className="text-neon-cyan">planar magnetic</span> headphones have an essentially flat, resistive impedance, so a mediocre output impedance does not colour their tone the way it does dynamic or multi-driver balanced-armature designs; it just wastes power. Planars care about <span className="text-neon-magenta">current</span>, not damping factor.
+        </p>
+        <p className="mb-6 max-w-2xl text-sm text-foreground/80">
+          The last column only covers the <a href="#phones" className="text-neon-cyan underline-offset-4 hover:underline">gear recommended on this page</a>, using each vendor's published <span className="text-neon-cyan">single-ended</span> and <span className="text-neon-cyan">balanced</span> output figures — which is why the same dongle can appear in two rows depending on which output you plug into. <span className="text-neon-magenta">FiiO Air Link style adapters</span> are missing on purpose: they transmit Bluetooth to wireless headphones rather than amplifying wired ones, so they don't drive any of these profiles directly.
         </p>
         <DataTable
           rows={[
