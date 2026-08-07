@@ -718,42 +718,99 @@ const Index = () => {
 
       <Section id="glossary" icon={BookOpen} title="Glossary" tone="cyan">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          A few quick definitions for the terms used above, in case anything is new to you.
+          A few quick definitions for the terms used above, in alphabetical order, in case anything is new to you.
         </p>
         <div className="grid gap-5 md:grid-cols-2">
-          <Card title="ANC">
-            <p><span className="text-neon-cyan">Active Noise Cancellation</span> — microphones sample ambient sound and the headphone plays an inverted signal to cancel it, most effective on steady low-frequency noise (planes, trains, HVAC).</p>
-          </Card>
-          <Card title="Crossfeed">
-            <p>Mixes a small amount of each stereo channel into the other to make headphone listening sound less "in-head" and closer to speakers.</p>
-          </Card>
-          <Card title="DSP">
-            <p><span className="text-neon-cyan">Digital Signal Processing</span> — software that reshapes audio in real time (<span className="text-neon-cyan">EQ</span>, <span className="text-neon-cyan">reverb</span>, <span className="text-neon-cyan">crossfeed</span>, <span className="text-neon-cyan">dynamics</span>).</p>
-          </Card>
-          <Card title="EQ / PEQ">
-            <p><span className="text-neon-cyan">EQ</span> is an equalizer that boosts or cuts frequency bands. <span className="text-neon-cyan">PEQ</span> (Parametric EQ) lets you control center frequency, gain and bandwidth (Q) per band — far more precise than a fixed graphic EQ.</p>
-          </Card>
-          <Card title="FRC / AutoEQ">
-            <p><span className="text-neon-cyan">Frequency Response Correction</span> (Neutron's term) and <span className="text-neon-cyan">AutoEQ</span> both apply measured headphone-correction filters so a given headphone matches a chosen <span className="text-neon-cyan">target curve</span>.</p>
-          </Card>
-          <Card title="IEM">
-            <p><span className="text-neon-cyan">In-Ear Monitor</span> — a sealed in-ear headphone with silicone or foam tips that sits inside the ear canal, giving strong passive isolation and a consistent low-end response.</p>
-          </Card>
-          <Card title="LUFS">
-            <p><span className="text-neon-cyan">Loudness Units Full Scale</span> — a perceptual loudness measurement (ITU&nbsp;BS.1770) used by streaming services and ReplayGain to normalize tracks to a common target (e.g. <span className="text-neon-cyan">-14&nbsp;LUFS</span> on Spotify/Tidal).</p>
-          </Card>
-          <Card title="MTP">
-            <p><span className="text-neon-cyan">Media Transfer Protocol</span> — the USB mode Android phones use to expose their storage to a computer so you can drag and drop files without special drivers.</p>
-          </Card>
-          <Card title="OWS">
-            <p><span className="text-neon-cyan">Open Wearable Stereo</span> — an open-fit earbud that clips to or rests on the ear without sealing the canal, leaving you aware of your surroundings (e.g. the Moondrop Pill).</p>
-          </Card>
-          <Card title="ReplayGain">
-            <p>A metadata-based <span className="text-neon-magenta">volume normalization</span> standard. Tracks are scanned for perceived loudness, and players use the resulting tags to play everything at a consistent level — without re-encoding or compressing the audio.</p>
-          </Card>
-          <Card title="Target curve">
-            <p>The frequency response a headphone is tuned (or EQ'd) to match — e.g. the <span className="text-neon-cyan">Harman</span> curve or B&amp;K-style in-ear targets.</p>
-          </Card>
+          <div id="g-alc" className="scroll-mt-24">
+            <Card title="ALC">
+              <p><span className="text-neon-cyan">Adaptive Loudness Compensation</span> (Neutron) — adjusts tonal balance for how loudly you are listening, so quiet listening keeps its bass and treble instead of thinning out.</p>
+            </Card>
+          </div>
+          <div id="g-anc" className="scroll-mt-24">
+            <Card title="ANC">
+              <p><span className="text-neon-cyan">Active Noise Cancellation</span> — microphones sample ambient sound and the headphone plays an inverted signal to cancel it, most effective on steady low-frequency noise (planes, trains, HVAC).</p>
+            </Card>
+          </div>
+          <div id="g-ldac" className="scroll-mt-24">
+            <Card title="Bluetooth codecs (AAC, aptX, LDAC)">
+              <p>The rules used to compress audio for the Bluetooth link. <span className="text-neon-cyan">AAC</span> is the lossy baseline, <span className="text-neon-cyan">aptX HD</span> and <span className="text-neon-cyan">LDAC</span> carry more data (LDAC up to 990 kbps), and <span className="text-neon-cyan">aptX Lossless</span> is bit-exact CD quality. Both ends must support the same codec.</p>
+            </Card>
+          </div>
+          <div id="g-crossfeed" className="scroll-mt-24">
+            <Card title="Crossfeed">
+              <p>Mixes a small amount of each stereo channel into the other to make headphone listening sound less "in-head" and closer to speakers.</p>
+            </Card>
+          </div>
+          <div id="g-sensitivity" className="scroll-mt-24">
+            <Card title="dB/mW vs dB/V">
+              <p>Two ways to publish <span className="text-neon-cyan">sensitivity</span>. dB/mW is loudness per milliwatt of power; dB/V is loudness per volt. They are not interchangeable — a 32 Ω headphone rated 114 dB/V is only about 99 dB/mW — and manufacturers quote whichever flatters the product.</p>
+            </Card>
+          </div>
+          <div id="g-dsp" className="scroll-mt-24">
+            <Card title="DSP">
+              <p><span className="text-neon-cyan">Digital Signal Processing</span> — software that reshapes audio in real time (<span className="text-neon-cyan">EQ</span>, <span className="text-neon-cyan">reverb</span>, <span className="text-neon-cyan">crossfeed</span>, <span className="text-neon-cyan">dynamics</span>).</p>
+            </Card>
+          </div>
+          <div id="g-dynameq" className="scroll-mt-24">
+            <Card title="DynamEQ">
+              <p>Cambridge Audio's loudness-aware EQ in the Melomania app — it lifts the frequency extremes at low volume and backs off as you turn up, so the tuning stays consistent across listening levels.</p>
+            </Card>
+          </div>
+          <div id="g-eq" className="scroll-mt-24">
+            <Card title="EQ / PEQ">
+              <p><span className="text-neon-cyan">EQ</span> is an equalizer that boosts or cuts frequency bands. <span className="text-neon-cyan">PEQ</span> (Parametric EQ) lets you control center frequency, gain and bandwidth (Q) per band — far more precise than a fixed graphic EQ.</p>
+            </Card>
+          </div>
+          <div id="g-frc" className="scroll-mt-24">
+            <Card title="FRC / AutoEQ">
+              <p><span className="text-neon-cyan">Frequency Response Correction</span> (Neutron's term) and <span className="text-neon-cyan">AutoEQ</span> both apply measured headphone-correction filters so a given headphone matches a chosen <span className="text-neon-cyan">target curve</span>.</p>
+            </Card>
+          </div>
+          <div id="g-iem" className="scroll-mt-24">
+            <Card title="IEM">
+              <p><span className="text-neon-cyan">In-Ear Monitor</span> — a sealed in-ear headphone with silicone or foam tips that sits inside the ear canal, giving strong passive isolation and a consistent low-end response.</p>
+            </Card>
+          </div>
+          <div id="g-lufs" className="scroll-mt-24">
+            <Card title="LUFS">
+              <p><span className="text-neon-cyan">Loudness Units Full Scale</span> — a perceptual loudness measurement (ITU&nbsp;BS.1770) used by streaming services and ReplayGain to normalize tracks to a common target (e.g. <span className="text-neon-cyan">-14&nbsp;LUFS</span> on Spotify/Tidal).</p>
+            </Card>
+          </div>
+          <div id="g-mtp" className="scroll-mt-24">
+            <Card title="MTP">
+              <p><span className="text-neon-cyan">Media Transfer Protocol</span> — the USB mode Android phones use to expose their storage to a computer so you can drag and drop files without special drivers.</p>
+            </Card>
+          </div>
+          <div id="g-outputz" className="scroll-mt-24">
+            <Card title="Output impedance & damping factor">
+              <p>The source's own internal resistance. Divide the headphone's impedance by it to get the <span className="text-neon-cyan">damping factor</span> — aim for 8 or more. A high output impedance changes the tone of loads whose impedance varies with frequency (dynamic drivers, multi-driver balanced armatures); <span className="text-neon-magenta">planar magnetics are flat and resistive</span>, so it only wastes power on them.</p>
+            </Card>
+          </div>
+          <div id="g-ows" className="scroll-mt-24">
+            <Card title="OWS">
+              <p><span className="text-neon-cyan">Open Wearable Stereo</span> — an open-fit earbud that clips to or rests on the ear without sealing the canal, leaving you aware of your surroundings (e.g. the Moondrop Pill).</p>
+            </Card>
+          </div>
+          <div id="g-replaygain" className="scroll-mt-24">
+            <Card title="ReplayGain">
+              <p>A metadata-based <span className="text-neon-magenta">volume normalization</span> standard. Tracks are scanned for perceived loudness, and players use the resulting tags to play everything at a consistent level — without re-encoding or compressing the audio.</p>
+            </Card>
+          </div>
+          <div id="g-soundcheck" className="scroll-mt-24">
+            <Card title="Sound Check">
+              <p>Apple Music's built-in volume normalization — the streaming equivalent of ReplayGain, levelling tracks to roughly <span className="text-neon-cyan">-16&nbsp;LUFS</span> so you stop reaching for the volume between songs.</p>
+            </Card>
+          </div>
+          <div id="g-src" className="scroll-mt-24">
+            <Card title="SRC resampling">
+              <p><span className="text-neon-cyan">Sample Rate Conversion</span> — Android's system mixer resampling everything to one fixed rate. Feeding a USB DAC directly from a player that supports it bypasses the mixer, so hi-res files reach the DAC untouched.</p>
+            </Card>
+          </div>
+          <div id="g-target" className="scroll-mt-24">
+            <Card title="Target curve">
+              <p>The frequency response a headphone is tuned (or EQ'd) to match — e.g. the <span className="text-neon-cyan">Harman</span> curve or B&amp;K-style in-ear targets.</p>
+            </Card>
+          </div>
         </div>
       </Section>
 
