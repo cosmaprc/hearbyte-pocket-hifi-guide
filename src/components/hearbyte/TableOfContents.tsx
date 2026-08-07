@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 
 const sections = [
+  { id: "start", label: "Start here" },
+  { id: "chain", label: "My preferred chain" },
   { id: "phones", label: "Phones & Accessories" },
   { id: "software", label: "Software" },
   { id: "headphones", label: "Headphones" },
-  { id: "demands", label: "Electrical demands" },
-  { id: "chain", label: "My chain" },
-  { id: "replaygain", label: "ReplayGain" },
-  { id: "transfer", label: "Transfer" },
+  { id: "demands", label: "Headphone electrical demands" },
+  { id: "replaygain", label: "Using ReplayGain" },
+  { id: "transfer", label: "Getting music onto your phone" },
   { id: "glossary", label: "Glossary" },
   { id: "links", label: "Links" },
 ];

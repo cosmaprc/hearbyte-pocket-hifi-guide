@@ -6,8 +6,9 @@ import Card from "@/components/hearbyte/Card";
 import Bullets from "@/components/hearbyte/Bullets";
 import Divider from "@/components/hearbyte/Divider";
 import DataTable from "@/components/hearbyte/DataTable";
+import SubHeading from "@/components/hearbyte/SubHeading";
 import TableOfContents from "@/components/hearbyte/TableOfContents";
-import { Smartphone, Sliders, Headphones, Volume2, BookOpen, Link, FolderInput, Zap, Gauge } from "lucide-react";
+import { Smartphone, Sliders, Headphones, Volume2, BookOpen, Link, FolderInput, Zap, Gauge, ListOrdered } from "lucide-react";
 import hd560sQudelixHeadband from "@/assets/hd560s-qudelix-headband.jpg";
 import hd560sQudelixFront from "@/assets/hd560s-qudelix-front.jpg";
 
@@ -17,11 +18,76 @@ const GearLink = ({ children }: { children: React.ReactNode }) => (
   </a>
 );
 
+const GlossaryLink = ({ term, children }: { term: string; children: React.ReactNode }) => (
+  <a href={`#g-${term}`} className="text-neon-cyan underline decoration-dotted underline-offset-4">
+    {children}
+  </a>
+);
+
+const startSteps = [
+  {
+    href: "#phones",
+    title: "1 · Start with the phone you already own",
+    body: "Check whether it has a headphone jack, LDAC and a spatial processor. Only buy a dongle DAC or a Bluetooth transmitter if that check says you need one.",
+  },
+  {
+    href: "#software",
+    title: "2 · Pick a player and a DSP chain",
+    body: "This is where most of the audible difference lives. jetAudio, Neutron or USB Audio Player Pro all give you ReplayGain, preamp control and serious DSP.",
+  },
+  {
+    href: "#headphones",
+    title: "3 · Pick headphones and copy my settings",
+    body: "Every headphone below has a \u201cHow I run it\u201d panel with the exact app, EQ and DSP settings I use. Start there, then tweak to taste.",
+  },
+];
+
 const Index = () => {
   return (
     <main className="min-h-screen bg-background text-foreground">
       <Hero />
       <TableOfContents />
+
+      <Divider />
+
+      <Section id="start" icon={ListOrdered} title="Start here" tone="cyan">
+        <p className="mb-6 max-w-2xl text-base text-foreground/90">
+          Three steps, in this order. Everything else on this page is detail you can come back for.
+        </p>
+        <ol className="grid gap-5 md:grid-cols-3">
+          {startSteps.map((s) => (
+            <li key={s.href}>
+              <a
+                href={s.href}
+                className="flex h-full flex-col rounded-xl border border-border bg-card-gradient p-6 transition-smooth hover:border-neon-cyan/60 hover:shadow-card-glow"
+              >
+                <span className="font-display text-lg font-bold text-neon-cyan">{s.title}</span>
+                <span className="mt-3 text-sm leading-relaxed text-foreground/85">{s.body}</span>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </Section>
+
+      <Divider />
+
+      <Section id="chain" icon={Zap} title="My preferred audio chain" tone="magenta">
+        <p className="mb-6 max-w-2xl text-base text-foreground/90">
+          When I want to stop experimenting and just listen, this is the chain I reach for. If you copy one thing off this page, copy this.
+        </p>
+        <div className="grid gap-5 md:grid-cols-2">
+          <Card title="The chain">
+            <Bullets
+              items={[
+                <><span className="text-neon-magenta">Source:</span> Android phone with <GlossaryLink term="ldac">LDAC</GlossaryLink>.</>,
+                <><span className="text-neon-magenta">App:</span> <ExtLink href="https://music.apple.com/" className="text-neon-cyan">Apple Music</ExtLink> — <GlossaryLink term="soundcheck">Sound Check</GlossaryLink> on, every other DSP including <span className="text-neon-cyan">Dolby Atmos</span> off.</>,
+                <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink> — no EQ of any kind.</>,
+                <><span className="text-neon-magenta">DAC / Bluetooth receiver:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k-dac-amp" className="text-neon-cyan">Qudelix 5K</ExtLink> — either wireless over Bluetooth at <span className="text-neon-cyan">LDAC 990 kbps</span>, or wired.</>,
+              ]}
+            />
+          </Card>
+        </div>
+      </Section>
 
       <Divider />
 
@@ -51,7 +117,7 @@ const Index = () => {
           <Card title="Bluetooth codecs">
             <Bullets
               items={[
-                <>The common ones, from lossy to effectively lossless: <span className="text-neon-cyan">AAC</span>, <span className="text-neon-cyan">aptX HD</span>, <span className="text-neon-cyan">aptX Lossless</span> and <span className="text-neon-cyan">LDAC</span>.</>,
+                <>The common <GlossaryLink term="ldac">codecs</GlossaryLink>, from lossy to effectively lossless: <span className="text-neon-cyan">AAC</span>, <span className="text-neon-cyan">aptX HD</span>, <span className="text-neon-cyan">aptX Lossless</span> and <span className="text-neon-cyan">LDAC</span>.</>,
                 <>In honest blind listening, most people — and most headphones — <span className="text-neon-magenta">can't reliably tell them apart</span>, or tell any of them from a <span className="text-neon-cyan">wired</span> connection.</>,
                 <>Pick whatever your phone and headphones both support and stop worrying. Tuning and EQ matter far more than codec.</>,
               ]}
@@ -71,7 +137,7 @@ const Index = () => {
           <Card title="USB-C DAC dongles">
             <Bullets
               items={[
-                <>For phones without a headphone jack, or when you want bit-perfect hi-res out to wired headphones. Paired with <ExtLink href="https://www.extreamsd.com/index.php/products/usb-audio-player-pro" className="text-neon-cyan">USB Audio Player Pro</ExtLink> or <ExtLink href="https://neutronmp.com/" className="text-neon-cyan">Neutron</ExtLink>, a USB DAC receives audio <span className="text-neon-magenta">directly and bit-perfect</span> at full resolution (e.g. <span className="text-neon-cyan">24-bit / 192 kHz</span>), bypassing Android's system mixer and <span className="text-neon-magenta">SRC resampling</span>.</>,
+                <>For phones without a headphone jack, or when you want bit-perfect hi-res out to wired headphones. Paired with <ExtLink href="https://www.extreamsd.com/index.php/products/usb-audio-player-pro" className="text-neon-cyan">USB Audio Player Pro</ExtLink> or <ExtLink href="https://neutronmp.com/" className="text-neon-cyan">Neutron</ExtLink>, a USB DAC receives audio <span className="text-neon-magenta">directly and bit-perfect</span> at full resolution (e.g. <span className="text-neon-cyan">24-bit / 192 kHz</span>), bypassing Android's system mixer and <GlossaryLink term="src">SRC resampling</GlossaryLink>.</>,
               ]}
             />
           </Card>
@@ -85,26 +151,37 @@ const Index = () => {
           </Card>
         </div>
 
-        <div className="mt-10">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended DACs</p>
-          <div className="grid gap-5 md:grid-cols-2">
-            <Card title="Qudelix 5K" href="https://www.qudelix.com/products/qudelix-5k-dac-amp">
-              <Bullets
-                items={[
-                  <>Reference <span className="text-neon-cyan">USB DAC</span> and <span className="text-neon-cyan">Bluetooth receiver</span> in one, with a first-class <span className="text-neon-magenta">20-band parametric EQ</span> app that stores presets on the device itself.</>,
-                  <>Supports <span className="text-neon-cyan">LDAC</span>, <span className="text-neon-cyan">aptX Adaptive</span> and every mainstream codec over Bluetooth, plus <span className="text-neon-cyan">3.5mm</span> and <span className="text-neon-cyan">2.5mm balanced</span> outputs.</>,
-                  <>Supports <span className="text-neon-cyan">AutoEQ</span> and ships with a list of <span className="text-neon-magenta">AutoEQ profiles</span> out of the box.</>,
-                  <>Has <span className="text-neon-cyan">independent hardware volume control</span>.</>,
-                  <>The companion app is the <span className="text-neon-magenta">best and most responsive</span> I have ever used.</>,
-                  <>The pick if you only buy one — it covers the wired and wireless cases and travels well.</>,
-                ]}
-              />
-            </Card>
-          </div>
+        <SubHeading>Recommended · one box for both jobs</SubHeading>
+        <div className="grid gap-5 md:grid-cols-2">
+          <Card title="Qudelix 5K" href="https://www.qudelix.com/products/qudelix-5k-dac-amp">
+            <p className="text-sm text-foreground/85">
+              The pick if you only buy one thing: it is both the <span className="text-neon-cyan">USB DAC</span> and the <span className="text-neon-cyan">Bluetooth receiver</span>, so it replaces two purchases and travels well.
+            </p>
+            <dl className="mt-4 space-y-3 text-sm">
+              <div>
+                <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">As a wired USB DAC</dt>
+                <dd className="mt-1 text-foreground/85">
+                  <span className="text-neon-cyan">3.5mm</span> and <span className="text-neon-cyan">2.5mm balanced</span> outputs with <GlossaryLink term="outputz">independent hardware volume control</GlossaryLink> — the balanced port has real headroom for demanding loads.
+                </dd>
+              </div>
+              <div>
+                <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">As a Bluetooth receiver</dt>
+                <dd className="mt-1 text-foreground/85">
+                  <GlossaryLink term="ldac">LDAC</GlossaryLink>, <span className="text-neon-cyan">aptX Adaptive</span> and every mainstream codec, applying its on-device EQ to whatever is streaming to it — turn any wired headphone into a well-tuned wireless one.
+                </dd>
+              </div>
+              <div>
+                <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Either way</dt>
+                <dd className="mt-1 text-foreground/85">
+                  A first-class <span className="text-neon-magenta">20-band <GlossaryLink term="eq">parametric EQ</GlossaryLink></span> stored on the device itself, <span className="text-neon-cyan">AutoEQ</span> support with profiles out of the box, and the <span className="text-neon-magenta">best and most responsive</span> companion app I have ever used.
+                </dd>
+              </div>
+            </dl>
+          </Card>
         </div>
 
-        <div className="mt-8">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-neon-cyan">Other DACs</p>
+        <div>
+          <SubHeading>Other DACs</SubHeading>
           <div className="grid gap-5 md:grid-cols-3">
             <Card title="FiiO KA11" href="https://www.fiio.com/newsinfo/893399.html">
               <p>A powerful single-piece dongle DAC (fixed cable) with incredible audio quality at a very low price.</p>
@@ -123,21 +200,13 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="mt-8">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended Bluetooth receivers</p>
-          <div className="grid gap-5 md:grid-cols-2">
-            <Card title="Qudelix 5K" href="https://www.qudelix.com/products/qudelix-5k-dac-amp">
-              <p>Doubles as a top-tier <span className="text-neon-cyan">Bluetooth receiver</span>: <span className="text-neon-cyan">LDAC</span>, <span className="text-neon-cyan">aptX Adaptive</span> and on-device <span className="text-neon-magenta">20-band PEQ</span> that applies to whatever source is streaming to it — turn any wired headphone into a well-tuned wireless one.</p>
-            </Card>
-          </div>
-        </div>
       </Section>
 
       <Divider />
 
       <Section id="software" icon={Sliders} title="Software" tone="magenta">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          The right <span className="text-neon-cyan">player</span> and <span className="text-neon-magenta">DSP</span> chain shapes your sound far more than any <span className="text-neon-cyan">cable</span> or <span className="text-neon-cyan">DAC</span>. These three apps give you <span className="text-neon-cyan">ReplayGain support</span>, <span className="text-neon-cyan">Preamp control</span> and serious <span className="text-neon-magenta">DSP power</span>.
+          The right <span className="text-neon-cyan">player</span> and <GlossaryLink term="dsp">DSP</GlossaryLink> chain shapes your sound far more than any <span className="text-neon-cyan">cable</span> or <span className="text-neon-cyan">DAC</span>. These three apps give you <span className="text-neon-cyan">ReplayGain support</span>, <span className="text-neon-cyan">Preamp control</span> and serious <span className="text-neon-magenta">DSP power</span>.
         </p>
         <div className="grid gap-5 md:grid-cols-3">
           <Card title="jetAudio" href="https://www.jetaudio.com/">
@@ -165,7 +234,7 @@ const Index = () => {
                   <ExtLink href="https://play.google.com/store/apps/details?id=com.neutroncode.mp" className="text-neon-cyan">Android</ExtLink>
                 </>,
                 <><span className="text-neon-cyan">ReplayGain</span> support with manual <span className="text-neon-cyan">preamp</span> adjustment</>,
-                <>Deep DSP toolbox: <span className="text-neon-magenta">Parametric EQ</span>, <span className="text-neon-magenta">Frequency Response Correction</span> (AutoEQ), <span className="text-neon-magenta">Crossfeed</span> and <span className="text-neon-magenta">Adaptive Loudness Compensation</span>.</>,
+                <>Deep DSP toolbox: <span className="text-neon-magenta">Parametric EQ</span>, <span className="text-neon-magenta">Frequency Response Correction</span> (AutoEQ), <GlossaryLink term="crossfeed">Crossfeed</GlossaryLink> and <span className="text-neon-magenta">Adaptive Loudness Compensation</span>.</>,
               ]}
             />
           </Card>
@@ -199,7 +268,7 @@ const Index = () => {
           If you're new to this and want to figure out your own preferences before spending big, try the <ExtLink href="https://www.akg.com/Headphones/Professional%20Headphones/K371.html" className="text-neon-cyan">AKG K371</ExtLink> (<span className="text-neon-magenta">closed-back</span>, tuned to the <span className="text-neon-cyan">Harman</span> target) alongside the <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink> (<span className="text-neon-magenta">open-back</span>, <span className="text-neon-cyan">diffuse-field</span> / flat). Load them into <ExtLink href="https://www.extreamsd.com/index.php/products/usb-audio-player-pro" className="text-neon-cyan">USB Audio Player Pro</ExtLink> with <ExtLink href="https://www.toneboosters.com/tb_morphit_v1.html" className="text-neon-cyan">ToneBoosters MorphIt</ExtLink> and A/B different target curves — you'll quickly work out whether you prefer open vs closed, and Harman vs diffuse-field.
         </p>
 
-        <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended · Bluetooth earbuds</p>
+        <SubHeading spaced={false}>Recommended · Bluetooth earbuds</SubHeading>
         <div className="grid gap-5 md:grid-cols-2">
           <Card title="Creative Aurvana Ace 3" href="https://us.creative.com/p/headphones-headsets/creative-aurvana-ace-3">
             <Bullets
@@ -210,7 +279,7 @@ const Index = () => {
                 <><span className="text-neon-magenta">Others:</span> xMEMS solid-state tweeters, LDAC, aptX Lossless, Mimi sound personalisation.</>,
               ]}
             />
-            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
+            <div className="mt-4 rounded-lg border border-neon-magenta/40 bg-neon-magenta/5 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
               <p className="mt-2 text-sm text-foreground/85">
                 Run the <span className="text-neon-magenta">Mimi sound personalisation</span> hearing test in the <span className="text-neon-cyan">Creative app</span> once and leave it on — it's the single biggest change you can make to how these sound. Stack a light <span className="text-neon-cyan">jetAudio</span> Bongiovi chain only if you want extra flavour on top.
@@ -219,7 +288,7 @@ const Index = () => {
           </Card>
         </div>
 
-        <p className="mb-4 mt-10 text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended · Wired headphones</p>
+        <SubHeading>Recommended · Wired headphones</SubHeading>
         <div className="grid gap-5 md:grid-cols-2">
           <Card title="Sennheiser HD 560S" href="https://en-uk.sennheiser.com/hd-560s">
             <Bullets
@@ -230,7 +299,7 @@ const Index = () => {
                 <><span className="text-neon-magenta">Others:</span> diffuse-field / neutral tuning, open-back soundstage, easy to drive.</>,
               ]}
             />
-            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
+            <div className="mt-4 rounded-lg border border-neon-magenta/40 bg-neon-magenta/5 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
               <p className="mt-2 text-sm text-foreground/85">
                 Pair with <span className="text-neon-cyan">USB Audio Player Pro</span> + <span className="text-neon-magenta">ToneBoosters MorphIt</span> to audition different target curves; otherwise the stock tuning is already reference-flat and needs nothing.
@@ -239,7 +308,7 @@ const Index = () => {
           </Card>
         </div>
 
-        <p className="mb-4 mt-10 text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended · Bluetooth headphones</p>
+        <SubHeading>Recommended · Bluetooth headphones</SubHeading>
         <div className="grid gap-5 md:grid-cols-2">
           <Card title="Audio Technica ATH-M50x BT2" href="https://www.audio-technica.com/en-us/ath-m50xbt2">
             <Bullets
@@ -250,10 +319,13 @@ const Index = () => {
                 <><span className="text-neon-magenta">Others:</span> the same sonic signature of the legendary ATH-M50x studio headphones, multipoint connection, large-aperture drivers deliver deep and accurate bass response, AK4331 advanced audio DAC and dedicated internal headphone amp, LDAC.</>,
               ]}
             />
-            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
+            <div className="mt-4 rounded-lg border border-neon-magenta/40 bg-neon-magenta/5 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
               <p className="mt-2 text-sm text-foreground/85">
                 Drive it from <span className="text-neon-cyan">jetAudio</span> and pick a DSP chain by connection.
+              </p>
+              <p className="mt-2 text-xs text-foreground/60">
+                Bongiovi city profiles: <span className="text-neon-cyan">H</span> = Headphones (safer), <span className="text-neon-cyan">G</span> = General (often nicer highs).
               </p>
               <dl className="mt-3 space-y-2 text-sm">
                 <div>
@@ -277,7 +349,7 @@ const Index = () => {
                 <><span className="text-neon-magenta">Others:</span> <span className="text-neon-cyan">LDAC up to 990 kbps</span>, independent hardware volume, <span className="text-neon-cyan">AutoEQ</span> profiles in the Qudelix app, balanced output for extra headroom.</>,
               ]}
             />
-            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
+            <div className="mt-4 rounded-lg border border-neon-magenta/40 bg-neon-magenta/5 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
               <p className="mt-2 text-sm text-foreground/85">
                 Velcro the 5K to the headband, run <span className="text-neon-cyan">LDAC 990 kbps</span> and leave the tuning stock — <span className="text-neon-magenta">no EQ of any kind</span>. Use the balanced output when you want more headroom, or plug in over USB when you want it wired and bit-perfect. See the <a href="#demands" className="text-neon-cyan underline-offset-4 hover:underline">electrical demands table</a> for why this pairing has plenty of margin.
@@ -300,7 +372,7 @@ const Index = () => {
           </Card>
         </div>
 
-        <p className="mb-4 mt-10 text-xs font-semibold uppercase tracking-widest text-neon-cyan">Other pairings</p>
+        <SubHeading>Also owned and tested · in-ear and open-ear</SubHeading>
         <div className="grid gap-5 md:grid-cols-3">
           <Card title="AirPods Pro 2" href="https://www.apple.com/airpods-pro/">
             <Bullets
@@ -311,7 +383,7 @@ const Index = () => {
                 <><span className="text-neon-magenta">Others:</span> tight Apple-ecosystem integration, hearing health features.</>,
               ]}
             />
-            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
+            <div className="mt-4 rounded-lg border border-border bg-background/40 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
               <dl className="mt-3 space-y-2 text-sm">
                 <div>
@@ -320,31 +392,7 @@ const Index = () => {
                 </div>
                 <div>
                   <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Source: Neutron Player / HiFi DAC V1</dt>
-                  <dd className="text-foreground/85"><span className="text-neon-magenta">FRC:</span> Crinacle on 711 (passive mode) preset · <span className="text-neon-magenta">Crossfeed:</span> jMeier · <span className="text-neon-magenta">EQ:</span> Deep · <span className="text-neon-magenta">ALC:</span> preset #3 (optional)</dd>
-                </div>
-              </dl>
-            </div>
-          </Card>
-
-          <Card title="AKG K371" href="https://www.akg.com/Headphones/Professional%20Headphones/K371.html">
-            <Bullets
-              items={[
-                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">wired over-ear</span></>,
-                <><span className="text-neon-magenta">ANC:</span> No</>,
-                <><span className="text-neon-magenta">Wired:</span> 3.5mm</>,
-                <><span className="text-neon-magenta">Others:</span> famously close to the Harman target out of the box.</>,
-              ]}
-            />
-            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
-              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
-              <dl className="mt-3 space-y-2 text-sm">
-                <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Mode: Default</dt>
-                  <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> London H</dd>
-                </div>
-                <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Source: Neutron Player / HiFi DAC V1</dt>
-                  <dd className="text-foreground/85"><span className="text-neon-magenta">FRC:</span> Rtings on HMS II.3 preset · <span className="text-neon-magenta">Crossfeed:</span> jMeier · <span className="text-neon-magenta">EQ:</span> Deep</dd>
+                  <dd className="text-foreground/85"><span className="text-neon-magenta">FRC:</span> Crinacle on 711 (passive mode) preset · <span className="text-neon-magenta">Crossfeed:</span> jMeier · <span className="text-neon-magenta">EQ:</span> Deep · <span className="text-neon-magenta"><GlossaryLink term="alc">ALC</GlossaryLink>:</span> preset #3 (optional)</dd>
                 </div>
               </dl>
             </div>
@@ -356,10 +404,10 @@ const Index = () => {
                 <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">in-ear</span> (true wireless)</>,
                 <><span className="text-neon-magenta">ANC:</span> Yes</>,
                 <><span className="text-neon-magenta">Wired:</span> N/A</>,
-                <><span className="text-neon-magenta">Others:</span> Class A/B hi-fi grade amplification, LDAC, aptX Lossless, 7-band EQ, DynamEQ.</>,
+                <><span className="text-neon-magenta">Others:</span> Class A/B hi-fi grade amplification, LDAC, aptX Lossless, 7-band EQ, <GlossaryLink term="dynameq">DynamEQ</GlossaryLink>.</>,
               ]}
             />
-            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
+            <div className="mt-4 rounded-lg border border-border bg-background/40 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
               <p className="mt-2 text-sm text-foreground/85">
                 Set the EQ in the <span className="text-neon-cyan">Melomania app</span>, then stack with <span className="text-neon-cyan">jetAudio</span> <span className="text-neon-cyan">Bongiovi DPS</span>.
@@ -381,6 +429,60 @@ const Index = () => {
             </div>
           </Card>
 
+          <Card title="Moondrop Pill" href="https://moondroplab.com/en/products/pill">
+            <Bullets
+              items={[
+                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">open-ear</span> (ear-clip / OWS)</>,
+                <><span className="text-neon-magenta">ANC:</span> No</>,
+                <><span className="text-neon-magenta">Wired:</span> N/A</>,
+                <><span className="text-neon-magenta">Others:</span> Bluetooth 6.0, dual device connectivity, one-click auto EQ with community-driven EQ profiles.</>,
+              ]}
+            />
+            <div className="mt-4 rounded-lg border border-border bg-background/40 p-4">
+              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
+              <p className="mt-2 text-sm text-foreground/85">
+                In the <span className="text-neon-cyan">Moondrop app</span>, load the official <span className="text-neon-magenta">Herbert's B&amp;K InEar Style</span> <span className="text-neon-cyan">PEQ preset</span>, then stack one of the jetAudio DSP chains below.
+              </p>
+              <dl className="mt-3 space-y-2 text-sm">
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">EQ: InEar</dt>
+                  <dd className="text-foreground/85"><span className="text-neon-magenta">AM3D:</span> Dance · <span className="text-neon-magenta">Bongiovi:</span> Huadu G, Atlanta H</dd>
+                </div>
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">EQ: Reference</dt>
+                  <dd className="text-foreground/85"><span className="text-neon-magenta">AM3D:</span> Rock, Dance · <span className="text-neon-magenta">Bongiovi:</span> London H, Atlanta G, Huadu G, Phoenix G, Portland G</dd>
+                </div>
+              </dl>
+            </div>
+          </Card>
+        </div>
+
+        <SubHeading>Also owned and tested · over-ear</SubHeading>
+        <div className="grid gap-5 md:grid-cols-3">
+          <Card title="AKG K371" href="https://www.akg.com/Headphones/Professional%20Headphones/K371.html">
+            <Bullets
+              items={[
+                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">wired over-ear</span></>,
+                <><span className="text-neon-magenta">ANC:</span> No</>,
+                <><span className="text-neon-magenta">Wired:</span> 3.5mm</>,
+                <><span className="text-neon-magenta">Others:</span> famously close to the Harman target out of the box.</>,
+              ]}
+            />
+            <div className="mt-4 rounded-lg border border-border bg-background/40 p-4">
+              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
+              <dl className="mt-3 space-y-2 text-sm">
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Mode: Default</dt>
+                  <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> London H</dd>
+                </div>
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Source: Neutron Player / HiFi DAC V1</dt>
+                  <dd className="text-foreground/85"><span className="text-neon-magenta">FRC:</span> Rtings on HMS II.3 preset · <span className="text-neon-magenta">Crossfeed:</span> jMeier · <span className="text-neon-magenta">EQ:</span> Deep</dd>
+                </div>
+              </dl>
+            </div>
+          </Card>
+
           <Card title="Cambridge Audio P100SE" href="https://www.cambridgeaudio.com/usa/en/products/melomania/melomania-p100-se">
             <Bullets
               items={[
@@ -390,7 +492,7 @@ const Index = () => {
                 <><span className="text-neon-magenta">Others:</span> Class A/B hi-fi grade amplification, aptX Lossless, user replaceable battery and earcups, DynamEQ, 7-band EQ, multipoint connection, fast charge.</>,
               ]}
             />
-            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
+            <div className="mt-4 rounded-lg border border-border bg-background/40 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
               <p className="mt-2 text-sm text-foreground/85">
                 Over Bluetooth, set the <span className="text-neon-cyan">Melomania app</span> EQ to <span className="text-neon-magenta">Normal</span> and toggle between the <span className="text-neon-magenta">Blues</span> and <span className="text-neon-magenta">Voice</span> tone presets, then stack a jetAudio chain.
@@ -410,33 +512,6 @@ const Index = () => {
               </p>
             </div>
           </Card>
-
-          <Card title="Moondrop Pill" href="https://moondroplab.com/en/products/pill">
-            <Bullets
-              items={[
-                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">open-ear</span> (ear-clip / OWS)</>,
-                <><span className="text-neon-magenta">ANC:</span> No</>,
-                <><span className="text-neon-magenta">Wired:</span> N/A</>,
-                <><span className="text-neon-magenta">Others:</span> Bluetooth 6.0, dual device connectivity, one-click auto EQ with community-driven EQ profiles.</>,
-              ]}
-            />
-            <div className="mt-4 rounded-lg border border-neon-cyan/30 bg-background/40 p-4">
-              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
-              <p className="mt-2 text-sm text-foreground/85">
-                In the <span className="text-neon-cyan">Moondrop app</span>, load the official <span className="text-neon-magenta">Herbert's B&amp;K InEar Style</span> <span className="text-neon-cyan">PEQ preset</span>, then stack one of the jetAudio DSP chains below.
-              </p>
-              <dl className="mt-3 space-y-2 text-sm">
-                <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">EQ: InEar</dt>
-                  <dd className="text-foreground/85"><span className="text-neon-magenta">AM3D:</span> Dance · <span className="text-neon-magenta">Bongiovi:</span> Huadu G, Atlanta H</dd>
-                </div>
-                <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">EQ: Reference</dt>
-                  <dd className="text-foreground/85"><span className="text-neon-magenta">AM3D:</span> Rock, Dance · <span className="text-neon-magenta">Bongiovi:</span> London H, Atlanta G, Huadu G, Phoenix G, Portland G</dd>
-                </div>
-              </dl>
-            </div>
-          </Card>
         </div>
       </Section>
 
@@ -444,7 +519,7 @@ const Index = () => {
 
       <Section id="demands" icon={Gauge} title="Headphone electrical demands" tone="purple">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          Two numbers decide how picky a headphone is about its source: <span className="text-neon-cyan">impedance</span> (Ω) and <span className="text-neon-cyan">sensitivity</span> (dB/mW or dB/V). Match them to the right amplifier or DAC and the headphone sings; mismatch them and you get hiss, clipping, or not enough volume headroom.
+          Two numbers decide how picky a headphone is about its source: <span className="text-neon-cyan">impedance</span> (Ω) and <GlossaryLink term="sensitivity">sensitivity</GlossaryLink> (dB/mW or dB/V). Match them to the right amplifier or DAC and the headphone sings; mismatch them and you get hiss, clipping, or not enough volume headroom.
         </p>
         <p className="mb-6 max-w-2xl text-sm text-foreground/80">
           One correction first, because almost every guide gets it wrong: impedance is simply the <span className="text-neon-cyan">ratio of voltage to current</span>, and that ratio does not change with level. A headphone therefore does not need proportionally more current in the bass. If it plays <span className="text-neon-magenta">loud enough, it produces enough bass</span> — and if it produces enough bass, it plays loud enough. Running short of current shows up as <span className="text-neon-magenta">clipping on peaks</span> across the whole signal, not as weak or thin bass. That claim is one of the most repeated ideas in audio writing and in AI-generated text, and it is still wrong.
@@ -455,6 +530,9 @@ const Index = () => {
         <p className="mb-6 max-w-2xl text-sm text-foreground/80">
           The last column only covers the <a href="#phones" className="text-neon-cyan underline-offset-4 hover:underline">gear recommended on this page</a>, using each vendor's published <span className="text-neon-cyan">single-ended</span> and <span className="text-neon-cyan">balanced</span> output figures — which is why the same dongle can appear in two rows depending on which output you plug into. <span className="text-neon-magenta">FiiO Air Link style adapters</span> are missing on purpose: they transmit Bluetooth to wireless headphones rather than amplifying wired ones, so they don't drive any of these profiles directly.
         </p>
+        <div className="mb-6 max-w-2xl rounded-lg border border-neon-magenta/40 bg-neon-magenta/5 p-4 text-sm text-foreground/85">
+          <span className="font-semibold text-neon-magenta">If you only read one line:</span> every headphone recommended on this page is driven comfortably by the sources recommended above — the <GearLink>Qudelix 5K</GearLink> covers all of them. The table below is for the edge cases: hard-to-drive planars, 300 Ω classics and hiss-prone sensitive IEMs.
+        </div>
         <DataTable
           rows={[
             {
@@ -572,30 +650,9 @@ const Index = () => {
 
       <Divider />
 
-      <Section id="chain" icon={Zap} title="My preferred audio chain" tone="cyan">
-
-        <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          When I want to stop experimenting and just listen, this is the chain I reach for.
-        </p>
-        <div className="grid gap-5 md:grid-cols-2">
-          <Card title="The chain">
-            <Bullets
-              items={[
-                <><span className="text-neon-magenta">Source:</span> Android phone with <span className="text-neon-cyan">LDAC</span>.</>,
-                <><span className="text-neon-magenta">App:</span> <ExtLink href="https://music.apple.com/" className="text-neon-cyan">Apple Music</ExtLink> — <span className="text-neon-cyan">Sound Check</span> on, every other DSP including <span className="text-neon-cyan">Dolby Atmos</span> off.</>,
-                <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink> — no EQ of any kind.</>,
-                <><span className="text-neon-magenta">DAC / Bluetooth receiver:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k-dac-amp" className="text-neon-cyan">Qudelix 5K</ExtLink> — either wireless over Bluetooth at <span className="text-neon-cyan">LDAC 990 kbps</span>, or wired.</>,
-              ]}
-            />
-          </Card>
-        </div>
-      </Section>
-
-      <Divider />
-
       <Section id="replaygain" icon={Volume2} title="Using ReplayGain" tone="orange">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          <span className="text-neon-cyan">ReplayGain</span> is a form of <span className="text-neon-magenta">volume normalization</span> that, when applied correctly, does not affect the <span className="text-neon-magenta">dynamic range</span> of your music. Scan your files once to write <span className="text-neon-cyan">track</span> and <span className="text-neon-cyan">album</span> tags, and the players above will read them and level everything automatically — no more reaching for the volume between songs. If you mostly shuffle across artists, prefer <span className="text-neon-magenta">track</span> mode; if you listen album-first, use <span className="text-neon-magenta">album</span> mode to preserve relative loudness within a record.
+          <GlossaryLink term="replaygain">ReplayGain</GlossaryLink> is a form of <span className="text-neon-magenta">volume normalization</span> that, when applied correctly, does not affect the <span className="text-neon-magenta">dynamic range</span> of your music. Scan your files once to write <span className="text-neon-cyan">track</span> and <span className="text-neon-cyan">album</span> tags, and the players above will read them and level everything automatically — no more reaching for the volume between songs. If you mostly shuffle across artists, prefer <span className="text-neon-magenta">track</span> mode; if you listen album-first, use <span className="text-neon-magenta">album</span> mode to preserve relative loudness within a record.
         </p>
         <div className="grid gap-5 md:grid-cols-3">
           <Card title="foobar2000 on Windows" href="https://www.foobar2000.org/">
@@ -621,7 +678,7 @@ const Index = () => {
             <Bullets
               items={[
                 <>Built into <span className="text-neon-cyan">Neutron</span>: scans your library and writes <span className="text-neon-cyan">ReplayGain</span>-compatible tags <span className="text-neon-magenta">on-device</span>, no PC required.</>,
-                <>Configurable target loudness — set <span className="text-neon-cyan">-16 LUFS</span> for <span className="text-neon-magenta">Apple Music</span>, <span className="text-neon-cyan">-14 LUFS</span> to match <span className="text-neon-magenta">Spotify</span>, <span className="text-neon-magenta">YouTube</span> and <span className="text-neon-magenta">Tidal</span>, or the classic <span className="text-neon-cyan">-18 LUFS</span> ReplayGain default.</>,
+                <>Configurable target loudness — set <GlossaryLink term="lufs">-16 LUFS</GlossaryLink> for <span className="text-neon-magenta">Apple Music</span>, <span className="text-neon-cyan">-14 LUFS</span> to match <span className="text-neon-magenta">Spotify</span>, <span className="text-neon-magenta">YouTube</span> and <span className="text-neon-magenta">Tidal</span>, or the classic <span className="text-neon-cyan">-18 LUFS</span> ReplayGain default.</>,
                 <>The simplest path if you only listen in Neutron and don't want a separate scanner. See the <ExtLink href="https://neutroncode.com/feature_normalization" className="text-neon-magenta">official guide</ExtLink> for the full options.</>,
               ]}
             />
@@ -649,7 +706,7 @@ const Index = () => {
           <Card title="Android">
             <Bullets
               items={[
-                <>Connect over USB in <span className="text-neon-cyan">MTP</span> mode and copy folders to internal storage or an <span className="text-neon-cyan">SD card</span> with any file manager.</>,
+                <>Connect over USB in <GlossaryLink term="mtp">MTP</GlossaryLink> mode and copy folders to internal storage or an <span className="text-neon-cyan">SD card</span> with any file manager.</>,
                 <>All three players above will pick the files up from anywhere they have read access — no app-specific sandbox dance.</>,
               ]}
             />
@@ -661,42 +718,99 @@ const Index = () => {
 
       <Section id="glossary" icon={BookOpen} title="Glossary" tone="cyan">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          A few quick definitions for the terms used above, in case anything is new to you.
+          A few quick definitions for the terms used above, in alphabetical order, in case anything is new to you.
         </p>
         <div className="grid gap-5 md:grid-cols-2">
-          <Card title="ANC">
-            <p><span className="text-neon-cyan">Active Noise Cancellation</span> — microphones sample ambient sound and the headphone plays an inverted signal to cancel it, most effective on steady low-frequency noise (planes, trains, HVAC).</p>
-          </Card>
-          <Card title="Crossfeed">
-            <p>Mixes a small amount of each stereo channel into the other to make headphone listening sound less "in-head" and closer to speakers.</p>
-          </Card>
-          <Card title="DSP">
-            <p><span className="text-neon-cyan">Digital Signal Processing</span> — software that reshapes audio in real time (<span className="text-neon-cyan">EQ</span>, <span className="text-neon-cyan">reverb</span>, <span className="text-neon-cyan">crossfeed</span>, <span className="text-neon-cyan">dynamics</span>).</p>
-          </Card>
-          <Card title="EQ / PEQ">
-            <p><span className="text-neon-cyan">EQ</span> is an equalizer that boosts or cuts frequency bands. <span className="text-neon-cyan">PEQ</span> (Parametric EQ) lets you control center frequency, gain and bandwidth (Q) per band — far more precise than a fixed graphic EQ.</p>
-          </Card>
-          <Card title="FRC / AutoEQ">
-            <p><span className="text-neon-cyan">Frequency Response Correction</span> (Neutron's term) and <span className="text-neon-cyan">AutoEQ</span> both apply measured headphone-correction filters so a given headphone matches a chosen <span className="text-neon-cyan">target curve</span>.</p>
-          </Card>
-          <Card title="IEM">
-            <p><span className="text-neon-cyan">In-Ear Monitor</span> — a sealed in-ear headphone with silicone or foam tips that sits inside the ear canal, giving strong passive isolation and a consistent low-end response.</p>
-          </Card>
-          <Card title="LUFS">
-            <p><span className="text-neon-cyan">Loudness Units Full Scale</span> — a perceptual loudness measurement (ITU&nbsp;BS.1770) used by streaming services and ReplayGain to normalize tracks to a common target (e.g. <span className="text-neon-cyan">-14&nbsp;LUFS</span> on Spotify/Tidal).</p>
-          </Card>
-          <Card title="MTP">
-            <p><span className="text-neon-cyan">Media Transfer Protocol</span> — the USB mode Android phones use to expose their storage to a computer so you can drag and drop files without special drivers.</p>
-          </Card>
-          <Card title="OWS">
-            <p><span className="text-neon-cyan">Open Wearable Stereo</span> — an open-fit earbud that clips to or rests on the ear without sealing the canal, leaving you aware of your surroundings (e.g. the Moondrop Pill).</p>
-          </Card>
-          <Card title="ReplayGain">
-            <p>A metadata-based <span className="text-neon-magenta">volume normalization</span> standard. Tracks are scanned for perceived loudness, and players use the resulting tags to play everything at a consistent level — without re-encoding or compressing the audio.</p>
-          </Card>
-          <Card title="Target curve">
-            <p>The frequency response a headphone is tuned (or EQ'd) to match — e.g. the <span className="text-neon-cyan">Harman</span> curve or B&amp;K-style in-ear targets.</p>
-          </Card>
+          <div id="g-alc" className="scroll-mt-24">
+            <Card title="ALC">
+              <p><span className="text-neon-cyan">Adaptive Loudness Compensation</span> (Neutron) — adjusts tonal balance for how loudly you are listening, so quiet listening keeps its bass and treble instead of thinning out.</p>
+            </Card>
+          </div>
+          <div id="g-anc" className="scroll-mt-24">
+            <Card title="ANC">
+              <p><span className="text-neon-cyan">Active Noise Cancellation</span> — microphones sample ambient sound and the headphone plays an inverted signal to cancel it, most effective on steady low-frequency noise (planes, trains, HVAC).</p>
+            </Card>
+          </div>
+          <div id="g-ldac" className="scroll-mt-24">
+            <Card title="Bluetooth codecs (AAC, aptX, LDAC)">
+              <p>The rules used to compress audio for the Bluetooth link. <span className="text-neon-cyan">AAC</span> is the lossy baseline, <span className="text-neon-cyan">aptX HD</span> and <span className="text-neon-cyan">LDAC</span> carry more data (LDAC up to 990 kbps), and <span className="text-neon-cyan">aptX Lossless</span> is bit-exact CD quality. Both ends must support the same codec.</p>
+            </Card>
+          </div>
+          <div id="g-crossfeed" className="scroll-mt-24">
+            <Card title="Crossfeed">
+              <p>Mixes a small amount of each stereo channel into the other to make headphone listening sound less "in-head" and closer to speakers.</p>
+            </Card>
+          </div>
+          <div id="g-sensitivity" className="scroll-mt-24">
+            <Card title="dB/mW vs dB/V">
+              <p>Two ways to publish <span className="text-neon-cyan">sensitivity</span>. dB/mW is loudness per milliwatt of power; dB/V is loudness per volt. They are not interchangeable — a 32 Ω headphone rated 114 dB/V is only about 99 dB/mW — and manufacturers quote whichever flatters the product.</p>
+            </Card>
+          </div>
+          <div id="g-dsp" className="scroll-mt-24">
+            <Card title="DSP">
+              <p><span className="text-neon-cyan">Digital Signal Processing</span> — software that reshapes audio in real time (<span className="text-neon-cyan">EQ</span>, <span className="text-neon-cyan">reverb</span>, <span className="text-neon-cyan">crossfeed</span>, <span className="text-neon-cyan">dynamics</span>).</p>
+            </Card>
+          </div>
+          <div id="g-dynameq" className="scroll-mt-24">
+            <Card title="DynamEQ">
+              <p>Cambridge Audio's loudness-aware EQ in the Melomania app — it lifts the frequency extremes at low volume and backs off as you turn up, so the tuning stays consistent across listening levels.</p>
+            </Card>
+          </div>
+          <div id="g-eq" className="scroll-mt-24">
+            <Card title="EQ / PEQ">
+              <p><span className="text-neon-cyan">EQ</span> is an equalizer that boosts or cuts frequency bands. <span className="text-neon-cyan">PEQ</span> (Parametric EQ) lets you control center frequency, gain and bandwidth (Q) per band — far more precise than a fixed graphic EQ.</p>
+            </Card>
+          </div>
+          <div id="g-frc" className="scroll-mt-24">
+            <Card title="FRC / AutoEQ">
+              <p><span className="text-neon-cyan">Frequency Response Correction</span> (Neutron's term) and <span className="text-neon-cyan">AutoEQ</span> both apply measured headphone-correction filters so a given headphone matches a chosen <span className="text-neon-cyan">target curve</span>.</p>
+            </Card>
+          </div>
+          <div id="g-iem" className="scroll-mt-24">
+            <Card title="IEM">
+              <p><span className="text-neon-cyan">In-Ear Monitor</span> — a sealed in-ear headphone with silicone or foam tips that sits inside the ear canal, giving strong passive isolation and a consistent low-end response.</p>
+            </Card>
+          </div>
+          <div id="g-lufs" className="scroll-mt-24">
+            <Card title="LUFS">
+              <p><span className="text-neon-cyan">Loudness Units Full Scale</span> — a perceptual loudness measurement (ITU&nbsp;BS.1770) used by streaming services and ReplayGain to normalize tracks to a common target (e.g. <span className="text-neon-cyan">-14&nbsp;LUFS</span> on Spotify/Tidal).</p>
+            </Card>
+          </div>
+          <div id="g-mtp" className="scroll-mt-24">
+            <Card title="MTP">
+              <p><span className="text-neon-cyan">Media Transfer Protocol</span> — the USB mode Android phones use to expose their storage to a computer so you can drag and drop files without special drivers.</p>
+            </Card>
+          </div>
+          <div id="g-outputz" className="scroll-mt-24">
+            <Card title="Output impedance & damping factor">
+              <p>The source's own internal resistance. Divide the headphone's impedance by it to get the <span className="text-neon-cyan">damping factor</span> — aim for 8 or more. A high output impedance changes the tone of loads whose impedance varies with frequency (dynamic drivers, multi-driver balanced armatures); <span className="text-neon-magenta">planar magnetics are flat and resistive</span>, so it only wastes power on them.</p>
+            </Card>
+          </div>
+          <div id="g-ows" className="scroll-mt-24">
+            <Card title="OWS">
+              <p><span className="text-neon-cyan">Open Wearable Stereo</span> — an open-fit earbud that clips to or rests on the ear without sealing the canal, leaving you aware of your surroundings (e.g. the Moondrop Pill).</p>
+            </Card>
+          </div>
+          <div id="g-replaygain" className="scroll-mt-24">
+            <Card title="ReplayGain">
+              <p>A metadata-based <span className="text-neon-magenta">volume normalization</span> standard. Tracks are scanned for perceived loudness, and players use the resulting tags to play everything at a consistent level — without re-encoding or compressing the audio.</p>
+            </Card>
+          </div>
+          <div id="g-soundcheck" className="scroll-mt-24">
+            <Card title="Sound Check">
+              <p>Apple Music's built-in volume normalization — the streaming equivalent of ReplayGain, levelling tracks to roughly <span className="text-neon-cyan">-16&nbsp;LUFS</span> so you stop reaching for the volume between songs.</p>
+            </Card>
+          </div>
+          <div id="g-src" className="scroll-mt-24">
+            <Card title="SRC resampling">
+              <p><span className="text-neon-cyan">Sample Rate Conversion</span> — Android's system mixer resampling everything to one fixed rate. Feeding a USB DAC directly from a player that supports it bypasses the mixer, so hi-res files reach the DAC untouched.</p>
+            </Card>
+          </div>
+          <div id="g-target" className="scroll-mt-24">
+            <Card title="Target curve">
+              <p>The frequency response a headphone is tuned (or EQ'd) to match — e.g. the <span className="text-neon-cyan">Harman</span> curve or B&amp;K-style in-ear targets.</p>
+            </Card>
+          </div>
         </div>
       </Section>
 
