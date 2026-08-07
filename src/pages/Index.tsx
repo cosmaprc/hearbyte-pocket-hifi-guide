@@ -151,26 +151,37 @@ const Index = () => {
           </Card>
         </div>
 
-        <div className="mt-10">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-neon-cyan">Recommended DACs</p>
-          <div className="grid gap-5 md:grid-cols-2">
-            <Card title="Qudelix 5K" href="https://www.qudelix.com/products/qudelix-5k-dac-amp">
-              <Bullets
-                items={[
-                  <>Reference <span className="text-neon-cyan">USB DAC</span> and <span className="text-neon-cyan">Bluetooth receiver</span> in one, with a first-class <span className="text-neon-magenta">20-band parametric EQ</span> app that stores presets on the device itself.</>,
-                  <>Supports <span className="text-neon-cyan">LDAC</span>, <span className="text-neon-cyan">aptX Adaptive</span> and every mainstream codec over Bluetooth, plus <span className="text-neon-cyan">3.5mm</span> and <span className="text-neon-cyan">2.5mm balanced</span> outputs.</>,
-                  <>Supports <span className="text-neon-cyan">AutoEQ</span> and ships with a list of <span className="text-neon-magenta">AutoEQ profiles</span> out of the box.</>,
-                  <>Has <span className="text-neon-cyan">independent hardware volume control</span>.</>,
-                  <>The companion app is the <span className="text-neon-magenta">best and most responsive</span> I have ever used.</>,
-                  <>The pick if you only buy one — it covers the wired and wireless cases and travels well.</>,
-                ]}
-              />
-            </Card>
-          </div>
+        <SubHeading>Recommended · one box for both jobs</SubHeading>
+        <div className="grid gap-5 md:grid-cols-2">
+          <Card title="Qudelix 5K" href="https://www.qudelix.com/products/qudelix-5k-dac-amp">
+            <p className="text-sm text-foreground/85">
+              The pick if you only buy one thing: it is both the <span className="text-neon-cyan">USB DAC</span> and the <span className="text-neon-cyan">Bluetooth receiver</span>, so it replaces two purchases and travels well.
+            </p>
+            <dl className="mt-4 space-y-3 text-sm">
+              <div>
+                <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">As a wired USB DAC</dt>
+                <dd className="mt-1 text-foreground/85">
+                  <span className="text-neon-cyan">3.5mm</span> and <span className="text-neon-cyan">2.5mm balanced</span> outputs with <GlossaryLink term="outputz">independent hardware volume control</GlossaryLink> — the balanced port has real headroom for demanding loads.
+                </dd>
+              </div>
+              <div>
+                <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">As a Bluetooth receiver</dt>
+                <dd className="mt-1 text-foreground/85">
+                  <GlossaryLink term="ldac">LDAC</GlossaryLink>, <span className="text-neon-cyan">aptX Adaptive</span> and every mainstream codec, applying its on-device EQ to whatever is streaming to it — turn any wired headphone into a well-tuned wireless one.
+                </dd>
+              </div>
+              <div>
+                <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Either way</dt>
+                <dd className="mt-1 text-foreground/85">
+                  A first-class <span className="text-neon-magenta">20-band <GlossaryLink term="eq">parametric EQ</GlossaryLink></span> stored on the device itself, <span className="text-neon-cyan">AutoEQ</span> support with profiles out of the box, and the <span className="text-neon-magenta">best and most responsive</span> companion app I have ever used.
+                </dd>
+              </div>
+            </dl>
+          </Card>
         </div>
 
-        <div className="mt-8">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-neon-cyan">Other DACs</p>
+        <div>
+          <SubHeading>Other DACs</SubHeading>
           <div className="grid gap-5 md:grid-cols-3">
             <Card title="FiiO KA11" href="https://www.fiio.com/newsinfo/893399.html">
               <p>A powerful single-piece dongle DAC (fixed cable) with incredible audio quality at a very low price.</p>
