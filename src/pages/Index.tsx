@@ -828,6 +828,7 @@ const Index = () => {
                 <><ExtLink href="https://www.headphoneer.com/" className="text-neon-cyan">Headphoneer</ExtLink> — written reviews of headphones, IEMs, amps and DACs.</>,
                 <><ExtLink href="https://www.head-fi.org/" className="text-neon-cyan">Head-Fi</ExtLink> — long-running headphone enthusiast reviews.</>,
                 <><ExtLink href="https://www.audiosciencereview.com/forum/index.php" className="text-neon-cyan">Audio Science Review</ExtLink> — objective, measurement-led gear reviews.</>,
+                <><ExtLink href="https://www.rtings.com/headphones" className="text-neon-cyan">RTINGS</ExtLink> — detailed headphone reviews with consistent measurement methodology.</>,
               ]}
             />
           </Card>
@@ -837,6 +838,8 @@ const Index = () => {
                 <><ExtLink href="https://squig.link/" className="text-neon-cyan">Squig.link</ExtLink> — browse and compare frequency-response graphs from a wide database.</>,
                 <><ExtLink href="https://autoeq.app/" className="text-neon-cyan">AutoEQ</ExtLink> — generate parametric EQ presets to match target curves from measurement data.</>,
                 <><ExtLink href="https://peqdb.com/" className="text-neon-cyan">PEQdb</ExtLink> — searchable database of parametric EQ presets for headphones and IEMs.</>,
+                <><ExtLink href="https://opra.roon.app/" className="text-neon-cyan">OPRA</ExtLink> — Roon-integrated headphone preference rating explorer.</>,
+                <><ExtLink href="https://www.rtings.com/headphones/learn/eq-repository" className="text-neon-cyan">RTINGS EQ Repository</ExtLink> — measured EQ presets for a wide range of headphones.</>,
               ]}
             />
           </Card>
@@ -873,6 +876,15 @@ const Index = () => {
                 ]}
               />
             </div>
+          </Card>
+          <Card title="Learning">
+            <Bullets
+              items={[
+                <><ExtLink href="https://www.rtings.com/headphones/learn/research/eq-remeasurements" className="text-neon-cyan">RTINGS EQ Remeasurements</ExtLink> — how they re-measure headphones after applying EQ.</>,
+                <><ExtLink href="https://www.rtings.com/headphones/tools/table" className="text-neon-cyan">RTINGS Headphones Table</ExtLink> — sortable comparison table of reviewed headphones.</>,
+                <><ExtLink href="https://www.rtings.com/headphones/tools/compare" className="text-neon-cyan">RTINGS Compare Tool</ExtLink> — side-by-side comparison of measurement data.</>,
+              ]}
+            />
           </Card>
         </div>
       </Section>
