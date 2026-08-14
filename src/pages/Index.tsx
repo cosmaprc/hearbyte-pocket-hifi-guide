@@ -848,6 +848,9 @@ const Index = () => {
               items={[
                 <><ExtLink href="https://www.head-fi.org/" className="text-neon-cyan">Head-Fi</ExtLink> — the largest headphone enthusiast forum and discussion hub.</>,
                 <><ExtLink href="https://www.audiosciencereview.com/forum/index.php" className="text-neon-cyan">Audio Science Review</ExtLink> — active forum focused on objective audio measurements.</>,
+                <><ExtLink href="https://www.reddit.com/r/headphones/s/N2EtgyodPs" className="text-neon-cyan">r/headphones</ExtLink> — general headphone discussion and news.</>,
+                <><ExtLink href="https://www.reddit.com/r/oratory1990/s/U4gCItaBjU" className="text-neon-cyan">r/oratory1990</ExtLink> — EQ presets and measurement discussions.</>,
+                <><ExtLink href="https://www.reddit.com/r/HeadphoneAdvice/s/sYWZKVYEjL" className="text-neon-cyan">r/HeadphoneAdvice</ExtLink> — purchase advice and recommendations.</>,
               ]}
             />
           </Card>
