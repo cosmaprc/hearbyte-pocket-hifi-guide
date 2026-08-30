@@ -633,7 +633,7 @@ const Index = () => {
 
       <Section id="links" icon={Link} title="Links" tone="magenta">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          A curated set of external resources for diving deeper into headphone measurements, community discussion, and high-quality music purchases.
+          The sites I keep going back to for measurements, arguments and music worth buying.
         </p>
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           <Card title="Reviews">
