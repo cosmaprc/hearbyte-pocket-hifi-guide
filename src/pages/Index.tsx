@@ -180,6 +180,7 @@ const Index = () => {
               items={[
                 <>Get a <span className="text-neon-cyan">USB-C iPhone</span> (15 and later) if you can — it can feed a USB DAC <span className="text-neon-magenta">directly</span> for hi-res playback.</>,
                 <>Older <span className="text-neon-cyan">Lightning</span> iPhones need a <span className="text-neon-cyan">Camera Connection Kit</span> or a Lightning DAC, which is clunkier and pricier.</>,
+                <>iOS has the same problem — the system slider moves in coarse steps, so with sensitive headphones the level you want falls between two of them. <span className="text-neon-magenta">Independent volume</span> on the headphones or dongle fixes it, and the <ExtLink href="https://apps.apple.com/us/app/volume-control/id6608975062" className="text-neon-cyan">Volume Control</ExtLink> app may give you finer steps on the phone itself.</>,
               ]}
             />
           </Card>
