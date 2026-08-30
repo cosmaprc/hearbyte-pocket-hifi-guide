@@ -86,7 +86,33 @@ const Index = () => {
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://hifiman.com/products/detail/305" className="text-neon-cyan">HiFiMAN Sundara (2022)</ExtLink>.</>,
-                <><span className="text-neon-magenta">DAC:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> over <span className="text-neon-cyan">USB</span>, powered from <span className="text-neon-cyan">USB-C</span> rather than its internal battery — only with <span className="text-neon-cyan">no EQ</span>, since with the target <span className="text-neon-cyan">PEQ</span> profile it can run out of power on some genres. With the profile on, use the <ExtLink href="https://www.fiio.com/qx13" className="text-neon-cyan">FiiO QX13</ExtLink> paired with the <ExtLink href="https://www.fiio.com/productinfo/1507720.html" className="text-neon-cyan">FiiO Estick</ExtLink> battery.</>,
+                <>
+                  <span className="text-neon-magenta">DAC:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> over <span className="text-neon-cyan">USB</span>, powered from <span className="text-neon-cyan">USB-C</span> rather than its internal battery — only with <span className="text-neon-cyan">no EQ</span>, since with the target <span className="text-neon-cyan">PEQ</span> profile it can run out of power on some genres.
+                  <div className="mt-2 rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-3 text-sm">
+                    <span className="text-neon-magenta">Can it drive it?</span> <span className="text-neon-cyan">Yes</span> — without EQ it only needs about <span className="text-neon-cyan">500 mW</span>, so roughly <span className="text-neon-cyan">0.5 V</span> against the DAC's <span className="text-neon-cyan">4 V</span> max.
+                  </div>
+                </>,
+                <>
+                  <span className="text-neon-magenta">DAC, with the PEQ profile:</span> the <ExtLink href="https://www.fiio.com/qx13" className="text-neon-cyan">FiiO QX13</ExtLink> paired with the <ExtLink href="https://www.fiio.com/productinfo/1507720.html" className="text-neon-cyan">FiiO Estick</ExtLink> battery.
+                  <div className="mt-2 rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-3 text-sm">
+                    <div className="text-neon-magenta">Can it drive it?</div>
+                    <ul className="mt-1 space-y-0.5">
+                      <li>Sensitivity: <span className="text-neon-cyan">92 dB SPL/mW</span></li>
+                      <li>Impedance: <span className="text-neon-cyan">32 Ω</span></li>
+                      <li>Target average loudness: <span className="text-neon-cyan">90 dB SPL</span></li>
+                      <li>Sound Check headroom: <span className="text-neon-cyan">7 dB</span> (so <span className="text-neon-cyan">106 dB</span> average at the amp)</li>
+                      <li><span className="text-neon-cyan">PEQ</span> preamp headroom: <span className="text-neon-cyan">~9 dB</span></li>
+                      <li>Crest factor, jazz / acoustic: <span className="text-neon-cyan">14 dB</span></li>
+                      <li>Peak needed: 90 + 7 + 9 + 14 = <span className="text-neon-cyan">120 dB SPL</span></li>
+                      <li>Voltage needed: <span className="text-neon-cyan">~4.5 V</span></li>
+                      <li>FiiO QX13 on <span className="text-neon-cyan">4.4 mm balanced</span>: <span className="text-neon-cyan">6.19 V</span></li>
+                      <li>Verdict: <span className="text-neon-cyan">yes</span>, with headroom to spare.</li>
+                    </ul>
+                    <div className="mt-1">
+                      Run the numbers yourself: <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=92&u=dbmw&z=32&v=6.19&spl=106&hr=14" className="text-neon-cyan">headphone power calculator</ExtLink> (pre-filled).
+                    </div>
+                  </div>
+                </>,
                 <><span className="text-neon-magenta">EQ:</span> none, otherwise the <span className="text-neon-cyan">PEQ</span> profile above.</>,
               ]}
             />
