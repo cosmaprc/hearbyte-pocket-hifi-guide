@@ -137,6 +137,7 @@ const Index = () => {
               items={[
                 <><span className="text-neon-magenta">Earbuds:</span> <ExtLink href="https://moondroplab.com/en/products/pill" className="text-neon-cyan">Moondrop Pill</ExtLink> or <span className="text-neon-cyan">Pill S</span>.</>,
                 <><span className="text-neon-magenta">Connection:</span> Bluetooth <span className="text-neon-cyan">AAC</span> straight from the phone.</>,
+                <><span className="text-neon-magenta">EQ:</span> in the <span className="text-neon-cyan">Moondrop app</span> I keep the default bands, drop every Q to the minimum (<span className="text-neon-cyan">0.20</span>), then push all bands to max. That works out as a flat <span className="text-neon-cyan">+3 dB</span> lift across the board — on iPhone it buys about one volume step, so <span className="text-neon-cyan">85%</span> gets me where 100% used to.</>,
               ]}
             />
           </Card>
