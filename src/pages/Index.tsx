@@ -134,8 +134,9 @@ const Index = () => {
                       <li><span className="text-neon-cyan">PEQ</span> preamp headroom: <span className="text-neon-cyan">~3 dB</span></li>
                       <li>Crest factor, jazz / acoustic: <span className="text-neon-cyan">14 dB</span></li>
                       <li>Peak needed: 90 + 7 + 3 + 14 = <span className="text-neon-cyan">114 dB SPL</span></li>
-                      <li>Power / voltage needed: <span className="text-neon-cyan">~800 mW</span> / <span className="text-neon-cyan">~0.8 V</span></li>
-                      <li>FiiO JIEZI on <span className="text-neon-cyan">3.5 mm single-ended</span>: <span className="text-neon-cyan">1 V</span></li>
+                      <li>Power / voltage needed: <span className="text-neon-cyan">~1.01 V</span></li>
+                      <li>FiiO JIEZI on <span className="text-neon-cyan">3.5 mm single-ended</span>: <span className="text-neon-cyan">1.04 V</span></li>
+
                       <li>Verdict: <span className="text-neon-cyan">yes</span>.</li>
                     </ul>
                     <div className="mt-1">
