@@ -55,7 +55,7 @@ const Index = () => {
                 <>
                   <span className="text-neon-magenta">DAC:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> over <span className="text-neon-cyan">USB</span>, set to draw power from <span className="text-neon-cyan">USB-C</span> rather than its internal battery.
                   <div className="mt-2 rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-3 text-sm">
-                    <div className="text-neon-magenta">Can it drive it?</div>
+                    <div className="flex items-baseline gap-2"><span className="text-neon-magenta">Can it drive it?</span> <a href="#demands" title="Why these numbers — headphone electrical demands" className="text-xs text-neon-cyan underline-offset-4 hover:underline">why?</a></div>
                     <ul className="mt-1 space-y-0.5">
                       <li>Sensitivity: <span className="text-neon-cyan">100.8 dB SPL/mW</span></li>
                       <li>Impedance: <span className="text-neon-cyan">120 Ω</span></li>
@@ -76,7 +76,7 @@ const Index = () => {
                 <>
                   <span className="text-neon-magenta">DAC, alternative:</span> the <ExtLink href="https://www.fiio.com/qx13" className="text-neon-cyan">FiiO QX13</ExtLink> paired with the <ExtLink href="https://www.fiio.com/productinfo/1507720.html" className="text-neon-cyan">FiiO Estick</ExtLink> battery.
                   <div className="mt-2 rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-3 text-sm">
-                    <span className="text-neon-magenta">Can it drive it?</span> <span className="text-neon-cyan">Yes</span> — max output is <span className="text-neon-cyan">6.19 V</span>.
+                    <span className="text-neon-magenta">Can it drive it?</span> <a href="#demands" title="Why these numbers — headphone electrical demands" className="text-xs text-neon-cyan underline-offset-4 hover:underline">why?</a> <span className="text-neon-cyan">Yes</span> — max output is <span className="text-neon-cyan">6.19 V</span>.
                   </div>
                 </>,
               ]}
@@ -90,13 +90,13 @@ const Index = () => {
                 <>
                   <span className="text-neon-magenta">DAC:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> over <span className="text-neon-cyan">USB</span>, powered from <span className="text-neon-cyan">USB-C</span> rather than its internal battery — only with <span className="text-neon-cyan">no EQ</span>, since with the target <span className="text-neon-cyan">PEQ</span> profile it can run out of power on some genres.
                   <div className="mt-2 rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-3 text-sm">
-                    <span className="text-neon-magenta">Can it drive it?</span> <span className="text-neon-cyan">Yes</span> — without EQ it only needs about <span className="text-neon-cyan">500 mW</span>, so roughly <span className="text-neon-cyan">0.5 V</span> against the DAC's <span className="text-neon-cyan">4 V</span> max.
+                    <span className="text-neon-magenta">Can it drive it?</span> <a href="#demands" title="Why these numbers — headphone electrical demands" className="text-xs text-neon-cyan underline-offset-4 hover:underline">why?</a> <span className="text-neon-cyan">Yes</span> — without EQ it only needs about <span className="text-neon-cyan">500 mW</span>, so roughly <span className="text-neon-cyan">0.5 V</span> against the DAC's <span className="text-neon-cyan">4 V</span> max.
                   </div>
                 </>,
                 <>
                   <span className="text-neon-magenta">DAC, with the PEQ profile:</span> the <ExtLink href="https://www.fiio.com/qx13" className="text-neon-cyan">FiiO QX13</ExtLink> paired with the <ExtLink href="https://www.fiio.com/productinfo/1507720.html" className="text-neon-cyan">FiiO Estick</ExtLink> battery.
                   <div className="mt-2 rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-3 text-sm">
-                    <div className="text-neon-magenta">Can it drive it?</div>
+                    <div className="flex items-baseline gap-2"><span className="text-neon-magenta">Can it drive it?</span> <a href="#demands" title="Why these numbers — headphone electrical demands" className="text-xs text-neon-cyan underline-offset-4 hover:underline">why?</a></div>
                     <ul className="mt-1 space-y-0.5">
                       <li>Sensitivity: <span className="text-neon-cyan">92 dB SPL/mW</span></li>
                       <li>Impedance: <span className="text-neon-cyan">32 Ω</span></li>
@@ -125,7 +125,7 @@ const Index = () => {
                 <>
                   <span className="text-neon-magenta">DAC:</span> <ExtLink href="https://fiio.com/newsinfo/1065510.html" className="text-neon-cyan">FiiO JIEZI</ExtLink>.
                   <div className="mt-2 rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-3 text-sm">
-                    <div className="text-neon-magenta">Can it drive it?</div>
+                    <div className="flex items-baseline gap-2"><span className="text-neon-magenta">Can it drive it?</span> <a href="#demands" title="Why these numbers — headphone electrical demands" className="text-xs text-neon-cyan underline-offset-4 hover:underline">why?</a></div>
                     <ul className="mt-1 space-y-0.5">
                       <li>Sensitivity: <span className="text-neon-cyan">99 dB SPL/mW</span></li>
                       <li>Impedance: <span className="text-neon-cyan">32 Ω</span></li>
@@ -154,7 +154,7 @@ const Index = () => {
                 <>
                   <span className="text-neon-magenta">DAC:</span> <ExtLink href="https://fiio.com/newsinfo/1065510.html" className="text-neon-cyan">FiiO JIEZI</ExtLink>.
                   <div className="mt-2 rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-3 text-sm">
-                    <div className="text-neon-magenta">Can it drive it?</div>
+                    <div className="flex items-baseline gap-2"><span className="text-neon-magenta">Can it drive it?</span> <a href="#demands" title="Why these numbers — headphone electrical demands" className="text-xs text-neon-cyan underline-offset-4 hover:underline">why?</a></div>
                     <ul className="mt-1 space-y-0.5">
                       <li>Sensitivity: <span className="text-neon-cyan">99 dB SPL/mW</span></li>
                       <li>Impedance: <span className="text-neon-cyan">38 Ω</span></li>
