@@ -522,7 +522,7 @@ const Index = () => {
             <Bullets
               items={[
                 <>Connect over USB in <GlossaryLink term="mtp">MTP</GlossaryLink> mode and copy folders to internal storage or an <span className="text-neon-cyan">SD card</span> with any file manager.</>,
-                <>All three players above will pick the files up from anywhere they have read access — no app-specific sandbox dance.</>,
+                <>All three players will find the files anywhere they have read access. No per-app folders to worry about.</>,
               ]}
             />
           </Card>
