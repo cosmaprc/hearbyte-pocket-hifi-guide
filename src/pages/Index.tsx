@@ -87,11 +87,32 @@ const Index = () => {
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink>.</>,
-                <><span className="text-neon-magenta">Receiver:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k-dac-amp" className="text-neon-cyan">Qudelix 5K</ExtLink> as a <GlossaryLink term="ldac">LDAC</GlossaryLink> Bluetooth receiver, fed by a <ExtLink href="https://www.fiio.com/airlink" className="text-neon-cyan">FiiO Air Link</ExtLink> adapter — the same chain as the <a href="#headphones" className="text-neon-cyan underline-offset-4 hover:underline">HD 560S + Qudelix 5K</a> Bluetooth setup.</>,
+                <><span className="text-neon-magenta">Receiver:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k-dac-amp" className="text-neon-cyan">Qudelix 5K</ExtLink> as a <GlossaryLink term="ldac">LDAC</GlossaryLink> Bluetooth receiver, fed by a <ExtLink href="https://www.fiio.com/airlink" className="text-neon-cyan">FiiO Air Link</ExtLink> adapter.</>,
                 <><span className="text-neon-magenta">EQ:</span> none at all, or the <ExtLink href="https://www.rtings.com/headphones/learn/eq-repository" className="text-neon-cyan">rtings.com</ExtLink> target preference curve <span className="text-neon-cyan">PEQ</span> profile.</>,
               ]}
             />
+            <div className="mt-4 rounded-lg border border-neon-magenta/40 bg-neon-magenta/5 p-4">
+              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
+              <p className="mt-2 text-sm text-foreground/85">
+                Velcro the 5K to the headband, run <span className="text-neon-cyan">LDAC 990 kbps</span> and leave the tuning stock — <span className="text-neon-magenta">no EQ of any kind</span>. Use the balanced output when you want more headroom, or plug in over USB when you want it wired and bit-perfect. See the <a href="#demands" className="text-neon-cyan underline-offset-4 hover:underline">electrical demands table</a> for why this pairing has plenty of margin.
+              </p>
+            </div>
+            <div className="mt-4 grid grid-cols-2 gap-3">
+              <img
+                src={hd560sQudelixHeadband}
+                alt="Sennheiser HD 560S with a Qudelix 5K and its cable velcro-strapped to the headband"
+                loading="lazy"
+                className="h-40 w-full rounded-lg border border-border object-cover object-top md:h-48"
+              />
+              <img
+                src={hd560sQudelixFront}
+                alt="Sennheiser HD 560S held up front-on with the Qudelix 5K mounted on the headband"
+                loading="lazy"
+                className="h-40 w-full rounded-lg border border-border object-cover object-top md:h-48"
+              />
+            </div>
           </Card>
+
           <Card title="6 · Audio-Technica ATH-M50x BT2 — wireless">
             <Bullets
               items={[
