@@ -188,7 +188,7 @@ const Index = () => {
                 <>The common <GlossaryLink term="ldac">codecs</GlossaryLink>, from lossy to effectively lossless: <span className="text-neon-cyan">AAC</span>, <span className="text-neon-cyan">aptX HD</span>, <span className="text-neon-cyan">aptX Lossless</span>, <span className="text-neon-cyan">LDAC</span> and <span className="text-neon-cyan">LHDC</span>.</>,
                 <>In honest blind listening, most people (and most headphones) <span className="text-neon-magenta">can't reliably tell them apart</span>, or tell any of them from a <span className="text-neon-cyan">wired</span> connection.</>,
                 <><span className="text-neon-cyan">LHDC</span> has two modes worth knowing about: <span className="text-neon-magenta">LHDC High Resolution</span> up to 24-bit / 192 kHz, and <span className="text-neon-magenta">LHDC Lossless</span> at bit-exact 16-bit / 44.1 kHz CD quality.</>,
-                <>Use whatever both ends support. Tuning and EQ will change the sound far more than the codec does.</>,
+                <>Use whatever both ends already support.</>,
               ]}
             />
           </Card>
