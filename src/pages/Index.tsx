@@ -533,7 +533,7 @@ const Index = () => {
 
       <Section id="glossary" icon={BookOpen} title="Glossary" tone="cyan">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          A few quick definitions for the terms used above, in alphabetical order, in case anything is new to you.
+          Definitions for the terms used above, in alphabetical order.
         </p>
         <div className="grid gap-5 md:grid-cols-2">
           <div id="g-alc" className="scroll-mt-24">
