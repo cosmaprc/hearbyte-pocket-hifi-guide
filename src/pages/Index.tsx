@@ -684,7 +684,7 @@ const Index = () => {
             <Bullets
               items={[
                 <><ExtLink href="https://www.qobuz.com/gb-en/shop" className="text-neon-cyan">Qobuz</ExtLink> — hi-res downloads as well as streaming, all lossless.</>,
-                <><ExtLink href="https://bandcamp.com/" className="text-neon-cyan">Bandcamp</ExtLink> pays the artist properly, and usually offers FLAC.</>,
+                <><ExtLink href="https://bandcamp.com/" className="text-neon-cyan">Bandcamp</ExtLink> gives the artist a much bigger cut, and usually offers FLAC.</>,
                 <><ExtLink href="https://uk.7digital.com/" className="text-neon-cyan">7digital</ExtLink> — big catalogue of hi-res and lossless downloads.</>,
               ]}
             />
