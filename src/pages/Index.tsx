@@ -681,8 +681,8 @@ const Index = () => {
           <Card title="Streaming & Playlists">
             <Bullets
               items={[
-                <><ExtLink href="https://music.apple.com/" className="text-neon-cyan">Apple Music</ExtLink> is my preferred streaming and music discovery app — its suggestions helped me put together my best playlists.</>,
-                <>Large <span className="text-neon-cyan">hi-res</span> / <span className="text-neon-cyan">lossless</span> catalogue with <span className="text-neon-magenta">Spatial Audio</span> tracks and built-in audio normalization at roughly <span className="text-neon-cyan">-16 LUFS</span>.</>,
+                <><ExtLink href="https://music.apple.com/" className="text-neon-cyan">Apple Music</ExtLink> is what I stream on, mostly because its suggestions are good. My best playlists came out of them.</>,
+                <>Big <span className="text-neon-cyan">hi-res</span> / <span className="text-neon-cyan">lossless</span> catalogue, some <span className="text-neon-magenta">Spatial Audio</span> tracks, and normalization built in at roughly <span className="text-neon-cyan">-16 LUFS</span>.</>,
               ]}
             />
             <div className="mt-4">
