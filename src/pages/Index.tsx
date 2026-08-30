@@ -94,8 +94,9 @@ const Index = () => {
             <div className="mt-4 rounded-lg border border-neon-magenta/40 bg-neon-magenta/5 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
               <p className="mt-2 text-sm text-foreground/85">
-                Velcro the 5K to the headband, run <span className="text-neon-cyan">LDAC 990 kbps</span> and leave the tuning stock — <span className="text-neon-magenta">no EQ of any kind</span>. Use the balanced output when you want more headroom, or plug in over USB when you want it wired and bit-perfect. See the <a href="#demands" className="text-neon-cyan underline-offset-4 hover:underline">electrical demands table</a> for why this pairing has plenty of margin.
+                The 5K velcros to the headband. I run <span className="text-neon-cyan">LDAC 990 kbps</span> and leave the tuning stock, with <span className="text-neon-magenta">no EQ of any kind</span>. The balanced output gives more headroom if you want it, and plugging in over USB makes it wired and bit-perfect. The <a href="#demands" className="text-neon-cyan underline-offset-4 hover:underline">electrical demands table</a> shows how much margin this pairing has.
               </p>
+
             </div>
             <div className="mt-4 grid grid-cols-2 gap-3">
               <img
