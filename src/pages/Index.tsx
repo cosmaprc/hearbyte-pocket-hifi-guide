@@ -624,7 +624,7 @@ const Index = () => {
           </div>
           <div id="g-soundcheck" className="scroll-mt-24">
             <Card title="Sound Check">
-              <p>Apple Music's built-in volume normalization — the streaming equivalent of ReplayGain, levelling tracks to roughly <span className="text-neon-cyan">-16&nbsp;LUFS</span> so you stop reaching for the volume between songs.</p>
+              <p>Apple Music's built-in volume normalization — the streaming equivalent of ReplayGain, levelling tracks to roughly <span className="text-neon-cyan">-16&nbsp;LUFS</span>.</p>
             </Card>
           </div>
           <div id="g-src" className="scroll-mt-24">
