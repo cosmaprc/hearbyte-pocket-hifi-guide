@@ -50,27 +50,6 @@ const Index = () => {
 
       <Divider />
 
-      <Section id="start" icon={ListOrdered} title="Start here" tone="cyan">
-        <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          Three steps, in this order. Everything else on this page is detail you can come back for.
-        </p>
-        <ol className="grid gap-5 md:grid-cols-3">
-          {startSteps.map((s) => (
-            <li key={s.href}>
-              <a
-                href={s.href}
-                className="flex h-full flex-col rounded-xl border border-border bg-card-gradient p-6 transition-smooth hover:border-neon-cyan/60 hover:shadow-card-glow"
-              >
-                <span className="font-display text-lg font-bold text-neon-cyan">{s.title}</span>
-                <span className="mt-3 text-sm leading-relaxed text-foreground/85">{s.body}</span>
-              </a>
-            </li>
-          ))}
-        </ol>
-      </Section>
-
-      <Divider />
-
       <Section id="chain" icon={Zap} title="My preferred audio chain" tone="magenta">
         <div className="grid gap-5 md:grid-cols-2">
           <Card title="The chain">
