@@ -267,7 +267,7 @@ const Index = () => {
               />
             </Card>
             <Card title="Neutron HiFi DAC V1" href="https://neutronhifi.com/devices/dac/v1/details">
-              <p>A pioneer in bringing <span className="text-neon-cyan">DSP</span> to dongle DACs — includes almost every DSP from the Neutron Player plus extras like <span className="text-neon-cyan">THD Compensation</span>. Read the incredibly well-written manual to discover everything it can do.</p>
+              <p>One of the first dongles to put real <span className="text-neon-cyan">DSP</span> on the device: almost everything from the Neutron Player, plus extras like <span className="text-neon-cyan">THD Compensation</span>. The manual is unusually thorough and worth reading properly.</p>
             </Card>
           </div>
         </div>
