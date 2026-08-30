@@ -29,7 +29,7 @@ https://theaudiostuff.com/tools/headphone-power-calculator/#sens=100.8&u=dbmw&z=
 
 Keeps: paired with the FiiO Estick battery.
 
-Same "Can it drive it?" structure — same headphone figures and required ~3.6 V, with the QX13's balanced (4.4 mm) output voltage in the comparison line and its own pre-filled calculator link. I'll confirm the QX13's published output voltage from FiiO's spec page before writing the number, rather than guessing it; if a trustworthy figure isn't available I'll leave that line out and only state the ~3.6 V requirement.
+No math block here — just a short "Can it drive it?" line: yes, with a max output of 6.19 V.
 
 ## Technical notes
 
