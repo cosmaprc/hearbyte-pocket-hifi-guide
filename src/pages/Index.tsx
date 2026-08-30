@@ -72,9 +72,6 @@ const Index = () => {
       <Divider />
 
       <Section id="chain" icon={Zap} title="My preferred audio chain" tone="magenta">
-        <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          When I want to stop experimenting and just listen, this is the chain I reach for. If you copy one thing off this page, copy this.
-        </p>
         <div className="grid gap-5 md:grid-cols-2">
           <Card title="The chain">
             <Bullets
