@@ -226,27 +226,7 @@ const Index = () => {
           If you're new to this and want to figure out your own preferences before spending big, try the <ExtLink href="https://www.akg.com/Headphones/Professional%20Headphones/K371.html" className="text-neon-cyan">AKG K371</ExtLink> (<span className="text-neon-magenta">closed-back</span>, tuned to the <span className="text-neon-cyan">Harman</span> target) alongside the <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink> (<span className="text-neon-magenta">open-back</span>, <span className="text-neon-cyan">diffuse-field</span> / flat). Load them into <ExtLink href="https://www.extreamsd.com/index.php/products/usb-audio-player-pro" className="text-neon-cyan">USB Audio Player Pro</ExtLink> with <ExtLink href="https://www.toneboosters.com/tb_morphit_v1.html" className="text-neon-cyan">ToneBoosters MorphIt</ExtLink> and A/B different target curves — you'll quickly work out whether you prefer open vs closed, and Harman vs diffuse-field.
         </p>
 
-        <SubHeading spaced={false}>Recommended · Bluetooth earbuds</SubHeading>
-        <div className="grid gap-5 md:grid-cols-2">
-          <Card title="Creative Aurvana Ace 3" href="https://us.creative.com/p/headphones-headsets/creative-aurvana-ace-3">
-            <Bullets
-              items={[
-                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">in-ear</span> (true wireless)</>,
-                <><span className="text-neon-magenta">ANC:</span> Yes</>,
-                <><span className="text-neon-magenta">Wired:</span> N/A</>,
-                <><span className="text-neon-magenta">Others:</span> xMEMS solid-state tweeters, LDAC, aptX Lossless, Mimi sound personalisation.</>,
-              ]}
-            />
-            <div className="mt-4 rounded-lg border border-neon-magenta/40 bg-neon-magenta/5 p-4">
-              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
-              <p className="mt-2 text-sm text-foreground/85">
-                Run the <span className="text-neon-magenta">Mimi sound personalisation</span> hearing test in the <span className="text-neon-cyan">Creative app</span> once and leave it on — it's the single biggest change you can make to how these sound. Stack a light <span className="text-neon-cyan">jetAudio</span> Bongiovi chain only if you want extra flavour on top.
-              </p>
-            </div>
-          </Card>
-        </div>
-
-        <SubHeading>Recommended · Wired headphones</SubHeading>
+        <SubHeading spaced={false}>Recommended · Wired headphones</SubHeading>
         <div className="grid gap-5 md:grid-cols-2">
           <Card title="Sennheiser HD 560S" href="https://en-uk.sennheiser.com/hd-560s">
             <Bullets
@@ -332,60 +312,18 @@ const Index = () => {
 
         <SubHeading>Also owned and tested · in-ear and open-ear</SubHeading>
         <div className="grid gap-5 md:grid-cols-3">
-          <Card title="AirPods Pro 2" href="https://www.apple.com/airpods-pro/">
+          <Card title="Moondrop × Wuthering Waves U.C.T.S." href="https://moondroplab.com/en/products/u-c-t-s">
             <Bullets
               items={[
-                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">in-ear</span> (true wireless)</>,
-                <><span className="text-neon-magenta">ANC:</span> Yes</>,
+                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">open-ear</span> (clip-on / <GlossaryLink term="ows">OWS</GlossaryLink>)</>,
+                <><span className="text-neon-magenta">ANC:</span> No</>,
                 <><span className="text-neon-magenta">Wired:</span> N/A</>,
-                <><span className="text-neon-magenta">Others:</span> tight Apple-ecosystem integration, hearing health features.</>,
+                <><span className="text-neon-magenta">Others:</span> Wuthering Waves collaboration edition, clip-on open-ear fit that leaves the canal free, app-based EQ profiles.</>,
               ]}
             />
-            <div className="mt-4 rounded-lg border border-border bg-background/40 p-4">
-              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
-              <dl className="mt-3 space-y-2 text-sm">
-                <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Mode: ANC Off</dt>
-                  <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> AirPods Pro</dd>
-                </div>
-                <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Source: Neutron Player / HiFi DAC V1</dt>
-                  <dd className="text-foreground/85"><span className="text-neon-magenta">FRC:</span> Crinacle on 711 (passive mode) preset · <span className="text-neon-magenta">Crossfeed:</span> jMeier · <span className="text-neon-magenta">EQ:</span> Deep · <span className="text-neon-magenta"><GlossaryLink term="alc">ALC</GlossaryLink>:</span> preset #3 (optional)</dd>
-                </div>
-              </dl>
-            </div>
           </Card>
 
-          <Card title="Cambridge Audio A100" href="https://www.cambridgeaudio.com/usa/en/products/melomania/melomania-a100">
-            <Bullets
-              items={[
-                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">in-ear</span> (true wireless)</>,
-                <><span className="text-neon-magenta">ANC:</span> Yes</>,
-                <><span className="text-neon-magenta">Wired:</span> N/A</>,
-                <><span className="text-neon-magenta">Others:</span> Class A/B hi-fi grade amplification, LDAC, aptX Lossless, 7-band EQ, <GlossaryLink term="dynameq">DynamEQ</GlossaryLink>.</>,
-              ]}
-            />
-            <div className="mt-4 rounded-lg border border-border bg-background/40 p-4">
-              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
-              <p className="mt-2 text-sm text-foreground/85">
-                Set the EQ in the <span className="text-neon-cyan">Melomania app</span>, then stack with <span className="text-neon-cyan">jetAudio</span> <span className="text-neon-cyan">Bongiovi DPS</span>.
-              </p>
-              <dl className="mt-3 space-y-2 text-sm">
-                <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Note</dt>
-                  <dd className="text-foreground/85">I prefer the sound of these on the <span className="text-neon-magenta">Rock EQ preset</span> with <span className="text-neon-magenta">DynamEQ</span> turned on and without any other DSP more than any other item on this list.</dd>
-                </div>
-                <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">EQ: Blues</dt>
-                  <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> London H</dd>
-                </div>
-                <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">EQ: Rock</dt>
-                  <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> Boston G, Las Vegas G</dd>
-                </div>
-              </dl>
-            </div>
-          </Card>
+
 
           <Card title="Moondrop Pill" href="https://moondroplab.com/en/products/pill">
             <Bullets
@@ -441,35 +379,6 @@ const Index = () => {
             </div>
           </Card>
 
-          <Card title="Cambridge Audio P100SE" href="https://www.cambridgeaudio.com/usa/en/products/melomania/melomania-p100-se">
-            <Bullets
-              items={[
-                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">wireless over-ear</span></>,
-                <><span className="text-neon-magenta">ANC:</span> Yes</>,
-                <><span className="text-neon-magenta">Wired:</span> 3.5mm / USB-C</>,
-                <><span className="text-neon-magenta">Others:</span> Class A/B hi-fi grade amplification, aptX Lossless, user replaceable battery and earcups, DynamEQ, 7-band EQ, multipoint connection, fast charge.</>,
-              ]}
-            />
-            <div className="mt-4 rounded-lg border border-border bg-background/40 p-4">
-              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
-              <p className="mt-2 text-sm text-foreground/85">
-                Over Bluetooth, set the <span className="text-neon-cyan">Melomania app</span> EQ to <span className="text-neon-magenta">Normal</span> and toggle between the <span className="text-neon-magenta">Blues</span> and <span className="text-neon-magenta">Voice</span> tone presets, then stack a jetAudio chain.
-              </p>
-              <dl className="mt-3 space-y-2 text-sm">
-                <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">EQ: Normal + Blues</dt>
-                  <dd className="text-foreground/85"><span className="text-neon-magenta">AM3D:</span> Ballad · <span className="text-neon-magenta">Bongiovi:</span> New York H</dd>
-                </div>
-                <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">EQ: Normal + Voice</dt>
-                  <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> London H, Atlanta H, New York H</dd>
-                </div>
-              </dl>
-              <p className="mt-3 text-sm text-foreground/85">
-                If the <span className="text-neon-magenta">sub-bass</span> feels overwhelming, drop the <span className="text-neon-cyan">leftmost slider</span> of the <span className="text-neon-cyan">Melomania app</span>'s EQ — you'll tame the rumble while keeping plenty of punch. Especially handy on the <span className="text-neon-magenta">Flat</span>, <span className="text-neon-magenta">Electronic</span> and <span className="text-neon-magenta">Rock</span> presets.
-              </p>
-            </div>
-          </Card>
         </div>
       </Section>
 
