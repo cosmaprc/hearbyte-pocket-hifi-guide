@@ -114,7 +114,6 @@ const Index = () => {
                     </div>
                   </div>
                 </>,
-                <><span className="text-neon-magenta">EQ:</span> none, otherwise the <span className="text-neon-cyan">PEQ</span> profile above.</>,
               ]}
             />
           </Card>
