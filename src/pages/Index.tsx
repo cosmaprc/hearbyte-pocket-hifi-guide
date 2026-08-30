@@ -160,7 +160,7 @@ const Index = () => {
 
       <Section id="phones" icon={Smartphone} title="Phones & Accessories" tone="cyan">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          Any modern <span className="text-neon-cyan">iPhone</span> or <span className="text-neon-cyan">Android</span> phone is a fine starting point. What you plug in matters less than what you run on it, so check what your phone already does before you buy anything. Then add a <span className="text-neon-magenta">DAC</span> or a <span className="text-neon-magenta">Bluetooth transmitter</span> only if it's actually missing something.
+          Any modern <span className="text-neon-cyan">iPhone</span> or <span className="text-neon-cyan">Android</span> phone is a fine starting point. Find out what yours already does first; a <span className="text-neon-magenta">DAC</span> or a <span className="text-neon-magenta">Bluetooth transmitter</span> is only worth buying to fill a gap.
         </p>
 
         <div className="grid gap-5 md:grid-cols-2">
