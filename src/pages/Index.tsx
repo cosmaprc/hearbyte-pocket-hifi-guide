@@ -436,12 +436,10 @@ const Index = () => {
               ),
               sources: (
                 <>
-                  Highly versatile — 120 Ω at 110 dB/V needs only a fraction of a volt to play loud, so
-                  the choice comes down to features rather than power.{" "}
-                  <GearLink>Qudelix 5K</GearLink> (wired or LDAC),{" "}
-                  <GearLink>FiiO KA11</GearLink>, <GearLink>Neutron HiFi DAC V1</GearLink> or{" "}
-                  <GearLink>Hidizs Martha</GearLink> all perform cleanly without bottlenecking
-                  dynamics.
+                  The easy row. 120 Ω at 110 dB/V needs a fraction of a volt to play loud, so pick on
+                  features rather than power. <GearLink>Qudelix 5K</GearLink> (wired or LDAC),{" "}
+                  <GearLink>FiiO KA11</GearLink>, <GearLink>Neutron HiFi DAC V1</GearLink> and{" "}
+                  <GearLink>Hidizs Martha</GearLink> all drive it cleanly.
                 </>
               ),
             },
