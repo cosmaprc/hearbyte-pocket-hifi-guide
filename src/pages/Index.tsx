@@ -223,8 +223,9 @@ const Index = () => {
         <div className="grid gap-5 md:grid-cols-2">
           <Card title="Qudelix 5K" href="https://www.qudelix.com/products/qudelix-5k">
             <p className="text-sm text-foreground/85">
-              The pick if you only buy one thing: it is both the <span className="text-neon-cyan">USB DAC</span> and the <span className="text-neon-cyan">Bluetooth receiver</span>, so it replaces two purchases and travels well.
+              If you buy one thing, buy this. It is a <span className="text-neon-cyan">USB DAC</span> and a <span className="text-neon-cyan">Bluetooth receiver</span> in the same small box, so it covers two purchases.
             </p>
+
             <dl className="mt-4 space-y-3 text-sm">
               <div>
                 <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">As a wired USB DAC</dt>
