@@ -5,7 +5,7 @@ const sections = [
   { id: "preferences", label: "Finding your preferences" },
   { id: "phones", label: "Phones & Accessories" },
   { id: "software", label: "Software" },
-  { id: "demands", label: "Headphone electrical demands" },
+  { id: "demands", label: "Enough power?" },
 
   { id: "replaygain", label: "Using ReplayGain" },
   { id: "transfer", label: "Getting music onto your phone" },
