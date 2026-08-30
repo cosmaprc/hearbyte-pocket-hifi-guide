@@ -676,7 +676,7 @@ const Index = () => {
                 <><ExtLink href="https://www.audiosciencereview.com/forum/index.php" className="text-neon-cyan">Audio Science Review</ExtLink>'s forum, where the measurements get picked apart.</>,
                 <><ExtLink href="https://www.reddit.com/r/headphones/s/N2EtgyodPs" className="text-neon-cyan">r/headphones</ExtLink> for general discussion and news.</>,
                 <><ExtLink href="https://www.reddit.com/r/oratory1990/s/U4gCItaBjU" className="text-neon-cyan">r/oratory1990</ExtLink> — EQ presets, and straight answers about how any of this works.</>,
-                <><ExtLink href="https://www.reddit.com/r/HeadphoneAdvice/s/sYWZKVYEjL" className="text-neon-cyan">r/HeadphoneAdvice</ExtLink> if you want a recommendation for your budget.</>,
+                <>Budget recommendations get answered on <ExtLink href="https://www.reddit.com/r/HeadphoneAdvice/s/sYWZKVYEjL" className="text-neon-cyan">r/HeadphoneAdvice</ExtLink>.</>,
               ]}
             />
           </Card>
