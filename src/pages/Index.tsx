@@ -256,7 +256,7 @@ const Index = () => {
           <SubHeading>Other DACs</SubHeading>
           <div className="grid gap-5 md:grid-cols-3">
             <Card title="FiiO JIEZI" href="https://fiio.com/newsinfo/1065510.html">
-              <p>A tiny, inexpensive <span className="text-neon-cyan">USB-C</span> dongle DAC — an easy way to get clean sound out of a phone with no headphone jack.</p>
+              <p>A tiny, cheap <span className="text-neon-cyan">USB-C</span> dongle DAC. The easiest way to get clean sound out of a phone with no headphone jack.</p>
             </Card>
             <Card title="FiiO QX13" href="https://www.fiio.com/qx13">
               <Bullets
