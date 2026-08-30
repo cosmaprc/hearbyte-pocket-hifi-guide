@@ -8,7 +8,7 @@ import Divider from "@/components/hearbyte/Divider";
 import DataTable from "@/components/hearbyte/DataTable";
 import SubHeading from "@/components/hearbyte/SubHeading";
 import TableOfContents from "@/components/hearbyte/TableOfContents";
-import { Smartphone, Sliders, Headphones, Volume2, BookOpen, Link, FolderInput, Zap, Gauge, ListOrdered } from "lucide-react";
+import { Smartphone, Sliders, Headphones, Volume2, BookOpen, Link, FolderInput, Zap, Gauge } from "lucide-react";
 import hd560sQudelixHeadband from "@/assets/hd560s-qudelix-headband.jpg";
 import hd560sQudelixFront from "@/assets/hd560s-qudelix-front.jpg";
 
@@ -23,24 +23,6 @@ const GlossaryLink = ({ term, children }: { term: string; children: React.ReactN
     {children}
   </a>
 );
-
-const startSteps = [
-  {
-    href: "#phones",
-    title: "1 · Start with the phone you already own",
-    body: "Check whether it has a headphone jack, LDAC and a spatial processor. Only buy a dongle DAC or a Bluetooth transmitter if that check says you need one.",
-  },
-  {
-    href: "#chain",
-    title: "2 · Pick a streaming service and DSP chain",
-    body: "Apple Music is my default — Sound Check on, every other DSP off. If you want deeper control, jetAudio, Neutron or USB Audio Player Pro give you ReplayGain, preamp control and serious DSP.",
-  },
-  {
-    href: "#headphones",
-    title: "3 · Pick headphones and copy my settings",
-    body: "Every headphone below has a \u201cHow I run it\u201d panel with the exact app, EQ and DSP settings I use. Some need no EQ at all — start there, then tweak to taste.",
-  },
-];
 
 const Index = () => {
   return (
