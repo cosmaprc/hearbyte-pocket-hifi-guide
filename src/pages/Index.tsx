@@ -237,8 +237,9 @@ const Index = () => {
               <div>
                 <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">As a Bluetooth receiver</dt>
                 <dd className="mt-1 text-foreground/85">
-                  <GlossaryLink term="ldac">LDAC</GlossaryLink>, <span className="text-neon-cyan">aptX Adaptive</span> and every mainstream codec, applying its on-device EQ to whatever is streaming to it — turn any wired headphone into a well-tuned wireless one.
+                  <GlossaryLink term="ldac">LDAC</GlossaryLink>, <span className="text-neon-cyan">aptX Adaptive</span> and every mainstream codec. Its on-device EQ applies to whatever is streaming to it, which turns any wired headphone into a well-tuned wireless one.
                 </dd>
+
               </div>
               <div>
                 <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Either way</dt>
