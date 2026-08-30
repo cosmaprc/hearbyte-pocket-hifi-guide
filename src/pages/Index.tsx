@@ -271,9 +271,19 @@ const Index = () => {
 
       <Section id="software" icon={Sliders} title="Software" tone="magenta">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          The right <span className="text-neon-cyan">player</span> and <GlossaryLink term="dsp">DSP</GlossaryLink> chain shapes your sound far more than any <span className="text-neon-cyan">cable</span> or <span className="text-neon-cyan">DAC</span>. These three apps give you <span className="text-neon-cyan">ReplayGain support</span>, <span className="text-neon-cyan">Preamp control</span> and serious <span className="text-neon-magenta">DSP power</span>.
+          The right <span className="text-neon-cyan">streaming service</span>, <span className="text-neon-cyan">player</span> and <GlossaryLink term="dsp">DSP</GlossaryLink> chain shapes your sound far more than any <span className="text-neon-cyan">cable</span> or <span className="text-neon-cyan">DAC</span>. These apps give you <span className="text-neon-cyan">loudness normalization</span>, <span className="text-neon-cyan">Preamp control</span> and serious <span className="text-neon-magenta">DSP power</span>.
         </p>
-        <div className="grid gap-5 md:grid-cols-3">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <Card title="Apple Music" href="https://www.apple.com/apple-music/">
+            <Bullets
+              items={[
+                <>Streaming service on both <ExtLink href="https://apps.apple.com/us/app/apple-music/id1108187390" className="text-neon-cyan">iOS</ExtLink> and <ExtLink href="https://play.google.com/store/apps/details?id=com.apple.android.music" className="text-neon-cyan">Android</ExtLink></>,
+                <><span className="text-neon-cyan">Lossless</span> enabled at <span className="text-neon-magenta">24-bit / 48 kHz</span> — plenty for headphones, and easier on battery and bandwidth than higher rates.</>,
+                <><GlossaryLink term="soundcheck">Sound Check</GlossaryLink> on, so track-to-track loudness stays consistent — the streaming equivalent of <GlossaryLink term="replaygain">ReplayGain</GlossaryLink>.</>,
+                <>No other DSP layered on top here — <span className="text-neon-cyan">EQ</span> and DSP work happens in the player apps or on the <span className="text-neon-cyan">DAC</span>.</>,
+              ]}
+            />
+          </Card>
           <Card title="jetAudio" href="https://www.jetaudio.com/">
             <Bullets
               items={[
