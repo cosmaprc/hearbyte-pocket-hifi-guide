@@ -48,19 +48,20 @@ const Hero = () => {
         </p>
 
         <p className="mt-6 max-w-2xl text-balance text-lg text-foreground/90 [text-shadow:0_2px_8px_hsl(var(--background)/0.9)] sm:text-xl">
-          Quick-pick gear and software pairings to get the most{" "}
-          <span className="text-neon-magenta">fun</span> and{" "}
-          <span className="text-neon-cyan">engaging</span> sound out of your music.
+          The gear and software I actually use to make music sound{" "}
+          <span className="text-neon-magenta">fun</span> on a{" "}
+          <span className="text-neon-cyan">phone</span>, and why.
         </p>
 
         <a
-          href="#headphones"
-          aria-label="Jump to headphones section"
+          href="#chain"
+          aria-label="Jump to my preferred audio chains"
           className="mt-10 inline-flex items-center gap-2 rounded-full border border-neon-magenta/60 bg-primary/10 px-6 py-3 text-sm font-semibold uppercase tracking-widest text-foreground transition-smooth hover:bg-primary/20 hover:shadow-neon-magenta focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon-magenta/60"
         >
-          Jump to gear
+          My chains
           <ChevronDown aria-hidden className="h-4 w-4 motion-safe:animate-bounce" />
         </a>
+
       </div>
     </header>
   );
