@@ -51,7 +51,33 @@ const Index = () => {
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink>.</>,
-                <><span className="text-neon-magenta">DAC:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> over <span className="text-neon-cyan">USB</span>, set to draw power from <span className="text-neon-cyan">USB-C</span> rather than its internal battery — or the <ExtLink href="https://www.fiio.com/qx13" className="text-neon-cyan">FiiO QX13</ExtLink> paired with the <ExtLink href="https://www.fiio.com/productinfo/1507720.html" className="text-neon-cyan">FiiO Estick</ExtLink> battery.</>,
+                <>
+                  <span className="text-neon-magenta">DAC:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> over <span className="text-neon-cyan">USB</span>, set to draw power from <span className="text-neon-cyan">USB-C</span> rather than its internal battery.
+                  <div className="mt-2 rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-3 text-sm">
+                    <div className="text-neon-magenta">Can it drive it?</div>
+                    <ul className="mt-1 space-y-0.5">
+                      <li>Sensitivity: <span className="text-neon-cyan">100.8 dB SPL/mW</span></li>
+                      <li>Impedance: <span className="text-neon-cyan">120 Ω</span></li>
+                      <li>Target average loudness: <span className="text-neon-cyan">90 dB SPL</span></li>
+                      <li>Sound Check headroom: <span className="text-neon-cyan">7 dB</span> (so <span className="text-neon-cyan">97 dB</span> average at the amp)</li>
+                      <li><span className="text-neon-cyan">PEQ</span> preamp headroom: <span className="text-neon-cyan">~10 dB</span></li>
+                      <li>Crest factor, jazz / acoustic: <span className="text-neon-cyan">14 dB</span></li>
+                      <li>Peak needed: 90 + 7 + 10 + 14 = <span className="text-neon-cyan">121 dB SPL</span></li>
+                      <li>Voltage needed: <span className="text-neon-cyan">~3.6 V</span></li>
+                      <li>Qudelix 5K on <span className="text-neon-cyan">2.5 mm balanced</span>: <span className="text-neon-cyan">4 V</span></li>
+                      <li>Verdict: <span className="text-neon-cyan">yes</span>, with a little left over.</li>
+                    </ul>
+                    <div className="mt-1">
+                      Run the numbers yourself: <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=100.8&u=dbmw&z=120&v=4&spl=107&hr=14" className="text-neon-cyan">headphone power calculator</ExtLink> (pre-filled).
+                    </div>
+                  </div>
+                </>,
+                <>
+                  <span className="text-neon-magenta">DAC, alternative:</span> the <ExtLink href="https://www.fiio.com/qx13" className="text-neon-cyan">FiiO QX13</ExtLink> paired with the <ExtLink href="https://www.fiio.com/productinfo/1507720.html" className="text-neon-cyan">FiiO Estick</ExtLink> battery.
+                  <div className="mt-2 rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-3 text-sm">
+                    <span className="text-neon-magenta">Can it drive it?</span> <span className="text-neon-cyan">Yes</span> — max output is <span className="text-neon-cyan">6.19 V</span>.
+                  </div>
+                </>,
                 <><span className="text-neon-magenta">EQ:</span> none, otherwise the <span className="text-neon-cyan">PEQ</span> profile above.</>,
               ]}
             />
