@@ -332,60 +332,18 @@ const Index = () => {
 
         <SubHeading>Also owned and tested · in-ear and open-ear</SubHeading>
         <div className="grid gap-5 md:grid-cols-3">
-          <Card title="AirPods Pro 2" href="https://www.apple.com/airpods-pro/">
+          <Card title="Moondrop × Wuthering Waves U.C.T.S." href="https://moondroplab.com/en/products/u-c-t-s">
             <Bullets
               items={[
-                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">in-ear</span> (true wireless)</>,
-                <><span className="text-neon-magenta">ANC:</span> Yes</>,
+                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">open-ear</span> (clip-on / <GlossaryLink term="ows">OWS</GlossaryLink>)</>,
+                <><span className="text-neon-magenta">ANC:</span> No</>,
                 <><span className="text-neon-magenta">Wired:</span> N/A</>,
-                <><span className="text-neon-magenta">Others:</span> tight Apple-ecosystem integration, hearing health features.</>,
+                <><span className="text-neon-magenta">Others:</span> Wuthering Waves collaboration edition, clip-on open-ear fit that leaves the canal free, app-based EQ profiles.</>,
               ]}
             />
-            <div className="mt-4 rounded-lg border border-border bg-background/40 p-4">
-              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
-              <dl className="mt-3 space-y-2 text-sm">
-                <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Mode: ANC Off</dt>
-                  <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> AirPods Pro</dd>
-                </div>
-                <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Source: Neutron Player / HiFi DAC V1</dt>
-                  <dd className="text-foreground/85"><span className="text-neon-magenta">FRC:</span> Crinacle on 711 (passive mode) preset · <span className="text-neon-magenta">Crossfeed:</span> jMeier · <span className="text-neon-magenta">EQ:</span> Deep · <span className="text-neon-magenta"><GlossaryLink term="alc">ALC</GlossaryLink>:</span> preset #3 (optional)</dd>
-                </div>
-              </dl>
-            </div>
           </Card>
 
-          <Card title="Cambridge Audio A100" href="https://www.cambridgeaudio.com/usa/en/products/melomania/melomania-a100">
-            <Bullets
-              items={[
-                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">in-ear</span> (true wireless)</>,
-                <><span className="text-neon-magenta">ANC:</span> Yes</>,
-                <><span className="text-neon-magenta">Wired:</span> N/A</>,
-                <><span className="text-neon-magenta">Others:</span> Class A/B hi-fi grade amplification, LDAC, aptX Lossless, 7-band EQ, <GlossaryLink term="dynameq">DynamEQ</GlossaryLink>.</>,
-              ]}
-            />
-            <div className="mt-4 rounded-lg border border-border bg-background/40 p-4">
-              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
-              <p className="mt-2 text-sm text-foreground/85">
-                Set the EQ in the <span className="text-neon-cyan">Melomania app</span>, then stack with <span className="text-neon-cyan">jetAudio</span> <span className="text-neon-cyan">Bongiovi DPS</span>.
-              </p>
-              <dl className="mt-3 space-y-2 text-sm">
-                <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Note</dt>
-                  <dd className="text-foreground/85">I prefer the sound of these on the <span className="text-neon-magenta">Rock EQ preset</span> with <span className="text-neon-magenta">DynamEQ</span> turned on and without any other DSP more than any other item on this list.</dd>
-                </div>
-                <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">EQ: Blues</dt>
-                  <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> London H</dd>
-                </div>
-                <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">EQ: Rock</dt>
-                  <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> Boston G, Las Vegas G</dd>
-                </div>
-              </dl>
-            </div>
-          </Card>
+
 
           <Card title="Moondrop Pill" href="https://moondroplab.com/en/products/pill">
             <Bullets
