@@ -201,7 +201,7 @@ const Index = () => {
               items={[
                 <>Many <span className="text-neon-cyan">Android</span> phones include a system-level <span className="text-neon-magenta">Dolby Atmos</span> or spatial processor.</>,
                 <>It widens the stage, and stock-tuned headphones often sound more <span className="text-neon-magenta">open</span> with it on.</>,
-                <>Treat it as one more DSP layer to A/B against <span className="text-neon-cyan">Bongiovi DPS</span> or <span className="text-neon-cyan">AM3D</span> in jetAudio, not a replacement for them.</>,
+                
               ]}
             />
           </Card>
