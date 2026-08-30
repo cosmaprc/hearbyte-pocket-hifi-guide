@@ -172,7 +172,6 @@ const Index = () => {
                     </div>
                   </div>
                 </>,
-                <><span className="text-neon-magenta">EQ:</span> none.</>,
               ]}
             />
           </Card>
