@@ -226,7 +226,7 @@ const Index = () => {
         <div className="grid gap-5 md:grid-cols-2">
           <Card title="Qudelix 5K" href="https://www.qudelix.com/products/qudelix-5k">
             <p className="text-sm text-foreground/85">
-              If you buy one thing, buy this. It is a <span className="text-neon-cyan">USB DAC</span> and a <span className="text-neon-cyan">Bluetooth receiver</span> in the same small box, so it covers two purchases.
+              A <span className="text-neon-cyan">USB DAC</span> and a <span className="text-neon-cyan">Bluetooth receiver</span> in the same small box, which is why it's the one thing I'd buy first.
             </p>
 
             <dl className="mt-4 space-y-3 text-sm">
