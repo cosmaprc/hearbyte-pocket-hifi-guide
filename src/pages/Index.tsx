@@ -391,12 +391,14 @@ const Index = () => {
               sources: (
                 <>
                   This row is about volts, not milliwatts: 2 VRMS into 300 Ω is only ~13 mW, fine at
-                  average levels and tight on peaks. <GearLink>Qudelix 5K</GearLink> on balanced
-                  roughly doubles the swing and is the best of the four.{" "}
-                  <GearLink>Neutron HiFi DAC V1</GearLink> runs cleanly at 2 VRMS but has no headroom
-                  left once you apply negative pre-amp gain for EQ. The{" "}
-                  <GearLink>FiiO KA11</GearLink>'s 200 mW rating means nothing here, because it cannot
-                  supply the voltage. A desktop amp is still the right answer.
+                  average levels and tight on peaks. The <GearLink>FiiO QX13</GearLink> on 4.4mm
+                  balanced is the pick, rated 125 mW into 300 Ω against 40 mW single-ended, and{" "}
+                  <GearLink>Qudelix 5K</GearLink> on balanced roughly doubles its own swing and comes
+                  close. <GearLink>Neutron HiFi DAC V1</GearLink> runs cleanly at 2 VRMS but has no
+                  headroom left once you apply negative pre-amp gain for EQ. A single-ended dongle
+                  like the <GearLink>FiiO JIEZI</GearLink> is out of its depth here, and a big
+                  milliwatt figure into 32 Ω tells you nothing at 300 Ω. A desktop amp is still the
+                  right answer.
                 </>
               ),
             },
