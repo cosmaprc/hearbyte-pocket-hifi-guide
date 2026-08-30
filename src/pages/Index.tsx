@@ -384,13 +384,13 @@ const Index = () => {
                 "Sennheiser HD 600 (300 Ω / ~97 dB/mW), Beyerdynamic DT 880 (250 Ω / 96 dB/mW), Beyerdynamic DT 990 Pro (250 Ω / 96 dB/mW)",
               sources: (
                 <>
-                  This row is about volts, not milliwatts: 2 VRMS into 300 Ω is only ~13 mW — fine for
-                  average listening, tight on peaks. <GearLink>Qudelix 5K</GearLink> on balanced roughly
-                  doubles the swing and is the best of the four.{" "}
-                  <GearLink>Neutron HiFi DAC V1</GearLink> runs cleanly at 2 VRMS but lacks headroom
-                  once you apply negative pre-amp gain for EQ. The <GearLink>FiiO KA11</GearLink>'s
-                  200 mW rating is irrelevant here — it cannot supply the voltage. Desktop amps still
-                  win.
+                  This row is about volts, not milliwatts: 2 VRMS into 300 Ω is only ~13 mW, fine at
+                  average levels and tight on peaks. <GearLink>Qudelix 5K</GearLink> on balanced
+                  roughly doubles the swing and is the best of the four.{" "}
+                  <GearLink>Neutron HiFi DAC V1</GearLink> runs cleanly at 2 VRMS but has no headroom
+                  left once you apply negative pre-amp gain for EQ. The{" "}
+                  <GearLink>FiiO KA11</GearLink>'s 200 mW rating means nothing here, because it cannot
+                  supply the voltage. A desktop amp is still the right answer.
                 </>
               ),
             },
