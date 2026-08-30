@@ -672,9 +672,9 @@ const Index = () => {
           <Card title="Music Stores">
             <Bullets
               items={[
-                <><ExtLink href="https://www.qobuz.com/gb-en/shop" className="text-neon-cyan">Qobuz</ExtLink> — hi-res streaming and download store with lossless catalogue.</>,
-                <><ExtLink href="https://bandcamp.com/" className="text-neon-cyan">Bandcamp</ExtLink> — buy directly from artists, often in lossless FLAC.</>,
-                <><ExtLink href="https://uk.7digital.com/" className="text-neon-cyan">7digital</ExtLink> — hi-res and lossless downloads from a large catalogue.</>,
+                <><ExtLink href="https://www.qobuz.com/gb-en/shop" className="text-neon-cyan">Qobuz</ExtLink> — hi-res downloads as well as streaming, all lossless.</>,
+                <><ExtLink href="https://bandcamp.com/" className="text-neon-cyan">Bandcamp</ExtLink> pays the artist properly, and usually offers FLAC.</>,
+                <><ExtLink href="https://uk.7digital.com/" className="text-neon-cyan">7digital</ExtLink> — big catalogue of hi-res and lossless downloads.</>,
               ]}
             />
           </Card>
