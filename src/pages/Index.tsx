@@ -171,6 +171,7 @@ const Index = () => {
               items={[
                 <>Plenty of mid-range Androids (<span className="text-neon-cyan">Motorola</span>, for one) ship with <span className="text-neon-magenta">Dolby Atmos</span>, <span className="text-neon-cyan">aptX HD</span> or better, and sometimes a <span className="text-neon-cyan">3.5 mm</span> jack that handles <span className="text-neon-cyan">24-bit / 192 kHz</span>.</>,
                 <>The spec sheet often lists whatever a dongle would have added.</>,
+                <>Volume control is the catch: most Androids give you a coarse slider of roughly <span className="text-neon-cyan">15 steps</span>, so the right listening level often sits between two of them. You get finer control only if the headphones or the dongle have their own <span className="text-neon-magenta">independent volume</span>. <span className="text-neon-cyan">Samsung</span> phones sometimes ship extra volume tools of their own; failing that, an app like <ExtLink href="https://play.google.com/store/apps/details?id=com.phascinate.precisevolume" className="text-neon-cyan">Precise Volume 2.0</ExtLink> can split the steps up.</>,
               ]}
             />
           </Card>
