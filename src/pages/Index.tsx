@@ -46,7 +46,7 @@ const Index = () => {
           </Card>
         </div>
 
-        <SubHeading>Chains · in the order I reach for them</SubHeading>
+        <SubHeading>Chains</SubHeading>
         <div className="grid gap-5 md:grid-cols-2">
           <Card title="1 · Sennheiser HD 560S — wired">
             <Bullets
