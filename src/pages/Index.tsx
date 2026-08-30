@@ -460,10 +460,11 @@ const Index = () => {
               examples: "Audio-Technica ATH-R70x (470 Ω / 99 dB/mW, ~102 dB/V)",
               sources: (
                 <>
-                  <GearLink>Qudelix 5K</GearLink> on balanced or{" "}
-                  <GearLink>Neutron HiFi DAC V1</GearLink> in its 2 VRMS mode both do the job. The{" "}
-                  <GearLink>FiiO KA11</GearLink> is voltage-limited despite its power rating, and an
-                  legacy smartphone headphone jack will feel restricted and quiet.
+                  <GearLink>Qudelix 5K</GearLink> on balanced, the <GearLink>FiiO QX13</GearLink> on
+                  4.4mm balanced, or <GearLink>Neutron HiFi DAC V1</GearLink> in its 2 VRMS mode all
+                  do the job. A plain single-ended dongle like the <GearLink>FiiO JIEZI</GearLink> is
+                  voltage-limited here, and a legacy smartphone headphone jack will feel restricted
+                  and quiet.
                 </>
               ),
             },
