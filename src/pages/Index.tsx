@@ -51,6 +51,7 @@ const Index = () => {
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink>.</>,
+                <><span className="text-neon-magenta">EQ:</span> none, otherwise the <span className="text-neon-cyan">PEQ</span> profile above.</>,
                 <>
                   <span className="text-neon-magenta">DAC:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> over <span className="text-neon-cyan">USB</span>, set to draw power from <span className="text-neon-cyan">USB-C</span> rather than its internal battery.
                   <div className="mt-2 rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-3 text-sm">
@@ -78,7 +79,6 @@ const Index = () => {
                     <span className="text-neon-magenta">Can it drive it?</span> <span className="text-neon-cyan">Yes</span> — max output is <span className="text-neon-cyan">6.19 V</span>.
                   </div>
                 </>,
-                <><span className="text-neon-magenta">EQ:</span> none, otherwise the <span className="text-neon-cyan">PEQ</span> profile above.</>,
               ]}
             />
           </Card>
@@ -86,6 +86,7 @@ const Index = () => {
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://hifiman.com/products/detail/305" className="text-neon-cyan">HiFiMAN Sundara (2022)</ExtLink>.</>,
+                <><span className="text-neon-magenta">EQ:</span> none, otherwise the <span className="text-neon-cyan">PEQ</span> profile above.</>,
                 <>
                   <span className="text-neon-magenta">DAC:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> over <span className="text-neon-cyan">USB</span>, powered from <span className="text-neon-cyan">USB-C</span> rather than its internal battery — only with <span className="text-neon-cyan">no EQ</span>, since with the target <span className="text-neon-cyan">PEQ</span> profile it can run out of power on some genres.
                   <div className="mt-2 rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-3 text-sm">
@@ -113,7 +114,6 @@ const Index = () => {
                     </div>
                   </div>
                 </>,
-                <><span className="text-neon-magenta">EQ:</span> none, otherwise the <span className="text-neon-cyan">PEQ</span> profile above.</>,
               ]}
             />
           </Card>
@@ -121,6 +121,7 @@ const Index = () => {
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://www.akg.com/Headphones/Professional%20Headphones/K371.html" className="text-neon-cyan">AKG K371</ExtLink>.</>,
+                <><span className="text-neon-magenta">EQ:</span> the <span className="text-neon-cyan">PEQ</span> profile above, always on.</>,
                 <>
                   <span className="text-neon-magenta">DAC:</span> <ExtLink href="https://fiio.com/newsinfo/1065510.html" className="text-neon-cyan">FiiO JIEZI</ExtLink>.
                   <div className="mt-2 rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-3 text-sm">
@@ -142,7 +143,6 @@ const Index = () => {
                     </div>
                   </div>
                 </>,
-                <><span className="text-neon-magenta">EQ:</span> the <span className="text-neon-cyan">PEQ</span> profile above, always on.</>,
               ]}
             />
           </Card>
@@ -150,6 +150,7 @@ const Index = () => {
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://www.audio-technica.com/en-us/ath-m50xbt2" className="text-neon-cyan">ATH-M50x BT2</ExtLink>, on the <span className="text-neon-cyan">3.5 mm</span> cable.</>,
+                <><span className="text-neon-magenta">EQ:</span> none.</>,
                 <>
                   <span className="text-neon-magenta">DAC:</span> <ExtLink href="https://fiio.com/newsinfo/1065510.html" className="text-neon-cyan">FiiO JIEZI</ExtLink>.
                   <div className="mt-2 rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-3 text-sm">
@@ -171,7 +172,6 @@ const Index = () => {
                     </div>
                   </div>
                 </>,
-                <><span className="text-neon-magenta">EQ:</span> none.</>,
               ]}
             />
           </Card>
@@ -179,8 +179,8 @@ const Index = () => {
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink>.</>,
-                <><span className="text-neon-magenta">Receiver:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> as a <GlossaryLink term="ldac">LDAC</GlossaryLink> Bluetooth receiver, fed by a <ExtLink href="https://www.fiio.com/airlink" className="text-neon-cyan">FiiO Air Link</ExtLink> adapter.</>,
                 <><span className="text-neon-magenta">EQ:</span> stock tuning, or the <span className="text-neon-cyan">PEQ</span> profile above loaded onto the 5K itself.</>,
+                <><span className="text-neon-magenta">Receiver:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> as a <GlossaryLink term="ldac">LDAC</GlossaryLink> Bluetooth receiver, fed by a <ExtLink href="https://www.fiio.com/airlink" className="text-neon-cyan">FiiO Air Link</ExtLink> adapter.</>,
               ]}
             />
             <div className="mt-4 rounded-lg border border-neon-magenta/40 bg-neon-magenta/5 p-4">
@@ -218,8 +218,8 @@ const Index = () => {
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Earphones:</span> <ExtLink href="https://moondroplab.com/en/products/u-c-t-s" className="text-neon-cyan">Moondrop × Wuthering Waves U.C.T.S.</ExtLink> open-ear (<GlossaryLink term="ows">OWS</GlossaryLink>) clip-ons.</>,
-                <><span className="text-neon-magenta">Connection:</span> <ExtLink href="https://www.tempotec.net/" className="text-neon-cyan">Tempotec LHDC One</ExtLink> Bluetooth adapter.</>,
                 <><span className="text-neon-magenta">EQ:</span> in the <span className="text-neon-cyan">Moondrop app</span> I keep the default bands, drop every Q to the minimum (<span className="text-neon-cyan">0.20</span>), then push all bands to max. That works out as a flat <span className="text-neon-cyan">+3 dB</span> lift across the board — on iPhone it buys about one volume step, so <span className="text-neon-cyan">85%</span> gets me where 100% used to.</>,
+                <><span className="text-neon-magenta">Connection:</span> <ExtLink href="https://www.tempotec.net/" className="text-neon-cyan">Tempotec LHDC One</ExtLink> Bluetooth adapter.</>,
               ]}
             />
           </Card>
@@ -227,8 +227,8 @@ const Index = () => {
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Earbuds:</span> <ExtLink href="https://moondroplab.com/en/products/pill" className="text-neon-cyan">Moondrop Pill</ExtLink> or <span className="text-neon-cyan">Pill S</span>.</>,
-                <><span className="text-neon-magenta">Connection:</span> Bluetooth <span className="text-neon-cyan">AAC</span> straight from the phone.</>,
                 <><span className="text-neon-magenta">EQ:</span> in the <span className="text-neon-cyan">Moondrop app</span> I keep the default bands, drop every Q to the minimum (<span className="text-neon-cyan">0.20</span>), then push all bands to max. That works out as a flat <span className="text-neon-cyan">+3 dB</span> lift across the board — on iPhone it buys about one volume step, so <span className="text-neon-cyan">85%</span> gets me where 100% used to.</>,
+                <><span className="text-neon-magenta">Connection:</span> Bluetooth <span className="text-neon-cyan">AAC</span> straight from the phone.</>,
               ]}
             />
           </Card>
