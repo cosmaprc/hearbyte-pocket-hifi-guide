@@ -562,8 +562,8 @@ const Index = () => {
             </Card>
           </div>
           <div id="g-ldac" className="scroll-mt-24">
-            <Card title="Bluetooth codecs (AAC, aptX, LDAC)">
-              <p>The rules used to compress audio for the Bluetooth link. <span className="text-neon-cyan">AAC</span> is the lossy baseline, <span className="text-neon-cyan">aptX HD</span> and <span className="text-neon-cyan">LDAC</span> carry more data (LDAC up to 990 kbps), and <span className="text-neon-cyan">aptX Lossless</span> is bit-exact CD quality. Both ends must support the same codec.</p>
+            <Card title="Bluetooth codecs (AAC, aptX, LDAC, LHDC)">
+              <p>The rules used to compress audio for the Bluetooth link. <span className="text-neon-cyan">AAC</span> is the lossy baseline, <span className="text-neon-cyan">aptX HD</span> and <span className="text-neon-cyan">LDAC</span> carry more data (LDAC up to 990 kbps), and <span className="text-neon-cyan">aptX Lossless</span> is bit-exact CD quality. <span className="text-neon-cyan">LHDC High Resolution</span> goes up to 24-bit / 192 kHz, while <span className="text-neon-cyan">LHDC Lossless</span> is bit-exact 16-bit / 44.1 kHz. Both ends must support the same codec.</p>
             </Card>
           </div>
           <div id="g-crossfeed" className="scroll-mt-24">
