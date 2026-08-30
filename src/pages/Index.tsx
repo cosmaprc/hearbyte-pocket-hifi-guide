@@ -342,7 +342,7 @@ const Index = () => {
 
       <Section id="demands" icon={Gauge} title="Headphone electrical demands" tone="purple">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          Two numbers decide how fussy a headphone is about its source: <span className="text-neon-cyan">impedance</span> (Ω) and <GlossaryLink term="sensitivity">sensitivity</GlossaryLink> (dB/mW or dB/V). Get the pairing right and you never think about it again. Get it wrong and you get hiss, or clipping, or you simply run out of volume.
+          Two numbers decide how fussy a headphone is about its source: <span className="text-neon-cyan">impedance</span> (Ω) and <GlossaryLink term="sensitivity">sensitivity</GlossaryLink> (dB/mW or dB/V). Mismatch them and you get hiss, clipping, or not enough volume.
         </p>
         <p className="mb-6 max-w-2xl text-sm text-foreground/80">
           One correction before the table, because you will read the opposite everywhere. Impedance is just the <span className="text-neon-cyan">ratio of voltage to current</span>, and that ratio does not change with level, so a headphone does not draw proportionally more current in the bass. If it plays <span className="text-neon-magenta">loud enough, it has enough bass</span>, and vice versa. When an amp runs short of current you get <span className="text-neon-magenta">clipping on peaks</span> across the whole signal, not weak or thin bass. <ExtLink href="https://www.reddit.com/r/headphones/s/vq4C1c1tvn" className="text-neon-cyan">oratory1990 explains it here</ExtLink>.
