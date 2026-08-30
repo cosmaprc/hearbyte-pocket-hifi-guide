@@ -71,7 +71,7 @@ const Index = () => {
               items={[
                 <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://www.akg.com/Headphones/Professional%20Headphones/K371.html" className="text-neon-cyan">AKG K371</ExtLink>.</>,
                 <><span className="text-neon-magenta">DAC:</span> <ExtLink href="https://fiio.com/newsinfo/1065510.html" className="text-neon-cyan">FiiO JIEZI</ExtLink>.</>,
-                <><span className="text-neon-magenta">EQ:</span> the <ExtLink href="https://www.rtings.com/headphones/learn/eq-repository" className="text-neon-cyan">rtings.com</ExtLink> target preference curve <span className="text-neon-cyan">PEQ</span> profile.</>,
+                <><span className="text-neon-magenta">EQ:</span> the <span className="text-neon-cyan">PEQ</span> profile above, always on.</>,
               ]}
             />
           </Card>
