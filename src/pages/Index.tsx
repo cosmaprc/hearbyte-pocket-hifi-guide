@@ -51,7 +51,7 @@ const Index = () => {
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink>.</>,
-                <><span className="text-neon-magenta">DAC:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k-dac-amp" className="text-neon-cyan">Qudelix 5K</ExtLink> over <span className="text-neon-cyan">USB</span>, set to draw power from <span className="text-neon-cyan">USB-C</span> rather than its internal battery — or the <ExtLink href="https://www.fiio.com/qx13" className="text-neon-cyan">FiiO QX13</ExtLink> paired with the <ExtLink href="https://www.fiio.com/estick" className="text-neon-cyan">FiiO Estick</ExtLink> battery.</>,
+                <><span className="text-neon-magenta">DAC:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> over <span className="text-neon-cyan">USB</span>, set to draw power from <span className="text-neon-cyan">USB-C</span> rather than its internal battery — or the <ExtLink href="https://www.fiio.com/qx13" className="text-neon-cyan">FiiO QX13</ExtLink> paired with the <ExtLink href="https://www.fiio.com/productinfo/1507720.html" className="text-neon-cyan">FiiO Estick</ExtLink> battery.</>,
                 <><span className="text-neon-magenta">EQ:</span> none at all, or the <ExtLink href="https://www.rtings.com/headphones/learn/eq-repository" className="text-neon-cyan">rtings.com</ExtLink> target preference curve <span className="text-neon-cyan">PEQ</span> profile.</>,
               ]}
             />
@@ -60,7 +60,7 @@ const Index = () => {
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://hifiman.com/products/detail/305" className="text-neon-cyan">HiFiMAN Sundara (2022)</ExtLink>.</>,
-                <><span className="text-neon-magenta">DAC:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k-dac-amp" className="text-neon-cyan">Qudelix 5K</ExtLink> over <span className="text-neon-cyan">USB</span>, powered from <span className="text-neon-cyan">USB-C</span> rather than its internal battery — or the <ExtLink href="https://www.fiio.com/qx13" className="text-neon-cyan">FiiO QX13</ExtLink> paired with the <ExtLink href="https://www.fiio.com/estick" className="text-neon-cyan">FiiO Estick</ExtLink> battery.</>,
+                <><span className="text-neon-magenta">DAC:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> over <span className="text-neon-cyan">USB</span>, powered from <span className="text-neon-cyan">USB-C</span> rather than its internal battery — or the <ExtLink href="https://www.fiio.com/qx13" className="text-neon-cyan">FiiO QX13</ExtLink> paired with the <ExtLink href="https://www.fiio.com/productinfo/1507720.html" className="text-neon-cyan">FiiO Estick</ExtLink> battery.</>,
                 <><span className="text-neon-magenta">EQ:</span> none at all, or the <ExtLink href="https://www.rtings.com/headphones/learn/eq-repository" className="text-neon-cyan">rtings.com</ExtLink> target preference curve <span className="text-neon-cyan">PEQ</span> profile.</>,
               ]}
             />
@@ -69,7 +69,7 @@ const Index = () => {
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://www.akg.com/Headphones/Professional%20Headphones/K371.html" className="text-neon-cyan">AKG K371</ExtLink>.</>,
-                <><span className="text-neon-magenta">DAC:</span> <ExtLink href="https://www.fiio.com/jiezi" className="text-neon-cyan">FiiO JIEZI</ExtLink>.</>,
+                <><span className="text-neon-magenta">DAC:</span> <ExtLink href="https://fiio.com/newsinfo/1065510.html" className="text-neon-cyan">FiiO JIEZI</ExtLink>.</>,
                 <><span className="text-neon-magenta">EQ:</span> the <ExtLink href="https://www.rtings.com/headphones/learn/eq-repository" className="text-neon-cyan">rtings.com</ExtLink> target preference curve <span className="text-neon-cyan">PEQ</span> profile.</>,
               ]}
             />
@@ -78,7 +78,7 @@ const Index = () => {
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://www.audio-technica.com/en-us/ath-m50xbt2" className="text-neon-cyan">ATH-M50x BT2</ExtLink>, on the <span className="text-neon-cyan">3.5 mm</span> cable.</>,
-                <><span className="text-neon-magenta">DAC:</span> <ExtLink href="https://www.fiio.com/jiezi" className="text-neon-cyan">FiiO JIEZI</ExtLink>.</>,
+                <><span className="text-neon-magenta">DAC:</span> <ExtLink href="https://fiio.com/newsinfo/1065510.html" className="text-neon-cyan">FiiO JIEZI</ExtLink>.</>,
                 <><span className="text-neon-magenta">EQ:</span> none.</>,
               ]}
             />
@@ -87,7 +87,7 @@ const Index = () => {
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink>.</>,
-                <><span className="text-neon-magenta">Receiver:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k-dac-amp" className="text-neon-cyan">Qudelix 5K</ExtLink> as a <GlossaryLink term="ldac">LDAC</GlossaryLink> Bluetooth receiver, fed by a <ExtLink href="https://www.fiio.com/airlink" className="text-neon-cyan">FiiO Air Link</ExtLink> adapter.</>,
+                <><span className="text-neon-magenta">Receiver:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> as a <GlossaryLink term="ldac">LDAC</GlossaryLink> Bluetooth receiver, fed by a <ExtLink href="https://www.fiio.com/airlink" className="text-neon-cyan">FiiO Air Link</ExtLink> adapter.</>,
                 <><span className="text-neon-magenta">EQ:</span> none at all, or the <ExtLink href="https://www.rtings.com/headphones/learn/eq-repository" className="text-neon-cyan">rtings.com</ExtLink> target preference curve <span className="text-neon-cyan">PEQ</span> profile.</>,
               ]}
             />
@@ -218,7 +218,7 @@ const Index = () => {
 
         <SubHeading>Recommended · one box for both jobs</SubHeading>
         <div className="grid gap-5 md:grid-cols-2">
-          <Card title="Qudelix 5K" href="https://www.qudelix.com/products/qudelix-5k-dac-amp">
+          <Card title="Qudelix 5K" href="https://www.qudelix.com/products/qudelix-5k">
             <p className="text-sm text-foreground/85">
               The pick if you only buy one thing: it is both the <span className="text-neon-cyan">USB DAC</span> and the <span className="text-neon-cyan">Bluetooth receiver</span>, so it replaces two purchases and travels well.
             </p>
@@ -248,7 +248,7 @@ const Index = () => {
         <div>
           <SubHeading>Other DACs</SubHeading>
           <div className="grid gap-5 md:grid-cols-3">
-            <Card title="FiiO JIEZI" href="https://www.fiio.com/jiezi">
+            <Card title="FiiO JIEZI" href="https://fiio.com/newsinfo/1065510.html">
               <p>A tiny, inexpensive <span className="text-neon-cyan">USB-C</span> dongle DAC — an easy way to get clean sound out of a phone with no headphone jack.</p>
             </Card>
             <Card title="FiiO QX13" href="https://www.fiio.com/qx13">
