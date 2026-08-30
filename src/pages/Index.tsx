@@ -244,8 +244,9 @@ const Index = () => {
               <div>
                 <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Either way</dt>
                 <dd className="mt-1 text-foreground/85">
-                  A first-class <span className="text-neon-magenta">20-band <GlossaryLink term="eq">parametric EQ</GlossaryLink></span> stored on the device itself, <span className="text-neon-cyan">AutoEQ</span> support with profiles out of the box, and the <span className="text-neon-magenta">best and most responsive</span> companion app I have ever used.
+                  A <span className="text-neon-magenta">20-band <GlossaryLink term="eq">parametric EQ</GlossaryLink></span> stored on the device itself, <span className="text-neon-cyan">AutoEQ</span> profiles out of the box, and the <span className="text-neon-magenta">most responsive</span> companion app I have used on anything.
                 </dd>
+
               </div>
             </dl>
           </Card>
