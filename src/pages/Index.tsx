@@ -368,13 +368,14 @@ const Index = () => {
                 "Hifiman Edition XS (18 Ω / 92 dB/mW), Dan Clark Audio Aeon 2 (13 Ω / ~92 dB/mW)",
               sources: (
                 <>
-                  <GearLink>FiiO KA11</GearLink> (~200 mW into 32 Ω) and{" "}
-                  <GearLink>Hidizs Martha</GearLink> on 4.4mm balanced (~230 mW into 32 Ω) supply the
-                  most current, though the KA11 runs very hot and drains the phone under continuous
-                  draw. The <GearLink>Qudelix 5K</GearLink> works here only on 2.5mm balanced
+                  The <GearLink>FiiO QX13</GearLink> supplies the most current by a wide margin:
+                  250 mW per channel single-ended and 605 mW balanced into 32 Ω, rising to 310 and
+                  900 mW in desktop mode with the Estick battery attached. The{" "}
+                  <GearLink>Qudelix 5K</GearLink> is the next option but only on 2.5mm balanced
                   (~240 mW into 32 Ω); its single-ended output (~80 mW into 32 Ω) runs short. The{" "}
-                  <GearLink>Neutron HiFi DAC V1</GearLink> is the wrong tool for this row, clean on
-                  voltage but light on current. None of them beat a desktop amp here.
+                  <GearLink>FiiO JIEZI</GearLink> is the wrong tool for a hard planar, and the{" "}
+                  <GearLink>Neutron HiFi DAC V1</GearLink> is clean on voltage but light on current.
+                  None of them beat a desktop amp here.
                 </>
               ),
             },
