@@ -7,8 +7,8 @@ Turn the single "The chain" card into a shared base plus one card per chain, in 
 - App: Apple Music — Lossless 24-bit / 48 kHz, Sound Check on
 
 ## Chain cards (each: headphones -> DAC/adapter -> EQ)
-1. Sennheiser HD 560S — Qudelix 5K or FiiO QX13; no EQ, or the RTINGS target preference curve PEQ profile
-2. HiFiMAN Sundara (2022) — Qudelix 5K or FiiO QX13; no EQ, or the RTINGS target preference curve PEQ profile
+1. Sennheiser HD 560S — Qudelix 5K (wired USB, set to draw power from USB-C rather than its internal battery) or FiiO QX13; no EQ, or the RTINGS target preference curve PEQ profile
+2. HiFiMAN Sundara (2022) — Qudelix 5K (wired USB, powered from USB-C rather than its internal battery) or FiiO QX13; no EQ, or the RTINGS target preference curve PEQ profile
 3. AKG K371 — FiiO JIEZI; RTINGS target preference curve PEQ profile
 4. Audio-Technica ATH-M50x BT2, wired — FiiO JIEZI; no EQ
 5. Sennheiser HD 560S wireless — Qudelix 5K as Bluetooth receiver over LDAC, fed by a FiiO Air Link adapter (same chain as the "Sennheiser HD 560S + Qudelix 5K" Bluetooth headphones card)
