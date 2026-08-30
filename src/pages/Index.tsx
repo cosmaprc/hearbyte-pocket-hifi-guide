@@ -421,10 +421,11 @@ const Index = () => {
               ),
               sources: (
                 <>
+                  Hiss and coarse volume steps are the problem here rather than power, so the{" "}
                   <GearLink>Neutron HiFi DAC V1</GearLink> (&lt; 0.6 Ω output impedance, switchable
-                  1 VRMS mode) first, then <GearLink>Qudelix 5K</GearLink> (&lt; 1 Ω, precise hardware
-                  volume control) on single-ended. Power isn't the problem here, hiss and coarse volume
-                  steps are. Stay in low gain and keep off the high-power balanced ports.
+                  1 VRMS mode) comes first, then <GearLink>Qudelix 5K</GearLink> (&lt; 1 Ω, precise
+                  hardware volume control) on single-ended. Stay in low gain and keep off the
+                  high-power balanced ports.
                 </>
               ),
             },
