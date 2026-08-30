@@ -40,7 +40,7 @@ const Index = () => {
                 <><span className="text-neon-magenta">Source:</span> <span className="text-neon-cyan">iPhone</span>.</>,
                 <><span className="text-neon-magenta">App:</span> <ExtLink href="https://music.apple.com/" className="text-neon-cyan">Apple Music</ExtLink> — <GlossaryLink term="soundcheck">Sound Check</GlossaryLink> on.</>,
                 <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink> — no EQ of any kind, or the <ExtLink href="https://www.rtings.com/headphones/learn/eq-repository" className="text-neon-cyan">rtings.com</ExtLink> Rtings target preference curve <span className="text-neon-cyan">PEQ</span> profile.</>,
-                <><span className="text-neon-magenta">DAC / Bluetooth adapter:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k-dac-amp" className="text-neon-cyan">Qudelix 5K</ExtLink>, <ExtLink href="https://www.fiio.com/airlink" className="text-neon-cyan">FiiO Air Link</ExtLink>, <ExtLink href="https://www.fiio.com/qx13" className="text-neon-cyan">FiiO QX13</ExtLink> or <ExtLink href="https://www.tempotec.net/" className="text-neon-cyan">Tempotec LHDC One</ExtLink>.</>,
+                <><span className="text-neon-magenta">DAC:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k-dac-amp" className="text-neon-cyan">Qudelix 5K</ExtLink> or <ExtLink href="https://www.fiio.com/qx13" className="text-neon-cyan">FiiO QX13</ExtLink>.</>,
               ]}
             />
           </Card>
