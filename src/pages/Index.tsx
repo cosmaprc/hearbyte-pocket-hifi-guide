@@ -350,7 +350,7 @@ const Index = () => {
           Watch the units. <span className="text-neon-magenta">dB/mW</span> and <span className="text-neon-magenta">dB/V</span> are not interchangeable, and manufacturers quote whichever flatters the product: a 32 Ω headphone rated 114 dB/V is only about 99 dB/mW. Worth knowing too that <span className="text-neon-cyan">planar magnetic</span> headphones have a flat, resistive impedance, so a mediocre output impedance doesn't colour their tone the way it does dynamic or multi-driver balanced-armature designs. It just wastes power. Planars care about <span className="text-neon-magenta">current</span>, not damping factor.
         </p>
         <p className="mb-6 max-w-2xl text-sm text-foreground/80">
-          The last column only covers the <a href="#phones" className="text-neon-cyan underline-offset-4 hover:underline">gear recommended on this page</a>, using each vendor's published <span className="text-neon-cyan">single-ended</span> and <span className="text-neon-cyan">balanced</span> figures. That's why the same dongle shows up in two rows: it depends which output you plug into. <span className="text-neon-magenta">FiiO Air Link style adapters</span> are left out on purpose, since they transmit Bluetooth rather than amplify anything.
+          The last column only covers the <a href="#phones" className="text-neon-cyan underline-offset-4 hover:underline">gear recommended on this page</a>, using each vendor's published <span className="text-neon-cyan">single-ended</span> and <span className="text-neon-cyan">balanced</span> figures. That's why the same dongle shows up in two rows: the QX13 on its <span className="text-neon-cyan">3.5mm</span> output is a different device from the QX13 on <span className="text-neon-cyan">4.4mm balanced</span>. <span className="text-neon-magenta">FiiO Air Link style adapters</span> are left out on purpose, since they transmit Bluetooth rather than amplify anything.
         </p>
         <div className="mb-6 max-w-2xl rounded-lg border border-neon-magenta/40 bg-neon-magenta/5 p-4 text-sm text-foreground/85">
           <span className="font-semibold text-neon-magenta">The short version:</span> every headphone on this page is driven comfortably by the sources above, and the <GearLink>Qudelix 5K</GearLink> handles all of them. The table is for the awkward cases: hard-to-drive planars, 300 Ω classics, and sensitive <GlossaryLink term="iem">IEMs</GlossaryLink> that pick up hiss.
@@ -368,13 +368,14 @@ const Index = () => {
                 "Hifiman Edition XS (18 Ω / 92 dB/mW), Dan Clark Audio Aeon 2 (13 Ω / ~92 dB/mW)",
               sources: (
                 <>
-                  <GearLink>FiiO KA11</GearLink> (~200 mW into 32 Ω) and{" "}
-                  <GearLink>Hidizs Martha</GearLink> on 4.4mm balanced (~230 mW into 32 Ω) supply the
-                  most current, though the KA11 runs very hot and drains the phone under continuous
-                  draw. The <GearLink>Qudelix 5K</GearLink> works here only on 2.5mm balanced
+                  The <GearLink>FiiO QX13</GearLink> supplies the most current by a wide margin:
+                  250 mW per channel single-ended and 605 mW balanced into 32 Ω, rising to 310 and
+                  900 mW in desktop mode with the Estick battery attached. The{" "}
+                  <GearLink>Qudelix 5K</GearLink> is the next option but only on 2.5mm balanced
                   (~240 mW into 32 Ω); its single-ended output (~80 mW into 32 Ω) runs short. The{" "}
-                  <GearLink>Neutron HiFi DAC V1</GearLink> is the wrong tool for this row, clean on
-                  voltage but light on current. None of them beat a desktop amp here.
+                  <GearLink>FiiO JIEZI</GearLink> is the wrong tool for a hard planar, and the{" "}
+                  <GearLink>Neutron HiFi DAC V1</GearLink> is clean on voltage but light on current.
+                  None of them beat a desktop amp here.
                 </>
               ),
             },
@@ -390,12 +391,14 @@ const Index = () => {
               sources: (
                 <>
                   This row is about volts, not milliwatts: 2 VRMS into 300 Ω is only ~13 mW, fine at
-                  average levels and tight on peaks. <GearLink>Qudelix 5K</GearLink> on balanced
-                  roughly doubles the swing and is the best of the four.{" "}
-                  <GearLink>Neutron HiFi DAC V1</GearLink> runs cleanly at 2 VRMS but has no headroom
-                  left once you apply negative pre-amp gain for EQ. The{" "}
-                  <GearLink>FiiO KA11</GearLink>'s 200 mW rating means nothing here, because it cannot
-                  supply the voltage. A desktop amp is still the right answer.
+                  average levels and tight on peaks. The <GearLink>FiiO QX13</GearLink> on 4.4mm
+                  balanced is the pick, rated 125 mW into 300 Ω against 40 mW single-ended, and{" "}
+                  <GearLink>Qudelix 5K</GearLink> on balanced roughly doubles its own swing and comes
+                  close. <GearLink>Neutron HiFi DAC V1</GearLink> runs cleanly at 2 VRMS but has no
+                  headroom left once you apply negative pre-amp gain for EQ. A single-ended dongle
+                  like the <GearLink>FiiO JIEZI</GearLink> is out of its depth here, and a big
+                  milliwatt figure into 32 Ω tells you nothing at 300 Ω. A desktop amp is still the
+                  right answer.
                 </>
               ),
             },
@@ -443,8 +446,8 @@ const Index = () => {
                 <>
                   The easy row. 120 Ω at 110 dB/V needs a fraction of a volt to play loud, so pick on
                   features rather than power. <GearLink>Qudelix 5K</GearLink> (wired or LDAC),{" "}
-                  <GearLink>FiiO KA11</GearLink>, <GearLink>Neutron HiFi DAC V1</GearLink> and{" "}
-                  <GearLink>Hidizs Martha</GearLink> all drive it cleanly.
+                  <GearLink>FiiO JIEZI</GearLink>, <GearLink>FiiO QX13</GearLink> and{" "}
+                  <GearLink>Neutron HiFi DAC V1</GearLink> all drive it cleanly.
                 </>
               ),
             },
@@ -457,10 +460,11 @@ const Index = () => {
               examples: "Audio-Technica ATH-R70x (470 Ω / 99 dB/mW, ~102 dB/V)",
               sources: (
                 <>
-                  <GearLink>Qudelix 5K</GearLink> on balanced or{" "}
-                  <GearLink>Neutron HiFi DAC V1</GearLink> in its 2 VRMS mode both do the job. The{" "}
-                  <GearLink>FiiO KA11</GearLink> is voltage-limited despite its power rating, and an
-                  legacy smartphone headphone jack will feel restricted and quiet.
+                  <GearLink>Qudelix 5K</GearLink> on balanced, the <GearLink>FiiO QX13</GearLink> on
+                  4.4mm balanced, or <GearLink>Neutron HiFi DAC V1</GearLink> in its 2 VRMS mode all
+                  do the job. A plain single-ended dongle like the <GearLink>FiiO JIEZI</GearLink> is
+                  voltage-limited here, and a legacy smartphone headphone jack will feel restricted
+                  and quiet.
                 </>
               ),
             },
