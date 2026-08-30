@@ -358,18 +358,18 @@ const Index = () => {
               demand: "High Current (I)",
               target: "High continuous current output at low loads",
               wrongAmp:
-                "The amp hits its current limit and clips on peaks — distortion and compressed dynamics across the whole signal, not just the bass — plus significant amp heat and rapid battery drain",
+                "The amp hits its current limit and clips on peaks. You hear distortion and squashed dynamics across the whole signal, not just the bass, and the amp gets hot and eats the phone battery",
               examples:
                 "Hifiman Edition XS (18 Ω / 92 dB/mW), Dan Clark Audio Aeon 2 (13 Ω / ~92 dB/mW)",
               sources: (
                 <>
                   <GearLink>FiiO KA11</GearLink> (~200 mW into 32 Ω) and{" "}
                   <GearLink>Hidizs Martha</GearLink> on 4.4mm balanced (~230 mW into 32 Ω) supply the
-                  most current, though the KA11 runs intensely hot and drains the phone battery under
-                  continuous draw. The <GearLink>Qudelix 5K</GearLink> only on 2.5mm balanced
-                  (~240 mW into 32 Ω) — its single-ended output (~80 mW into 32 Ω) runs short. The{" "}
-                  <GearLink>Neutron HiFi DAC V1</GearLink> is the wrong tool here: voltage-clean but
-                  current-light. All four are compromises versus a desktop amp for this profile.
+                  most current, though the KA11 runs very hot and drains the phone under continuous
+                  draw. The <GearLink>Qudelix 5K</GearLink> works here only on 2.5mm balanced
+                  (~240 mW into 32 Ω); its single-ended output (~80 mW into 32 Ω) runs short. The{" "}
+                  <GearLink>Neutron HiFi DAC V1</GearLink> is the wrong tool for this row, clean on
+                  voltage but light on current. None of them beat a desktop amp here.
                 </>
               ),
             },
