@@ -33,14 +33,86 @@ const Index = () => {
       <Divider />
 
       <Section id="chain" icon={Zap} title="My preferred audio chain" tone="magenta">
+        <SubHeading spaced={false}>Shared base · every chain starts here</SubHeading>
         <div className="grid gap-5 md:grid-cols-2">
-          <Card title="The chain">
+          <Card title="Source &amp; app">
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Source:</span> <span className="text-neon-cyan">iPhone</span>.</>,
-                <><span className="text-neon-magenta">App:</span> <ExtLink href="https://music.apple.com/" className="text-neon-cyan">Apple Music</ExtLink> — <GlossaryLink term="soundcheck">Sound Check</GlossaryLink> on.</>,
-                <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink> — no EQ of any kind, or the <ExtLink href="https://www.rtings.com/headphones/learn/eq-repository" className="text-neon-cyan">rtings.com</ExtLink> Rtings target preference curve <span className="text-neon-cyan">PEQ</span> profile.</>,
-                <><span className="text-neon-magenta">DAC:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k-dac-amp" className="text-neon-cyan">Qudelix 5K</ExtLink> or <ExtLink href="https://www.fiio.com/qx13" className="text-neon-cyan">FiiO QX13</ExtLink>.</>,
+                <><span className="text-neon-magenta">App:</span> <ExtLink href="https://music.apple.com/" className="text-neon-cyan">Apple Music</ExtLink> — <span className="text-neon-cyan">Lossless 24-bit / 48 kHz</span>, <GlossaryLink term="soundcheck">Sound Check</GlossaryLink> on.</>,
+              ]}
+            />
+          </Card>
+        </div>
+
+        <SubHeading>Chains · in the order I reach for them</SubHeading>
+        <div className="grid gap-5 md:grid-cols-2">
+          <Card title="1 · Sennheiser HD 560S — wired">
+            <Bullets
+              items={[
+                <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink>.</>,
+                <><span className="text-neon-magenta">DAC:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k-dac-amp" className="text-neon-cyan">Qudelix 5K</ExtLink> over <span className="text-neon-cyan">USB</span>, set to draw power from <span className="text-neon-cyan">USB-C</span> rather than its internal battery — or the <ExtLink href="https://www.fiio.com/qx13" className="text-neon-cyan">FiiO QX13</ExtLink> paired with the <ExtLink href="https://www.fiio.com/estick" className="text-neon-cyan">FiiO Estick</ExtLink> battery.</>,
+                <><span className="text-neon-magenta">EQ:</span> none at all, or the <ExtLink href="https://www.rtings.com/headphones/learn/eq-repository" className="text-neon-cyan">rtings.com</ExtLink> target preference curve <span className="text-neon-cyan">PEQ</span> profile.</>,
+              ]}
+            />
+          </Card>
+          <Card title="2 · HiFiMAN Sundara (2022) — wired">
+            <Bullets
+              items={[
+                <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://hifiman.com/products/detail/305" className="text-neon-cyan">HiFiMAN Sundara (2022)</ExtLink>.</>,
+                <><span className="text-neon-magenta">DAC:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k-dac-amp" className="text-neon-cyan">Qudelix 5K</ExtLink> over <span className="text-neon-cyan">USB</span>, powered from <span className="text-neon-cyan">USB-C</span> rather than its internal battery — or the <ExtLink href="https://www.fiio.com/qx13" className="text-neon-cyan">FiiO QX13</ExtLink> paired with the <ExtLink href="https://www.fiio.com/estick" className="text-neon-cyan">FiiO Estick</ExtLink> battery.</>,
+                <><span className="text-neon-magenta">EQ:</span> none at all, or the <ExtLink href="https://www.rtings.com/headphones/learn/eq-repository" className="text-neon-cyan">rtings.com</ExtLink> target preference curve <span className="text-neon-cyan">PEQ</span> profile.</>,
+              ]}
+            />
+          </Card>
+          <Card title="3 · AKG K371 — wired">
+            <Bullets
+              items={[
+                <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://www.akg.com/Headphones/Professional%20Headphones/K371.html" className="text-neon-cyan">AKG K371</ExtLink>.</>,
+                <><span className="text-neon-magenta">DAC:</span> <ExtLink href="https://www.fiio.com/jiezi" className="text-neon-cyan">FiiO JIEZI</ExtLink>.</>,
+                <><span className="text-neon-magenta">EQ:</span> the <ExtLink href="https://www.rtings.com/headphones/learn/eq-repository" className="text-neon-cyan">rtings.com</ExtLink> target preference curve <span className="text-neon-cyan">PEQ</span> profile.</>,
+              ]}
+            />
+          </Card>
+          <Card title="4 · Audio-Technica ATH-M50x BT2 — wired">
+            <Bullets
+              items={[
+                <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://www.audio-technica.com/en-us/ath-m50xbt2" className="text-neon-cyan">ATH-M50x BT2</ExtLink>, on the <span className="text-neon-cyan">3.5 mm</span> cable.</>,
+                <><span className="text-neon-magenta">DAC:</span> <ExtLink href="https://www.fiio.com/jiezi" className="text-neon-cyan">FiiO JIEZI</ExtLink>.</>,
+                <><span className="text-neon-magenta">EQ:</span> none.</>,
+              ]}
+            />
+          </Card>
+          <Card title="5 · Sennheiser HD 560S — wireless">
+            <Bullets
+              items={[
+                <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink>.</>,
+                <><span className="text-neon-magenta">Receiver:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k-dac-amp" className="text-neon-cyan">Qudelix 5K</ExtLink> as a <GlossaryLink term="ldac">LDAC</GlossaryLink> Bluetooth receiver, fed by a <ExtLink href="https://www.fiio.com/airlink" className="text-neon-cyan">FiiO Air Link</ExtLink> adapter — the same chain as the <a href="#headphones" className="text-neon-cyan underline-offset-4 hover:underline">HD 560S + Qudelix 5K</a> Bluetooth setup.</>,
+                <><span className="text-neon-magenta">EQ:</span> none at all, or the <ExtLink href="https://www.rtings.com/headphones/learn/eq-repository" className="text-neon-cyan">rtings.com</ExtLink> target preference curve <span className="text-neon-cyan">PEQ</span> profile.</>,
+              ]}
+            />
+          </Card>
+          <Card title="6 · Audio-Technica ATH-M50x BT2 — wireless">
+            <Bullets
+              items={[
+                <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://www.audio-technica.com/en-us/ath-m50xbt2" className="text-neon-cyan">ATH-M50x BT2</ExtLink>.</>,
+                <><span className="text-neon-magenta">Connection:</span> Bluetooth <span className="text-neon-cyan">AAC</span> straight from the phone, or <GlossaryLink term="ldac">LDAC</GlossaryLink> via a <ExtLink href="https://www.fiio.com/airlink" className="text-neon-cyan">FiiO Air Link</ExtLink> adapter.</>,
+              ]}
+            />
+          </Card>
+          <Card title="7 · Moondrop × Wuthering Waves U.C.T.S. — wireless">
+            <Bullets
+              items={[
+                <><span className="text-neon-magenta">Earphones:</span> <ExtLink href="https://moondroplab.com/en/products/u-c-t-s" className="text-neon-cyan">Moondrop × Wuthering Waves U.C.T.S.</ExtLink> open-ear clip-ons.</>,
+                <><span className="text-neon-magenta">Connection:</span> <ExtLink href="https://www.tempotec.net/" className="text-neon-cyan">Tempotec LHDC One</ExtLink> Bluetooth adapter.</>,
+              ]}
+            />
+          </Card>
+          <Card title="8 · Moondrop Pill / Pill S — wireless">
+            <Bullets
+              items={[
+                <><span className="text-neon-magenta">Earbuds:</span> <ExtLink href="https://moondroplab.com/en/products/pill" className="text-neon-cyan">Moondrop Pill</ExtLink> or <span className="text-neon-cyan">Pill S</span>.</>,
+                <><span className="text-neon-magenta">Connection:</span> Bluetooth <span className="text-neon-cyan">AAC</span> straight from the phone.</>,
               ]}
             />
           </Card>
