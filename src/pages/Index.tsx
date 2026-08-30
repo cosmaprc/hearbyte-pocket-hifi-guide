@@ -168,7 +168,7 @@ const Index = () => {
             <Bullets
               items={[
                 <>Plenty of mid-range Androids (<span className="text-neon-cyan">Motorola</span>, for one) ship with <span className="text-neon-magenta">Dolby Atmos</span>, <span className="text-neon-cyan">aptX HD</span> or better, and sometimes a <span className="text-neon-cyan">3.5 mm</span> jack that handles <span className="text-neon-cyan">24-bit / 192 kHz</span>.</>,
-                <>Read the spec sheet first. You may already have the dongle you were about to buy.</>,
+                <>The spec sheet often lists whatever a dongle would have added.</>,
               ]}
             />
           </Card>
