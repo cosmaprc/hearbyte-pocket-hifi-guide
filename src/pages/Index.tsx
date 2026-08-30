@@ -206,6 +206,8 @@ const Index = () => {
             <Bullets
               items={[
                 <>For phones without a headphone jack, or when you want bit-perfect hi-res out to wired headphones. Paired with <ExtLink href="https://www.extreamsd.com/index.php/products/usb-audio-player-pro" className="text-neon-cyan">USB Audio Player Pro</ExtLink> or <ExtLink href="https://neutronmp.com/" className="text-neon-cyan">Neutron</ExtLink>, a USB DAC receives audio <span className="text-neon-magenta">directly and bit-perfect</span> at full resolution (e.g. <span className="text-neon-cyan">24-bit / 192 kHz</span>), bypassing Android's system mixer and <GlossaryLink term="src">SRC resampling</GlossaryLink>.</>,
+                <>Check <span className="text-neon-magenta">compatibility and known issues for your exact phone model</span> before buying. USB DAC behaviour is not consistent across handsets.</>,
+                <>Two examples from my own use: the <GearLink>FiiO KA11</GearLink> works fine on Android and a Lightning iPhone 14, but goes <span className="text-neon-magenta">monophonic</span> on an iPhone 17 Pro Max in a way that looks potentially unsafe. The <GearLink>Hidizs S9 Pro Plus</GearLink> on firmware 1.0 broke on first use on an iPhone 17 Pro Max, having worked fine on Android and the Lightning iPhone 14.</>,
               ]}
             />
           </Card>
