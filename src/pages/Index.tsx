@@ -284,7 +284,7 @@ const Index = () => {
 
       <Section id="software" icon={Sliders} title="Software" tone="magenta">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          Your <span className="text-neon-cyan">streaming service</span>, <span className="text-neon-cyan">player</span> and <GlossaryLink term="dsp">DSP</GlossaryLink> chain will change the sound more than any cable or DAC. These are the apps I use, and what each one is good for.
+          This is where most of the sound gets decided: the <span className="text-neon-cyan">streaming service</span>, the <span className="text-neon-cyan">player</span> and whatever <GlossaryLink term="dsp">DSP</GlossaryLink> sits between them. Four apps, and what I use each for.
         </p>
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           <Card title="Apple Music" href="https://www.apple.com/apple-music/">
