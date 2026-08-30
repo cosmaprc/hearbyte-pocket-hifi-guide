@@ -218,8 +218,8 @@ const Index = () => {
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Earphones:</span> <ExtLink href="https://moondroplab.com/en/products/u-c-t-s" className="text-neon-cyan">Moondrop × Wuthering Waves U.C.T.S.</ExtLink> open-ear (<GlossaryLink term="ows">OWS</GlossaryLink>) clip-ons.</>,
-                <><span className="text-neon-magenta">Connection:</span> <ExtLink href="https://www.tempotec.net/" className="text-neon-cyan">Tempotec LHDC One</ExtLink> Bluetooth adapter.</>,
                 <><span className="text-neon-magenta">EQ:</span> in the <span className="text-neon-cyan">Moondrop app</span> I keep the default bands, drop every Q to the minimum (<span className="text-neon-cyan">0.20</span>), then push all bands to max. That works out as a flat <span className="text-neon-cyan">+3 dB</span> lift across the board — on iPhone it buys about one volume step, so <span className="text-neon-cyan">85%</span> gets me where 100% used to.</>,
+                <><span className="text-neon-magenta">Connection:</span> <ExtLink href="https://www.tempotec.net/" className="text-neon-cyan">Tempotec LHDC One</ExtLink> Bluetooth adapter.</>,
               ]}
             />
           </Card>
