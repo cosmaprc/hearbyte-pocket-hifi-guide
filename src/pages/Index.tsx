@@ -650,11 +650,11 @@ const Index = () => {
           <Card title="Measurements & EQ tools">
             <Bullets
               items={[
-                <><ExtLink href="https://squig.link/" className="text-neon-cyan">Squig.link</ExtLink> — browse and compare frequency-response graphs from a wide database.</>,
-                <><ExtLink href="https://autoeq.app/" className="text-neon-cyan">AutoEQ</ExtLink> — generate parametric EQ presets to match target curves from measurement data.</>,
-                <><ExtLink href="https://peqdb.com/" className="text-neon-cyan">PEQdb</ExtLink> — searchable database of parametric EQ presets for headphones and IEMs.</>,
-                <><ExtLink href="https://opra.roon.app/" className="text-neon-cyan">OPRA</ExtLink> — Roon-integrated headphone preference rating explorer.</>,
-                <><ExtLink href="https://www.rtings.com/headphones/learn/eq-repository" className="text-neon-cyan">RTINGS EQ Repository</ExtLink> — measured EQ presets for a wide range of headphones.</>,
+                <><ExtLink href="https://squig.link/" className="text-neon-cyan">Squig.link</ExtLink> — overlay frequency-response graphs from a huge database.</>,
+                <><ExtLink href="https://autoeq.app/" className="text-neon-cyan">AutoEQ</ExtLink> builds a parametric EQ preset from measurement data to hit a target curve.</>,
+                <><ExtLink href="https://peqdb.com/" className="text-neon-cyan">PEQdb</ExtLink> — searchable presets for headphones and IEMs, if someone has already done the work.</>,
+                <><ExtLink href="https://opra.roon.app/" className="text-neon-cyan">OPRA</ExtLink> — Roon's headphone preference rating explorer.</>,
+                <><ExtLink href="https://www.rtings.com/headphones/learn/eq-repository" className="text-neon-cyan">RTINGS EQ Repository</ExtLink> — where the preference-curve profiles I use come from.</>,
               ]}
             />
           </Card>
