@@ -8,7 +8,7 @@ import Divider from "@/components/hearbyte/Divider";
 import DataTable from "@/components/hearbyte/DataTable";
 import SubHeading from "@/components/hearbyte/SubHeading";
 import TableOfContents from "@/components/hearbyte/TableOfContents";
-import { Smartphone, Sliders, Headphones, Volume2, BookOpen, Link, FolderInput, Zap, Gauge, ListOrdered } from "lucide-react";
+import { Smartphone, Sliders, Headphones, Volume2, BookOpen, Link, FolderInput, Zap, Gauge } from "lucide-react";
 import hd560sQudelixHeadband from "@/assets/hd560s-qudelix-headband.jpg";
 import hd560sQudelixFront from "@/assets/hd560s-qudelix-front.jpg";
 
@@ -24,50 +24,11 @@ const GlossaryLink = ({ term, children }: { term: string; children: React.ReactN
   </a>
 );
 
-const startSteps = [
-  {
-    href: "#phones",
-    title: "1 · Start with the phone you already own",
-    body: "Check whether it has a headphone jack, LDAC and a spatial processor. Only buy a dongle DAC or a Bluetooth transmitter if that check says you need one.",
-  },
-  {
-    href: "#chain",
-    title: "2 · Pick a streaming service and DSP chain",
-    body: "Apple Music is my default — Sound Check on, every other DSP off. If you want deeper control, jetAudio, Neutron or USB Audio Player Pro give you ReplayGain, preamp control and serious DSP.",
-  },
-  {
-    href: "#headphones",
-    title: "3 · Pick headphones and copy my settings",
-    body: "Every headphone below has a \u201cHow I run it\u201d panel with the exact app, EQ and DSP settings I use. Some need no EQ at all — start there, then tweak to taste.",
-  },
-];
-
 const Index = () => {
   return (
     <main className="min-h-screen bg-background text-foreground">
       <Hero />
       <TableOfContents />
-
-      <Divider />
-
-      <Section id="start" icon={ListOrdered} title="Start here" tone="cyan">
-        <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          Three steps, in this order. Everything else on this page is detail you can come back for.
-        </p>
-        <ol className="grid gap-5 md:grid-cols-3">
-          {startSteps.map((s) => (
-            <li key={s.href}>
-              <a
-                href={s.href}
-                className="flex h-full flex-col rounded-xl border border-border bg-card-gradient p-6 transition-smooth hover:border-neon-cyan/60 hover:shadow-card-glow"
-              >
-                <span className="font-display text-lg font-bold text-neon-cyan">{s.title}</span>
-                <span className="mt-3 text-sm leading-relaxed text-foreground/85">{s.body}</span>
-              </a>
-            </li>
-          ))}
-        </ol>
-      </Section>
 
       <Divider />
 
@@ -90,7 +51,7 @@ const Index = () => {
 
       <Section id="phones" icon={Smartphone} title="Phones & Accessories" tone="cyan">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          You don't need exotic hardware. Any modern <span className="text-neon-cyan">iPhone</span> or <span className="text-neon-cyan">Android</span> phone is a perfectly good starting point — pair it with a <span className="text-neon-cyan">wired</span> or <span className="text-neon-cyan">wireless</span> headphone of your choice and let the apps below do the heavy lifting. The magic happens in the <span className="text-neon-magenta">software</span>. Your <span className="text-neon-cyan">phone</span> decides whether you even need a dongle — start there, then pick a <span className="text-neon-magenta">DAC</span> or <span className="text-neon-magenta">Bluetooth transmitter</span> only if you need one.
+          Any modern <span className="text-neon-cyan">iPhone</span> or <span className="text-neon-cyan">Android</span> phone is a perfectly good starting point — pair it with a <span className="text-neon-cyan">wired</span> or <span className="text-neon-cyan">wireless</span> headphone of your choice and let the apps below do the heavy lifting. The magic happens in the <span className="text-neon-magenta">software</span>. Your <span className="text-neon-cyan">phone</span> decides whether you even need a dongle — start there, then pick a <span className="text-neon-magenta">DAC</span> or <span className="text-neon-magenta">Bluetooth transmitter</span> only if you need one.
         </p>
         <div className="grid gap-5 md:grid-cols-2">
           <Card title="Android phones">
