@@ -159,8 +159,9 @@ const Index = () => {
 
       <Section id="phones" icon={Smartphone} title="Phones & Accessories" tone="cyan">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          Any modern <span className="text-neon-cyan">iPhone</span> or <span className="text-neon-cyan">Android</span> phone is a perfectly good starting point — pair it with a <span className="text-neon-cyan">wired</span> or <span className="text-neon-cyan">wireless</span> headphone of your choice and let the apps below do the heavy lifting. The magic happens in the <span className="text-neon-magenta">software</span>. Your <span className="text-neon-cyan">phone</span> decides whether you even need a dongle — start there, then pick a <span className="text-neon-magenta">DAC</span> or <span className="text-neon-magenta">Bluetooth transmitter</span> only if you need one.
+          Any modern <span className="text-neon-cyan">iPhone</span> or <span className="text-neon-cyan">Android</span> phone is a fine starting point. What you plug in matters less than what you run on it, so check what your phone already does before you buy anything. Then add a <span className="text-neon-magenta">DAC</span> or a <span className="text-neon-magenta">Bluetooth transmitter</span> only if it's actually missing something.
         </p>
+
         <div className="grid gap-5 md:grid-cols-2">
           <Card title="Android phones">
             <Bullets
