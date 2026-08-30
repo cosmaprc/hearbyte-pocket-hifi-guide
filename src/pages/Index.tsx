@@ -52,7 +52,7 @@ const Index = () => {
               items={[
                 <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink>.</>,
                 <><span className="text-neon-magenta">DAC:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> over <span className="text-neon-cyan">USB</span>, set to draw power from <span className="text-neon-cyan">USB-C</span> rather than its internal battery — or the <ExtLink href="https://www.fiio.com/qx13" className="text-neon-cyan">FiiO QX13</ExtLink> paired with the <ExtLink href="https://www.fiio.com/productinfo/1507720.html" className="text-neon-cyan">FiiO Estick</ExtLink> battery.</>,
-                <><span className="text-neon-magenta">EQ:</span> none at all, or the <ExtLink href="https://www.rtings.com/headphones/learn/eq-repository" className="text-neon-cyan">rtings.com</ExtLink> target preference curve <span className="text-neon-cyan">PEQ</span> profile.</>,
+                <><span className="text-neon-magenta">EQ:</span> usually none. When I do reach for it, the <ExtLink href="https://www.rtings.com/headphones/learn/eq-repository" className="text-neon-cyan">rtings.com</ExtLink> target preference curve <span className="text-neon-cyan">PEQ</span> profile.</>,
               ]}
             />
           </Card>
@@ -61,7 +61,7 @@ const Index = () => {
               items={[
                 <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://hifiman.com/products/detail/305" className="text-neon-cyan">HiFiMAN Sundara (2022)</ExtLink>.</>,
                 <><span className="text-neon-magenta">DAC:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> over <span className="text-neon-cyan">USB</span>, powered from <span className="text-neon-cyan">USB-C</span> rather than its internal battery — or the <ExtLink href="https://www.fiio.com/qx13" className="text-neon-cyan">FiiO QX13</ExtLink> paired with the <ExtLink href="https://www.fiio.com/productinfo/1507720.html" className="text-neon-cyan">FiiO Estick</ExtLink> battery.</>,
-                <><span className="text-neon-magenta">EQ:</span> none at all, or the <ExtLink href="https://www.rtings.com/headphones/learn/eq-repository" className="text-neon-cyan">rtings.com</ExtLink> target preference curve <span className="text-neon-cyan">PEQ</span> profile.</>,
+                <><span className="text-neon-magenta">EQ:</span> flat most of the time, or the <ExtLink href="https://www.rtings.com/headphones/learn/eq-repository" className="text-neon-cyan">rtings.com</ExtLink> target preference curve <span className="text-neon-cyan">PEQ</span> profile.</>,
               ]}
             />
           </Card>
@@ -88,14 +88,15 @@ const Index = () => {
               items={[
                 <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink>.</>,
                 <><span className="text-neon-magenta">Receiver:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> as a <GlossaryLink term="ldac">LDAC</GlossaryLink> Bluetooth receiver, fed by a <ExtLink href="https://www.fiio.com/airlink" className="text-neon-cyan">FiiO Air Link</ExtLink> adapter.</>,
-                <><span className="text-neon-magenta">EQ:</span> none at all, or the <ExtLink href="https://www.rtings.com/headphones/learn/eq-repository" className="text-neon-cyan">rtings.com</ExtLink> target preference curve <span className="text-neon-cyan">PEQ</span> profile.</>,
+                <><span className="text-neon-magenta">EQ:</span> stock tuning, or the <ExtLink href="https://www.rtings.com/headphones/learn/eq-repository" className="text-neon-cyan">rtings.com</ExtLink> target preference curve <span className="text-neon-cyan">PEQ</span> profile loaded onto the 5K itself.</>,
               ]}
             />
             <div className="mt-4 rounded-lg border border-neon-magenta/40 bg-neon-magenta/5 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
               <p className="mt-2 text-sm text-foreground/85">
-                Velcro the 5K to the headband, run <span className="text-neon-cyan">LDAC 990 kbps</span> and leave the tuning stock — <span className="text-neon-magenta">no EQ of any kind</span>. Use the balanced output when you want more headroom, or plug in over USB when you want it wired and bit-perfect. See the <a href="#demands" className="text-neon-cyan underline-offset-4 hover:underline">electrical demands table</a> for why this pairing has plenty of margin.
+                The 5K velcros to the headband. I run <span className="text-neon-cyan">LDAC 990 kbps</span> and leave the tuning stock, with <span className="text-neon-magenta">no EQ of any kind</span>. The balanced output gives more headroom if you want it, and plugging in over USB makes it wired and bit-perfect. The <a href="#demands" className="text-neon-cyan underline-offset-4 hover:underline">electrical demands table</a> shows how much margin this pairing has.
               </p>
+
             </div>
             <div className="mt-4 grid grid-cols-2 gap-3">
               <img
@@ -146,8 +147,9 @@ const Index = () => {
         <div className="grid gap-5 md:grid-cols-2">
           <Card title="Start with two reference tunings">
             <p>
-              If you're new to this and want to figure out your own preferences before spending big, try the <ExtLink href="https://www.akg.com/Headphones/Professional%20Headphones/K371.html" className="text-neon-cyan">AKG K371</ExtLink> (<span className="text-neon-magenta">closed-back</span>, tuned to the <span className="text-neon-cyan">Harman</span> target) alongside the <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink> (<span className="text-neon-magenta">open-back</span>, <span className="text-neon-cyan">diffuse-field</span> / flat). Load them into <ExtLink href="https://www.extreamsd.com/index.php/products/usb-audio-player-pro" className="text-neon-cyan">USB Audio Player Pro</ExtLink> with <ExtLink href="https://www.toneboosters.com/tb_morphit_v1.html" className="text-neon-cyan">ToneBoosters MorphIt</ExtLink> and A/B different <GlossaryLink term="target">target curves</GlossaryLink> — you'll quickly work out whether you prefer open vs closed, and Harman vs diffuse-field.
+              If you don't know what you like yet, get two headphones that disagree with each other. The <ExtLink href="https://www.akg.com/Headphones/Professional%20Headphones/K371.html" className="text-neon-cyan">AKG K371</ExtLink> is <span className="text-neon-magenta">closed-back</span> and tuned to the <span className="text-neon-cyan">Harman</span> target; the <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink> is <span className="text-neon-magenta">open-back</span> and closer to <span className="text-neon-cyan">diffuse-field</span>. Load both into <ExtLink href="https://www.extreamsd.com/index.php/products/usb-audio-player-pro" className="text-neon-cyan">USB Audio Player Pro</ExtLink> with <ExtLink href="https://www.toneboosters.com/tb_morphit_v1.html" className="text-neon-cyan">ToneBoosters MorphIt</ExtLink> and swap between <GlossaryLink term="target">target curves</GlossaryLink>. It won't take long to work out which side you sit on.
             </p>
+
           </Card>
         </div>
       </Section>
@@ -157,14 +159,15 @@ const Index = () => {
 
       <Section id="phones" icon={Smartphone} title="Phones & Accessories" tone="cyan">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          Any modern <span className="text-neon-cyan">iPhone</span> or <span className="text-neon-cyan">Android</span> phone is a perfectly good starting point — pair it with a <span className="text-neon-cyan">wired</span> or <span className="text-neon-cyan">wireless</span> headphone of your choice and let the apps below do the heavy lifting. The magic happens in the <span className="text-neon-magenta">software</span>. Your <span className="text-neon-cyan">phone</span> decides whether you even need a dongle — start there, then pick a <span className="text-neon-magenta">DAC</span> or <span className="text-neon-magenta">Bluetooth transmitter</span> only if you need one.
+          Any modern <span className="text-neon-cyan">iPhone</span> or <span className="text-neon-cyan">Android</span> phone is a fine starting point. What you plug in matters less than what you run on it, so check what your phone already does before you buy anything. Then add a <span className="text-neon-magenta">DAC</span> or a <span className="text-neon-magenta">Bluetooth transmitter</span> only if it's actually missing something.
         </p>
+
         <div className="grid gap-5 md:grid-cols-2">
           <Card title="Android phones">
             <Bullets
               items={[
-                <>Many mid-range Androids (<span className="text-neon-cyan">Motorola</span>, for example) ship with <span className="text-neon-magenta">Dolby Atmos</span>, <span className="text-neon-cyan">aptX HD</span> or better, and occasionally a <span className="text-neon-cyan">24-bit / 192 kHz</span>-capable <span className="text-neon-cyan">3.5 mm</span> jack.</>,
-                <>Worth checking the spec sheet before assuming you need a dongle — you may already have everything you need.</>,
+                <>Plenty of mid-range Androids (<span className="text-neon-cyan">Motorola</span>, for one) ship with <span className="text-neon-magenta">Dolby Atmos</span>, <span className="text-neon-cyan">aptX HD</span> or better, and sometimes a <span className="text-neon-cyan">3.5 mm</span> jack that handles <span className="text-neon-cyan">24-bit / 192 kHz</span>.</>,
+                <>Read the spec sheet first. You may already have the dongle you were about to buy.</>,
               ]}
             />
           </Card>
@@ -182,18 +185,18 @@ const Index = () => {
             <Bullets
               items={[
                 <>The common <GlossaryLink term="ldac">codecs</GlossaryLink>, from lossy to effectively lossless: <span className="text-neon-cyan">AAC</span>, <span className="text-neon-cyan">aptX HD</span>, <span className="text-neon-cyan">aptX Lossless</span>, <span className="text-neon-cyan">LDAC</span> and <span className="text-neon-cyan">LHDC</span>.</>,
-                <>In honest blind listening, most people — and most headphones — <span className="text-neon-magenta">can't reliably tell them apart</span>, or tell any of them from a <span className="text-neon-cyan">wired</span> connection.</>,
-                <><span className="text-neon-cyan">LHDC</span> offers two modes worth knowing: <span className="text-neon-magenta">LHDC High Resolution</span> (up to 24-bit / 192 kHz) and <span className="text-neon-magenta">LHDC Lossless</span> (bit-exact 16-bit / 44.1 kHz CD quality).</>,
-                <>Pick whatever your phone and headphones both support and stop worrying. Tuning and EQ matter far more than codec.</>,
+                <>In honest blind listening, most people (and most headphones) <span className="text-neon-magenta">can't reliably tell them apart</span>, or tell any of them from a <span className="text-neon-cyan">wired</span> connection.</>,
+                <><span className="text-neon-cyan">LHDC</span> has two modes worth knowing about: <span className="text-neon-magenta">LHDC High Resolution</span> up to 24-bit / 192 kHz, and <span className="text-neon-magenta">LHDC Lossless</span> at bit-exact 16-bit / 44.1 kHz CD quality.</>,
+                <>Use whatever both ends support. Tuning and EQ will change the sound far more than the codec does.</>,
               ]}
             />
           </Card>
           <Card title="Dolby Atmos on phones">
             <Bullets
               items={[
-                <>Many <span className="text-neon-cyan">Android</span> phones include a system-level <span className="text-neon-magenta">Dolby Atmos</span> / spatial processor.</>,
-                <>It's a worthwhile bonus — widens the stage and can make stock-tuned headphones sound more <span className="text-neon-magenta">open and immersive</span>.</>,
-                <>Treat it as another DSP layer to A/B against <span className="text-neon-cyan">Bongiovi DPS</span> or <span className="text-neon-cyan">AM3D</span> in jetAudio, not a replacement.</>,
+                <>Many <span className="text-neon-cyan">Android</span> phones include a system-level <span className="text-neon-magenta">Dolby Atmos</span> or spatial processor.</>,
+                <>It widens the stage, and stock-tuned headphones often sound more <span className="text-neon-magenta">open</span> with it on.</>,
+                <>Treat it as one more DSP layer to A/B against <span className="text-neon-cyan">Bongiovi DPS</span> or <span className="text-neon-cyan">AM3D</span> in jetAudio, not a replacement for them.</>,
               ]}
             />
           </Card>
@@ -220,26 +223,30 @@ const Index = () => {
         <div className="grid gap-5 md:grid-cols-2">
           <Card title="Qudelix 5K" href="https://www.qudelix.com/products/qudelix-5k">
             <p className="text-sm text-foreground/85">
-              The pick if you only buy one thing: it is both the <span className="text-neon-cyan">USB DAC</span> and the <span className="text-neon-cyan">Bluetooth receiver</span>, so it replaces two purchases and travels well.
+              If you buy one thing, buy this. It is a <span className="text-neon-cyan">USB DAC</span> and a <span className="text-neon-cyan">Bluetooth receiver</span> in the same small box, so it covers two purchases.
             </p>
+
             <dl className="mt-4 space-y-3 text-sm">
               <div>
                 <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">As a wired USB DAC</dt>
                 <dd className="mt-1 text-foreground/85">
-                  <span className="text-neon-cyan">3.5mm</span> and <span className="text-neon-cyan">2.5mm balanced</span> outputs with <GlossaryLink term="outputz">independent hardware volume control</GlossaryLink> — the balanced port has real headroom for demanding loads.
+                  <span className="text-neon-cyan">3.5mm</span> and <span className="text-neon-cyan">2.5mm balanced</span> outputs with <GlossaryLink term="outputz">independent hardware volume control</GlossaryLink>. The balanced port has real headroom for demanding loads.
                 </dd>
+
               </div>
               <div>
                 <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">As a Bluetooth receiver</dt>
                 <dd className="mt-1 text-foreground/85">
-                  <GlossaryLink term="ldac">LDAC</GlossaryLink>, <span className="text-neon-cyan">aptX Adaptive</span> and every mainstream codec, applying its on-device EQ to whatever is streaming to it — turn any wired headphone into a well-tuned wireless one.
+                  <GlossaryLink term="ldac">LDAC</GlossaryLink>, <span className="text-neon-cyan">aptX Adaptive</span> and every mainstream codec. Its on-device EQ applies to whatever is streaming to it, which turns any wired headphone into a well-tuned wireless one.
                 </dd>
+
               </div>
               <div>
                 <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Either way</dt>
                 <dd className="mt-1 text-foreground/85">
-                  A first-class <span className="text-neon-magenta">20-band <GlossaryLink term="eq">parametric EQ</GlossaryLink></span> stored on the device itself, <span className="text-neon-cyan">AutoEQ</span> support with profiles out of the box, and the <span className="text-neon-magenta">best and most responsive</span> companion app I have ever used.
+                  A <span className="text-neon-magenta">20-band <GlossaryLink term="eq">parametric EQ</GlossaryLink></span> stored on the device itself, <span className="text-neon-cyan">AutoEQ</span> profiles out of the box, and the <span className="text-neon-magenta">most responsive</span> companion app I have used on anything.
                 </dd>
+
               </div>
             </dl>
           </Card>
@@ -249,7 +256,7 @@ const Index = () => {
           <SubHeading>Other DACs</SubHeading>
           <div className="grid gap-5 md:grid-cols-3">
             <Card title="FiiO JIEZI" href="https://fiio.com/newsinfo/1065510.html">
-              <p>A tiny, inexpensive <span className="text-neon-cyan">USB-C</span> dongle DAC — an easy way to get clean sound out of a phone with no headphone jack.</p>
+              <p>A tiny, cheap <span className="text-neon-cyan">USB-C</span> dongle DAC. The easiest way to get clean sound out of a phone with no headphone jack.</p>
             </Card>
             <Card title="FiiO QX13" href="https://www.fiio.com/qx13">
               <Bullets
@@ -260,7 +267,7 @@ const Index = () => {
               />
             </Card>
             <Card title="Neutron HiFi DAC V1" href="https://neutronhifi.com/devices/dac/v1/details">
-              <p>A pioneer in bringing <span className="text-neon-cyan">DSP</span> to dongle DACs — includes almost every DSP from the Neutron Player plus extras like <span className="text-neon-cyan">THD Compensation</span>. Read the incredibly well-written manual to discover everything it can do.</p>
+              <p>One of the first dongles to put real <span className="text-neon-cyan">DSP</span> on the device: almost everything from the Neutron Player, plus extras like <span className="text-neon-cyan">THD Compensation</span>. The manual is unusually thorough and worth reading properly.</p>
             </Card>
           </div>
         </div>
@@ -271,7 +278,7 @@ const Index = () => {
 
       <Section id="software" icon={Sliders} title="Software" tone="magenta">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          The right <span className="text-neon-cyan">streaming service</span>, <span className="text-neon-cyan">player</span> and <GlossaryLink term="dsp">DSP</GlossaryLink> chain shapes your sound far more than any <span className="text-neon-cyan">cable</span> or <span className="text-neon-cyan">DAC</span>. These apps give you <span className="text-neon-cyan">loudness normalization</span>, <span className="text-neon-cyan">Preamp control</span> and serious <span className="text-neon-magenta">DSP power</span>.
+          Your <span className="text-neon-cyan">streaming service</span>, <span className="text-neon-cyan">player</span> and <GlossaryLink term="dsp">DSP</GlossaryLink> chain will change the sound more than any cable or DAC. These are the apps I use, and what each one is good for.
         </p>
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           <Card title="Apple Music" href="https://www.apple.com/apple-music/">
@@ -294,7 +301,7 @@ const Index = () => {
                   <ExtLink href="https://play.google.com/store/apps/details?id=com.jetappfactory.jetaudioplus" className="text-neon-cyan">Android</ExtLink>
                 </>,
                 <><span className="text-neon-cyan">ReplayGain</span> support with manual <span className="text-neon-cyan">preamp</span> adjustment</>,
-                <>Bundled DSPs include a <span className="text-neon-cyan">graphic EQ</span>, <ExtLink href="https://www.am3d.com/" className="text-neon-magenta">AM3D</ExtLink> and <ExtLink href="https://www.bongioviacoustics.com/" className="text-neon-magenta">Bongiovi DPS</ExtLink> — the last two transform how your music sounds.</>,
+                <>Bundled DSPs include a <span className="text-neon-cyan">graphic EQ</span>, <ExtLink href="https://www.am3d.com/" className="text-neon-magenta">AM3D</ExtLink> and <ExtLink href="https://www.bongioviacoustics.com/" className="text-neon-magenta">Bongiovi DPS</ExtLink>. The last two change the sound dramatically, for better or worse depending on the track.</>,
                 <>Note: within jetAudio, AM3D, Bongiovi DPS and Crystalizer are <span className="text-neon-magenta">paid in-app purchases</span>, not free with the app.</>,
               ]}
             />
@@ -309,7 +316,7 @@ const Index = () => {
                   <ExtLink href="https://play.google.com/store/apps/details?id=com.neutroncode.mp" className="text-neon-cyan">Android</ExtLink>
                 </>,
                 <><span className="text-neon-cyan">ReplayGain</span> support with manual <span className="text-neon-cyan">preamp</span> adjustment</>,
-                <>Deep DSP toolbox: <span className="text-neon-magenta">Parametric EQ</span>, <span className="text-neon-magenta">Frequency Response Correction</span> (AutoEQ), <GlossaryLink term="crossfeed">Crossfeed</GlossaryLink> and <span className="text-neon-magenta">Adaptive Loudness Compensation</span>.</>,
+                <>The widest DSP set of the three: <span className="text-neon-magenta">Parametric EQ</span>, <span className="text-neon-magenta">Frequency Response Correction</span> (AutoEQ), <GlossaryLink term="crossfeed">Crossfeed</GlossaryLink> and <span className="text-neon-magenta">Adaptive Loudness Compensation</span>.</>,
               ]}
             />
           </Card>
@@ -329,19 +336,19 @@ const Index = () => {
 
       <Section id="demands" icon={Gauge} title="Headphone electrical demands" tone="purple">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          Two numbers decide how picky a headphone is about its source: <span className="text-neon-cyan">impedance</span> (Ω) and <GlossaryLink term="sensitivity">sensitivity</GlossaryLink> (dB/mW or dB/V). Match them to the right amplifier or DAC and the headphone sings; mismatch them and you get hiss, clipping, or not enough volume headroom.
+          Two numbers decide how fussy a headphone is about its source: <span className="text-neon-cyan">impedance</span> (Ω) and <GlossaryLink term="sensitivity">sensitivity</GlossaryLink> (dB/mW or dB/V). Get the pairing right and you never think about it again. Get it wrong and you get hiss, or clipping, or you simply run out of volume.
         </p>
         <p className="mb-6 max-w-2xl text-sm text-foreground/80">
-          One correction first, because almost every guide gets it wrong: impedance is simply the <span className="text-neon-cyan">ratio of voltage to current</span>, and that ratio does not change with level. A headphone therefore does not need proportionally more current in the bass. If it plays <span className="text-neon-magenta">loud enough, it produces enough bass</span> — and if it produces enough bass, it plays loud enough. Running short of current shows up as <span className="text-neon-magenta">clipping on peaks</span> across the whole signal, not as weak or thin bass. That claim is one of the most repeated ideas in audio writing and in AI-generated text, and it is still wrong. <ExtLink href="https://www.reddit.com/r/headphones/s/vq4C1c1tvn" className="text-neon-cyan">Source: oratory1990's comment on r/headphones</ExtLink>.
+          One correction before the table, because you will read the opposite everywhere. Impedance is just the <span className="text-neon-cyan">ratio of voltage to current</span>, and that ratio does not change with level, so a headphone does not draw proportionally more current in the bass. If it plays <span className="text-neon-magenta">loud enough, it has enough bass</span>, and vice versa. When an amp runs short of current you get <span className="text-neon-magenta">clipping on peaks</span> across the whole signal, not weak or thin bass. <ExtLink href="https://www.reddit.com/r/headphones/s/vq4C1c1tvn" className="text-neon-cyan">oratory1990 explains it here</ExtLink>.
         </p>
         <p className="mb-6 max-w-2xl text-sm text-foreground/80">
-          Watch the units: <span className="text-neon-magenta">dB/mW</span> and <span className="text-neon-magenta">dB/V</span> are not interchangeable, and manufacturers publish whichever flatters the product — a 32 Ω headphone rated 114 dB/V is only about 99 dB/mW. Note too that <span className="text-neon-cyan">planar magnetic</span> headphones have an essentially flat, resistive impedance, so a mediocre output impedance does not colour their tone the way it does dynamic or multi-driver balanced-armature designs; it just wastes power. Planars care about <span className="text-neon-magenta">current</span>, not damping factor.
+          Watch the units. <span className="text-neon-magenta">dB/mW</span> and <span className="text-neon-magenta">dB/V</span> are not interchangeable, and manufacturers quote whichever flatters the product: a 32 Ω headphone rated 114 dB/V is only about 99 dB/mW. Worth knowing too that <span className="text-neon-cyan">planar magnetic</span> headphones have a flat, resistive impedance, so a mediocre output impedance doesn't colour their tone the way it does dynamic or multi-driver balanced-armature designs. It just wastes power. Planars care about <span className="text-neon-magenta">current</span>, not damping factor.
         </p>
         <p className="mb-6 max-w-2xl text-sm text-foreground/80">
-          The last column only covers the <a href="#phones" className="text-neon-cyan underline-offset-4 hover:underline">gear recommended on this page</a>, using each vendor's published <span className="text-neon-cyan">single-ended</span> and <span className="text-neon-cyan">balanced</span> output figures — which is why the same dongle can appear in two rows depending on which output you plug into. <span className="text-neon-magenta">FiiO Air Link style adapters</span> are missing on purpose: they transmit Bluetooth to wireless headphones rather than amplifying wired ones, so they don't drive any of these profiles directly.
+          The last column only covers the <a href="#phones" className="text-neon-cyan underline-offset-4 hover:underline">gear recommended on this page</a>, using each vendor's published <span className="text-neon-cyan">single-ended</span> and <span className="text-neon-cyan">balanced</span> figures. That's why the same dongle shows up in two rows: it depends which output you plug into. <span className="text-neon-magenta">FiiO Air Link style adapters</span> are left out on purpose, since they transmit Bluetooth rather than amplify anything.
         </p>
         <div className="mb-6 max-w-2xl rounded-lg border border-neon-magenta/40 bg-neon-magenta/5 p-4 text-sm text-foreground/85">
-          <span className="font-semibold text-neon-magenta">If you only read one line:</span> every headphone recommended on this page is driven comfortably by the sources recommended above — the <GearLink>Qudelix 5K</GearLink> covers all of them. The table below is for the edge cases: hard-to-drive planars, 300 Ω classics and hiss-prone sensitive <GlossaryLink term="iem">IEMs</GlossaryLink>.
+          <span className="font-semibold text-neon-magenta">The short version:</span> every headphone on this page is driven comfortably by the sources above, and the <GearLink>Qudelix 5K</GearLink> handles all of them. The table is for the awkward cases: hard-to-drive planars, 300 Ω classics, and sensitive <GlossaryLink term="iem">IEMs</GlossaryLink> that pick up hiss.
         </div>
         <DataTable
           rows={[
@@ -351,18 +358,18 @@ const Index = () => {
               demand: "High Current (I)",
               target: "High continuous current output at low loads",
               wrongAmp:
-                "The amp hits its current limit and clips on peaks — distortion and compressed dynamics across the whole signal, not just the bass — plus significant amp heat and rapid battery drain",
+                "The amp hits its current limit and clips on peaks. You hear distortion and squashed dynamics across the whole signal, not just the bass, and the amp gets hot and eats the phone battery",
               examples:
                 "Hifiman Edition XS (18 Ω / 92 dB/mW), Dan Clark Audio Aeon 2 (13 Ω / ~92 dB/mW)",
               sources: (
                 <>
                   <GearLink>FiiO KA11</GearLink> (~200 mW into 32 Ω) and{" "}
                   <GearLink>Hidizs Martha</GearLink> on 4.4mm balanced (~230 mW into 32 Ω) supply the
-                  most current, though the KA11 runs intensely hot and drains the phone battery under
-                  continuous draw. The <GearLink>Qudelix 5K</GearLink> only on 2.5mm balanced
-                  (~240 mW into 32 Ω) — its single-ended output (~80 mW into 32 Ω) runs short. The{" "}
-                  <GearLink>Neutron HiFi DAC V1</GearLink> is the wrong tool here: voltage-clean but
-                  current-light. All four are compromises versus a desktop amp for this profile.
+                  most current, though the KA11 runs very hot and drains the phone under continuous
+                  draw. The <GearLink>Qudelix 5K</GearLink> works here only on 2.5mm balanced
+                  (~240 mW into 32 Ω); its single-ended output (~80 mW into 32 Ω) runs short. The{" "}
+                  <GearLink>Neutron HiFi DAC V1</GearLink> is the wrong tool for this row, clean on
+                  voltage but light on current. None of them beat a desktop amp here.
                 </>
               ),
             },
@@ -377,13 +384,13 @@ const Index = () => {
                 "Sennheiser HD 600 (300 Ω / ~97 dB/mW), Beyerdynamic DT 880 (250 Ω / 96 dB/mW), Beyerdynamic DT 990 Pro (250 Ω / 96 dB/mW)",
               sources: (
                 <>
-                  This row is about volts, not milliwatts: 2 VRMS into 300 Ω is only ~13 mW — fine for
-                  average listening, tight on peaks. <GearLink>Qudelix 5K</GearLink> on balanced roughly
-                  doubles the swing and is the best of the four.{" "}
-                  <GearLink>Neutron HiFi DAC V1</GearLink> runs cleanly at 2 VRMS but lacks headroom
-                  once you apply negative pre-amp gain for EQ. The <GearLink>FiiO KA11</GearLink>'s
-                  200 mW rating is irrelevant here — it cannot supply the voltage. Desktop amps still
-                  win.
+                  This row is about volts, not milliwatts: 2 VRMS into 300 Ω is only ~13 mW, fine at
+                  average levels and tight on peaks. <GearLink>Qudelix 5K</GearLink> on balanced
+                  roughly doubles the swing and is the best of the four.{" "}
+                  <GearLink>Neutron HiFi DAC V1</GearLink> runs cleanly at 2 VRMS but has no headroom
+                  left once you apply negative pre-amp gain for EQ. The{" "}
+                  <GearLink>FiiO KA11</GearLink>'s 200 mW rating means nothing here, because it cannot
+                  supply the voltage. A desktop amp is still the right answer.
                 </>
               ),
             },
@@ -407,8 +414,8 @@ const Index = () => {
                 <>
                   <GearLink>Neutron HiFi DAC V1</GearLink> (&lt; 0.6 Ω output impedance, switchable
                   1 VRMS mode) first, then <GearLink>Qudelix 5K</GearLink> (&lt; 1 Ω, precise hardware
-                  volume control) on single-ended. The risk here is hiss and coarse volume steps, not a
-                  lack of power: stay in low gain and off the high-power balanced ports.
+                  volume control) on single-ended. Power isn't the problem here, hiss and coarse volume
+                  steps are. Stay in low gain and keep off the high-power balanced ports.
                 </>
               ),
             },
@@ -429,12 +436,10 @@ const Index = () => {
               ),
               sources: (
                 <>
-                  Highly versatile — 120 Ω at 110 dB/V needs only a fraction of a volt to play loud, so
-                  the choice comes down to features rather than power.{" "}
-                  <GearLink>Qudelix 5K</GearLink> (wired or LDAC),{" "}
-                  <GearLink>FiiO KA11</GearLink>, <GearLink>Neutron HiFi DAC V1</GearLink> or{" "}
-                  <GearLink>Hidizs Martha</GearLink> all perform cleanly without bottlenecking
-                  dynamics.
+                  The easy row. 120 Ω at 110 dB/V needs a fraction of a volt to play loud, so pick on
+                  features rather than power. <GearLink>Qudelix 5K</GearLink> (wired or LDAC),{" "}
+                  <GearLink>FiiO KA11</GearLink>, <GearLink>Neutron HiFi DAC V1</GearLink> and{" "}
+                  <GearLink>Hidizs Martha</GearLink> all drive it cleanly.
                 </>
               ),
             },
@@ -443,13 +448,13 @@ const Index = () => {
               specs: "> 150 Ω, > 100 dB/mW",
               demand: "Moderate Voltage (V)",
               target: "Clean, linear voltage delivery",
-              wrongAmp: "Slightly restricted volume peaks on weak sources; compressed dynamics",
+              wrongAmp: "Volume peaks feel a little restricted on weak sources, and dynamics get squashed",
               examples: "Audio-Technica ATH-R70x (470 Ω / 99 dB/mW, ~102 dB/V)",
               sources: (
                 <>
                   <GearLink>Qudelix 5K</GearLink> on balanced or{" "}
-                  <GearLink>Neutron HiFi DAC V1</GearLink> in its 2 VRMS mode are both adequate. The{" "}
-                  <GearLink>FiiO KA11</GearLink> is voltage-limited despite its power rating, and a
+                  <GearLink>Neutron HiFi DAC V1</GearLink> in its 2 VRMS mode both do the job. The{" "}
+                  <GearLink>FiiO KA11</GearLink> is voltage-limited despite its power rating, and an
                   legacy smartphone headphone jack will feel restricted and quiet.
                 </>
               ),
@@ -462,7 +467,7 @@ const Index = () => {
 
       <Section id="replaygain" icon={Volume2} title="Using ReplayGain" tone="orange">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          <GlossaryLink term="replaygain">ReplayGain</GlossaryLink> is a form of <span className="text-neon-magenta">volume normalization</span> that, when applied correctly, does not affect the <span className="text-neon-magenta">dynamic range</span> of your music. Scan your files once to write <span className="text-neon-cyan">track</span> and <span className="text-neon-cyan">album</span> tags, and the players above will read them and level everything automatically — no more reaching for the volume between songs. If you mostly shuffle across artists, prefer <span className="text-neon-magenta">track</span> mode; if you listen album-first, use <span className="text-neon-magenta">album</span> mode to preserve relative loudness within a record.
+          <GlossaryLink term="replaygain">ReplayGain</GlossaryLink> is <span className="text-neon-magenta">volume normalization</span> done properly: applied correctly it leaves the <span className="text-neon-magenta">dynamic range</span> of your music alone. Scan your files once to write <span className="text-neon-cyan">track</span> and <span className="text-neon-cyan">album</span> tags and the players above will level everything for you. If you mostly shuffle across artists, use <span className="text-neon-magenta">track</span> mode. If you listen album-first, use <span className="text-neon-magenta">album</span> mode so the relative loudness within a record survives.
         </p>
         <div className="grid gap-5 md:grid-cols-3">
           <Card title="foobar2000 on Windows" href="https://www.foobar2000.org/">
@@ -517,7 +522,7 @@ const Index = () => {
             <Bullets
               items={[
                 <>Connect over USB in <GlossaryLink term="mtp">MTP</GlossaryLink> mode and copy folders to internal storage or an <span className="text-neon-cyan">SD card</span> with any file manager.</>,
-                <>All three players above will pick the files up from anywhere they have read access — no app-specific sandbox dance.</>,
+                <>All three players will find the files anywhere they have read access. No per-app folders to worry about.</>,
               ]}
             />
           </Card>
@@ -528,7 +533,7 @@ const Index = () => {
 
       <Section id="glossary" icon={BookOpen} title="Glossary" tone="cyan">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          A few quick definitions for the terms used above, in alphabetical order, in case anything is new to you.
+          Definitions for the terms used above, in alphabetical order.
         </p>
         <div className="grid gap-5 md:grid-cols-2">
           <div id="g-alc" className="scroll-mt-24">
@@ -628,56 +633,56 @@ const Index = () => {
 
       <Section id="links" icon={Link} title="Links" tone="magenta">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          A curated set of external resources for diving deeper into headphone measurements, community discussion, and high-quality music purchases.
+          The sites I keep going back to for measurements, arguments and music worth buying.
         </p>
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           <Card title="Reviews">
             <Bullets
               items={[
-                <><ExtLink href="https://www.pragmaticaudio.com/" className="text-neon-cyan">Pragmatic Audio</ExtLink> — in-depth headphone and IEM reviews with measurement data.</>,
-                <><ExtLink href="https://www.headphoneer.com/" className="text-neon-cyan">Headphoneer</ExtLink> — written reviews of headphones, IEMs, amps and DACs.</>,
-                <><ExtLink href="https://www.head-fi.org/" className="text-neon-cyan">Head-Fi</ExtLink> — long-running headphone enthusiast reviews.</>,
-                <><ExtLink href="https://www.audiosciencereview.com/forum/index.php" className="text-neon-cyan">Audio Science Review</ExtLink> — objective, measurement-led gear reviews.</>,
-                <><ExtLink href="https://www.rtings.com/headphones" className="text-neon-cyan">RTINGS</ExtLink> — detailed headphone reviews with consistent measurement methodology.</>,
+                <><ExtLink href="https://www.pragmaticaudio.com/" className="text-neon-cyan">Pragmatic Audio</ExtLink> — long headphone and IEM reviews, always with the measurements.</>,
+                <><ExtLink href="https://www.headphoneer.com/" className="text-neon-cyan">Headphoneer</ExtLink> covers headphones, IEMs, amps and DACs in writing rather than video.</>,
+                <><ExtLink href="https://www.head-fi.org/" className="text-neon-cyan">Head-Fi</ExtLink> — decades of enthusiast impressions, for better and worse.</>,
+                <><ExtLink href="https://www.audiosciencereview.com/forum/index.php" className="text-neon-cyan">Audio Science Review</ExtLink> starts from the measurements and argues from there.</>,
+                <><ExtLink href="https://www.rtings.com/headphones" className="text-neon-cyan">RTINGS</ExtLink> — the same test methodology applied to everything, which makes comparisons actually mean something.</>,
               ]}
             />
           </Card>
           <Card title="Measurements & EQ tools">
             <Bullets
               items={[
-                <><ExtLink href="https://squig.link/" className="text-neon-cyan">Squig.link</ExtLink> — browse and compare frequency-response graphs from a wide database.</>,
-                <><ExtLink href="https://autoeq.app/" className="text-neon-cyan">AutoEQ</ExtLink> — generate parametric EQ presets to match target curves from measurement data.</>,
-                <><ExtLink href="https://peqdb.com/" className="text-neon-cyan">PEQdb</ExtLink> — searchable database of parametric EQ presets for headphones and IEMs.</>,
-                <><ExtLink href="https://opra.roon.app/" className="text-neon-cyan">OPRA</ExtLink> — Roon-integrated headphone preference rating explorer.</>,
-                <><ExtLink href="https://www.rtings.com/headphones/learn/eq-repository" className="text-neon-cyan">RTINGS EQ Repository</ExtLink> — measured EQ presets for a wide range of headphones.</>,
+                <><ExtLink href="https://squig.link/" className="text-neon-cyan">Squig.link</ExtLink> — overlay frequency-response graphs from a huge database.</>,
+                <><ExtLink href="https://autoeq.app/" className="text-neon-cyan">AutoEQ</ExtLink> builds a parametric EQ preset from measurement data to hit a target curve.</>,
+                <><ExtLink href="https://peqdb.com/" className="text-neon-cyan">PEQdb</ExtLink> — searchable presets for headphones and IEMs, if someone has already done the work.</>,
+                <><ExtLink href="https://opra.roon.app/" className="text-neon-cyan">OPRA</ExtLink> — Roon's headphone preference rating explorer.</>,
+                <><ExtLink href="https://www.rtings.com/headphones/learn/eq-repository" className="text-neon-cyan">RTINGS EQ Repository</ExtLink> — where the preference-curve profiles I use come from.</>,
               ]}
             />
           </Card>
           <Card title="Community">
             <Bullets
               items={[
-                <><ExtLink href="https://www.head-fi.org/" className="text-neon-cyan">Head-Fi</ExtLink> — the largest headphone enthusiast forum and discussion hub.</>,
-                <><ExtLink href="https://www.audiosciencereview.com/forum/index.php" className="text-neon-cyan">Audio Science Review</ExtLink> — active forum focused on objective audio measurements.</>,
-                <><ExtLink href="https://www.reddit.com/r/headphones/s/N2EtgyodPs" className="text-neon-cyan">r/headphones</ExtLink> — general headphone discussion and news.</>,
-                <><ExtLink href="https://www.reddit.com/r/oratory1990/s/U4gCItaBjU" className="text-neon-cyan">r/oratory1990</ExtLink> — EQ presets and measurement discussions.</>,
-                <><ExtLink href="https://www.reddit.com/r/HeadphoneAdvice/s/sYWZKVYEjL" className="text-neon-cyan">r/HeadphoneAdvice</ExtLink> — purchase advice and recommendations.</>,
+                <><ExtLink href="https://www.head-fi.org/" className="text-neon-cyan">Head-Fi</ExtLink> — the biggest headphone forum there is.</>,
+                <><ExtLink href="https://www.audiosciencereview.com/forum/index.php" className="text-neon-cyan">Audio Science Review</ExtLink>'s forum, where the measurements get picked apart.</>,
+                <><ExtLink href="https://www.reddit.com/r/headphones/s/N2EtgyodPs" className="text-neon-cyan">r/headphones</ExtLink> for general discussion and news.</>,
+                <><ExtLink href="https://www.reddit.com/r/oratory1990/s/U4gCItaBjU" className="text-neon-cyan">r/oratory1990</ExtLink> — EQ presets, and straight answers about how any of this works.</>,
+                <><ExtLink href="https://www.reddit.com/r/HeadphoneAdvice/s/sYWZKVYEjL" className="text-neon-cyan">r/HeadphoneAdvice</ExtLink> if you want a recommendation for your budget.</>,
               ]}
             />
           </Card>
           <Card title="Music Stores">
             <Bullets
               items={[
-                <><ExtLink href="https://www.qobuz.com/gb-en/shop" className="text-neon-cyan">Qobuz</ExtLink> — hi-res streaming and download store with lossless catalogue.</>,
-                <><ExtLink href="https://bandcamp.com/" className="text-neon-cyan">Bandcamp</ExtLink> — buy directly from artists, often in lossless FLAC.</>,
-                <><ExtLink href="https://uk.7digital.com/" className="text-neon-cyan">7digital</ExtLink> — hi-res and lossless downloads from a large catalogue.</>,
+                <><ExtLink href="https://www.qobuz.com/gb-en/shop" className="text-neon-cyan">Qobuz</ExtLink> — hi-res downloads as well as streaming, all lossless.</>,
+                <><ExtLink href="https://bandcamp.com/" className="text-neon-cyan">Bandcamp</ExtLink> pays the artist properly, and usually offers FLAC.</>,
+                <><ExtLink href="https://uk.7digital.com/" className="text-neon-cyan">7digital</ExtLink> — big catalogue of hi-res and lossless downloads.</>,
               ]}
             />
           </Card>
           <Card title="Streaming & Playlists">
             <Bullets
               items={[
-                <><ExtLink href="https://music.apple.com/" className="text-neon-cyan">Apple Music</ExtLink> is my preferred streaming and music discovery app — its suggestions helped me put together my best playlists.</>,
-                <>Large <span className="text-neon-cyan">hi-res</span> / <span className="text-neon-cyan">lossless</span> catalogue with <span className="text-neon-magenta">Spatial Audio</span> tracks and built-in audio normalization at roughly <span className="text-neon-cyan">-16 LUFS</span>.</>,
+                <><ExtLink href="https://music.apple.com/" className="text-neon-cyan">Apple Music</ExtLink> is what I stream on, mostly because its suggestions are good. My best playlists came out of them.</>,
+                <>Big <span className="text-neon-cyan">hi-res</span> / <span className="text-neon-cyan">lossless</span> catalogue, some <span className="text-neon-magenta">Spatial Audio</span> tracks, and normalization built in at roughly <span className="text-neon-cyan">-16 LUFS</span>.</>,
               ]}
             />
             <div className="mt-4">

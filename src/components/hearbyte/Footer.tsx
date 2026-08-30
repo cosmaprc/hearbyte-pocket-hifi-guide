@@ -6,8 +6,9 @@ const Footer = () => (
         <span className="text-neon-cyan text-glow-cyan">BYTE</span>
       </div>
       <p className="text-xs text-muted-foreground">
-        Quick-pick gear and software pairings for the most fun, engaging sound.
+        Pocket hi-fi notes from someone who keeps fiddling with it.
       </p>
+
       <p className="text-xs text-muted-foreground">
         © {new Date().getFullYear()} HeartByte
       </p>
