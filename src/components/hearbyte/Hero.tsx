@@ -48,9 +48,9 @@ const Hero = () => {
         </p>
 
         <p className="mt-6 max-w-2xl text-balance text-lg text-foreground/90 [text-shadow:0_2px_8px_hsl(var(--background)/0.9)] sm:text-xl">
-          The gear and software I actually use to make music sound{" "}
+          The gear and software I use to make music sound{" "}
           <span className="text-neon-magenta">fun</span> on a{" "}
-          <span className="text-neon-cyan">phone</span>, and why.
+          <span className="text-neon-cyan">phone</span>.
         </p>
 
         <a
