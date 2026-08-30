@@ -446,8 +446,8 @@ const Index = () => {
                 <>
                   The easy row. 120 Ω at 110 dB/V needs a fraction of a volt to play loud, so pick on
                   features rather than power. <GearLink>Qudelix 5K</GearLink> (wired or LDAC),{" "}
-                  <GearLink>FiiO KA11</GearLink>, <GearLink>Neutron HiFi DAC V1</GearLink> and{" "}
-                  <GearLink>Hidizs Martha</GearLink> all drive it cleanly.
+                  <GearLink>FiiO JIEZI</GearLink>, <GearLink>FiiO QX13</GearLink> and{" "}
+                  <GearLink>Neutron HiFi DAC V1</GearLink> all drive it cleanly.
                 </>
               ),
             },
