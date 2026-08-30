@@ -467,7 +467,7 @@ const Index = () => {
 
       <Section id="replaygain" icon={Volume2} title="Using ReplayGain" tone="orange">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          <GlossaryLink term="replaygain">ReplayGain</GlossaryLink> is a form of <span className="text-neon-magenta">volume normalization</span> that, when applied correctly, does not affect the <span className="text-neon-magenta">dynamic range</span> of your music. Scan your files once to write <span className="text-neon-cyan">track</span> and <span className="text-neon-cyan">album</span> tags, and the players above will read them and level everything automatically — no more reaching for the volume between songs. If you mostly shuffle across artists, prefer <span className="text-neon-magenta">track</span> mode; if you listen album-first, use <span className="text-neon-magenta">album</span> mode to preserve relative loudness within a record.
+          <GlossaryLink term="replaygain">ReplayGain</GlossaryLink> is <span className="text-neon-magenta">volume normalization</span> done properly: applied correctly it leaves the <span className="text-neon-magenta">dynamic range</span> of your music alone. Scan your files once to write <span className="text-neon-cyan">track</span> and <span className="text-neon-cyan">album</span> tags and the players above will level everything for you. If you mostly shuffle across artists, use <span className="text-neon-magenta">track</span> mode. If you listen album-first, use <span className="text-neon-magenta">album</span> mode so the relative loudness within a record survives.
         </p>
         <div className="grid gap-5 md:grid-cols-3">
           <Card title="foobar2000 on Windows" href="https://www.foobar2000.org/">
