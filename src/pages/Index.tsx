@@ -141,19 +141,19 @@ const Index = () => {
         <div>
           <SubHeading>Other DACs</SubHeading>
           <div className="grid gap-5 md:grid-cols-3">
-            <Card title="FiiO KA11" href="https://www.fiio.com/newsinfo/893399.html">
-              <p>A powerful single-piece dongle DAC (fixed cable) with incredible audio quality at a very low price.</p>
+            <Card title="FiiO JIEZI" href="https://www.fiio.com/jiezi">
+              <p>A tiny, inexpensive <span className="text-neon-cyan">USB-C</span> dongle DAC — an easy way to get clean sound out of a phone with no headphone jack.</p>
+            </Card>
+            <Card title="FiiO QX13" href="https://www.fiio.com/qx13">
+              <Bullets
+                items={[
+                  <>A compact <span className="text-neon-cyan">USB-C</span> dongle DAC with <span className="text-neon-cyan">3.5mm</span> and <span className="text-neon-cyan">4.4mm balanced</span> outputs.</>,
+                  <>You can attach a dedicated <span className="text-neon-magenta">Estick battery</span> to power it, so it draws no charge from your phone.</>,
+                ]}
+              />
             </Card>
             <Card title="Neutron HiFi DAC V1" href="https://neutronhifi.com/devices/dac/v1/details">
               <p>A pioneer in bringing <span className="text-neon-cyan">DSP</span> to dongle DACs — includes almost every DSP from the Neutron Player plus extras like <span className="text-neon-cyan">THD Compensation</span>. Read the incredibly well-written manual to discover everything it can do.</p>
-            </Card>
-            <Card title="Hidizs S9 Pro Plus Martha" href="https://www.hidizs.net/products/hidizs-s9pro-plus-martha-balanced-mini-hifi-dac-amp">
-              <Bullets
-                items={[
-                  <>Dual <span className="text-neon-cyan">ES9038Q2M</span> DAC chips with both <span className="text-neon-cyan">3.5mm single-ended</span> and <span className="text-neon-cyan">4.4mm balanced</span> outputs — plenty of power for a dongle.</>,
-                  <>Has <span className="text-neon-cyan">independent volume control</span>.</>,
-                ]}
-              />
             </Card>
           </div>
         </div>
