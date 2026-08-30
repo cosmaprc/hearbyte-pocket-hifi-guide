@@ -5,7 +5,6 @@ import Section from "@/components/hearbyte/Section";
 import Card from "@/components/hearbyte/Card";
 import Bullets from "@/components/hearbyte/Bullets";
 import Divider from "@/components/hearbyte/Divider";
-import DataTable from "@/components/hearbyte/DataTable";
 import SubHeading from "@/components/hearbyte/SubHeading";
 import TableOfContents from "@/components/hearbyte/TableOfContents";
 import { Smartphone, Sliders, Headphones, Volume2, BookOpen, Link, FolderInput, Zap, Gauge } from "lucide-react";
@@ -95,7 +94,7 @@ const Index = () => {
             <div className="mt-4 rounded-lg border border-neon-magenta/40 bg-neon-magenta/5 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
               <p className="mt-2 text-sm text-foreground/85">
-                The 5K velcros to the headband. I run <span className="text-neon-cyan">LDAC 990 kbps</span> and leave the tuning stock, with <span className="text-neon-magenta">no EQ of any kind</span>. The balanced output gives more headroom if you want it, and plugging in over USB makes it wired and bit-perfect. The <a href="#demands" className="text-neon-cyan underline-offset-4 hover:underline">electrical demands table</a> shows how much margin this pairing has.
+                The 5K velcros to the headband. I run <span className="text-neon-cyan">LDAC 990 kbps</span> and leave the tuning stock, with <span className="text-neon-magenta">no EQ of any kind</span>. The balanced output gives more headroom if you want it, and plugging in over USB makes it wired and bit-perfect. The <a href="#demands" className="text-neon-cyan underline-offset-4 hover:underline">electrical demands notes</a> explain how much margin this pairing has.
               </p>
 
             </div>
@@ -352,130 +351,9 @@ const Index = () => {
           One correction before the table, because you will read the opposite everywhere. Impedance is just the <span className="text-neon-cyan">ratio of voltage to current</span>, and that ratio does not change with level, so a headphone does not draw proportionally more current in the bass. If it plays <span className="text-neon-magenta">loud enough, it has enough bass</span>, and vice versa. When an amp runs short of current you get <span className="text-neon-magenta">clipping on peaks</span> across the whole signal, not weak or thin bass. <ExtLink href="https://www.reddit.com/r/headphones/s/vq4C1c1tvn" className="text-neon-cyan">oratory1990 explains it here</ExtLink>.
         </p>
         <p className="mb-6 max-w-2xl text-sm text-foreground/80">
-          Watch the units: <span className="text-neon-magenta">dB/mW</span> and <span className="text-neon-magenta">dB/V</span> are not interchangeable, and vendors quote whichever number flatters the product (<GlossaryLink term="sensitivity">how they convert</GlossaryLink>). And <span className="text-neon-cyan">planar magnetic</span> headphones care about <span className="text-neon-magenta">current</span> rather than damping factor, since their impedance is flat and resistive.
+          Watch the units: <span className="text-neon-magenta">dB/mW</span> and <span className="text-neon-magenta">dB/V</span> are not interchangeable, and vendors quote whichever number flatters the product (<GlossaryLink term="sensitivity">how they convert</GlossaryLink>).
         </p>
-        <p className="mb-6 max-w-2xl text-sm text-foreground/80">
-          The last column only covers the <a href="#phones" className="text-neon-cyan underline-offset-4 hover:underline">gear recommended on this page</a>, using each vendor's published <span className="text-neon-cyan">single-ended</span> and <span className="text-neon-cyan">balanced</span> figures. That's why the same dongle shows up in two rows: the QX13 on its <span className="text-neon-cyan">3.5mm</span> output is a different device from the QX13 on <span className="text-neon-cyan">4.4mm balanced</span>. <span className="text-neon-magenta">FiiO Air Link style adapters</span> are left out on purpose, since they transmit Bluetooth rather than amplify anything.
-        </p>
-        <div className="mb-6 max-w-2xl rounded-lg border border-neon-magenta/40 bg-neon-magenta/5 p-4 text-sm text-foreground/85">
-          <span className="font-semibold text-neon-magenta">The short version:</span> every headphone on this page is driven comfortably by the sources above, and the <GearLink>Qudelix 5K</GearLink> handles all of them. The table is for the awkward cases: hard-to-drive planars, 300 Ω classics, and sensitive <GlossaryLink term="iem">IEMs</GlossaryLink> that pick up hiss.
-        </div>
-        <DataTable
-          rows={[
-            {
-              profile: "Low Impedance + Low Sensitivity",
-              specs: "< 32 Ω, < 96 dB/mW",
-              demand: "High Current (I)",
-              target: "High continuous current output at low loads",
-              wrongAmp:
-                "The amp hits its current limit and clips on peaks. You hear distortion and squashed dynamics across the whole signal, not just the bass, and the amp gets hot and eats the phone battery",
-              examples:
-                "Hifiman Edition XS (18 Ω / 92 dB/mW), Dan Clark Audio Aeon 2 (13 Ω / ~92 dB/mW)",
-              sources: (
-                <>
-                  The <GearLink>FiiO QX13</GearLink> supplies the most current by a wide margin:
-                  250 mW per channel single-ended and 605 mW balanced into 32 Ω, rising to 310 and
-                  900 mW in desktop mode with the Estick battery attached. The{" "}
-                  <GearLink>Qudelix 5K</GearLink> is the next option but only on 2.5mm balanced
-                  (~240 mW into 32 Ω); its single-ended output (~80 mW into 32 Ω) runs short. The{" "}
-                  <GearLink>FiiO JIEZI</GearLink> is the wrong tool for a hard planar, and the{" "}
-                  <GearLink>Neutron HiFi DAC V1</GearLink> is clean on voltage but light on current —
-                  as is any dongle next to a desktop amp.
-                </>
-              ),
-            },
-            {
-              profile: "High Impedance + Low Sensitivity",
-              specs: "> 150 Ω, ≲ 97 dB/mW",
-              demand: "High Voltage (V)",
-              target: "High voltage swing (VRMS) at high loads",
-              wrongAmp:
-                "Simply too quiet: you run out of volume before the music is loud enough, and there is no headroom left once EQ applies negative pre-amp gain",
-              examples:
-                "Sennheiser HD 600 (300 Ω / ~97 dB/mW), Beyerdynamic DT 880 (250 Ω / 96 dB/mW), Beyerdynamic DT 990 Pro (250 Ω / 96 dB/mW)",
-              sources: (
-                <>
-                  This row is about volts, not milliwatts: 2 VRMS into 300 Ω is only ~13 mW, fine at
-                  average levels and tight on peaks. The <GearLink>FiiO QX13</GearLink> on 4.4mm
-                  balanced is the pick, rated 125 mW into 300 Ω against 40 mW single-ended, and{" "}
-                  <GearLink>Qudelix 5K</GearLink> on balanced roughly doubles its own swing and comes
-                  close. <GearLink>Neutron HiFi DAC V1</GearLink> runs cleanly at 2 VRMS but has no
-                  headroom left once you apply negative pre-amp gain for EQ, and a single-ended
-                  dongle like the <GearLink>FiiO JIEZI</GearLink> is out of its depth. Ignore
-                  milliwatt figures quoted into 32 Ω; they say nothing about 300 Ω. This is the row
-                  where a desktop amp genuinely earns its place.
-                </>
-              ),
-            },
-            {
-              profile: "Low Impedance + High Sensitivity",
-              specs: "< 32 Ω, > 100 dB/mW",
-              demand: "Ultra-low Noise Floor",
-              target: "Near-zero output impedance (< 1 Ω) and high SNR",
-              wrongAmp:
-                "Audible background hiss or static; on dynamic and multi-driver balanced-armature loads, bloated, loose or muddy bass from a low damping factor",
-              examples: (
-                <>
-                  Campfire Andromeda (~12.8 Ω / ~113 dB/mW), Shure SE846 (~9 Ω / ~114 dB/mW),{" "}
-                  <a href="#preferences" className="text-neon-cyan underline-offset-4 hover:underline">
-                    AKG K371
-                  </a>{" "}
-                  (32 Ω / 114 dB/V, ~99 dB/mW)
-                </>
-              ),
-              sources: (
-                <>
-                  Hiss and coarse volume steps are the problem here rather than power, so the{" "}
-                  <GearLink>Neutron HiFi DAC V1</GearLink> (&lt; 0.6 Ω output impedance, switchable
-                  1 VRMS mode) comes first, then <GearLink>Qudelix 5K</GearLink> (&lt; 1 Ω, precise
-                  hardware volume control) on single-ended. Stay in low gain and keep off the
-                  high-power balanced ports.
-                </>
-              ),
-            },
-            {
-              profile: "Medium Impedance + High Sensitivity",
-              specs: "~120 Ω, ~101 dB/mW",
-              demand: "Moderate Voltage & Clean Current",
-              target: "Clean, linear delivery with low output impedance",
-              wrongAmp:
-                "May need slightly more volume than a standard phone jack provides; otherwise easy to drive",
-              examples: (
-                <>
-                  <a href="#preferences" className="text-neon-cyan underline-offset-4 hover:underline">
-                    Sennheiser HD 560S
-                  </a>{" "}
-                  (120 Ω / 110 dB/V)
-                </>
-              ),
-              sources: (
-                <>
-                  120 Ω at 110 dB/V needs a fraction of a volt to play loud, so pick on features
-                  rather than power. <GearLink>Qudelix 5K</GearLink> (wired or LDAC),{" "}
-                  <GearLink>FiiO JIEZI</GearLink>, <GearLink>FiiO QX13</GearLink> and{" "}
-                  <GearLink>Neutron HiFi DAC V1</GearLink> all drive it cleanly.
-                </>
-              ),
-            },
-            {
-              profile: "High Impedance + High Sensitivity",
-              specs: "> 150 Ω, > 100 dB/mW",
-              demand: "Moderate Voltage (V)",
-              target: "Clean, linear voltage delivery",
-              wrongAmp: "Volume peaks feel a little restricted on weak sources, and dynamics get squashed",
-              examples: "Audio-Technica ATH-R70x (470 Ω / 99 dB/mW, ~102 dB/V)",
-              sources: (
-                <>
-                  <GearLink>Qudelix 5K</GearLink> on balanced, the <GearLink>FiiO QX13</GearLink> on
-                  4.4mm balanced, or <GearLink>Neutron HiFi DAC V1</GearLink> in its 2 VRMS mode all
-                  do the job. A plain single-ended dongle like the <GearLink>FiiO JIEZI</GearLink> is
-                  voltage-limited here, and a legacy smartphone headphone jack will feel restricted
-                  and quiet.
-                </>
-              ),
-            },
-          ]}
-        />
+
       </Section>
 
       <Divider />
