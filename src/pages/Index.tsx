@@ -87,11 +87,32 @@ const Index = () => {
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink>.</>,
-                <><span className="text-neon-magenta">Receiver:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k-dac-amp" className="text-neon-cyan">Qudelix 5K</ExtLink> as a <GlossaryLink term="ldac">LDAC</GlossaryLink> Bluetooth receiver, fed by a <ExtLink href="https://www.fiio.com/airlink" className="text-neon-cyan">FiiO Air Link</ExtLink> adapter — the same chain as the <a href="#headphones" className="text-neon-cyan underline-offset-4 hover:underline">HD 560S + Qudelix 5K</a> Bluetooth setup.</>,
+                <><span className="text-neon-magenta">Receiver:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k-dac-amp" className="text-neon-cyan">Qudelix 5K</ExtLink> as a <GlossaryLink term="ldac">LDAC</GlossaryLink> Bluetooth receiver, fed by a <ExtLink href="https://www.fiio.com/airlink" className="text-neon-cyan">FiiO Air Link</ExtLink> adapter.</>,
                 <><span className="text-neon-magenta">EQ:</span> none at all, or the <ExtLink href="https://www.rtings.com/headphones/learn/eq-repository" className="text-neon-cyan">rtings.com</ExtLink> target preference curve <span className="text-neon-cyan">PEQ</span> profile.</>,
               ]}
             />
+            <div className="mt-4 rounded-lg border border-neon-magenta/40 bg-neon-magenta/5 p-4">
+              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
+              <p className="mt-2 text-sm text-foreground/85">
+                Velcro the 5K to the headband, run <span className="text-neon-cyan">LDAC 990 kbps</span> and leave the tuning stock — <span className="text-neon-magenta">no EQ of any kind</span>. Use the balanced output when you want more headroom, or plug in over USB when you want it wired and bit-perfect. See the <a href="#demands" className="text-neon-cyan underline-offset-4 hover:underline">electrical demands table</a> for why this pairing has plenty of margin.
+              </p>
+            </div>
+            <div className="mt-4 grid grid-cols-2 gap-3">
+              <img
+                src={hd560sQudelixHeadband}
+                alt="Sennheiser HD 560S with a Qudelix 5K and its cable velcro-strapped to the headband"
+                loading="lazy"
+                className="h-40 w-full rounded-lg border border-border object-cover object-top md:h-48"
+              />
+              <img
+                src={hd560sQudelixFront}
+                alt="Sennheiser HD 560S held up front-on with the Qudelix 5K mounted on the headband"
+                loading="lazy"
+                className="h-40 w-full rounded-lg border border-border object-cover object-top md:h-48"
+              />
+            </div>
           </Card>
+
           <Card title="6 · Audio-Technica ATH-M50x BT2 — wireless">
             <Bullets
               items={[
@@ -118,6 +139,19 @@ const Index = () => {
           </Card>
         </div>
       </Section>
+
+      <Divider />
+
+      <Section id="preferences" icon={Headphones} title="Finding your own preferences" tone="purple">
+        <div className="grid gap-5 md:grid-cols-2">
+          <Card title="Start with two reference tunings">
+            <p>
+              If you're new to this and want to figure out your own preferences before spending big, try the <ExtLink href="https://www.akg.com/Headphones/Professional%20Headphones/K371.html" className="text-neon-cyan">AKG K371</ExtLink> (<span className="text-neon-magenta">closed-back</span>, tuned to the <span className="text-neon-cyan">Harman</span> target) alongside the <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink> (<span className="text-neon-magenta">open-back</span>, <span className="text-neon-cyan">diffuse-field</span> / flat). Load them into <ExtLink href="https://www.extreamsd.com/index.php/products/usb-audio-player-pro" className="text-neon-cyan">USB Audio Player Pro</ExtLink> with <ExtLink href="https://www.toneboosters.com/tb_morphit_v1.html" className="text-neon-cyan">ToneBoosters MorphIt</ExtLink> and A/B different target curves — you'll quickly work out whether you prefer open vs closed, and Harman vs diffuse-field.
+            </p>
+          </Card>
+        </div>
+      </Section>
+
 
       <Divider />
 
@@ -282,126 +316,6 @@ const Index = () => {
 
       <Divider />
 
-      <Section id="headphones" icon={Headphones} title="Headphones & Earbuds" tone="purple">
-        <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          A short list of <span className="text-neon-cyan">headphones</span> and <span className="text-neon-cyan">earbuds</span> I keep coming back to, with the exact <span className="text-neon-cyan">app</span>, <span className="text-neon-cyan">EQ</span> and <span className="text-neon-magenta">DSP</span> settings that get the most fun out of each one.
-        </p>
-        <div className="mb-6 max-w-2xl space-y-2 rounded-lg border border-neon-cyan/20 bg-neon-cyan/5 p-4 text-sm text-foreground/80">
-          <p>
-            <span className="font-semibold text-neon-cyan">Order:</span> <span className="text-neon-cyan">alphabetical</span> by model name within each subsection.
-          </p>
-          <p>
-            <span className="font-semibold text-neon-cyan">Legend:</span> Bongiovi DPS city profiles come in two flavours — <span className="text-neon-cyan">H</span> (Headphones) and <span className="text-neon-cyan">G</span> (General). Both are worth A/B'ing; G often has nicer highs, H is usually safer.
-          </p>
-        </div>
-        <p className="mb-8 max-w-2xl text-base text-foreground/90">
-          If you're new to this and want to figure out your own preferences before spending big, try the <ExtLink href="https://www.akg.com/Headphones/Professional%20Headphones/K371.html" className="text-neon-cyan">AKG K371</ExtLink> (<span className="text-neon-magenta">closed-back</span>, tuned to the <span className="text-neon-cyan">Harman</span> target) alongside the <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink> (<span className="text-neon-magenta">open-back</span>, <span className="text-neon-cyan">diffuse-field</span> / flat). Load them into <ExtLink href="https://www.extreamsd.com/index.php/products/usb-audio-player-pro" className="text-neon-cyan">USB Audio Player Pro</ExtLink> with <ExtLink href="https://www.toneboosters.com/tb_morphit_v1.html" className="text-neon-cyan">ToneBoosters MorphIt</ExtLink> and A/B different target curves — you'll quickly work out whether you prefer open vs closed, and Harman vs diffuse-field.
-        </p>
-
-        <SubHeading spaced={false}>Recommended · Wired headphones</SubHeading>
-        <div className="grid gap-5 md:grid-cols-2">
-          <Card title="Sennheiser HD 560S" href="https://en-uk.sennheiser.com/hd-560s">
-            <Bullets
-              items={[
-                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">wired over-ear</span> (open-back)</>,
-                <><span className="text-neon-magenta">ANC:</span> No</>,
-                <><span className="text-neon-magenta">Wired:</span> 3.5mm (6.3mm adapter)</>,
-                <><span className="text-neon-magenta">Others:</span> diffuse-field / neutral tuning, open-back soundstage, easy to drive.</>,
-              ]}
-            />
-          </Card>
-        </div>
-
-        <SubHeading>Recommended · Bluetooth headphones</SubHeading>
-        <div className="grid gap-5 md:grid-cols-2">
-          <Card title="Audio Technica ATH-M50x BT2" href="https://www.audio-technica.com/en-us/ath-m50xbt2">
-            <Bullets
-              items={[
-                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">wireless over-ear</span> (closed-back)</>,
-                <><span className="text-neon-magenta">ANC:</span> No</>,
-                <><span className="text-neon-magenta">Wired:</span> 3.5mm</>,
-                <><span className="text-neon-magenta">Others:</span> the same sonic signature of the legendary ATH-M50x studio headphones, multipoint connection, large-aperture drivers deliver deep and accurate bass response, AK4331 advanced audio DAC and dedicated internal headphone amp, LDAC.</>,
-              ]}
-            />
-          </Card>
-
-          <Card title="Sennheiser HD 560S + Qudelix 5K">
-            <Bullets
-              items={[
-                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">wired open-back over-ear</span> made wireless with a clip-on <span className="text-neon-cyan">Bluetooth DAC/amp</span></>,
-                <><span className="text-neon-magenta">ANC:</span> No</>,
-                <><span className="text-neon-magenta">Wired:</span> 3.5mm into the <GearLink>Qudelix 5K</GearLink>, or USB-C from the phone for bit-perfect playback</>,
-                <><span className="text-neon-magenta">Others:</span> <span className="text-neon-cyan">LDAC up to 990 kbps</span>, independent hardware volume, <span className="text-neon-cyan">AutoEQ</span> profiles in the Qudelix app, balanced output for extra headroom.</>,
-              ]}
-            />
-            <div className="mt-4 rounded-lg border border-neon-magenta/40 bg-neon-magenta/5 p-4">
-              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
-              <p className="mt-2 text-sm text-foreground/85">
-                Velcro the 5K to the headband, run <span className="text-neon-cyan">LDAC 990 kbps</span> and leave the tuning stock — <span className="text-neon-magenta">no EQ of any kind</span>. Use the balanced output when you want more headroom, or plug in over USB when you want it wired and bit-perfect. See the <a href="#demands" className="text-neon-cyan underline-offset-4 hover:underline">electrical demands table</a> for why this pairing has plenty of margin.
-              </p>
-            </div>
-            <div className="mt-4 grid grid-cols-2 gap-3">
-              <img
-                src={hd560sQudelixHeadband}
-                alt="Sennheiser HD 560S with a Qudelix 5K and its cable velcro-strapped to the headband"
-                loading="lazy"
-                className="h-40 w-full rounded-lg border border-border object-cover object-top md:h-48"
-              />
-              <img
-                src={hd560sQudelixFront}
-                alt="Sennheiser HD 560S held up front-on with the Qudelix 5K mounted on the headband"
-                loading="lazy"
-                className="h-40 w-full rounded-lg border border-border object-cover object-top md:h-48"
-              />
-            </div>
-          </Card>
-        </div>
-
-        <SubHeading>Also owned and tested · in-ear and open-ear</SubHeading>
-        <div className="grid gap-5 md:grid-cols-3">
-          <Card title="Moondrop × Wuthering Waves U.C.T.S." href="https://moondroplab.com/en/products/u-c-t-s">
-            <Bullets
-              items={[
-                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">open-ear</span> (clip-on / <GlossaryLink term="ows">OWS</GlossaryLink>)</>,
-                <><span className="text-neon-magenta">ANC:</span> No</>,
-                <><span className="text-neon-magenta">Wired:</span> N/A</>,
-                <><span className="text-neon-magenta">Others:</span> Wuthering Waves collaboration edition, clip-on open-ear fit that leaves the canal free, app-based EQ profiles.</>,
-              ]}
-            />
-          </Card>
-
-
-
-          <Card title="Moondrop Pill" href="https://moondroplab.com/en/products/pill">
-            <Bullets
-              items={[
-                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">open-ear</span> (ear-clip / OWS)</>,
-                <><span className="text-neon-magenta">ANC:</span> No</>,
-                <><span className="text-neon-magenta">Wired:</span> N/A</>,
-                <><span className="text-neon-magenta">Others:</span> Bluetooth 6.0, dual device connectivity, one-click auto EQ with community-driven EQ profiles.</>,
-              ]}
-            />
-          </Card>
-        </div>
-
-        <SubHeading>Also owned and tested · over-ear</SubHeading>
-        <div className="grid gap-5 md:grid-cols-3">
-          <Card title="AKG K371" href="https://www.akg.com/Headphones/Professional%20Headphones/K371.html">
-            <Bullets
-              items={[
-                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">wired over-ear</span></>,
-                <><span className="text-neon-magenta">ANC:</span> No</>,
-                <><span className="text-neon-magenta">Wired:</span> 3.5mm</>,
-                <><span className="text-neon-magenta">Others:</span> famously close to the Harman target out of the box.</>,
-              ]}
-            />
-          </Card>
-
-        </div>
-      </Section>
-
-      <Divider />
-
       <Section id="demands" icon={Gauge} title="Headphone electrical demands" tone="purple">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
           Two numbers decide how picky a headphone is about its source: <span className="text-neon-cyan">impedance</span> (Ω) and <GlossaryLink term="sensitivity">sensitivity</GlossaryLink> (dB/mW or dB/V). Match them to the right amplifier or DAC and the headphone sings; mismatch them and you get hiss, clipping, or not enough volume headroom.
@@ -472,7 +386,7 @@ const Index = () => {
               examples: (
                 <>
                   Campfire Andromeda (~12.8 Ω / ~113 dB/mW), Shure SE846 (~9 Ω / ~114 dB/mW),{" "}
-                  <a href="#headphones" className="text-neon-cyan underline-offset-4 hover:underline">
+                  <a href="#preferences" className="text-neon-cyan underline-offset-4 hover:underline">
                     AKG K371
                   </a>{" "}
                   (32 Ω / 114 dB/V, ~99 dB/mW)
@@ -496,7 +410,7 @@ const Index = () => {
                 "May need slightly more volume than a standard phone jack provides; otherwise easy to drive",
               examples: (
                 <>
-                  <a href="#headphones" className="text-neon-cyan underline-offset-4 hover:underline">
+                  <a href="#preferences" className="text-neon-cyan underline-offset-4 hover:underline">
                     Sennheiser HD 560S
                   </a>{" "}
                   (120 Ω / 110 dB/V)
