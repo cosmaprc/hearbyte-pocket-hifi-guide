@@ -206,6 +206,8 @@ const Index = () => {
             <Bullets
               items={[
                 <>For phones without a headphone jack, or when you want bit-perfect hi-res out to wired headphones. Paired with <ExtLink href="https://www.extreamsd.com/index.php/products/usb-audio-player-pro" className="text-neon-cyan">USB Audio Player Pro</ExtLink> or <ExtLink href="https://neutronmp.com/" className="text-neon-cyan">Neutron</ExtLink>, a USB DAC receives audio <span className="text-neon-magenta">directly and bit-perfect</span> at full resolution (e.g. <span className="text-neon-cyan">24-bit / 192 kHz</span>), bypassing Android's system mixer and <GlossaryLink term="src">SRC resampling</GlossaryLink>.</>,
+                <>Check <span className="text-neon-magenta">compatibility and known issues for your exact phone model</span> before buying. USB DAC behaviour is not consistent across handsets.</>,
+                <>Two examples from my own use: the <span className="text-neon-cyan">FiiO KA11</span> works fine on Android and a Lightning iPhone 14, but goes <span className="text-neon-magenta">monophonic</span> on an iPhone 17 Pro Max in a way that looks potentially unsafe. The <span className="text-neon-cyan">Hidizs S9 Pro Plus</span> on firmware 1.0 broke on first use on an iPhone 17 Pro Max, having worked fine on Android and the Lightning iPhone 14.</>,
               ]}
             />
           </Card>
@@ -270,6 +272,9 @@ const Index = () => {
               <p>One of the first dongles to put real <span className="text-neon-cyan">DSP</span> on the device: almost everything from the Neutron Player, plus extras like <span className="text-neon-cyan">THD Compensation</span>. The manual is unusually thorough and worth reading properly.</p>
             </Card>
           </div>
+          <p className="mt-4 text-sm text-foreground/85">
+            <span className="font-semibold text-neon-magenta">A warning on FiiO's PEQ software:</span> it is buggy. At the time of writing, on both the JIEZI and the QX13, <span className="text-neon-cyan">Q</span> values on some bands shifted their decimals on their own, and the <span className="text-neon-cyan">preamp</span> field would only accept whole numbers.
+          </p>
         </div>
 
       </Section>
