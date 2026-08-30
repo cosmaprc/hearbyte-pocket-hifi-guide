@@ -272,6 +272,9 @@ const Index = () => {
               <p>One of the first dongles to put real <span className="text-neon-cyan">DSP</span> on the device: almost everything from the Neutron Player, plus extras like <span className="text-neon-cyan">THD Compensation</span>. The manual is unusually thorough and worth reading properly.</p>
             </Card>
           </div>
+          <p className="mt-4 text-sm text-foreground/85">
+            <span className="font-semibold text-neon-magenta">A warning on FiiO's PEQ software:</span> it is buggy. At the time of writing, on both the JIEZI and the QX13, <span className="text-neon-cyan">Q</span> values on some bands shifted their decimals on their own, and the <span className="text-neon-cyan">preamp</span> field would only accept whole numbers.
+          </p>
         </div>
 
       </Section>
