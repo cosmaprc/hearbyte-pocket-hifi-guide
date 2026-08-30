@@ -441,35 +441,7 @@ const Index = () => {
             </div>
           </Card>
 
-          <Card title="Cambridge Audio P100SE" href="https://www.cambridgeaudio.com/usa/en/products/melomania/melomania-p100-se">
-            <Bullets
-              items={[
-                <><span className="text-neon-magenta">Form Factor:</span> <span className="text-neon-cyan">wireless over-ear</span></>,
-                <><span className="text-neon-magenta">ANC:</span> Yes</>,
-                <><span className="text-neon-magenta">Wired:</span> 3.5mm / USB-C</>,
-                <><span className="text-neon-magenta">Others:</span> Class A/B hi-fi grade amplification, aptX Lossless, user replaceable battery and earcups, DynamEQ, 7-band EQ, multipoint connection, fast charge.</>,
-              ]}
-            />
-            <div className="mt-4 rounded-lg border border-border bg-background/40 p-4">
-              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
-              <p className="mt-2 text-sm text-foreground/85">
-                Over Bluetooth, set the <span className="text-neon-cyan">Melomania app</span> EQ to <span className="text-neon-magenta">Normal</span> and toggle between the <span className="text-neon-magenta">Blues</span> and <span className="text-neon-magenta">Voice</span> tone presets, then stack a jetAudio chain.
-              </p>
-              <dl className="mt-3 space-y-2 text-sm">
-                <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">EQ: Normal + Blues</dt>
-                  <dd className="text-foreground/85"><span className="text-neon-magenta">AM3D:</span> Ballad · <span className="text-neon-magenta">Bongiovi:</span> New York H</dd>
-                </div>
-                <div>
-                  <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">EQ: Normal + Voice</dt>
-                  <dd className="text-foreground/85"><span className="text-neon-magenta">Bongiovi:</span> London H, Atlanta H, New York H</dd>
-                </div>
-              </dl>
-              <p className="mt-3 text-sm text-foreground/85">
-                If the <span className="text-neon-magenta">sub-bass</span> feels overwhelming, drop the <span className="text-neon-cyan">leftmost slider</span> of the <span className="text-neon-cyan">Melomania app</span>'s EQ — you'll tame the rumble while keeping plenty of punch. Especially handy on the <span className="text-neon-magenta">Flat</span>, <span className="text-neon-magenta">Electronic</span> and <span className="text-neon-magenta">Rock</span> presets.
-              </p>
-            </div>
-          </Card>
+        
         </div>
       </Section>
 
