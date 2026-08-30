@@ -639,11 +639,11 @@ const Index = () => {
           <Card title="Reviews">
             <Bullets
               items={[
-                <><ExtLink href="https://www.pragmaticaudio.com/" className="text-neon-cyan">Pragmatic Audio</ExtLink> — in-depth headphone and IEM reviews with measurement data.</>,
-                <><ExtLink href="https://www.headphoneer.com/" className="text-neon-cyan">Headphoneer</ExtLink> — written reviews of headphones, IEMs, amps and DACs.</>,
-                <><ExtLink href="https://www.head-fi.org/" className="text-neon-cyan">Head-Fi</ExtLink> — long-running headphone enthusiast reviews.</>,
-                <><ExtLink href="https://www.audiosciencereview.com/forum/index.php" className="text-neon-cyan">Audio Science Review</ExtLink> — objective, measurement-led gear reviews.</>,
-                <><ExtLink href="https://www.rtings.com/headphones" className="text-neon-cyan">RTINGS</ExtLink> — detailed headphone reviews with consistent measurement methodology.</>,
+                <><ExtLink href="https://www.pragmaticaudio.com/" className="text-neon-cyan">Pragmatic Audio</ExtLink> — long headphone and IEM reviews, always with the measurements.</>,
+                <><ExtLink href="https://www.headphoneer.com/" className="text-neon-cyan">Headphoneer</ExtLink> covers headphones, IEMs, amps and DACs in writing rather than video.</>,
+                <><ExtLink href="https://www.head-fi.org/" className="text-neon-cyan">Head-Fi</ExtLink> — decades of enthusiast impressions, for better and worse.</>,
+                <><ExtLink href="https://www.audiosciencereview.com/forum/index.php" className="text-neon-cyan">Audio Science Review</ExtLink> starts from the measurements and argues from there.</>,
+                <><ExtLink href="https://www.rtings.com/headphones" className="text-neon-cyan">RTINGS</ExtLink> — the same test methodology applied to everything, which makes comparisons actually mean something.</>,
               ]}
             />
           </Card>
