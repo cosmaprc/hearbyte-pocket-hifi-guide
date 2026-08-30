@@ -4,7 +4,9 @@ Add one bullet to each phone card in Phones & Accessories, after the existing bu
 
 ## Android phones card
 
-Volume control is the catch: most Androids give you a coarse slider of roughly 15 steps, so the right listening level often sits between two of them. You get finer control only if the headphones or the dongle have their own independent volume.
+Volume control is the catch: most Androids give you a coarse slider of roughly 15 steps, so the right listening level often sits between two of them. You get finer control only if the headphones or the dongle have their own independent volume. Samsung phones sometimes ship extra volume tools of their own; failing that, an app like Precise Volume 2.0 can split the steps up.
+
+- "Precise Volume 2.0" links to its Play Store page via `ExtLink`.
 
 ## iPhones card
 
