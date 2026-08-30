@@ -51,6 +51,7 @@ const Index = () => {
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink>.</>,
+                <><span className="text-neon-magenta">EQ:</span> none, otherwise the <span className="text-neon-cyan">PEQ</span> profile above.</>,
                 <>
                   <span className="text-neon-magenta">DAC:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> over <span className="text-neon-cyan">USB</span>, set to draw power from <span className="text-neon-cyan">USB-C</span> rather than its internal battery.
                   <div className="mt-2 rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-3 text-sm">
