@@ -32,7 +32,7 @@ const Index = () => {
 
       <Divider />
 
-      <Section id="chain" icon={Zap} title="My preferred audio chain" tone="magenta">
+      <Section id="chain" icon={Zap} title="My preferred audio chains" tone="magenta">
         <SubHeading spaced={false}>Shared base · every chain starts here</SubHeading>
         <div className="grid gap-5 md:grid-cols-2">
           <Card title="Source &amp; app">
