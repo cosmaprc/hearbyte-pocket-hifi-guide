@@ -446,6 +446,22 @@ const Index = () => {
           Watch the units: <span className="text-neon-magenta">dB/mW</span> and <span className="text-neon-magenta">dB/V</span> are not interchangeable, and vendors quote whichever number flatters the product (<GlossaryLink term="sensitivity">how they convert</GlossaryLink>).
         </p>
 
+        <div className="max-w-2xl rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-4 text-sm text-foreground/90">
+          <div className="font-display text-neon-magenta">Important · intersample clipping and headroom</div>
+          <p className="mt-2">
+            Playing music from a computer or phone, the sound cannot distort or clip <span className="text-neon-cyan">digitally</span> unless you push the volume or EQ too high in software. Even when your software settings look safe, a hidden kind of distortion called <span className="text-neon-magenta">intersample clipping</span> can still happen inside the hardware. It occurs when the digital audio is turned back into a real waveform and the peaks of that waveform overshoot what the hardware can handle.
+          </p>
+          <p className="mt-2">
+            To stay clear of it, run the numbers through a free <span className="text-neon-cyan">headphone power calculator</span>. Different music needs different amounts of breathing room, or <span className="text-neon-magenta">headroom</span>: rock wants around <span className="text-neon-cyan">10 dB</span>, while acoustic and jazz want around <span className="text-neon-cyan">14 dB</span> for sudden peaks like a drum hit. The calculator tells you whether your portable DAC/amp dongle has enough output left to handle your genres cleanly — after <GlossaryLink term="replaygain">loudness normalization</GlossaryLink> pulls the level down (Spotify-style loudness matching), and after you lower the preamp yourself to make room for an <span className="text-neon-cyan">EQ</span> bass boost.
+          </p>
+          <p className="mt-3 text-neon-magenta">Calculators</p>
+          <ul className="mt-1 space-y-1">
+            <li><ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=97&u=dbv&z=300&v=1.0&spl=85&hr=10" className="text-neon-cyan">theaudiostuff.com headphone power calculator</ExtLink> — pre-filled with a 300 Ω, 97 dB/V example at 1.0 V and 10 dB headroom.</li>
+            <li><ExtLink href="https://www.headphonesty.com/headphone-power-calculator/" className="text-neon-cyan">Headphonesty headphone power calculator</ExtLink></li>
+            <li><ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">Headphones.com power calculator</ExtLink></li>
+          </ul>
+        </div>
+
       </Section>
 
       <Divider />
