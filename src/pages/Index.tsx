@@ -221,7 +221,7 @@ const Index = () => {
           </Card>
         </div>
 
-        <SubHeading>Recommended · one box for both jobs</SubHeading>
+        <SubHeading>Recommended</SubHeading>
         <div className="grid gap-5 md:grid-cols-2">
           <Card title="Qudelix 5K" href="https://www.qudelix.com/products/qudelix-5k">
             <p className="text-sm text-foreground/85">
