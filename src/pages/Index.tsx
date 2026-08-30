@@ -121,7 +121,27 @@ const Index = () => {
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://www.akg.com/Headphones/Professional%20Headphones/K371.html" className="text-neon-cyan">AKG K371</ExtLink>.</>,
-                <><span className="text-neon-magenta">DAC:</span> <ExtLink href="https://fiio.com/newsinfo/1065510.html" className="text-neon-cyan">FiiO JIEZI</ExtLink>.</>,
+                <>
+                  <span className="text-neon-magenta">DAC:</span> <ExtLink href="https://fiio.com/newsinfo/1065510.html" className="text-neon-cyan">FiiO JIEZI</ExtLink>.
+                  <div className="mt-2 rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-3 text-sm">
+                    <div className="text-neon-magenta">Can it drive it?</div>
+                    <ul className="mt-1 space-y-0.5">
+                      <li>Sensitivity: <span className="text-neon-cyan">99 dB SPL/mW</span></li>
+                      <li>Impedance: <span className="text-neon-cyan">32 Ω</span></li>
+                      <li>Target average loudness: <span className="text-neon-cyan">90 dB SPL</span></li>
+                      <li>Sound Check headroom: <span className="text-neon-cyan">7 dB</span> (so <span className="text-neon-cyan">98 dB</span> average at the amp)</li>
+                      <li><span className="text-neon-cyan">PEQ</span> preamp headroom: <span className="text-neon-cyan">~3 dB</span></li>
+                      <li>Crest factor, jazz / acoustic: <span className="text-neon-cyan">14 dB</span></li>
+                      <li>Peak needed: 90 + 7 + 3 + 14 = <span className="text-neon-cyan">114 dB SPL</span></li>
+                      <li>Power / voltage needed: <span className="text-neon-cyan">~800 mW</span> / <span className="text-neon-cyan">~0.8 V</span></li>
+                      <li>FiiO JIEZI on <span className="text-neon-cyan">3.5 mm single-ended</span>: <span className="text-neon-cyan">1 V</span></li>
+                      <li>Verdict: <span className="text-neon-cyan">yes</span>.</li>
+                    </ul>
+                    <div className="mt-1">
+                      Run the numbers yourself: <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=99&u=dbmw&z=32&v=1&spl=98&hr=14" className="text-neon-cyan">headphone power calculator</ExtLink> (pre-filled).
+                    </div>
+                  </div>
+                </>,
                 <><span className="text-neon-magenta">EQ:</span> the <span className="text-neon-cyan">PEQ</span> profile above, always on.</>,
               ]}
             />
