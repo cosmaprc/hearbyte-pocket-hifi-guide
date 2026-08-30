@@ -76,7 +76,7 @@ const Index = () => {
           <Card title="The chain">
             <Bullets
               items={[
-                <><span className="text-neon-magenta">Source:</span> Android phone with <GlossaryLink term="ldac">LDAC</GlossaryLink>.</>,
+                <><span className="text-neon-magenta">Source:</span> <span className="text-neon-cyan">iPhone</span>.</>,
                 <><span className="text-neon-magenta">App:</span> <ExtLink href="https://music.apple.com/" className="text-neon-cyan">Apple Music</ExtLink> — <GlossaryLink term="soundcheck">Sound Check</GlossaryLink> on, every other DSP including <span className="text-neon-cyan">Dolby Atmos</span> off.</>,
                 <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink> — no EQ of any kind.</>,
                 <><span className="text-neon-magenta">DAC / Bluetooth receiver:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k-dac-amp" className="text-neon-cyan">Qudelix 5K</ExtLink> — either wireless over Bluetooth at <span className="text-neon-cyan">LDAC 990 kbps</span>, or wired.</>,
