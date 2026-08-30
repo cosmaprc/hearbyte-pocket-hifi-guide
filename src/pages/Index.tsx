@@ -448,13 +448,13 @@ const Index = () => {
               specs: "> 150 Ω, > 100 dB/mW",
               demand: "Moderate Voltage (V)",
               target: "Clean, linear voltage delivery",
-              wrongAmp: "Slightly restricted volume peaks on weak sources; compressed dynamics",
+              wrongAmp: "Volume peaks feel a little restricted on weak sources, and dynamics get squashed",
               examples: "Audio-Technica ATH-R70x (470 Ω / 99 dB/mW, ~102 dB/V)",
               sources: (
                 <>
                   <GearLink>Qudelix 5K</GearLink> on balanced or{" "}
-                  <GearLink>Neutron HiFi DAC V1</GearLink> in its 2 VRMS mode are both adequate. The{" "}
-                  <GearLink>FiiO KA11</GearLink> is voltage-limited despite its power rating, and a
+                  <GearLink>Neutron HiFi DAC V1</GearLink> in its 2 VRMS mode both do the job. The{" "}
+                  <GearLink>FiiO KA11</GearLink> is voltage-limited despite its power rating, and an
                   legacy smartphone headphone jack will feel restricted and quiet.
                 </>
               ),
