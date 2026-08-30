@@ -124,7 +124,7 @@ const Index = () => {
           <Card title="7 · Moondrop × Wuthering Waves U.C.T.S. — wireless">
             <Bullets
               items={[
-                <><span className="text-neon-magenta">Earphones:</span> <ExtLink href="https://moondroplab.com/en/products/u-c-t-s" className="text-neon-cyan">Moondrop × Wuthering Waves U.C.T.S.</ExtLink> open-ear clip-ons.</>,
+                <><span className="text-neon-magenta">Earphones:</span> <ExtLink href="https://moondroplab.com/en/products/u-c-t-s" className="text-neon-cyan">Moondrop × Wuthering Waves U.C.T.S.</ExtLink> open-ear (<GlossaryLink term="ows">OWS</GlossaryLink>) clip-ons.</>,
                 <><span className="text-neon-magenta">Connection:</span> <ExtLink href="https://www.tempotec.net/" className="text-neon-cyan">Tempotec LHDC One</ExtLink> Bluetooth adapter.</>,
               ]}
             />
@@ -146,7 +146,7 @@ const Index = () => {
         <div className="grid gap-5 md:grid-cols-2">
           <Card title="Start with two reference tunings">
             <p>
-              If you're new to this and want to figure out your own preferences before spending big, try the <ExtLink href="https://www.akg.com/Headphones/Professional%20Headphones/K371.html" className="text-neon-cyan">AKG K371</ExtLink> (<span className="text-neon-magenta">closed-back</span>, tuned to the <span className="text-neon-cyan">Harman</span> target) alongside the <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink> (<span className="text-neon-magenta">open-back</span>, <span className="text-neon-cyan">diffuse-field</span> / flat). Load them into <ExtLink href="https://www.extreamsd.com/index.php/products/usb-audio-player-pro" className="text-neon-cyan">USB Audio Player Pro</ExtLink> with <ExtLink href="https://www.toneboosters.com/tb_morphit_v1.html" className="text-neon-cyan">ToneBoosters MorphIt</ExtLink> and A/B different target curves — you'll quickly work out whether you prefer open vs closed, and Harman vs diffuse-field.
+              If you're new to this and want to figure out your own preferences before spending big, try the <ExtLink href="https://www.akg.com/Headphones/Professional%20Headphones/K371.html" className="text-neon-cyan">AKG K371</ExtLink> (<span className="text-neon-magenta">closed-back</span>, tuned to the <span className="text-neon-cyan">Harman</span> target) alongside the <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink> (<span className="text-neon-magenta">open-back</span>, <span className="text-neon-cyan">diffuse-field</span> / flat). Load them into <ExtLink href="https://www.extreamsd.com/index.php/products/usb-audio-player-pro" className="text-neon-cyan">USB Audio Player Pro</ExtLink> with <ExtLink href="https://www.toneboosters.com/tb_morphit_v1.html" className="text-neon-cyan">ToneBoosters MorphIt</ExtLink> and A/B different <GlossaryLink term="target">target curves</GlossaryLink> — you'll quickly work out whether you prefer open vs closed, and Harman vs diffuse-field.
             </p>
           </Card>
         </div>
@@ -318,7 +318,7 @@ const Index = () => {
               items={[
                 <><ExtLink href="https://play.google.com/store/apps/details?id=com.extreamsd.usbaudioplayerpro" className="text-neon-cyan">Android</ExtLink> only</>,
                 <><span className="text-neon-cyan">ReplayGain</span> support with manual <span className="text-neon-cyan">preamp</span> adjustment</>,
-                <>Includes <span className="text-neon-magenta">Parametric EQ</span> and <ExtLink href="https://www.toneboosters.com/tb_morphit_v1.html" className="text-neon-magenta">ToneBoosters MorphIt</ExtLink> — apply target curves like <span className="text-neon-cyan">Harman</span> or <span className="text-neon-cyan">HiFi</span> to supported headphones, or make one headphone sound like another.</>,
+                <>Includes <span className="text-neon-magenta">Parametric EQ</span> and <ExtLink href="https://www.toneboosters.com/tb_morphit_v1.html" className="text-neon-magenta">ToneBoosters MorphIt</ExtLink> — apply <GlossaryLink term="target">target curves</GlossaryLink> like <span className="text-neon-cyan">Harman</span> or <span className="text-neon-cyan">HiFi</span> to supported headphones, or make one headphone sound like another.</>,
               ]}
             />
           </Card>
@@ -341,7 +341,7 @@ const Index = () => {
           The last column only covers the <a href="#phones" className="text-neon-cyan underline-offset-4 hover:underline">gear recommended on this page</a>, using each vendor's published <span className="text-neon-cyan">single-ended</span> and <span className="text-neon-cyan">balanced</span> output figures — which is why the same dongle can appear in two rows depending on which output you plug into. <span className="text-neon-magenta">FiiO Air Link style adapters</span> are missing on purpose: they transmit Bluetooth to wireless headphones rather than amplifying wired ones, so they don't drive any of these profiles directly.
         </p>
         <div className="mb-6 max-w-2xl rounded-lg border border-neon-magenta/40 bg-neon-magenta/5 p-4 text-sm text-foreground/85">
-          <span className="font-semibold text-neon-magenta">If you only read one line:</span> every headphone recommended on this page is driven comfortably by the sources recommended above — the <GearLink>Qudelix 5K</GearLink> covers all of them. The table below is for the edge cases: hard-to-drive planars, 300 Ω classics and hiss-prone sensitive IEMs.
+          <span className="font-semibold text-neon-magenta">If you only read one line:</span> every headphone recommended on this page is driven comfortably by the sources recommended above — the <GearLink>Qudelix 5K</GearLink> covers all of them. The table below is for the edge cases: hard-to-drive planars, 300 Ω classics and hiss-prone sensitive <GlossaryLink term="iem">IEMs</GlossaryLink>.
         </div>
         <DataTable
           rows={[
