@@ -5,7 +5,6 @@ import Section from "@/components/hearbyte/Section";
 import Card from "@/components/hearbyte/Card";
 import Bullets from "@/components/hearbyte/Bullets";
 import Divider from "@/components/hearbyte/Divider";
-import DataTable from "@/components/hearbyte/DataTable";
 import SubHeading from "@/components/hearbyte/SubHeading";
 import TableOfContents from "@/components/hearbyte/TableOfContents";
 import { Smartphone, Sliders, Headphones, Volume2, BookOpen, Link, FolderInput, Zap, Gauge } from "lucide-react";
