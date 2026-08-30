@@ -396,10 +396,10 @@ const Index = () => {
                   balanced is the pick, rated 125 mW into 300 Ω against 40 mW single-ended, and{" "}
                   <GearLink>Qudelix 5K</GearLink> on balanced roughly doubles its own swing and comes
                   close. <GearLink>Neutron HiFi DAC V1</GearLink> runs cleanly at 2 VRMS but has no
-                  headroom left once you apply negative pre-amp gain for EQ. A single-ended dongle
-                  like the <GearLink>FiiO JIEZI</GearLink> is out of its depth here, and a big
-                  milliwatt figure into 32 Ω tells you nothing at 300 Ω. A desktop amp is still the
-                  right answer.
+                  headroom left once you apply negative pre-amp gain for EQ, and a single-ended
+                  dongle like the <GearLink>FiiO JIEZI</GearLink> is out of its depth. Ignore
+                  milliwatt figures quoted into 32 Ω; they say nothing about 300 Ω. This is the row
+                  where a desktop amp genuinely earns its place.
                 </>
               ),
             },
