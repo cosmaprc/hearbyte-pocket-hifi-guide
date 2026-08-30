@@ -4,7 +4,7 @@ Turn the single "The chain" card into a shared base plus one card per chain, in 
 
 ## Shared base (shown once, above the chain cards)
 - Source: iPhone
-- App: Apple Music — Sound Check on
+- App: Apple Music — Lossless 24-bit / 48 kHz, Sound Check on
 
 ## Chain cards (each: headphones -> DAC/adapter -> EQ)
 1. Sennheiser HD 560S — Qudelix 5K or FiiO QX13; no EQ, or the RTINGS target preference curve PEQ profile
