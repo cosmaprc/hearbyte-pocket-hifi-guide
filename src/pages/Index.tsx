@@ -79,7 +79,6 @@ const Index = () => {
                     <span className="text-neon-magenta">Can it drive it?</span> <span className="text-neon-cyan">Yes</span> — max output is <span className="text-neon-cyan">6.19 V</span>.
                   </div>
                 </>,
-                <><span className="text-neon-magenta">EQ:</span> none, otherwise the <span className="text-neon-cyan">PEQ</span> profile above.</>,
               ]}
             />
           </Card>
