@@ -375,8 +375,8 @@ const Index = () => {
                   <GearLink>Qudelix 5K</GearLink> is the next option but only on 2.5mm balanced
                   (~240 mW into 32 Ω); its single-ended output (~80 mW into 32 Ω) runs short. The{" "}
                   <GearLink>FiiO JIEZI</GearLink> is the wrong tool for a hard planar, and the{" "}
-                  <GearLink>Neutron HiFi DAC V1</GearLink> is clean on voltage but light on current.
-                  None of them beat a desktop amp here.
+                  <GearLink>Neutron HiFi DAC V1</GearLink> is clean on voltage but light on current —
+                  as is any dongle next to a desktop amp.
                 </>
               ),
             },
