@@ -106,7 +106,7 @@ const Index = () => {
                       <li>Verdict: <span className="text-neon-cyan">yes</span>.</li>
                     </ul>
                     <div className="mt-1">
-                      Run the numbers yourself: <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=100.8&u=dbmw&z=120&v=4&spl=107&hr=14" className="text-neon-cyan">headphone power calculator</ExtLink> (pre-filled).
+                      Run the numbers yourself: <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphone power calculator</ExtLink>.
                     </div>
                   </div>
                 </>,
@@ -149,7 +149,7 @@ const Index = () => {
                       <li>Verdict: <span className="text-neon-cyan">yes</span>.</li>
                     </ul>
                     <div className="mt-1">
-                      Run the numbers yourself: <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=92&u=dbmw&z=32&v=5.37&spl=106&hr=14" className="text-neon-cyan">headphone power calculator</ExtLink> (pre-filled).
+                      Run the numbers yourself: <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphone power calculator</ExtLink>.
                     </div>
                   </div>
                 </>,
@@ -180,7 +180,7 @@ const Index = () => {
                       <li>Verdict: <span className="text-neon-cyan">yes</span>.</li>
                     </ul>
                     <div className="mt-1">
-                      Run the numbers yourself: <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=99&u=dbmw&z=32&v=1.04&spl=100&hr=14" className="text-neon-cyan">headphone power calculator</ExtLink> (pre-filled).
+                      Run the numbers yourself: <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphone power calculator</ExtLink>.
                     </div>
                   </div>
                 </>,
@@ -210,7 +210,7 @@ const Index = () => {
                       <li>Verdict: <span className="text-neon-cyan">yes</span>.</li>
                     </ul>
                     <div className="mt-1">
-                      Run the numbers yourself: <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=99&u=dbmw&z=38&v=1&spl=97&hr=14" className="text-neon-cyan">headphone power calculator</ExtLink> (pre-filled).
+                      Run the numbers yourself: <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphone power calculator</ExtLink>.
                     </div>
                   </div>
                 </>,
