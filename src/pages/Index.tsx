@@ -766,11 +766,6 @@ const Index = () => {
               <p><span className="text-neon-cyan">Adaptive Loudness Compensation</span> (Neutron) — adjusts tonal balance for how loudly you are listening, so quiet listening keeps its bass and treble instead of thinning out.</p>
             </Card>
           </div>
-          <div id="g-anc" className="scroll-mt-24">
-            <Card title="ANC">
-              <p><span className="text-neon-cyan">Active Noise Cancellation</span> — microphones sample ambient sound and the headphone plays an inverted signal to cancel it, most effective on steady low-frequency noise (planes, trains, HVAC).</p>
-            </Card>
-          </div>
           <div id="g-ldac" className="scroll-mt-24">
             <Card title="Bluetooth codecs (AAC, aptX, LDAC, LHDC)">
               <p>The rules used to compress audio for the Bluetooth link. <span className="text-neon-cyan">AAC</span> is the lossy baseline, <span className="text-neon-cyan">aptX HD</span> and <span className="text-neon-cyan">LDAC</span> carry more data (LDAC up to 990 kbps), and <span className="text-neon-cyan">aptX Lossless</span> is bit-exact CD quality. <span className="text-neon-cyan">LHDC High Resolution</span> goes up to 24-bit / 192 kHz, while <span className="text-neon-cyan">LHDC Lossless</span> is bit-exact 16-bit / 44.1 kHz. Both ends must support the same codec.</p>
