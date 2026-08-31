@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 
 const sections = [
   { id: "chain", label: "My preferred chains" },
+  { id: "demands", label: "Enough power?" },
   { id: "preferences", label: "Finding your preferences" },
   { id: "phones", label: "Phones & Accessories" },
   { id: "software", label: "Software" },
-  { id: "demands", label: "Enough power?" },
+
 
   { id: "replaygain", label: "Using ReplayGain" },
   { id: "transfer", label: "Getting music onto your phone" },
