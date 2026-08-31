@@ -492,20 +492,6 @@ const Index = () => {
 
       <Divider />
 
-      <Section id="preferences" icon={Headphones} title="Finding your own preferences" tone="purple">
-        <div className="grid gap-5 md:grid-cols-2">
-          <Card title="Start with two reference tunings">
-            <p>
-              If you don't know what you like yet, get two headphones that disagree with each other. The <ExtLink href="https://www.akg.com/Headphones/Professional%20Headphones/K371.html" className="text-neon-cyan">AKG K371</ExtLink> is <span className="text-neon-magenta">closed-back</span> and tuned to the <span className="text-neon-cyan">Harman</span> target; the <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink> is <span className="text-neon-magenta">open-back</span> and closer to <span className="text-neon-cyan">diffuse-field</span>. Load both into <ExtLink href="https://www.extreamsd.com/index.php/products/usb-audio-player-pro" className="text-neon-cyan">USB Audio Player Pro</ExtLink> with <ExtLink href="https://www.toneboosters.com/tb_morphit_v1.html" className="text-neon-cyan">ToneBoosters MorphIt</ExtLink> and swap between <GlossaryLink term="target">target curves</GlossaryLink> until you can tell which side you're on.
-            </p>
-
-          </Card>
-        </div>
-      </Section>
-
-
-      <Divider />
-
       <Section id="phones" icon={Smartphone} title="Phones & Accessories" tone="cyan">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
           Any modern <span className="text-neon-cyan">iPhone</span> or <span className="text-neon-cyan">Android</span> phone is a fine starting point. Find out what yours already does first; a <span className="text-neon-magenta">DAC</span> or a <span className="text-neon-magenta">Bluetooth transmitter</span> is only worth buying to fill a gap.
