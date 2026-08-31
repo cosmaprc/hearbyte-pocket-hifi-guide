@@ -15,7 +15,6 @@ const sections = [
 
 const TableOfContents = () => {
   const [active, setActive] = useState<string>(sections[0].id);
-  const [scrolled, setScrolled] = useState(false);
   const barRef = useRef<HTMLUListElement | null>(null);
   const chipRefs = useRef<Map<string, HTMLAnchorElement>>(new Map());
   const lockUntil = useRef(0);
@@ -34,17 +33,6 @@ const TableOfContents = () => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     bar.scrollTo({ left, behavior: reduce ? "auto" : "smooth" });
   }, [active]);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > window.innerHeight * 0.7);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-    };
-  }, []);
 
   // Reading-line rule: the active section is the last one whose top edge has
   // passed a line ~a third down the viewport. Works for short sections too.
@@ -98,53 +86,10 @@ const TableOfContents = () => {
   };
 
   return (
-    <>
-      {/* Desktop: compact floating card on the right */}
-      <nav
-        aria-label="Page sections"
-        className={`pointer-events-none fixed right-6 top-1/2 z-40 hidden -translate-y-1/2 transition-opacity duration-300 xl:block ${
-          scrolled ? "opacity-100" : "opacity-0"
-        }`}
-        aria-hidden={!scrolled}
-      >
-        <ul className="pointer-events-auto flex flex-col gap-3 rounded-2xl border border-neon-magenta/25 bg-background/90 px-3 py-4 shadow-card backdrop-blur-md">
-          {sections.map((s) => {
-            const isActive = active === s.id;
-            return (
-              <li key={s.id} className="group relative flex items-center justify-end">
-                <a
-                  href={`#${s.id}`}
-                  onClick={(e) => handleClick(e, s.id)}
-                  aria-label={`Jump to ${s.label}`}
-                  aria-current={isActive ? "true" : undefined}
-                  className="flex items-center gap-3 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon-magenta focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-                >
-                  <span
-                    className={`whitespace-nowrap rounded-md border border-neon-cyan/30 bg-background px-2 py-1 text-xs font-semibold uppercase tracking-widest text-neon-cyan opacity-0 shadow-sm transition-opacity group-hover:opacity-100 ${
-                      isActive ? "opacity-100" : ""
-                    }`}
-                  >
-                    {s.label}
-                  </span>
-                  <span
-                    className={`block h-3 w-3 rounded-full border transition-all ${
-                      isActive
-                        ? "scale-125 border-neon-magenta bg-neon-magenta shadow-neon-magenta"
-                        : "border-neon-cyan bg-transparent hover:border-neon-cyan"
-                    }`}
-                  />
-                </a>
-              </li>
-            );
-          })}
-        </ul>
-      </nav>
-
-      {/* Mobile/Tablet: horizontal sticky bar at the top */}
-      <nav
-        aria-label="Page sections"
-        className="sticky top-0 z-40 bg-background/95 shadow-[0_1px_0_0_hsl(var(--neon-magenta)/0.12)] backdrop-blur-md xl:hidden"
-      >
+    <nav
+      aria-label="Page sections"
+      className="sticky top-0 z-40 bg-background/95 shadow-[0_1px_0_0_hsl(var(--neon-magenta)/0.12)] backdrop-blur-md"
+    >
         <ul
           ref={barRef}
           className="flex gap-2 overflow-x-auto px-4 py-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
@@ -174,8 +119,7 @@ const TableOfContents = () => {
           })}
 
         </ul>
-      </nav>
-    </>
+    </nav>
   );
 };
 
