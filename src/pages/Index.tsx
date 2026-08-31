@@ -23,6 +23,42 @@ const GlossaryLink = ({ term, children }: { term: string; children: React.ReactN
   </a>
 );
 
+const dongleOutputs = [
+  {
+    name: "FiiO JIEZI",
+    output: "3.5 mm single-ended",
+    published: "Published: L+R ≥ 49 mW + 49 mW (16 Ω), L+R ≥ 34 mW + 34 mW (32 Ω), both at THD+N < 1%.",
+    rows: [
+      { z: "16 Ω", power: "49.00 mW", voltage: "0.885 Vrms", current: "55.34 mArms", limit: "Current limit" },
+      { z: "32 Ω", power: "34.00 mW", voltage: "1.043 Vrms", current: "32.60 mArms", limit: "Voltage rail" },
+      { z: "38 Ω", power: "28.63 mW", voltage: "1.043 Vrms", current: "27.45 mArms", limit: "Voltage rail" },
+      { z: "120 Ω", power: "9.07 mW", voltage: "1.043 Vrms", current: "8.69 mArms", limit: "Voltage rail" },
+    ],
+  },
+  {
+    name: "Qudelix 5K",
+    output: "2.5 mm balanced",
+    published: "Published: max 4 Vrms output, 240 mW per channel.",
+    rows: [
+      { z: "32 Ω", power: "240.0 mW", voltage: "2.77 Vrms", current: "86.6 mArms", limit: "Official power ceiling" },
+      { z: "38 Ω", power: "240.0 mW", voltage: "3.02 Vrms", current: "79.5 mArms", limit: "Official power ceiling" },
+      { z: "120 Ω", power: "133.3 mW", voltage: "4.00 Vrms", current: "33.3 mArms", limit: "Official voltage ceiling" },
+    ],
+  },
+  {
+    name: "FiiO QX13",
+    output: "4.4 mm balanced, USB decoding, desktop mode, high gain",
+    published: "Published: L+R ≥ 480 mW + 480 mW (16 Ω), ≥ 900 mW + 900 mW (32 Ω), ≥ 125 mW + 125 mW (300 Ω), all at THD+N < 1%.",
+    rows: [
+      { z: "16 Ω", power: "480.0 mW", voltage: "2.77 Vrms", current: "173.2 mArms", limit: "Current / thermal" },
+      { z: "32 Ω", power: "900.0 mW", voltage: "5.37 Vrms", current: "167.7 mArms", limit: "Current limited" },
+      { z: "38 Ω", power: "986.8 mW", voltage: "6.12 Vrms", current: "161.2 mArms", limit: "Voltage limited" },
+      { z: "120 Ω", power: "312.5 mW", voltage: "6.12 Vrms", current: "51.0 mArms", limit: "Voltage limited" },
+      { z: "300 Ω", power: "125.0 mW", voltage: "6.12 Vrms", current: "20.4 mArms", limit: "Voltage limited" },
+    ],
+  },
+];
+
 const Index = () => {
   return (
     <main className="min-h-screen bg-background text-foreground">
@@ -463,7 +499,49 @@ const Index = () => {
           </ul>
         </div>
 
+        <SubHeading>What the dongles actually put out</SubHeading>
+        <p className="mb-4 max-w-2xl text-sm text-foreground/80">
+          These are the figures the <span className="text-neon-magenta">Can it drive it?</span> panels in the <a href="#chain" className="text-neon-cyan underline-offset-4 hover:underline">chains section</a> compare against. The <span className="text-neon-cyan">32 Ω</span>, <span className="text-neon-cyan">38 Ω</span> and <span className="text-neon-cyan">120 Ω</span> rows are there because they are the loads I actually use: <span className="text-neon-magenta">AKG K371</span> / <span className="text-neon-magenta">HiFiMAN Sundara</span>, <span className="text-neon-magenta">ATH-M50x BT2</span> and <span className="text-neon-magenta">Sennheiser HD 560S</span>.
+        </p>
+        <div className="grid gap-5 lg:grid-cols-3">
+          {dongleOutputs.map((d) => (
+            <article
+              key={d.name}
+              className="rounded-xl border border-border bg-card-gradient p-4"
+            >
+              <h3 className="font-display text-base font-bold text-neon-magenta">{d.name}</h3>
+              <p className="mt-1 text-xs text-foreground/70">{d.output}</p>
+              <p className="mt-2 text-sm text-foreground/90">{d.published}</p>
+              <div className="mt-3 overflow-x-auto">
+                <table className="w-full min-w-[20rem] border-collapse text-left text-xs">
+                  <thead>
+                    <tr className="border-b border-border">
+                      <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Ω</th>
+                      <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Power</th>
+                      <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Voltage</th>
+                      <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Current</th>
+                      <th scope="col" className="py-2 font-semibold uppercase tracking-widest text-neon-cyan">Limited by</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {d.rows.map((r) => (
+                      <tr key={r.z} className="border-b border-border/60 last:border-b-0">
+                        <th scope="row" className="py-2 pr-3 font-semibold text-neon-magenta">{r.z}</th>
+                        <td className="py-2 pr-3 text-foreground/90">{r.power}</td>
+                        <td className="py-2 pr-3 text-foreground/90">{r.voltage}</td>
+                        <td className="py-2 pr-3 text-foreground/90">{r.current}</td>
+                        <td className="py-2 text-foreground/80">{r.limit}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </article>
+          ))}
+        </div>
+
       </Section>
+
 
       <Divider />
 
