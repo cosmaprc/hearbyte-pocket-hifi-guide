@@ -11,12 +11,6 @@ import { Smartphone, Sliders, Headphones, Volume2, BookOpen, Link, FolderInput, 
 import hd560sQudelixHeadband from "@/assets/hd560s-qudelix-headband.jpg";
 import hd560sQudelixFront from "@/assets/hd560s-qudelix-front.jpg";
 
-const GearLink = ({ children }: { children: React.ReactNode }) => (
-  <a href="#phones" className="text-neon-cyan underline-offset-4 hover:underline">
-    {children}
-  </a>
-);
-
 const GlossaryLink = ({ term, children }: { term: string; children: React.ReactNode }) => (
   <a href={`#g-${term}`} className="text-neon-cyan underline decoration-dotted underline-offset-4">
     {children}
@@ -96,12 +90,12 @@ const Index = () => {
                       <li>Sensitivity: <span className="text-neon-cyan">100.8 dB SPL/mW</span></li>
                       <li>Impedance: <span className="text-neon-cyan">120 Ω</span></li>
                       <li>Target average loudness: <span className="text-neon-cyan">90 dB SPL</span></li>
-                      <li>Sound Check headroom: <span className="text-neon-cyan">7 dB</span> (so <span className="text-neon-cyan">97 dB</span> average at the amp)</li>
+                      <li>Sound Check headroom: <span className="text-neon-cyan">7 dB</span></li>
                       <li><span className="text-neon-cyan">PEQ</span> preamp headroom: <span className="text-neon-cyan">~10 dB</span></li>
                       <li>Crest factor, jazz / acoustic: <span className="text-neon-cyan">14 dB</span></li>
                       <li>Peak needed: 90 + 7 + 10 + 14 = <span className="text-neon-cyan">121 dB SPL</span></li>
-                      <li>Power needed: <span className="text-neon-cyan">105 mW</span></li>
-                      <li>Voltage needed: <span className="text-neon-cyan">~3.6 V</span></li>
+                      <li>Power needed: <span className="text-neon-cyan">100 mW</span></li>
+                      <li>Voltage needed: <span className="text-neon-cyan">~3.46 V</span></li>
                       <li>Current pushed: <span className="text-neon-cyan">28.87 mA</span></li>
                       <li>Qudelix 5K on <span className="text-neon-cyan">2.5 mm balanced</span>: <span className="text-neon-cyan">133.3 mW / 4.00 V / 33.3 mA</span></li>
                       <li>Verdict: <span className="text-neon-cyan">yes</span>.</li>
@@ -112,9 +106,23 @@ const Index = () => {
                   </div>
                 </>,
                 <>
-                  <span className="text-neon-magenta">DAC, alternative:</span> the <ExtLink href="https://www.fiio.com/qx13" className="text-neon-cyan">FiiO QX13</ExtLink> paired with the <ExtLink href="https://www.fiio.com/productinfo/1507720.html" className="text-neon-cyan">FiiO Estick</ExtLink> battery.
+                  <span className="text-neon-magenta">DAC, alternative:</span> the <ExtLink href="https://www.fiio.com/qx13" className="text-neon-cyan">FiiO QX13</ExtLink> paired with the <ExtLink href="https://www.fiio.com/productinfo/1507720.html" className="text-neon-cyan">FiiO Estick</ExtLink> battery — with <span className="text-neon-cyan">no EQ</span>, since that leaves more headroom than the Qudelix on this load.
                   <div className="mt-2 rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-3 text-sm">
-                    <span className="text-neon-magenta">Can it drive it?</span> <a href="#demands" title="Why these numbers — do you have enough power?" className="text-xs text-neon-cyan underline-offset-4 hover:underline">why?</a> <span className="text-neon-cyan">Yes</span> — with the <span className="text-neon-cyan">PEQ</span> profile it needs <span className="text-neon-cyan">~3.6 V</span> / <span className="text-neon-cyan">105 mW</span> / <span className="text-neon-cyan">28.87 mA</span>, against the QX13's <span className="text-neon-cyan">312.5 mW / 6.12 Vrms / 51.0 mArms</span> at <span className="text-neon-cyan">120 Ω</span>.
+                    <div className="flex items-baseline gap-2"><span className="text-neon-magenta">Can it drive it?</span> <a href="#demands" title="Why these numbers — do you have enough power?" className="text-xs text-neon-cyan underline-offset-4 hover:underline">why?</a></div>
+                    <ul className="mt-1 space-y-0.5">
+                      <li>Sensitivity: <span className="text-neon-cyan">100.8 dB SPL/mW</span></li>
+                      <li>Impedance: <span className="text-neon-cyan">120 Ω</span></li>
+                      <li>Target average loudness: <span className="text-neon-cyan">90 dB SPL</span></li>
+                      <li>Sound Check headroom: <span className="text-neon-cyan">7 dB</span></li>
+                      <li><span className="text-neon-cyan">PEQ</span> preamp headroom: <span className="text-neon-cyan">0 dB</span> (no PEQ)</li>
+                      <li>Crest factor, jazz / acoustic: <span className="text-neon-cyan">14 dB</span></li>
+                      <li>Peak needed: 90 + 7 + 0 + 14 = <span className="text-neon-cyan">111 dB SPL</span></li>
+                      <li>Power needed: <span className="text-neon-cyan">10 mW</span></li>
+                      <li>Voltage needed: <span className="text-neon-cyan">~1.1 V</span></li>
+                      <li>Current pushed: <span className="text-neon-cyan">9.13 mA</span></li>
+                      <li>FiiO QX13 on <span className="text-neon-cyan">4.4 mm balanced</span>: <span className="text-neon-cyan">312.5 mW / 6.12 V / 51.0 mA</span></li>
+                      <li>Verdict: <span className="text-neon-cyan">yes</span>.</li>
+                    </ul>
                   </div>
                 </>,
 
@@ -129,7 +137,8 @@ const Index = () => {
                 <>
                   <span className="text-neon-magenta">DAC:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> over <span className="text-neon-cyan">USB</span>, powered from <span className="text-neon-cyan">USB-C</span> rather than its internal battery — only with <span className="text-neon-cyan">no EQ</span>, since with the target <span className="text-neon-cyan">PEQ</span> profile it can run out of power on some genres.
                   <div className="mt-2 rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-3 text-sm">
-                    <span className="text-neon-magenta">Can it drive it?</span> <a href="#demands" title="Why these numbers — do you have enough power?" className="text-xs text-neon-cyan underline-offset-4 hover:underline">why?</a> <span className="text-neon-cyan">Yes</span> — without EQ it needs <span className="text-neon-cyan">1.59 V</span> / <span className="text-neon-cyan">79.43 mW</span> / <span className="text-neon-cyan">49.82 mA</span>, against the Qudelix 5K's <span className="text-neon-cyan">240.0 mW / 2.77 Vrms / 86.6 mArms</span> at <span className="text-neon-cyan">32 Ω</span>.
+                    <div className="flex items-baseline gap-2"><span className="text-neon-magenta">Can it drive it?</span> <a href="#demands" title="Why these numbers — do you have enough power?" className="text-xs text-neon-cyan underline-offset-4 hover:underline">why?</a></div>
+                    <p className="mt-1"><span className="text-neon-cyan">Yes</span> — without EQ it needs <span className="text-neon-cyan">1.59 V</span> / <span className="text-neon-cyan">79.43 mW</span> / <span className="text-neon-cyan">49.82 mA</span>, against the Qudelix 5K's <span className="text-neon-cyan">240.0 mW / 2.77 Vrms / 86.6 mArms</span> at <span className="text-neon-cyan">32 Ω</span>.</p>
                   </div>
                 </>,
                 <>
@@ -140,7 +149,7 @@ const Index = () => {
                       <li>Sensitivity: <span className="text-neon-cyan">92 dB SPL/mW</span></li>
                       <li>Impedance: <span className="text-neon-cyan">32 Ω</span></li>
                       <li>Target average loudness: <span className="text-neon-cyan">90 dB SPL</span></li>
-                      <li>Sound Check headroom: <span className="text-neon-cyan">7 dB</span> (so <span className="text-neon-cyan">106 dB</span> average at the amp)</li>
+                      <li>Sound Check headroom: <span className="text-neon-cyan">7 dB</span></li>
                       <li><span className="text-neon-cyan">PEQ</span> preamp headroom: <span className="text-neon-cyan">~9 dB</span></li>
                       <li>Crest factor, jazz / acoustic: <span className="text-neon-cyan">14 dB</span></li>
                       <li>Peak needed: 90 + 7 + 9 + 14 = <span className="text-neon-cyan">120 dB SPL</span></li>
@@ -171,7 +180,7 @@ const Index = () => {
                       <li>Sensitivity: <span className="text-neon-cyan">99 dB SPL/mW</span></li>
                       <li>Impedance: <span className="text-neon-cyan">32 Ω</span></li>
                       <li>Target average loudness: <span className="text-neon-cyan">90 dB SPL</span></li>
-                      <li>Sound Check headroom: <span className="text-neon-cyan">7 dB</span> (so <span className="text-neon-cyan">98 dB</span> average at the amp)</li>
+                      <li>Sound Check headroom: <span className="text-neon-cyan">7 dB</span></li>
                       <li><span className="text-neon-cyan">PEQ</span> preamp headroom: <span className="text-neon-cyan">~3 dB</span></li>
                       <li>Crest factor, jazz / acoustic: <span className="text-neon-cyan">14 dB</span></li>
                       <li>Peak needed: 90 + 7 + 3 + 14 = <span className="text-neon-cyan">114 dB SPL</span></li>
@@ -203,7 +212,7 @@ const Index = () => {
                       <li>Sensitivity: <span className="text-neon-cyan">99 dB SPL/mW</span></li>
                       <li>Impedance: <span className="text-neon-cyan">38 Ω</span></li>
                       <li>Target average loudness: <span className="text-neon-cyan">90 dB SPL</span></li>
-                      <li>Sound Check headroom: <span className="text-neon-cyan">7 dB</span> (so <span className="text-neon-cyan">97 dB</span> average at the amp)</li>
+                      <li>Sound Check headroom: <span className="text-neon-cyan">7 dB</span></li>
                       <li><span className="text-neon-cyan">PEQ</span> preamp headroom: <span className="text-neon-cyan">0 dB</span> (no PEQ)</li>
                       <li>Crest factor, jazz / acoustic: <span className="text-neon-cyan">14 dB</span></li>
                       <li>Peak needed: 90 + 7 + 0 + 14 = <span className="text-neon-cyan">111 dB SPL</span></li>
@@ -233,7 +242,7 @@ const Index = () => {
             <div className="mt-4 rounded-lg border border-neon-magenta/40 bg-neon-magenta/5 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
               <p className="mt-2 text-sm text-foreground/85">
-                The 5K velcros to the headband. I run <span className="text-neon-cyan">LDAC 990 kbps</span> and leave the tuning stock, with <span className="text-neon-magenta">no EQ of any kind</span>. The balanced output gives more headroom if you want it, and plugging in over USB makes it wired and bit-perfect. The <a href="#demands" className="text-neon-cyan underline-offset-4 hover:underline">power notes</a> explain how much margin this pairing has.
+                The 5K velcros to the headband. I run <span className="text-neon-cyan">LDAC 990 kbps</span> and usually leave the tuning stock. If you want correction, load the <span className="text-neon-cyan">PEQ</span> profile onto the 5K itself rather than relying on the phone. The balanced output gives more headroom if you want it, and plugging in over USB makes it wired and bit-perfect. The <a href="#demands" className="text-neon-cyan underline-offset-4 hover:underline">power notes</a> explain how much margin this pairing has.
               </p>
 
             </div>
@@ -341,7 +350,7 @@ const Index = () => {
             <tbody>
               {[
                 {
-                  type: "Low Ω / high sensitivity (typical IEMs)",
+                  type: <><span className="text-neon-cyan">Low Ω</span> / high sensitivity (typical <GlossaryLink term="iem">IEMs</GlossaryLink>)</>,
                   z: "16 Ω",
                   sens: "110 dB/mW (very high)",
                   i: "7.9 mA (tiny flow)",
@@ -483,20 +492,6 @@ const Index = () => {
 
       <Divider />
 
-      <Section id="preferences" icon={Headphones} title="Finding your own preferences" tone="purple">
-        <div className="grid gap-5 md:grid-cols-2">
-          <Card title="Start with two reference tunings">
-            <p>
-              If you don't know what you like yet, get two headphones that disagree with each other. The <ExtLink href="https://www.akg.com/Headphones/Professional%20Headphones/K371.html" className="text-neon-cyan">AKG K371</ExtLink> is <span className="text-neon-magenta">closed-back</span> and tuned to the <span className="text-neon-cyan">Harman</span> target; the <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink> is <span className="text-neon-magenta">open-back</span> and closer to <span className="text-neon-cyan">diffuse-field</span>. Load both into <ExtLink href="https://www.extreamsd.com/index.php/products/usb-audio-player-pro" className="text-neon-cyan">USB Audio Player Pro</ExtLink> with <ExtLink href="https://www.toneboosters.com/tb_morphit_v1.html" className="text-neon-cyan">ToneBoosters MorphIt</ExtLink> and swap between <GlossaryLink term="target">target curves</GlossaryLink> until you can tell which side you're on.
-            </p>
-
-          </Card>
-        </div>
-      </Section>
-
-
-      <Divider />
-
       <Section id="phones" icon={Smartphone} title="Phones & Accessories" tone="cyan">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
           Any modern <span className="text-neon-cyan">iPhone</span> or <span className="text-neon-cyan">Android</span> phone is a fine starting point. Find out what yours already does first; a <span className="text-neon-magenta">DAC</span> or a <span className="text-neon-magenta">Bluetooth transmitter</span> is only worth buying to fill a gap.
@@ -538,7 +533,6 @@ const Index = () => {
               items={[
                 <>Many <span className="text-neon-cyan">Android</span> phones include a system-level <span className="text-neon-magenta">Dolby Atmos</span> or spatial processor.</>,
                 <>It widens the stage, and stock-tuned headphones often sound more <span className="text-neon-magenta">open</span> with it on.</>,
-                
               ]}
             />
           </Card>
@@ -574,7 +568,7 @@ const Index = () => {
               <div>
                 <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">As a wired USB DAC</dt>
                 <dd className="mt-1 text-foreground/85">
-                  <span className="text-neon-cyan">3.5mm</span> and <span className="text-neon-cyan">2.5mm balanced</span> outputs with <GlossaryLink term="outputz">independent hardware volume control</GlossaryLink>. The balanced port has real headroom for demanding loads.
+                  <span className="text-neon-cyan">3.5 mm</span> and <span className="text-neon-cyan">2.5 mm balanced</span> outputs with <GlossaryLink term="outputz">independent hardware volume control</GlossaryLink>. The balanced port has real headroom for demanding loads.
                 </dd>
 
               </div>
@@ -588,7 +582,7 @@ const Index = () => {
               <div>
                 <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Either way</dt>
                 <dd className="mt-1 text-foreground/85">
-                  A <span className="text-neon-magenta">20-band <GlossaryLink term="eq">parametric EQ</GlossaryLink></span> stored on the device itself, <span className="text-neon-cyan">AutoEQ</span> profiles out of the box, and a companion app that responds instantly.
+                  A <span className="text-neon-magenta">20-band</span> <GlossaryLink term="eq">parametric EQ</GlossaryLink> stored on the device itself, <span className="text-neon-cyan">AutoEQ</span> profiles out of the box, and a companion app that responds instantly.
                 </dd>
 
               </div>
@@ -605,7 +599,7 @@ const Index = () => {
             <Card title="FiiO QX13" href="https://www.fiio.com/qx13">
               <Bullets
                 items={[
-                  <>A compact <span className="text-neon-cyan">USB-C</span> dongle DAC with <span className="text-neon-cyan">3.5mm</span> and <span className="text-neon-cyan">4.4mm balanced</span> outputs.</>,
+                  <>A compact <span className="text-neon-cyan">USB-C</span> dongle DAC with <span className="text-neon-cyan">3.5 mm</span> and <span className="text-neon-cyan">4.4 mm balanced</span> outputs.</>,
                   <>You can attach a dedicated <span className="text-neon-magenta">Estick battery</span> to power it, so it draws no charge from your phone.</>,
                 ]}
               />
@@ -663,7 +657,7 @@ const Index = () => {
                   <ExtLink href="https://play.google.com/store/apps/details?id=com.neutroncode.mp" className="text-neon-cyan">Android</ExtLink>
                 </>,
                 <><span className="text-neon-cyan">ReplayGain</span> support with manual <span className="text-neon-cyan">preamp</span> adjustment</>,
-                <>The widest DSP set of the three: <span className="text-neon-magenta">Parametric EQ</span>, <span className="text-neon-magenta">Frequency Response Correction</span> (AutoEQ), <GlossaryLink term="crossfeed">Crossfeed</GlossaryLink> and <span className="text-neon-magenta">Adaptive Loudness Compensation</span>.</>,
+                <>The widest DSP set of the three: <span className="text-neon-magenta">Parametric EQ</span>, <span className="text-neon-magenta">Frequency Response Correction</span> (AutoEQ), <GlossaryLink term="crossfeed">Crossfeed</GlossaryLink> and <GlossaryLink term="alc">Adaptive Loudness Compensation</GlossaryLink>.</>,
               ]}
             />
           </Card>
@@ -681,6 +675,18 @@ const Index = () => {
 
       <Divider />
 
+      <Section id="preferences" icon={Headphones} title="Finding your own preferences" tone="magenta">
+        <div className="grid gap-5 md:grid-cols-2">
+          <Card title="Start with two reference tunings">
+            <p>
+              If you don't know what you like yet, get two headphones that disagree with each other. The <ExtLink href="https://www.akg.com/Headphones/Professional%20Headphones/K371.html" className="text-neon-cyan">AKG K371</ExtLink> is <span className="text-neon-magenta">closed-back</span> and tuned to the <span className="text-neon-cyan">Harman</span> target; the <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink> is <span className="text-neon-magenta">open-back</span> and closer to <span className="text-neon-cyan">diffuse-field</span>. Load both into <ExtLink href="https://www.extreamsd.com/index.php/products/usb-audio-player-pro" className="text-neon-cyan">USB Audio Player Pro</ExtLink> with <ExtLink href="https://www.toneboosters.com/tb_morphit_v1.html" className="text-neon-cyan">ToneBoosters MorphIt</ExtLink> and swap between <GlossaryLink term="target">target curves</GlossaryLink> until you can tell which side you're on.
+            </p>
+
+          </Card>
+        </div>
+      </Section>
+
+      <Divider />
 
       <Section id="replaygain" icon={Volume2} title="Using ReplayGain" tone="orange">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
@@ -758,11 +764,6 @@ const Index = () => {
               <p><span className="text-neon-cyan">Adaptive Loudness Compensation</span> (Neutron) — adjusts tonal balance for how loudly you are listening, so quiet listening keeps its bass and treble instead of thinning out.</p>
             </Card>
           </div>
-          <div id="g-anc" className="scroll-mt-24">
-            <Card title="ANC">
-              <p><span className="text-neon-cyan">Active Noise Cancellation</span> — microphones sample ambient sound and the headphone plays an inverted signal to cancel it, most effective on steady low-frequency noise (planes, trains, HVAC).</p>
-            </Card>
-          </div>
           <div id="g-ldac" className="scroll-mt-24">
             <Card title="Bluetooth codecs (AAC, aptX, LDAC, LHDC)">
               <p>The rules used to compress audio for the Bluetooth link. <span className="text-neon-cyan">AAC</span> is the lossy baseline, <span className="text-neon-cyan">aptX HD</span> and <span className="text-neon-cyan">LDAC</span> carry more data (LDAC up to 990 kbps), and <span className="text-neon-cyan">aptX Lossless</span> is bit-exact CD quality. <span className="text-neon-cyan">LHDC High Resolution</span> goes up to 24-bit / 192 kHz, while <span className="text-neon-cyan">LHDC Lossless</span> is bit-exact 16-bit / 44.1 kHz. Both ends must support the same codec.</p>
@@ -781,11 +782,6 @@ const Index = () => {
           <div id="g-dsp" className="scroll-mt-24">
             <Card title="DSP">
               <p><span className="text-neon-cyan">Digital Signal Processing</span> — software that reshapes audio in real time (<span className="text-neon-cyan">EQ</span>, <span className="text-neon-cyan">reverb</span>, <span className="text-neon-cyan">crossfeed</span>, <span className="text-neon-cyan">dynamics</span>).</p>
-            </Card>
-          </div>
-          <div id="g-dynameq" className="scroll-mt-24">
-            <Card title="DynamEQ">
-              <p>Cambridge Audio's loudness-aware EQ in the Melomania app — it lifts the frequency extremes at low volume and backs off as you turn up, so the tuning stays consistent across listening levels.</p>
             </Card>
           </div>
           <div id="g-eq" className="scroll-mt-24">
@@ -820,7 +816,7 @@ const Index = () => {
           </div>
           <div id="g-ows" className="scroll-mt-24">
             <Card title="OWS">
-              <p><span className="text-neon-cyan">Open Wearable Stereo</span> — an open-fit earbud that clips to or rests on the ear without sealing the canal, leaving you aware of your surroundings (e.g. the Moondrop Pill).</p>
+              <p><span className="text-neon-cyan">Open Wearable Stereo</span> — an open-fit earbud that clips to or rests on the ear without sealing the canal, leaving you aware of your surroundings (e.g. the Moondrop × Wuthering Waves U.C.T.S.).</p>
             </Card>
           </div>
           <div id="g-replaygain" className="scroll-mt-24">
