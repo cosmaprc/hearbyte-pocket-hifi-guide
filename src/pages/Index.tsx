@@ -83,30 +83,7 @@ const Index = () => {
                 <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink>.</>,
                 <><span className="text-neon-magenta">EQ:</span> none, otherwise the <span className="text-neon-cyan">PEQ</span> profile above.</>,
                 <>
-                  <span className="text-neon-magenta">DAC:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> over <span className="text-neon-cyan">USB</span>, set to draw power from <span className="text-neon-cyan">USB-C</span> rather than its internal battery.
-                  <div className="mt-2 rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-3 text-sm">
-                    <div className="flex items-baseline gap-2"><span className="text-neon-magenta">Can it drive it?</span> <a href="#demands" title="Why these numbers — do you have enough power?" className="text-xs text-neon-cyan underline-offset-4 hover:underline">why?</a></div>
-                    <ul className="mt-1 space-y-0.5">
-                      <li>Sensitivity: <span className="text-neon-cyan">100.8 dB SPL/mW</span></li>
-                      <li>Impedance: <span className="text-neon-cyan">120 Ω</span></li>
-                      <li>Target average loudness: <span className="text-neon-cyan">90 dB SPL</span></li>
-                      <li>Sound Check headroom: <span className="text-neon-cyan">7 dB</span></li>
-                      <li><span className="text-neon-cyan">PEQ</span> preamp headroom: <span className="text-neon-cyan">~10 dB</span></li>
-                      <li>Crest factor, jazz/acoustic: <span className="text-neon-cyan">14 dB</span></li>
-                      <li>Peak needed: 90 + 7 + 10 + 14 = <span className="text-neon-cyan">121 dB SPL</span></li>
-                      <li>Power needed: <span className="text-neon-cyan">100 mW</span></li>
-                      <li>Voltage needed: <span className="text-neon-cyan">~3.46 V</span></li>
-                      <li>Current pushed: <span className="text-neon-cyan">28.87 mA</span></li>
-                      <li>Qudelix 5K on <span className="text-neon-cyan">2.5 mm balanced</span>: <span className="text-neon-cyan">133.3 mW / 4.00 V / 33.3 mA</span></li>
-                      <li>Verdict: <span className="text-neon-cyan">yes</span></li>
-                    </ul>
-                    <div className="mt-1">
-                      Run the numbers yourself: <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=100.8&u=dbmw&z=120&v=4&spl=107&hr=14" className="text-neon-cyan">theaudiostuff.com</ExtLink> opens pre-filled with these values but doesn't report current, while <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphones.com</ExtLink> gives you the <span className="text-neon-cyan">mA</span> figure but has to be filled in by hand.
-                    </div>
-                  </div>
-                </>,
-                <>
-                  <span className="text-neon-magenta">DAC, alternative:</span> the <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> over <span className="text-neon-cyan">USB</span>, set to draw power from <span className="text-neon-cyan">USB-C</span> rather than its internal battery — with <span className="text-neon-cyan">no EQ</span>, since that leaves more headroom than the PEQ profile above.
+                  <span className="text-neon-magenta">DAC (no EQ):</span> the <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> over <span className="text-neon-cyan">USB</span>, set to draw power from <span className="text-neon-cyan">USB-C</span> rather than its internal battery — with <span className="text-neon-cyan">no EQ</span>, since that leaves more headroom than the PEQ profile above.
                   <div className="mt-2 rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-3 text-sm">
                     <div className="flex items-baseline gap-2"><span className="text-neon-magenta">Can it drive it?</span> <a href="#demands" title="Why these numbers — do you have enough power?" className="text-xs text-neon-cyan underline-offset-4 hover:underline">why?</a></div>
                     <ul className="mt-1 space-y-0.5">
@@ -125,6 +102,29 @@ const Index = () => {
                     </ul>
                     <div className="mt-1">
                       Run the numbers yourself: <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=100.8&u=dbmw&z=120&v=4&spl=97&hr=14" className="text-neon-cyan">theaudiostuff.com</ExtLink> opens pre-filled with these values but doesn't report current, while <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphones.com</ExtLink> gives you the <span className="text-neon-cyan">mA</span> figure but has to be filled in by hand.
+                    </div>
+                  </div>
+                </>,
+                <>
+                  <span className="text-neon-magenta">DAC (with PEQ):</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> over <span className="text-neon-cyan">USB</span>, set to draw power from <span className="text-neon-cyan">USB-C</span> rather than its internal battery.
+                  <div className="mt-2 rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-3 text-sm">
+                    <div className="flex items-baseline gap-2"><span className="text-neon-magenta">Can it drive it?</span> <a href="#demands" title="Why these numbers — do you have enough power?" className="text-xs text-neon-cyan underline-offset-4 hover:underline">why?</a></div>
+                    <ul className="mt-1 space-y-0.5">
+                      <li>Sensitivity: <span className="text-neon-cyan">100.8 dB SPL/mW</span></li>
+                      <li>Impedance: <span className="text-neon-cyan">120 Ω</span></li>
+                      <li>Target average loudness: <span className="text-neon-cyan">90 dB SPL</span></li>
+                      <li>Sound Check headroom: <span className="text-neon-cyan">7 dB</span></li>
+                      <li><span className="text-neon-cyan">PEQ</span> preamp headroom: <span className="text-neon-cyan">~10 dB</span></li>
+                      <li>Crest factor, jazz/acoustic: <span className="text-neon-cyan">14 dB</span></li>
+                      <li>Peak needed: 90 + 7 + 10 + 14 = <span className="text-neon-cyan">121 dB SPL</span></li>
+                      <li>Power needed: <span className="text-neon-cyan">100 mW</span></li>
+                      <li>Voltage needed: <span className="text-neon-cyan">~3.46 V</span></li>
+                      <li>Current pushed: <span className="text-neon-cyan">28.87 mA</span></li>
+                      <li>Qudelix 5K on <span className="text-neon-cyan">2.5 mm balanced</span>: <span className="text-neon-cyan">133.3 mW / 4.00 V / 33.3 mA</span></li>
+                      <li>Verdict: <span className="text-neon-cyan">yes</span></li>
+                    </ul>
+                    <div className="mt-1">
+                      Run the numbers yourself: <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=100.8&u=dbmw&z=120&v=4&spl=107&hr=14" className="text-neon-cyan">theaudiostuff.com</ExtLink> opens pre-filled with these values but doesn't report current, while <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphones.com</ExtLink> gives you the <span className="text-neon-cyan">mA</span> figure but has to be filled in by hand.
                     </div>
                   </div>
                 </>,
