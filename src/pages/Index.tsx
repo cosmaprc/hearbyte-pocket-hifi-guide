@@ -432,7 +432,7 @@ const Index = () => {
               <tr className="border-b border-border/60 last:border-b-0">
                 <th scope="row" className="py-2 pr-3 font-semibold text-neon-magenta">Step 3</th>
                 <td className="py-2 pr-3 text-foreground/90">Check amp capabilities (voltage &amp; power caps)</td>
-                <td className="py-2 text-foreground/90"><ExtLink href="https://www.omnicalculator.com/everyday-life/headphone-power" className="text-neon-cyan">Omni Headphone Power Calculator</ExtLink><br /><ExtLink href="https://www.moon-audio.com/pages/headphone-amp-calculator" className="text-neon-cyan">Moon Audio Amp Calculator</ExtLink></td>
+                <td className="py-2 text-foreground/90"><ExtLink href="https://www.omnicalculator.com/physics/ohms-law" className="text-neon-cyan">Omni Ohm's Law Calculator</ExtLink></td>
               </tr>
             </tbody>
           </table>
