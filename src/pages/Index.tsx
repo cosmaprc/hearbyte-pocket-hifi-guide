@@ -463,7 +463,49 @@ const Index = () => {
           </ul>
         </div>
 
+        <SubHeading>What the dongles actually put out</SubHeading>
+        <p className="mb-4 max-w-2xl text-sm text-foreground/80">
+          These are the figures the <span className="text-neon-magenta">Can it drive it?</span> panels in the <a href="#chain" className="text-neon-cyan underline-offset-4 hover:underline">chains section</a> compare against. The <span className="text-neon-cyan">32 Ω</span>, <span className="text-neon-cyan">38 Ω</span> and <span className="text-neon-cyan">120 Ω</span> rows are there because they are the loads I actually use: <span className="text-neon-magenta">AKG K371</span> / <span className="text-neon-magenta">HiFiMAN Sundara</span>, <span className="text-neon-magenta">ATH-M50x BT2</span> and <span className="text-neon-magenta">Sennheiser HD 560S</span>.
+        </p>
+        <div className="grid gap-5 lg:grid-cols-3">
+          {dongleOutputs.map((d) => (
+            <article
+              key={d.name}
+              className="rounded-xl border border-border bg-card-gradient p-4"
+            >
+              <h3 className="font-display text-base font-bold text-neon-magenta">{d.name}</h3>
+              <p className="mt-1 text-xs text-foreground/70">{d.output}</p>
+              <p className="mt-2 text-sm text-foreground/90">{d.published}</p>
+              <div className="mt-3 overflow-x-auto">
+                <table className="w-full min-w-[20rem] border-collapse text-left text-xs">
+                  <thead>
+                    <tr className="border-b border-border">
+                      <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Ω</th>
+                      <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Power</th>
+                      <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Voltage</th>
+                      <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Current</th>
+                      <th scope="col" className="py-2 font-semibold uppercase tracking-widest text-neon-cyan">Limited by</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {d.rows.map((r) => (
+                      <tr key={r.z} className="border-b border-border/60 last:border-b-0">
+                        <th scope="row" className="py-2 pr-3 font-semibold text-neon-magenta">{r.z}</th>
+                        <td className="py-2 pr-3 text-foreground/90">{r.power}</td>
+                        <td className="py-2 pr-3 text-foreground/90">{r.voltage}</td>
+                        <td className="py-2 pr-3 text-foreground/90">{r.current}</td>
+                        <td className="py-2 text-foreground/80">{r.limit}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </article>
+          ))}
+        </div>
+
       </Section>
+
 
       <Divider />
 
