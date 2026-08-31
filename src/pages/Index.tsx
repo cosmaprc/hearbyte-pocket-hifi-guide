@@ -583,7 +583,7 @@ const Index = () => {
               <div>
                 <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">As a wired USB DAC</dt>
                 <dd className="mt-1 text-foreground/85">
-                  <span className="text-neon-cyan">3.5mm</span> and <span className="text-neon-cyan">2.5mm balanced</span> outputs with <GlossaryLink term="outputz">independent hardware volume control</GlossaryLink>. The balanced port has real headroom for demanding loads.
+                  <span className="text-neon-cyan">3.5 mm</span> and <span className="text-neon-cyan">2.5 mm balanced</span> outputs with <GlossaryLink term="outputz">independent hardware volume control</GlossaryLink>. The balanced port has real headroom for demanding loads.
                 </dd>
 
               </div>
@@ -614,7 +614,7 @@ const Index = () => {
             <Card title="FiiO QX13" href="https://www.fiio.com/qx13">
               <Bullets
                 items={[
-                  <>A compact <span className="text-neon-cyan">USB-C</span> dongle DAC with <span className="text-neon-cyan">3.5mm</span> and <span className="text-neon-cyan">4.4mm balanced</span> outputs.</>,
+                  <>A compact <span className="text-neon-cyan">USB-C</span> dongle DAC with <span className="text-neon-cyan">3.5 mm</span> and <span className="text-neon-cyan">4.4 mm balanced</span> outputs.</>,
                   <>You can attach a dedicated <span className="text-neon-magenta">Estick battery</span> to power it, so it draws no charge from your phone.</>,
                 ]}
               />
