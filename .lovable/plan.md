@@ -17,6 +17,8 @@ Leave the pre-filled `spl=` values in the theaudiostuff.com calculator links alo
 
 Also: drop the parenthetical "(so X dB average at the amp)" from every chain card. The preceding "Sound Check headroom: 7 dB" already says enough; the raw target average can go into the expanded calculation list only.
 
+Chain 1's QX13 alternative panel: replace the compact "yes" summary with a proper no-EQ point using voltage 1.1 V, current 9.13 mA, power 10 mW (from a calculator), plus the "Why?" table power figures the other cards use.
+
 ## 2. Two panel styles for the same thing
 
 Chain 1 shows the detailed bullet list for the Qudelix and a one-line summary for the QX13; chain 2 does the opposite (one-liner for Qudelix, list for QX13). Chains 3 and 4 use the list only.
