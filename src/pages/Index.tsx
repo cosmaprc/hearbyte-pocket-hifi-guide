@@ -350,7 +350,7 @@ const Index = () => {
             <tbody>
               {[
                 {
-                  type: "Low Ω / high sensitivity (typical IEMs)",
+                  type: <><span className="text-neon-cyan">Low Ω</span> / high sensitivity (typical <GlossaryLink term="iem">IEMs</GlossaryLink>)</>,
                   z: "16 Ω",
                   sens: "110 dB/mW (very high)",
                   i: "7.9 mA (tiny flow)",
