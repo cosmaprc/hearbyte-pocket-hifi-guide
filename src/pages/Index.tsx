@@ -326,14 +326,16 @@ const Index = () => {
           Target volume: <span className="text-neon-cyan">110 dB SPL peak</span>.
         </p>
         <div className="overflow-x-auto rounded-xl border border-border bg-card-gradient p-4">
-          <table className="w-full min-w-[40rem] border-collapse text-left text-xs">
+          <table className="w-full min-w-[56rem] border-collapse text-left text-xs">
             <thead>
               <tr className="border-b border-border">
                 <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Headphone type</th>
                 <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Impedance</th>
-                <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Physical target current</th>
+                <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Sensitivity</th>
+                <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Target current</th>
                 <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Required voltage</th>
-                <th scope="col" className="py-2 font-semibold uppercase tracking-widest text-neon-cyan">Resulting power</th>
+                <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Resulting power</th>
+                <th scope="col" className="min-w-[13rem] py-2 font-semibold uppercase tracking-widest text-neon-cyan">The electrical demand</th>
               </tr>
             </thead>
             <tbody>
@@ -341,33 +343,42 @@ const Index = () => {
                 {
                   type: "Low Z / high sensitivity (typical IEMs)",
                   z: "16 Ω",
-                  i: "7.9 mA (low flow)",
-                  v: "0.13 V",
+                  sens: "110 dB/mW (very high)",
+                  i: "7.9 mA (tiny flow)",
+                  v: "0.13 V (tiny push)",
                   power: "1.00 mW",
+                  demand: "Ultra easy demand — barely draws voltage or current.",
                 },
                 {
                   type: "Low Z / low sensitivity (planar magnetic)",
                   z: "32 Ω",
-                  i: "55.9 mA (critical flow)",
-                  v: "1.79 V",
+                  sens: "90 dB/mW (very low)",
+                  i: "55.9 mA (massive)",
+                  v: "1.79 V (moderate)",
                   power: "100.00 mW",
+                  demand: "Current-dominant demand — needs roughly 7x more current than voltage, which chokes weak dongles.",
                 },
                 {
                   type: "High Z / mid sensitivity (studio open-back)",
                   z: "300 Ω",
-                  i: "8.2 mA (low flow)",
-                  v: "2.45 V",
+                  sens: "97 dB/mW (moderate)",
+                  i: "8.2 mA (tiny flow)",
+                  v: "2.45 V (high push)",
                   power: "20.00 mW",
+                  demand: "Voltage-dominant demand — needs a high voltage push to squeeze past the high resistance.",
                 },
               ].map((r) => (
                 <tr key={r.z} className="border-b border-border/60 last:border-b-0">
                   <th scope="row" className="py-2 pr-3 font-semibold text-neon-magenta">{r.type}</th>
                   <td className="py-2 pr-3 text-foreground/90">{r.z}</td>
+                  <td className="py-2 pr-3 text-foreground/90">{r.sens}</td>
                   <td className="py-2 pr-3 text-foreground/90">{r.i}</td>
                   <td className="py-2 pr-3 text-foreground/90">{r.v}</td>
-                  <td className="py-2 text-foreground/90">{r.power}</td>
+                  <td className="py-2 pr-3 text-foreground/90">{r.power}</td>
+                  <td className="min-w-[13rem] py-2 text-foreground/90">{r.demand}</td>
                 </tr>
               ))}
+
             </tbody>
           </table>
         </div>
