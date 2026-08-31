@@ -11,12 +11,6 @@ import { Smartphone, Sliders, Headphones, Volume2, BookOpen, Link, FolderInput, 
 import hd560sQudelixHeadband from "@/assets/hd560s-qudelix-headband.jpg";
 import hd560sQudelixFront from "@/assets/hd560s-qudelix-front.jpg";
 
-const GearLink = ({ children }: { children: React.ReactNode }) => (
-  <a href="#phones" className="text-neon-cyan underline-offset-4 hover:underline">
-    {children}
-  </a>
-);
-
 const GlossaryLink = ({ term, children }: { term: string; children: React.ReactNode }) => (
   <a href={`#g-${term}`} className="text-neon-cyan underline decoration-dotted underline-offset-4">
     {children}
