@@ -90,12 +90,12 @@ const Index = () => {
                       <li>Sensitivity: <span className="text-neon-cyan">100.8 dB SPL/mW</span></li>
                       <li>Impedance: <span className="text-neon-cyan">120 Ω</span></li>
                       <li>Target average loudness: <span className="text-neon-cyan">90 dB SPL</span></li>
-                      <li>Sound Check headroom: <span className="text-neon-cyan">7 dB</span> (so <span className="text-neon-cyan">97 dB</span> average at the amp)</li>
+                      <li>Sound Check headroom: <span className="text-neon-cyan">7 dB</span></li>
                       <li><span className="text-neon-cyan">PEQ</span> preamp headroom: <span className="text-neon-cyan">~10 dB</span></li>
                       <li>Crest factor, jazz / acoustic: <span className="text-neon-cyan">14 dB</span></li>
                       <li>Peak needed: 90 + 7 + 10 + 14 = <span className="text-neon-cyan">121 dB SPL</span></li>
-                      <li>Power needed: <span className="text-neon-cyan">105 mW</span></li>
-                      <li>Voltage needed: <span className="text-neon-cyan">~3.6 V</span></li>
+                      <li>Power needed: <span className="text-neon-cyan">100 mW</span></li>
+                      <li>Voltage needed: <span className="text-neon-cyan">~3.46 V</span></li>
                       <li>Current pushed: <span className="text-neon-cyan">28.87 mA</span></li>
                       <li>Qudelix 5K on <span className="text-neon-cyan">2.5 mm balanced</span>: <span className="text-neon-cyan">133.3 mW / 4.00 V / 33.3 mA</span></li>
                       <li>Verdict: <span className="text-neon-cyan">yes</span>.</li>
