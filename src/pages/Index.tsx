@@ -597,7 +597,7 @@ const Index = () => {
               <div>
                 <dt className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Either way</dt>
                 <dd className="mt-1 text-foreground/85">
-                  A <span className="text-neon-magenta">20-band <GlossaryLink term="eq">parametric EQ</GlossaryLink></span> stored on the device itself, <span className="text-neon-cyan">AutoEQ</span> profiles out of the box, and a companion app that responds instantly.
+                  A <span className="text-neon-magenta">20-band</span> <GlossaryLink term="eq">parametric EQ</GlossaryLink> stored on the device itself, <span className="text-neon-cyan">AutoEQ</span> profiles out of the box, and a companion app that responds instantly.
                 </dd>
 
               </div>
