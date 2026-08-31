@@ -818,7 +818,7 @@ const Index = () => {
           </div>
           <div id="g-ows" className="scroll-mt-24">
             <Card title="OWS">
-              <p><span className="text-neon-cyan">Open Wearable Stereo</span> — an open-fit earbud that clips to or rests on the ear without sealing the canal, leaving you aware of your surroundings (e.g. the Moondrop Pill).</p>
+              <p><span className="text-neon-cyan">Open Wearable Stereo</span> — an open-fit earbud that clips to or rests on the ear without sealing the canal, leaving you aware of your surroundings (e.g. the Moondrop × Wuthering Waves U.C.T.S.).</p>
             </Card>
           </div>
           <div id="g-replaygain" className="scroll-mt-24">
