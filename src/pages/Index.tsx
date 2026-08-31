@@ -383,6 +383,39 @@ const Index = () => {
           </table>
         </div>
 
+        <SubHeading>Online tools for your amp capability steps</SubHeading>
+        <p className="mb-4 max-w-2xl text-sm text-foreground/80">
+          These calculators turn the numbers above into a straight yes/no answer for any headphone / source pairing.
+        </p>
+        <div className="overflow-x-auto rounded-xl border border-border bg-card-gradient p-4">
+          <table className="w-full min-w-[36rem] border-collapse text-left text-xs">
+            <thead>
+              <tr className="border-b border-border">
+                <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Step</th>
+                <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Objective</th>
+                <th scope="col" className="py-2 font-semibold uppercase tracking-widest text-neon-cyan">Recommended online tool &amp; link</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-border/60 last:border-b-0">
+                <th scope="row" className="py-2 pr-3 font-semibold text-neon-magenta">Step 1</th>
+                <td className="py-2 pr-3 text-foreground/90">Target peak loudness (dB SPL calculation)</td>
+                <td className="py-2 text-foreground/90">No specialized web tool needed. Simply use a standard phone calculator: <span className="font-mono">[Avg dB] + [PEQ Loss] + [Genre Headroom]</span>.</td>
+              </tr>
+              <tr className="border-b border-border/60 last:border-b-0">
+                <th scope="row" className="py-2 pr-3 font-semibold text-neon-magenta">Step 2</th>
+                <td className="py-2 pr-3 text-foreground/90">Calculate required current (mA)</td>
+                <td className="py-2 text-foreground/90"><ExtLink href="https://headphones.com" className="text-neon-cyan">Headphones.com Power Calculator</ExtLink><br /><ExtLink href="https://headphonesty.com" className="text-neon-cyan">Headphonesty Power Calculator</ExtLink></td>
+              </tr>
+              <tr className="border-b border-border/60 last:border-b-0">
+                <th scope="row" className="py-2 pr-3 font-semibold text-neon-magenta">Step 3</th>
+                <td className="py-2 pr-3 text-foreground/90">Check amp capabilities (voltage &amp; power caps)</td>
+                <td className="py-2 text-foreground/90"><ExtLink href="https://omnicalculator.com" className="text-neon-cyan">Omni Headphone Power Calculator</ExtLink><br /><ExtLink href="https://moon-audio.com" className="text-neon-cyan">Moon Audio Amp Calculator</ExtLink></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
 
         <div className="mt-10 max-w-2xl rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-4 text-sm text-foreground/90">
 
