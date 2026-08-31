@@ -106,9 +106,23 @@ const Index = () => {
                   </div>
                 </>,
                 <>
-                  <span className="text-neon-magenta">DAC, alternative:</span> the <ExtLink href="https://www.fiio.com/qx13" className="text-neon-cyan">FiiO QX13</ExtLink> paired with the <ExtLink href="https://www.fiio.com/productinfo/1507720.html" className="text-neon-cyan">FiiO Estick</ExtLink> battery.
+                  <span className="text-neon-magenta">DAC, alternative:</span> the <ExtLink href="https://www.fiio.com/qx13" className="text-neon-cyan">FiiO QX13</ExtLink> paired with the <ExtLink href="https://www.fiio.com/productinfo/1507720.html" className="text-neon-cyan">FiiO Estick</ExtLink> battery — with <span className="text-neon-cyan">no EQ</span>, since that leaves more headroom than the Qudelix on this load.
                   <div className="mt-2 rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-3 text-sm">
-                    <span className="text-neon-magenta">Can it drive it?</span> <a href="#demands" title="Why these numbers — do you have enough power?" className="text-xs text-neon-cyan underline-offset-4 hover:underline">why?</a> <span className="text-neon-cyan">Yes</span> — with the <span className="text-neon-cyan">PEQ</span> profile it needs <span className="text-neon-cyan">~3.6 V</span> / <span className="text-neon-cyan">105 mW</span> / <span className="text-neon-cyan">28.87 mA</span>, against the QX13's <span className="text-neon-cyan">312.5 mW / 6.12 Vrms / 51.0 mArms</span> at <span className="text-neon-cyan">120 Ω</span>.
+                    <div className="flex items-baseline gap-2"><span className="text-neon-magenta">Can it drive it?</span> <a href="#demands" title="Why these numbers — do you have enough power?" className="text-xs text-neon-cyan underline-offset-4 hover:underline">why?</a></div>
+                    <ul className="mt-1 space-y-0.5">
+                      <li>Sensitivity: <span className="text-neon-cyan">100.8 dB SPL/mW</span></li>
+                      <li>Impedance: <span className="text-neon-cyan">120 Ω</span></li>
+                      <li>Target average loudness: <span className="text-neon-cyan">90 dB SPL</span></li>
+                      <li>Sound Check headroom: <span className="text-neon-cyan">7 dB</span></li>
+                      <li><span className="text-neon-cyan">PEQ</span> preamp headroom: <span className="text-neon-cyan">0 dB</span> (no PEQ)</li>
+                      <li>Crest factor, jazz / acoustic: <span className="text-neon-cyan">14 dB</span></li>
+                      <li>Peak needed: 90 + 7 + 0 + 14 = <span className="text-neon-cyan">111 dB SPL</span></li>
+                      <li>Power needed: <span className="text-neon-cyan">10 mW</span></li>
+                      <li>Voltage needed: <span className="text-neon-cyan">~1.1 V</span></li>
+                      <li>Current pushed: <span className="text-neon-cyan">9.13 mA</span></li>
+                      <li>FiiO QX13 on <span className="text-neon-cyan">4.4 mm balanced</span>: <span className="text-neon-cyan">312.5 mW / 6.12 V / 51.0 mA</span></li>
+                      <li>Verdict: <span className="text-neon-cyan">yes</span>.</li>
+                    </ul>
                   </div>
                 </>,
 
