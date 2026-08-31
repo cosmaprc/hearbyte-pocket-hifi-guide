@@ -177,13 +177,14 @@ const Index = () => {
                       <li>Peak needed: 90 + 7 + 3 + 14 = <span className="text-neon-cyan">114 dB SPL</span></li>
                       <li>Power needed: <span className="text-neon-cyan">32 mW</span></li>
                       <li>Voltage needed: <span className="text-neon-cyan">~1.01 V</span></li>
-                      <li>FiiO JIEZI on <span className="text-neon-cyan">3.5 mm single-ended</span>: <span className="text-neon-cyan">34 mW / 1.04 V</span></li>
-
+                      <li>Current pushed: <span className="text-neon-cyan">31.44 mA</span></li>
+                      <li>FiiO JIEZI on <span className="text-neon-cyan">3.5 mm single-ended</span>: <span className="text-neon-cyan">34 mW / 1.04 V / 32.60 mA</span></li>
                       <li>Verdict: <span className="text-neon-cyan">yes</span>.</li>
                     </ul>
                     <div className="mt-1">
-                      Run the numbers yourself: <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphone power calculator</ExtLink>.
+                      Run the numbers yourself: <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=99&u=dbmw&z=32&v=1.04&spl=100&hr=14" className="text-neon-cyan">theaudiostuff.com</ExtLink> opens pre-filled with these values but doesn't report current, while <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphones.com</ExtLink> gives you the <span className="text-neon-cyan">mA</span> figure but has to be filled in by hand.
                     </div>
+
                   </div>
                 </>,
               ]}
