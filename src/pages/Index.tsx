@@ -146,7 +146,7 @@ const Index = () => {
                       <li>Verdict: <span className="text-neon-cyan">yes</span>.</li>
                     </ul>
                     <div className="mt-1">
-                      Run the numbers yourself: <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=92&u=dbmw&z=32&v=6.19&spl=106&hr=14" className="text-neon-cyan">headphone power calculator</ExtLink> (pre-filled).
+                      Run the numbers yourself: <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=92&u=dbmw&z=32&v=5.37&spl=106&hr=14" className="text-neon-cyan">headphone power calculator</ExtLink> (pre-filled).
                     </div>
                   </div>
                 </>,
