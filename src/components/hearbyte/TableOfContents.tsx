@@ -18,6 +18,7 @@ const TableOfContents = () => {
   const [scrolled, setScrolled] = useState(false);
   const barRef = useRef<HTMLUListElement | null>(null);
   const chipRefs = useRef<Map<string, HTMLAnchorElement>>(new Map());
+  const lockUntil = useRef(0);
 
   // Keep the active chip visible inside the horizontal bar (mobile/tablet).
   useEffect(() => {
