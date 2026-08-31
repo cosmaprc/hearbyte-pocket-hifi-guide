@@ -11,7 +11,7 @@ Each panel lists `Sound Check headroom: 7 dB (so X dB average at the amp)`. That
 - Chain 3 (K371): says 98 dB — wrong, should be 97
 - Chain 4 (M50x BT2): 97 dB — correct
 
-Chain 1 also lists `Current pushed: 28.87 mA`, but 105 mW into 120 Ω is 3.55 V / 29.6 mA. Fix to 29.6 mA (or tell me the value you want kept and I'll leave it).
+Chain 1 also lists `Current pushed: 28.87 mA`, but 100 mW into 120 Ω is ~3.46 V / ~28.87 mA. Fix the Qudelix 5K no-PEQ panel to say "Current pushed: 28.87 mA" and use 100 mW as the reference, not 105.
 
 The pre-filled `spl=` value in the theaudiostuff links is also inconsistent between chains (107, 106, 100, 97). Each should be the average-at-amp figure, i.e. `spl=97` for all four, with `hr=14`. Chain 4's link also passes `v=1` while the text quotes 1.043 V — align to 1.043.
 
