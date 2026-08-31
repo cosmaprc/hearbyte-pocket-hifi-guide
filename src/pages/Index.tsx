@@ -106,7 +106,7 @@ const Index = () => {
                       <li>Verdict: <span className="text-neon-cyan">yes</span>.</li>
                     </ul>
                     <div className="mt-1">
-                      Run the numbers yourself: <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=100.8&u=dbmw&z=120&v=4&spl=107&hr=14" className="text-neon-cyan">headphone power calculator</ExtLink> (pre-filled).
+                      Run the numbers yourself: <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphone power calculator</ExtLink>.
                     </div>
                   </div>
                 </>,
@@ -127,7 +127,7 @@ const Index = () => {
                 <>
                   <span className="text-neon-magenta">DAC:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> over <span className="text-neon-cyan">USB</span>, powered from <span className="text-neon-cyan">USB-C</span> rather than its internal battery — only with <span className="text-neon-cyan">no EQ</span>, since with the target <span className="text-neon-cyan">PEQ</span> profile it can run out of power on some genres.
                   <div className="mt-2 rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-3 text-sm">
-                    <span className="text-neon-magenta">Can it drive it?</span> <a href="#demands" title="Why these numbers — do you have enough power?" className="text-xs text-neon-cyan underline-offset-4 hover:underline">why?</a> <span className="text-neon-cyan">Yes</span> — without EQ it only needs about <span className="text-neon-cyan">500 mW</span>, so roughly <span className="text-neon-cyan">0.5 V</span> against the DAC's <span className="text-neon-cyan">4 V</span> max.
+                    <span className="text-neon-magenta">Can it drive it?</span> <a href="#demands" title="Why these numbers — do you have enough power?" className="text-xs text-neon-cyan underline-offset-4 hover:underline">why?</a> <span className="text-neon-cyan">Yes</span> — without EQ it needs <span className="text-neon-cyan">1.59 V</span> / <span className="text-neon-cyan">79.43 mW</span> / <span className="text-neon-cyan">49.82 mA</span>, against the Qudelix 5K's <span className="text-neon-cyan">240.0 mW / 2.77 Vrms / 86.6 mArms</span> at <span className="text-neon-cyan">32 Ω</span>.
                   </div>
                 </>,
                 <>
@@ -144,11 +144,12 @@ const Index = () => {
                       <li>Peak needed: 90 + 7 + 9 + 14 = <span className="text-neon-cyan">120 dB SPL</span></li>
                       <li>Power needed: <span className="text-neon-cyan">631 mW</span></li>
                       <li>Voltage needed: <span className="text-neon-cyan">~4.5 V</span></li>
-                      <li>FiiO QX13 on <span className="text-neon-cyan">4.4 mm balanced</span>: <span className="text-neon-cyan">900 mW / 5.37 V</span></li>
+                      <li>Current pushed: <span className="text-neon-cyan">140.42 mA</span></li>
+                      <li>FiiO QX13 on <span className="text-neon-cyan">4.4 mm balanced</span>: <span className="text-neon-cyan">900 mW / 5.37 V / 167.7 mA</span></li>
                       <li>Verdict: <span className="text-neon-cyan">yes</span>.</li>
                     </ul>
                     <div className="mt-1">
-                      Run the numbers yourself: <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=92&u=dbmw&z=32&v=5.37&spl=106&hr=14" className="text-neon-cyan">headphone power calculator</ExtLink> (pre-filled).
+                      Run the numbers yourself: <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphone power calculator</ExtLink>.
                     </div>
                   </div>
                 </>,
@@ -179,7 +180,7 @@ const Index = () => {
                       <li>Verdict: <span className="text-neon-cyan">yes</span>.</li>
                     </ul>
                     <div className="mt-1">
-                      Run the numbers yourself: <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=99&u=dbmw&z=32&v=1.04&spl=100&hr=14" className="text-neon-cyan">headphone power calculator</ExtLink> (pre-filled).
+                      Run the numbers yourself: <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphone power calculator</ExtLink>.
                     </div>
                   </div>
                 </>,
@@ -209,7 +210,7 @@ const Index = () => {
                       <li>Verdict: <span className="text-neon-cyan">yes</span>.</li>
                     </ul>
                     <div className="mt-1">
-                      Run the numbers yourself: <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=99&u=dbmw&z=38&v=1&spl=97&hr=14" className="text-neon-cyan">headphone power calculator</ExtLink> (pre-filled).
+                      Run the numbers yourself: <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphone power calculator</ExtLink>.
                     </div>
                   </div>
                 </>,
