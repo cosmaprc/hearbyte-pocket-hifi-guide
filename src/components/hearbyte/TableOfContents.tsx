@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const sections = [
   { id: "chain", label: "My preferred chains" },
@@ -16,6 +16,23 @@ const sections = [
 const TableOfContents = () => {
   const [active, setActive] = useState<string>(sections[0].id);
   const [scrolled, setScrolled] = useState(false);
+  const barRef = useRef<HTMLUListElement | null>(null);
+  const chipRefs = useRef<Map<string, HTMLAnchorElement>>(new Map());
+
+  // Keep the active chip visible inside the horizontal bar (mobile/tablet).
+  useEffect(() => {
+    const bar = barRef.current;
+    const chip = chipRefs.current.get(active);
+    if (!bar || !chip) return;
+    if (bar.scrollWidth <= bar.clientWidth) return;
+
+    const target = chip.offsetLeft - (bar.clientWidth - chip.offsetWidth) / 2;
+    const left = Math.max(0, Math.min(target, bar.scrollWidth - bar.clientWidth));
+    if (Math.abs(left - bar.scrollLeft) < 4) return;
+
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    bar.scrollTo({ left, behavior: reduce ? "auto" : "smooth" });
+  }, [active]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > window.innerHeight * 0.7);
@@ -110,13 +127,20 @@ const TableOfContents = () => {
         aria-label="Page sections"
         className="sticky top-0 z-40 bg-background/95 shadow-[0_1px_0_0_hsl(var(--neon-magenta)/0.12)] backdrop-blur-md xl:hidden"
       >
-        <ul className="flex gap-2 overflow-x-auto px-4 py-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <ul
+          ref={barRef}
+          className="flex gap-2 overflow-x-auto px-4 py-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        >
           {sections.map((s) => {
             const isActive = active === s.id;
             return (
               <li key={s.id} className="shrink-0">
                 <a
                   href={`#${s.id}`}
+                  ref={(node) => {
+                    if (node) chipRefs.current.set(s.id, node);
+                    else chipRefs.current.delete(s.id);
+                  }}
                   onClick={(e) => handleClick(e, s.id)}
                   aria-current={isActive ? "true" : undefined}
                   className={`block rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-widest transition-colors ${
@@ -130,6 +154,7 @@ const TableOfContents = () => {
               </li>
             );
           })}
+
         </ul>
       </nav>
     </>
