@@ -16,6 +16,23 @@ const sections = [
 const TableOfContents = () => {
   const [active, setActive] = useState<string>(sections[0].id);
   const [scrolled, setScrolled] = useState(false);
+  const barRef = useRef<HTMLUListElement | null>(null);
+  const chipRefs = useRef<Map<string, HTMLAnchorElement>>(new Map());
+
+  // Keep the active chip visible inside the horizontal bar (mobile/tablet).
+  useEffect(() => {
+    const bar = barRef.current;
+    const chip = chipRefs.current.get(active);
+    if (!bar || !chip) return;
+    if (bar.scrollWidth <= bar.clientWidth) return;
+
+    const target = chip.offsetLeft - (bar.clientWidth - chip.offsetWidth) / 2;
+    const left = Math.max(0, Math.min(target, bar.scrollWidth - bar.clientWidth));
+    if (Math.abs(left - bar.scrollLeft) < 4) return;
+
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    bar.scrollTo({ left, behavior: reduce ? "auto" : "smooth" });
+  }, [active]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > window.innerHeight * 0.7);
