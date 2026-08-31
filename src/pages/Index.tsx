@@ -404,12 +404,12 @@ const Index = () => {
                   No specialized web tool needed.
                   <br />
                   Simply use a standard phone calculator to add your manual targets:
-                  <ul className="mt-1 list-inside list-disc space-y-0.5 font-mono">
-                    <li>[Desired Base (Avg) Listening Volume dB]</li>
-                    <li>+ [PEQ Preamp Reduction Loss dB]</li>
-                    <li>+ [Volume Normalisation Loss dB]</li>
-                    <li>+ [Genre Dynamic Headroom Peaks dB]</li>
-                  </ul>
+                  <div className="mt-1 space-y-0.5 font-mono">
+                    <div>[Desired Base (Avg) Listening Volume dB]</div>
+                    <div>+ [PEQ Preamp Reduction Loss dB]</div>
+                    <div>+ [Volume Normalisation Loss dB]</div>
+                    <div>+ [Genre Dynamic Headroom Peaks dB]</div>
+                  </div>
                 </td>
               </tr>
               <tr className="border-b border-border/60 last:border-b-0">
