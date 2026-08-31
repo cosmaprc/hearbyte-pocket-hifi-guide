@@ -110,13 +110,20 @@ const TableOfContents = () => {
         aria-label="Page sections"
         className="sticky top-0 z-40 bg-background/95 shadow-[0_1px_0_0_hsl(var(--neon-magenta)/0.12)] backdrop-blur-md xl:hidden"
       >
-        <ul className="flex gap-2 overflow-x-auto px-4 py-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <ul
+          ref={barRef}
+          className="flex gap-2 overflow-x-auto px-4 py-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        >
           {sections.map((s) => {
             const isActive = active === s.id;
             return (
               <li key={s.id} className="shrink-0">
                 <a
                   href={`#${s.id}`}
+                  ref={(node) => {
+                    if (node) chipRefs.current.set(s.id, node);
+                    else chipRefs.current.delete(s.id);
+                  }}
                   onClick={(e) => handleClick(e, s.id)}
                   aria-current={isActive ? "true" : undefined}
                   className={`block rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-widest transition-colors ${
@@ -130,6 +137,7 @@ const TableOfContents = () => {
               </li>
             );
           })}
+
         </ul>
       </nav>
     </>
