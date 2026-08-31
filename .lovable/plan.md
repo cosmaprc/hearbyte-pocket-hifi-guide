@@ -15,6 +15,8 @@ Chain 1 also lists `Current pushed: 28.87 mA`, but 105 mW into 120 Ω is 3.55 V 
 
 The pre-filled `spl=` value in the theaudiostuff links is also inconsistent between chains (107, 106, 100, 97). Each should be the average-at-amp figure, i.e. `spl=97` for all four, with `hr=14`. Chain 4's link also passes `v=1` while the text quotes 1.043 V — align to 1.043.
 
+Also: drop the parenthetical "(so X dB average at the amp)" from every chain card. The preceding "Sound Check headroom: 7 dB" already says enough; the raw target average can go into the expanded calculation list only.
+
 ## 2. Two panel styles for the same thing
 
 Chain 1 shows the detailed bullet list for the Qudelix and a one-line summary for the QX13; chain 2 does the opposite (one-liner for Qudelix, list for QX13). Chains 3 and 4 use the list only.
