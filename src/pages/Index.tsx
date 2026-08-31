@@ -399,8 +399,18 @@ const Index = () => {
             <tbody>
               <tr className="border-b border-border/60 last:border-b-0">
                 <th scope="row" className="py-2 pr-3 font-semibold text-neon-magenta">Step 1</th>
-                <td className="py-2 pr-3 text-foreground/90">Target peak loudness (dB SPL calculation)</td>
-                <td className="py-2 text-foreground/90">No specialized web tool needed. Simply use a standard phone calculator: <span className="font-mono">[Avg dB] + [PEQ Loss] + [Genre Headroom]</span>.</td>
+                <td className="py-2 pr-3 text-foreground/90">Target Peak Loudness (dB SPL Calculation)</td>
+                <td className="py-2 text-foreground/90">
+                  No specialized web tool needed.
+                  <br />
+                  Simply use a standard phone calculator to add your manual targets:
+                  <ul className="mt-1 list-inside list-disc space-y-0.5 font-mono">
+                    <li>[Desired Base (Avg) Listening Volume dB]</li>
+                    <li>+ [PEQ Preamp Reduction Loss dB]</li>
+                    <li>+ [Volume Normalisation Loss dB]</li>
+                    <li>+ [Genre Dynamic Headroom Peaks dB]</li>
+                  </ul>
+                </td>
               </tr>
               <tr className="border-b border-border/60 last:border-b-0">
                 <th scope="row" className="py-2 pr-3 font-semibold text-neon-magenta">Step 2</th>
