@@ -786,11 +786,6 @@ const Index = () => {
               <p><span className="text-neon-cyan">Digital Signal Processing</span> — software that reshapes audio in real time (<span className="text-neon-cyan">EQ</span>, <span className="text-neon-cyan">reverb</span>, <span className="text-neon-cyan">crossfeed</span>, <span className="text-neon-cyan">dynamics</span>).</p>
             </Card>
           </div>
-          <div id="g-dynameq" className="scroll-mt-24">
-            <Card title="DynamEQ">
-              <p>Cambridge Audio's loudness-aware EQ in the Melomania app — it lifts the frequency extremes at low volume and backs off as you turn up, so the tuning stays consistent across listening levels.</p>
-            </Card>
-          </div>
           <div id="g-eq" className="scroll-mt-24">
             <Card title="EQ / PEQ">
               <p><span className="text-neon-cyan">EQ</span> is an equalizer that boosts or cuts frequency bands. <span className="text-neon-cyan">PEQ</span> (Parametric EQ) lets you control center frequency, gain and bandwidth (Q) per band — far more precise than a fixed graphic EQ.</p>
