@@ -108,7 +108,7 @@ const TableOfContents = () => {
       {/* Mobile/Tablet: horizontal sticky bar at the top */}
       <nav
         aria-label="Page sections"
-        className="sticky top-0 z-40 border-b border-neon-magenta/20 bg-background/80 backdrop-blur-md lg:hidden"
+        className="sticky top-0 z-40 bg-background/95 shadow-[0_1px_0_0_hsl(var(--neon-magenta)/0.12)] backdrop-blur-md xl:hidden"
       >
         <ul className="flex gap-2 overflow-x-auto px-4 py-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {sections.map((s) => {
