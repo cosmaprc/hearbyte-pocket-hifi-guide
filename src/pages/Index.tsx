@@ -103,7 +103,7 @@ const Index = () => {
                       <li>Power needed: <span className="text-neon-cyan">105 mW</span></li>
                       <li>Voltage needed: <span className="text-neon-cyan">~3.6 V</span></li>
                       <li>Qudelix 5K on <span className="text-neon-cyan">2.5 mm balanced</span>: <span className="text-neon-cyan">133.5 mW / 4 V</span></li>
-                      <li>Verdict: <span className="text-neon-cyan">yes</span>, with a little left over.</li>
+                      <li>Verdict: <span className="text-neon-cyan">yes</span>.</li>
                     </ul>
                     <div className="mt-1">
                       Run the numbers yourself: <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=100.8&u=dbmw&z=120&v=4&spl=107&hr=14" className="text-neon-cyan">headphone power calculator</ExtLink> (pre-filled).
