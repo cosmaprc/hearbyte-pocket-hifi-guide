@@ -64,15 +64,15 @@ const TableOfContents = () => {
 
   return (
     <>
-      {/* Desktop: vertical sticky nav on the right */}
+      {/* Desktop: compact floating card on the right */}
       <nav
         aria-label="Page sections"
-        className={`pointer-events-none fixed right-6 top-1/2 z-40 hidden -translate-y-1/2 transition-opacity duration-300 lg:block ${
+        className={`pointer-events-none fixed right-6 top-1/2 z-40 hidden -translate-y-1/2 transition-opacity duration-300 xl:block ${
           scrolled ? "opacity-100" : "opacity-0"
         }`}
         aria-hidden={!scrolled}
       >
-        <ul className="pointer-events-auto flex flex-col gap-3 rounded-full border border-neon-magenta/30 bg-background/60 px-3 py-4 backdrop-blur-md">
+        <ul className="pointer-events-auto flex flex-col gap-3 rounded-2xl border border-neon-magenta/25 bg-background/90 px-3 py-4 shadow-card backdrop-blur-md">
           {sections.map((s) => {
             const isActive = active === s.id;
             return (
@@ -85,7 +85,7 @@ const TableOfContents = () => {
                   className="flex items-center gap-3 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon-magenta focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                 >
                   <span
-                    className={`whitespace-nowrap rounded-md border border-neon-cyan/30 bg-background/80 px-2 py-1 text-xs font-semibold uppercase tracking-widest text-neon-cyan opacity-0 transition-opacity group-hover:opacity-100 ${
+                    className={`whitespace-nowrap rounded-md border border-neon-cyan/30 bg-background px-2 py-1 text-xs font-semibold uppercase tracking-widest text-neon-cyan opacity-0 shadow-sm transition-opacity group-hover:opacity-100 ${
                       isActive ? "opacity-100" : ""
                     }`}
                   >
@@ -95,7 +95,7 @@ const TableOfContents = () => {
                     className={`block h-3 w-3 rounded-full border transition-all ${
                       isActive
                         ? "scale-125 border-neon-magenta bg-neon-magenta shadow-neon-magenta"
-                        : "border-neon-cyan/60 bg-transparent hover:border-neon-cyan"
+                        : "border-neon-cyan bg-transparent hover:border-neon-cyan"
                     }`}
                   />
                 </a>
@@ -108,7 +108,7 @@ const TableOfContents = () => {
       {/* Mobile/Tablet: horizontal sticky bar at the top */}
       <nav
         aria-label="Page sections"
-        className="sticky top-0 z-40 border-b border-neon-magenta/20 bg-background/80 backdrop-blur-md lg:hidden"
+        className="sticky top-0 z-40 bg-background/95 shadow-[0_1px_0_0_hsl(var(--neon-magenta)/0.12)] backdrop-blur-md xl:hidden"
       >
         <ul className="flex gap-2 overflow-x-auto px-4 py-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {sections.map((s) => {
