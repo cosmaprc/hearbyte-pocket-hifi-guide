@@ -149,7 +149,7 @@ const Index = () => {
                       <li>Verdict: <span className="text-neon-cyan">yes</span>.</li>
                     </ul>
                     <div className="mt-1">
-                      Run the numbers yourself: <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphone power calculator</ExtLink>.
+                      Run the numbers yourself: <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=92&u=dbmw&z=32&v=5.37&spl=106&hr=14" className="text-neon-cyan">theaudiostuff.com</ExtLink> opens pre-filled with these values but doesn't report current, while <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphones.com</ExtLink> gives you the <span className="text-neon-cyan">mA</span> figure but has to be filled in by hand.
                     </div>
                   </div>
                 </>,
