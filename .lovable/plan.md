@@ -8,9 +8,10 @@ Published output power: L+R ≥ 49 mW + 49 mW (16 Ω, THD+N < 1%), L+R ≥ 34 mW
 
 | Impedance | Power | Voltage | Current | Limited by |
 | --- | --- | --- | --- | --- |
-| 32 Ω | 34.00 mW | 1.043 Vrms | 32.60 mArms | Current / device |
-| 38 Ω | 28.63 mW | 1.043 Vrms | 27.45 mArms | Voltage |
-| 120 Ω | 9.07 mW | 1.043 Vrms | 8.69 mArms | Voltage |
+| 16 Ω | 49.00 mW | 0.885 Vrms | 55.34 mArms | Current limit |
+| 32 Ω | 34.00 mW | 1.043 Vrms | 32.60 mArms | Voltage rail |
+| 38 Ω | 28.63 mW | 1.043 Vrms | 27.45 mArms | Voltage rail |
+| 120 Ω | 9.07 mW | 1.043 Vrms | 8.69 mArms | Voltage rail |
 
 ## Qudelix 5K (2.5 mm balanced)
 
@@ -18,9 +19,9 @@ Published: max 4 Vrms output, 240 mW per channel.
 
 | Impedance | Power | Voltage | Current | Limited by |
 | --- | --- | --- | --- | --- |
-| 32 Ω | 240.0 mW | 2.77 Vrms | 86.6 mArms | Current / thermal |
-| 38 Ω | 240.0 mW | 3.02 Vrms | 79.5 mArms | Power / thermal |
-| 120 Ω | 133.3 mW | 4.00 Vrms | 33.3 mArms | Voltage |
+| 32 Ω | 240.0 mW | 2.77 Vrms | 86.6 mArms | Official power ceiling |
+| 38 Ω | 240.0 mW | 3.02 Vrms | 79.5 mArms | Official power ceiling |
+| 120 Ω | 133.3 mW | 4.00 Vrms | 33.3 mArms | Official voltage ceiling |
 
 ## FiiO QX13 (4.4 mm balanced, USB decoding, desktop mode, high gain)
 
@@ -28,9 +29,11 @@ Published output power: L+R ≥ 480 mW + 480 mW (16 Ω), ≥ 900 mW + 900 mW (32
 
 | Impedance | Power | Voltage | Current | Limited by |
 | --- | --- | --- | --- | --- |
+| 16 Ω | 480.0 mW | 2.77 Vrms | 173.2 mArms | Current / thermal |
 | 32 Ω | 900.0 mW | 5.37 Vrms | 167.7 mArms | Current limited |
 | 38 Ω | 986.8 mW | 6.12 Vrms | 161.2 mArms | Voltage limited |
 | 120 Ω | 312.5 mW | 6.12 Vrms | 51.0 mArms | Voltage limited |
+| 300 Ω | 125.0 mW | 6.12 Vrms | 20.4 mArms | Voltage limited |
 
 A short line above the panels notes these are the figures the "Can it drive it?" panels in the chains section compare against, and that the 32/38/120 Ω rows match the AKG K371 / HiFiMAN Sundara, ATH-M50x BT2 and HD 560S loads.
 
