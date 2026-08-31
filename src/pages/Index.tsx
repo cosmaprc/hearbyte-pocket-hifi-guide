@@ -295,7 +295,95 @@ const Index = () => {
           Watch the units: <span className="text-neon-magenta">dB/mW</span> and <span className="text-neon-magenta">dB/V</span> are not interchangeable, and vendors quote whichever number flatters the product (<GlossaryLink term="sensitivity">how they convert</GlossaryLink>).
         </p>
 
-        <div className="max-w-2xl rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-4 text-sm text-foreground/90">
+        <SubHeading>How power, voltage and current fit together</SubHeading>
+        <p className="mb-4 max-w-2xl text-sm text-foreground/80">
+          A driver needs <span className="text-neon-cyan">power</span> (mW) to make sound, and power is not a force of its own: it is what happens when electrical pressure (<span className="text-neon-cyan">voltage</span>) pushes electrical flow (<span className="text-neon-cyan">current</span>) through the headphone's <span className="text-neon-cyan">impedance</span>.
+        </p>
+        <p className="mb-4 max-w-2xl text-sm text-foreground/80">
+          <GlossaryLink term="sensitivity">Sensitivity</GlossaryLink> sets the total power or voltage you need for your target volume — the figures below use a loud <span className="text-neon-magenta">110 dB SPL peak</span> so musical dynamics stay clean. Impedance then decides how that power splits between current and voltage:
+        </p>
+        <Bullets
+          items={[
+            <>
+              <span className="text-neon-magenta">Low impedance (≤ 32 Ω)</span> opens the floodgates: very little voltage, but a lot of <span className="text-neon-cyan">current</span>. The amp needs current reserves.
+            </>,
+            <>
+              <span className="text-neon-magenta">High impedance (≥ 150 Ω)</span> acts like a narrow pipe: it restricts current, so it takes a lot of <span className="text-neon-cyan">voltage</span> to push the signal through.
+            </>,
+          ]}
+        />
+        <div className="mt-5 max-w-2xl rounded-md border border-border bg-background/40 p-4 text-sm">
+          <p className="font-display text-neon-cyan">The maths</p>
+          <ul className="mt-2 space-y-1 font-mono text-xs text-foreground/90">
+            <li>V = √( P(mW) × R(Ω) / 1000 )</li>
+            <li>I(mA) = V / R(Ω) × 1000</li>
+            <li>P(mW) = V × I(mA) &nbsp;— verification</li>
+          </ul>
+        </div>
+
+        <SubHeading>Electrical output comparison</SubHeading>
+        <p className="mb-4 max-w-2xl text-sm text-foreground/80">
+          Target volume: <span className="text-neon-cyan">110 dB SPL peak</span>.
+        </p>
+        <div className="overflow-x-auto rounded-xl border border-border bg-card-gradient p-4">
+          <table className="w-full min-w-[46rem] border-collapse text-left text-xs">
+            <thead>
+              <tr className="border-b border-border">
+                <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Headphone type</th>
+                <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Impedance</th>
+                <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Sensitivity</th>
+                <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Target power</th>
+                <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Voltage</th>
+                <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Current</th>
+                <th scope="col" className="py-2 font-semibold uppercase tracking-widest text-neon-cyan">Amp bottleneck</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                {
+                  type: "Low Z / high sensitivity (typical IEMs)",
+                  z: "16 Ω",
+                  sens: "110 dB/mW (very high)",
+                  power: "1.00 mW",
+                  v: "0.13 V",
+                  i: "7.9 mA",
+                  bottleneck: "None — any phone or dongle drives it",
+                },
+                {
+                  type: "Low Z / low sensitivity (planar magnetic)",
+                  z: "32 Ω",
+                  sens: "90 dB/mW (very low)",
+                  power: "100.00 mW",
+                  v: "1.79 V",
+                  i: "55.9 mA",
+                  bottleneck: "Current bottleneck — tiny dongles clip on peaks",
+                },
+                {
+                  type: "High Z / mid sensitivity (studio open-back)",
+                  z: "300 Ω",
+                  sens: "97 dB/mW (moderate)",
+                  power: "20.00 mW",
+                  v: "2.45 V",
+                  i: "8.2 mA",
+                  bottleneck: "Voltage bottleneck — thin and too quiet",
+                },
+              ].map((r) => (
+                <tr key={r.z} className="border-b border-border/60 last:border-b-0">
+                  <th scope="row" className="py-2 pr-3 font-semibold text-neon-magenta">{r.type}</th>
+                  <td className="py-2 pr-3 text-foreground/90">{r.z}</td>
+                  <td className="py-2 pr-3 text-foreground/90">{r.sens}</td>
+                  <td className="py-2 pr-3 text-foreground/90">{r.power}</td>
+                  <td className="py-2 pr-3 text-foreground/90">{r.v}</td>
+                  <td className="py-2 pr-3 text-foreground/90">{r.i}</td>
+                  <td className="py-2 text-foreground/80">{r.bottleneck}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div className="mt-10 max-w-2xl rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-4 text-sm text-foreground/90">
+
           <div className="font-display text-neon-magenta">Important · intersample clipping and headroom</div>
           <p className="mt-2">
             Playing music from a computer or phone, the sound cannot distort or clip <span className="text-neon-cyan">digitally</span> unless you push the volume or EQ too high in software. Even when your software settings look safe, a hidden kind of distortion called <span className="text-neon-magenta">intersample clipping</span> can still happen inside the hardware. It occurs when the digital audio is turned back into a real waveform and the peaks of that waveform overshoot what the hardware can handle.
