@@ -100,8 +100,9 @@ const Index = () => {
                       <li><span className="text-neon-cyan">PEQ</span> preamp headroom: <span className="text-neon-cyan">~10 dB</span></li>
                       <li>Crest factor, jazz / acoustic: <span className="text-neon-cyan">14 dB</span></li>
                       <li>Peak needed: 90 + 7 + 10 + 14 = <span className="text-neon-cyan">121 dB SPL</span></li>
+                      <li>Power needed: <span className="text-neon-cyan">105 mW</span></li>
                       <li>Voltage needed: <span className="text-neon-cyan">~3.6 V</span></li>
-                      <li>Qudelix 5K on <span className="text-neon-cyan">2.5 mm balanced</span>: <span className="text-neon-cyan">4 V</span></li>
+                      <li>Qudelix 5K on <span className="text-neon-cyan">2.5 mm balanced</span>: <span className="text-neon-cyan">133.5 mW / 4 V</span></li>
                       <li>Verdict: <span className="text-neon-cyan">yes</span>, with a little left over.</li>
                     </ul>
                     <div className="mt-1">
