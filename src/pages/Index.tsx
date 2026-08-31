@@ -415,12 +415,12 @@ const Index = () => {
               <tr className="border-b border-border/60 last:border-b-0">
                 <th scope="row" className="py-2 pr-3 font-semibold text-neon-magenta">Step 2</th>
                 <td className="py-2 pr-3 text-foreground/90">Calculate required current (mA)</td>
-                <td className="py-2 text-foreground/90"><ExtLink href="https://headphones.com" className="text-neon-cyan">Headphones.com Power Calculator</ExtLink><br /><ExtLink href="https://headphonesty.com" className="text-neon-cyan">Headphonesty Power Calculator</ExtLink></td>
+                <td className="py-2 text-foreground/90"><ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">Headphones.com Power Calculator</ExtLink><br /><ExtLink href="https://www.headphonesty.com/headphone-power-calculator/" className="text-neon-cyan">Headphonesty Power Calculator</ExtLink></td>
               </tr>
               <tr className="border-b border-border/60 last:border-b-0">
                 <th scope="row" className="py-2 pr-3 font-semibold text-neon-magenta">Step 3</th>
                 <td className="py-2 pr-3 text-foreground/90">Check amp capabilities (voltage &amp; power caps)</td>
-                <td className="py-2 text-foreground/90"><ExtLink href="https://omnicalculator.com" className="text-neon-cyan">Omni Headphone Power Calculator</ExtLink><br /><ExtLink href="https://moon-audio.com" className="text-neon-cyan">Moon Audio Amp Calculator</ExtLink></td>
+                <td className="py-2 text-foreground/90"><ExtLink href="https://www.omnicalculator.com/everyday-life/headphone-power" className="text-neon-cyan">Omni Headphone Power Calculator</ExtLink><br /><ExtLink href="https://www.moon-audio.com/pages/headphone-amp-calculator" className="text-neon-cyan">Moon Audio Amp Calculator</ExtLink></td>
               </tr>
             </tbody>
           </table>
