@@ -149,7 +149,7 @@ const Index = () => {
                       <li>Sensitivity: <span className="text-neon-cyan">92 dB SPL/mW</span></li>
                       <li>Impedance: <span className="text-neon-cyan">32 Ω</span></li>
                       <li>Target average loudness: <span className="text-neon-cyan">90 dB SPL</span></li>
-                      <li>Sound Check headroom: <span className="text-neon-cyan">7 dB</span> (so <span className="text-neon-cyan">106 dB</span> average at the amp)</li>
+                      <li>Sound Check headroom: <span className="text-neon-cyan">7 dB</span></li>
                       <li><span className="text-neon-cyan">PEQ</span> preamp headroom: <span className="text-neon-cyan">~9 dB</span></li>
                       <li>Crest factor, jazz / acoustic: <span className="text-neon-cyan">14 dB</span></li>
                       <li>Peak needed: 90 + 7 + 9 + 14 = <span className="text-neon-cyan">120 dB SPL</span></li>
