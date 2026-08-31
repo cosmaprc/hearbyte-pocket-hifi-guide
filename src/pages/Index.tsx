@@ -436,10 +436,6 @@ const Index = () => {
           <p className="mt-2">
             To stay clear of it, run the numbers through a free <span className="text-neon-cyan">headphone power calculator</span>. Different music needs different amounts of breathing room, or <span className="text-neon-magenta">headroom</span>: rock wants around <span className="text-neon-cyan">10 dB</span>, while acoustic and jazz want around <span className="text-neon-cyan">14 dB</span> for sudden peaks like a drum hit. The calculator tells you whether your portable DAC/amp dongle has enough output left to handle your genres cleanly — after <GlossaryLink term="replaygain">loudness normalization</GlossaryLink> pulls the level down, and after you lower the preamp yourself to make room for an <span className="text-neon-cyan">EQ</span> bass boost.
           </p>
-          <p className="mt-3 text-neon-magenta">Calculator</p>
-          <p className="mt-1">
-            <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=97&u=dbv&z=300&v=1.0&spl=85&hr=10" className="text-neon-cyan">theaudiostuff.com headphone power calculator</ExtLink> — pre-filled with a 300 Ω, 97 dB/V example at 1.0 V and 10 dB headroom.
-          </p>
         </div>
 
         <SubHeading>What the dongles actually put out</SubHeading>
