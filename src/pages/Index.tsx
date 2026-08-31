@@ -341,7 +341,7 @@ const Index = () => {
             <tbody>
               {[
                 {
-                  type: "Low Z / high sensitivity (typical IEMs)",
+                  type: "Low Ω / high sensitivity (typical IEMs)",
                   z: "16 Ω",
                   sens: "110 dB/mW (very high)",
                   i: "7.9 mA (tiny flow)",
@@ -350,7 +350,7 @@ const Index = () => {
                   demand: "Ultra easy demand — barely draws voltage or current.",
                 },
                 {
-                  type: "Low Z / low sensitivity (planar magnetic)",
+                  type: "Low Ω / low sensitivity (planar magnetic)",
                   z: "32 Ω",
                   sens: "90 dB/mW (very low)",
                   i: "55.9 mA (massive)",
@@ -359,7 +359,7 @@ const Index = () => {
                   demand: "Current-dominant demand — needs roughly 7x more current than voltage, which chokes weak dongles.",
                 },
                 {
-                  type: "High Z / mid sensitivity (studio open-back)",
+                  type: "High Ω / mid sensitivity (studio open-back)",
                   z: "300 Ω",
                   sens: "97 dB/mW (moderate)",
                   i: "8.2 mA (tiny flow)",
