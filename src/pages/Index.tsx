@@ -142,8 +142,8 @@ const Index = () => {
                       <li>Crest factor, jazz / acoustic: <span className="text-neon-cyan">14 dB</span></li>
                       <li>Peak needed: 90 + 7 + 9 + 14 = <span className="text-neon-cyan">120 dB SPL</span></li>
                       <li>Voltage needed: <span className="text-neon-cyan">~4.5 V</span></li>
-                      <li>FiiO QX13 on <span className="text-neon-cyan">4.4 mm balanced</span>: <span className="text-neon-cyan">6.19 V</span></li>
-                      <li>Verdict: <span className="text-neon-cyan">yes</span>, with headroom to spare.</li>
+                      <li>FiiO QX13 on <span className="text-neon-cyan">4.4 mm balanced</span>: <span className="text-neon-cyan">5.37 V</span></li>
+                      <li>Verdict: <span className="text-neon-cyan">yes</span>.</li>
                     </ul>
                     <div className="mt-1">
                       Run the numbers yourself: <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=92&u=dbmw&z=32&v=6.19&spl=106&hr=14" className="text-neon-cyan">headphone power calculator</ExtLink> (pre-filled).
