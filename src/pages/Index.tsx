@@ -642,9 +642,9 @@ const Index = () => {
                   Available on both{" "}
                   <ExtLink href="https://apps.apple.com/us/app/jetaudio-hi-res-music-player/id894888135" className="text-neon-cyan">iOS</ExtLink>
                   {" "}and{" "}
-                  <ExtLink href="https://play.google.com/store/apps/details?id=com.jetappfactory.jetaudioplus" className="text-neon-cyan">Android</ExtLink>
+                  <ExtLink href="https://play.google.com/store/apps/details?id=com.jetappfactory.jetaudioplus" className="text-neon-cyan">Android</ExtLink>.
                 </>,
-                <><span className="text-neon-cyan">ReplayGain</span> support with manual <span className="text-neon-cyan">preamp</span> adjustment</>,
+                <><span className="text-neon-cyan">ReplayGain</span> support with manual <span className="text-neon-cyan">preamp</span> adjustment.</>,
                 <>Bundled DSPs include a <span className="text-neon-cyan">graphic EQ</span>, <ExtLink href="https://www.am3d.com/" className="text-neon-magenta">AM3D</ExtLink> and <ExtLink href="https://www.bongioviacoustics.com/" className="text-neon-magenta">Bongiovi DPS</ExtLink>. The last two change the sound dramatically, for better or worse depending on the track.</>,
                 <>Note: within jetAudio, AM3D, Bongiovi DPS and Crystalizer are <span className="text-neon-magenta">paid in-app purchases</span>, not free with the app.</>,
               ]}
@@ -657,9 +657,9 @@ const Index = () => {
                   Available on both{" "}
                   <ExtLink href="https://apps.apple.com/us/app/neutron-music-player/id978831442" className="text-neon-cyan">iOS</ExtLink>
                   {" "}and{" "}
-                  <ExtLink href="https://play.google.com/store/apps/details?id=com.neutroncode.mp" className="text-neon-cyan">Android</ExtLink>
+                  <ExtLink href="https://play.google.com/store/apps/details?id=com.neutroncode.mp" className="text-neon-cyan">Android</ExtLink>.
                 </>,
-                <><span className="text-neon-cyan">ReplayGain</span> support with manual <span className="text-neon-cyan">preamp</span> adjustment</>,
+                <><span className="text-neon-cyan">ReplayGain</span> support with manual <span className="text-neon-cyan">preamp</span> adjustment.</>,
                 <>The widest DSP set of the three: <span className="text-neon-magenta">Parametric EQ</span>, <span className="text-neon-magenta">Frequency Response Correction</span> (AutoEQ), <GlossaryLink term="crossfeed">Crossfeed</GlossaryLink> and <GlossaryLink term="alc">Adaptive Loudness Compensation</GlossaryLink>.</>,
               ]}
             />
@@ -667,8 +667,8 @@ const Index = () => {
           <Card title="USB Audio Player Pro" href="https://www.extreamsd.com/index.php/products/usb-audio-player-pro">
             <Bullets
               items={[
-                <><ExtLink href="https://play.google.com/store/apps/details?id=com.extreamsd.usbaudioplayerpro" className="text-neon-cyan">Android</ExtLink> only</>,
-                <><span className="text-neon-cyan">ReplayGain</span> support with manual <span className="text-neon-cyan">preamp</span> adjustment</>,
+                <><ExtLink href="https://play.google.com/store/apps/details?id=com.extreamsd.usbaudioplayerpro" className="text-neon-cyan">Android</ExtLink> only.</>,
+                <><span className="text-neon-cyan">ReplayGain</span> support with manual <span className="text-neon-cyan">preamp</span> adjustment.</>,
                 <>Includes <span className="text-neon-magenta">Parametric EQ</span> and <ExtLink href="https://www.toneboosters.com/tb_morphit_v1.html" className="text-neon-magenta">ToneBoosters MorphIt</ExtLink> — apply <GlossaryLink term="target">target curves</GlossaryLink> like <span className="text-neon-cyan">Harman</span> or <span className="text-neon-cyan">HiFi</span> to supported headphones, or make one headphone sound like another.</>,
               ]}
             />
@@ -879,8 +879,8 @@ const Index = () => {
               items={[
                 <>Power calculators tell you whether a dongle has the <span className="text-neon-cyan">voltage</span> and <span className="text-neon-magenta">headroom</span> for a given headphone — see <a href="#demands" className="text-neon-cyan underline-offset-4 hover:underline">Do you have enough power?</a></>,
                 <><ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=97&u=dbv&z=300&v=1.0&spl=85&hr=10" className="text-neon-cyan">theaudiostuff.com headphone power calculator</ExtLink> — the one the <span className="text-neon-magenta">Can it drive it?</span> panels use, pre-filled with a 300 Ω, 97 dB/V example.</>,
-                <><ExtLink href="https://www.headphonesty.com/headphone-power-calculator/" className="text-neon-cyan">Headphonesty headphone power calculator</ExtLink></>,
-                <><ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">Headphones.com power calculator</ExtLink></>,
+                <><ExtLink href="https://www.headphonesty.com/headphone-power-calculator/" className="text-neon-cyan">Headphonesty headphone power calculator</ExtLink>.</>,
+                <><ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">Headphones.com power calculator</ExtLink>.</>,
               ]}
             />
           </Card>
