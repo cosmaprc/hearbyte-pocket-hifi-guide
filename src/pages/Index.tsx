@@ -23,6 +23,42 @@ const GlossaryLink = ({ term, children }: { term: string; children: React.ReactN
   </a>
 );
 
+const dongleOutputs = [
+  {
+    name: "FiiO JIEZI",
+    output: "3.5 mm single-ended",
+    published: "Published: L+R ≥ 49 mW + 49 mW (16 Ω), L+R ≥ 34 mW + 34 mW (32 Ω), both at THD+N < 1%.",
+    rows: [
+      { z: "16 Ω", power: "49.00 mW", voltage: "0.885 Vrms", current: "55.34 mArms", limit: "Current limit" },
+      { z: "32 Ω", power: "34.00 mW", voltage: "1.043 Vrms", current: "32.60 mArms", limit: "Voltage rail" },
+      { z: "38 Ω", power: "28.63 mW", voltage: "1.043 Vrms", current: "27.45 mArms", limit: "Voltage rail" },
+      { z: "120 Ω", power: "9.07 mW", voltage: "1.043 Vrms", current: "8.69 mArms", limit: "Voltage rail" },
+    ],
+  },
+  {
+    name: "Qudelix 5K",
+    output: "2.5 mm balanced",
+    published: "Published: max 4 Vrms output, 240 mW per channel.",
+    rows: [
+      { z: "32 Ω", power: "240.0 mW", voltage: "2.77 Vrms", current: "86.6 mArms", limit: "Official power ceiling" },
+      { z: "38 Ω", power: "240.0 mW", voltage: "3.02 Vrms", current: "79.5 mArms", limit: "Official power ceiling" },
+      { z: "120 Ω", power: "133.3 mW", voltage: "4.00 Vrms", current: "33.3 mArms", limit: "Official voltage ceiling" },
+    ],
+  },
+  {
+    name: "FiiO QX13",
+    output: "4.4 mm balanced, USB decoding, desktop mode, high gain",
+    published: "Published: L+R ≥ 480 mW + 480 mW (16 Ω), ≥ 900 mW + 900 mW (32 Ω), ≥ 125 mW + 125 mW (300 Ω), all at THD+N < 1%.",
+    rows: [
+      { z: "16 Ω", power: "480.0 mW", voltage: "2.77 Vrms", current: "173.2 mArms", limit: "Current / thermal" },
+      { z: "32 Ω", power: "900.0 mW", voltage: "5.37 Vrms", current: "167.7 mArms", limit: "Current limited" },
+      { z: "38 Ω", power: "986.8 mW", voltage: "6.12 Vrms", current: "161.2 mArms", limit: "Voltage limited" },
+      { z: "120 Ω", power: "312.5 mW", voltage: "6.12 Vrms", current: "51.0 mArms", limit: "Voltage limited" },
+      { z: "300 Ω", power: "125.0 mW", voltage: "6.12 Vrms", current: "20.4 mArms", limit: "Voltage limited" },
+    ],
+  },
+];
+
 const Index = () => {
   return (
     <main className="min-h-screen bg-background text-foreground">
