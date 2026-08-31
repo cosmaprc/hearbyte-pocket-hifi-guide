@@ -278,6 +278,78 @@ const Index = () => {
 
       <Divider />
 
+      <Section id="demands" icon={Gauge} title="Do you have enough power?" tone="purple">
+        <p className="mb-6 max-w-2xl text-base text-foreground/90">
+          Two numbers decide how fussy a headphone is about its source: <span className="text-neon-cyan">impedance</span> (Ω) and <GlossaryLink term="sensitivity">sensitivity</GlossaryLink> (dB/mW or dB/V). Mismatch them and you get hiss, clipping, or not enough volume.
+        </p>
+        <p className="mb-6 max-w-2xl text-sm text-foreground/80">
+          One correction before the table, because you will read the opposite everywhere. Impedance is just the <span className="text-neon-cyan">ratio of voltage to current</span>, and that ratio does not change with level, so a headphone does not draw proportionally more current in the bass. If it plays <span className="text-neon-magenta">loud enough, it has enough bass</span>, and vice versa. When an amp runs short of current you get <span className="text-neon-magenta">clipping on peaks</span> across the whole signal, not weak or thin bass. <ExtLink href="https://www.reddit.com/r/headphones/s/vq4C1c1tvn" className="text-neon-cyan">oratory1990 explains it here</ExtLink>.
+        </p>
+        <p className="mb-6 max-w-2xl text-sm text-foreground/80">
+          Watch the units: <span className="text-neon-magenta">dB/mW</span> and <span className="text-neon-magenta">dB/V</span> are not interchangeable, and vendors quote whichever number flatters the product (<GlossaryLink term="sensitivity">how they convert</GlossaryLink>).
+        </p>
+
+        <div className="max-w-2xl rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-4 text-sm text-foreground/90">
+          <div className="font-display text-neon-magenta">Important · intersample clipping and headroom</div>
+          <p className="mt-2">
+            Playing music from a computer or phone, the sound cannot distort or clip <span className="text-neon-cyan">digitally</span> unless you push the volume or EQ too high in software. Even when your software settings look safe, a hidden kind of distortion called <span className="text-neon-magenta">intersample clipping</span> can still happen inside the hardware. It occurs when the digital audio is turned back into a real waveform and the peaks of that waveform overshoot what the hardware can handle.
+          </p>
+          <p className="mt-2">
+            To stay clear of it, run the numbers through a free <span className="text-neon-cyan">headphone power calculator</span>. Different music needs different amounts of breathing room, or <span className="text-neon-magenta">headroom</span>: rock wants around <span className="text-neon-cyan">10 dB</span>, while acoustic and jazz want around <span className="text-neon-cyan">14 dB</span> for sudden peaks like a drum hit. The calculator tells you whether your portable DAC/amp dongle has enough output left to handle your genres cleanly — after <GlossaryLink term="replaygain">loudness normalization</GlossaryLink> pulls the level down, and after you lower the preamp yourself to make room for an <span className="text-neon-cyan">EQ</span> bass boost.
+          </p>
+          <p className="mt-3 text-neon-magenta">Calculators</p>
+          <ul className="mt-1 space-y-1">
+            <li><ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=97&u=dbv&z=300&v=1.0&spl=85&hr=10" className="text-neon-cyan">theaudiostuff.com headphone power calculator</ExtLink> — pre-filled with a 300 Ω, 97 dB/V example at 1.0 V and 10 dB headroom.</li>
+            <li><ExtLink href="https://www.headphonesty.com/headphone-power-calculator/" className="text-neon-cyan">Headphonesty headphone power calculator</ExtLink></li>
+            <li><ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">Headphones.com power calculator</ExtLink></li>
+          </ul>
+        </div>
+
+        <SubHeading>What the dongles actually put out</SubHeading>
+        <p className="mb-4 max-w-2xl text-sm text-foreground/80">
+          These are the figures the <span className="text-neon-magenta">Can it drive it?</span> panels in the <a href="#chain" className="text-neon-cyan underline-offset-4 hover:underline">chains section</a> compare against. The <span className="text-neon-cyan">32 Ω</span>, <span className="text-neon-cyan">38 Ω</span> and <span className="text-neon-cyan">120 Ω</span> rows are there because they are the loads I actually use: <span className="text-neon-magenta">AKG K371</span> / <span className="text-neon-magenta">HiFiMAN Sundara</span>, <span className="text-neon-magenta">ATH-M50x BT2</span> and <span className="text-neon-magenta">Sennheiser HD 560S</span>.
+        </p>
+        <div className="grid gap-5 lg:grid-cols-3">
+          {dongleOutputs.map((d) => (
+            <article
+              key={d.name}
+              className="rounded-xl border border-border bg-card-gradient p-4"
+            >
+              <h3 className="font-display text-base font-bold text-neon-magenta">{d.name}</h3>
+              <p className="mt-1 text-xs text-foreground/70">{d.output}</p>
+              <p className="mt-2 text-sm text-foreground/90">{d.published}</p>
+              <div className="mt-3 overflow-x-auto">
+                <table className="w-full min-w-[20rem] border-collapse text-left text-xs">
+                  <thead>
+                    <tr className="border-b border-border">
+                      <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Ω</th>
+                      <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Power</th>
+                      <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Voltage</th>
+                      <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Current</th>
+                      <th scope="col" className="py-2 font-semibold uppercase tracking-widest text-neon-cyan">Limited by</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {d.rows.map((r) => (
+                      <tr key={r.z} className="border-b border-border/60 last:border-b-0">
+                        <th scope="row" className="py-2 pr-3 font-semibold text-neon-magenta">{r.z}</th>
+                        <td className="py-2 pr-3 text-foreground/90">{r.power}</td>
+                        <td className="py-2 pr-3 text-foreground/90">{r.voltage}</td>
+                        <td className="py-2 pr-3 text-foreground/90">{r.current}</td>
+                        <td className="py-2 text-foreground/80">{r.limit}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </article>
+          ))}
+        </div>
+
+      </Section>
+
+      <Divider />
+
       <Section id="preferences" icon={Headphones} title="Finding your own preferences" tone="purple">
         <div className="grid gap-5 md:grid-cols-2">
           <Card title="Start with two reference tunings">
@@ -476,78 +548,6 @@ const Index = () => {
 
       <Divider />
 
-      <Section id="demands" icon={Gauge} title="Do you have enough power?" tone="purple">
-        <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          Two numbers decide how fussy a headphone is about its source: <span className="text-neon-cyan">impedance</span> (Ω) and <GlossaryLink term="sensitivity">sensitivity</GlossaryLink> (dB/mW or dB/V). Mismatch them and you get hiss, clipping, or not enough volume.
-        </p>
-        <p className="mb-6 max-w-2xl text-sm text-foreground/80">
-          One correction before the table, because you will read the opposite everywhere. Impedance is just the <span className="text-neon-cyan">ratio of voltage to current</span>, and that ratio does not change with level, so a headphone does not draw proportionally more current in the bass. If it plays <span className="text-neon-magenta">loud enough, it has enough bass</span>, and vice versa. When an amp runs short of current you get <span className="text-neon-magenta">clipping on peaks</span> across the whole signal, not weak or thin bass. <ExtLink href="https://www.reddit.com/r/headphones/s/vq4C1c1tvn" className="text-neon-cyan">oratory1990 explains it here</ExtLink>.
-        </p>
-        <p className="mb-6 max-w-2xl text-sm text-foreground/80">
-          Watch the units: <span className="text-neon-magenta">dB/mW</span> and <span className="text-neon-magenta">dB/V</span> are not interchangeable, and vendors quote whichever number flatters the product (<GlossaryLink term="sensitivity">how they convert</GlossaryLink>).
-        </p>
-
-        <div className="max-w-2xl rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-4 text-sm text-foreground/90">
-          <div className="font-display text-neon-magenta">Important · intersample clipping and headroom</div>
-          <p className="mt-2">
-            Playing music from a computer or phone, the sound cannot distort or clip <span className="text-neon-cyan">digitally</span> unless you push the volume or EQ too high in software. Even when your software settings look safe, a hidden kind of distortion called <span className="text-neon-magenta">intersample clipping</span> can still happen inside the hardware. It occurs when the digital audio is turned back into a real waveform and the peaks of that waveform overshoot what the hardware can handle.
-          </p>
-          <p className="mt-2">
-            To stay clear of it, run the numbers through a free <span className="text-neon-cyan">headphone power calculator</span>. Different music needs different amounts of breathing room, or <span className="text-neon-magenta">headroom</span>: rock wants around <span className="text-neon-cyan">10 dB</span>, while acoustic and jazz want around <span className="text-neon-cyan">14 dB</span> for sudden peaks like a drum hit. The calculator tells you whether your portable DAC/amp dongle has enough output left to handle your genres cleanly — after <GlossaryLink term="replaygain">loudness normalization</GlossaryLink> pulls the level down, and after you lower the preamp yourself to make room for an <span className="text-neon-cyan">EQ</span> bass boost.
-          </p>
-          <p className="mt-3 text-neon-magenta">Calculators</p>
-          <ul className="mt-1 space-y-1">
-            <li><ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=97&u=dbv&z=300&v=1.0&spl=85&hr=10" className="text-neon-cyan">theaudiostuff.com headphone power calculator</ExtLink> — pre-filled with a 300 Ω, 97 dB/V example at 1.0 V and 10 dB headroom.</li>
-            <li><ExtLink href="https://www.headphonesty.com/headphone-power-calculator/" className="text-neon-cyan">Headphonesty headphone power calculator</ExtLink></li>
-            <li><ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">Headphones.com power calculator</ExtLink></li>
-          </ul>
-        </div>
-
-        <SubHeading>What the dongles actually put out</SubHeading>
-        <p className="mb-4 max-w-2xl text-sm text-foreground/80">
-          These are the figures the <span className="text-neon-magenta">Can it drive it?</span> panels in the <a href="#chain" className="text-neon-cyan underline-offset-4 hover:underline">chains section</a> compare against. The <span className="text-neon-cyan">32 Ω</span>, <span className="text-neon-cyan">38 Ω</span> and <span className="text-neon-cyan">120 Ω</span> rows are there because they are the loads I actually use: <span className="text-neon-magenta">AKG K371</span> / <span className="text-neon-magenta">HiFiMAN Sundara</span>, <span className="text-neon-magenta">ATH-M50x BT2</span> and <span className="text-neon-magenta">Sennheiser HD 560S</span>.
-        </p>
-        <div className="grid gap-5 lg:grid-cols-3">
-          {dongleOutputs.map((d) => (
-            <article
-              key={d.name}
-              className="rounded-xl border border-border bg-card-gradient p-4"
-            >
-              <h3 className="font-display text-base font-bold text-neon-magenta">{d.name}</h3>
-              <p className="mt-1 text-xs text-foreground/70">{d.output}</p>
-              <p className="mt-2 text-sm text-foreground/90">{d.published}</p>
-              <div className="mt-3 overflow-x-auto">
-                <table className="w-full min-w-[20rem] border-collapse text-left text-xs">
-                  <thead>
-                    <tr className="border-b border-border">
-                      <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Ω</th>
-                      <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Power</th>
-                      <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Voltage</th>
-                      <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Current</th>
-                      <th scope="col" className="py-2 font-semibold uppercase tracking-widest text-neon-cyan">Limited by</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {d.rows.map((r) => (
-                      <tr key={r.z} className="border-b border-border/60 last:border-b-0">
-                        <th scope="row" className="py-2 pr-3 font-semibold text-neon-magenta">{r.z}</th>
-                        <td className="py-2 pr-3 text-foreground/90">{r.power}</td>
-                        <td className="py-2 pr-3 text-foreground/90">{r.voltage}</td>
-                        <td className="py-2 pr-3 text-foreground/90">{r.current}</td>
-                        <td className="py-2 text-foreground/80">{r.limit}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </article>
-          ))}
-        </div>
-
-      </Section>
-
-
-      <Divider />
 
       <Section id="replaygain" icon={Volume2} title="Using ReplayGain" tone="orange">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
