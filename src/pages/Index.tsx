@@ -438,7 +438,7 @@ const Index = () => {
           </p>
         </div>
 
-        <SubHeading>What the dongles actually put out</SubHeading>
+        <SubHeading>What the dongles actually output</SubHeading>
         <p className="mb-4 max-w-2xl text-sm text-foreground/80">
           These are the figures the <span className="text-neon-magenta">Can it drive it?</span> panels in the <a href="#chain" className="text-neon-cyan underline-offset-4 hover:underline">chains section</a> compare against. The <span className="text-neon-cyan">32 Ω</span>, <span className="text-neon-cyan">38 Ω</span> and <span className="text-neon-cyan">120 Ω</span> rows are there because they are the loads I actually use: <span className="text-neon-magenta">AKG K371</span> / <span className="text-neon-magenta">HiFiMAN Sundara</span>, <span className="text-neon-magenta">ATH-M50x BT2</span> and <span className="text-neon-magenta">Sennheiser HD 560S</span>.
         </p>
