@@ -176,7 +176,7 @@ const Index = () => {
                 <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://www.akg.com/Headphones/Professional%20Headphones/K371.html" className="text-neon-cyan">AKG K371</ExtLink>.</>,
                 <><span className="text-neon-magenta">EQ:</span> the <span className="text-neon-cyan">PEQ</span> profile above, always on.</>,
                 <>
-                  <span className="text-neon-magenta">DAC:</span> <ExtLink href="https://fiio.com/newsinfo/1065510.html" className="text-neon-cyan">FiiO JIEZI</ExtLink>.
+                  <span className="text-neon-magenta">DAC (with PEQ):</span> <ExtLink href="https://fiio.com/newsinfo/1065510.html" className="text-neon-cyan">FiiO JIEZI</ExtLink>.
                   <div className="mt-2 rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-3 text-sm">
                     <div className="flex items-baseline gap-2"><span className="text-neon-magenta">Can it drive it?</span> <a href="#demands" title="Why these numbers — do you have enough power?" className="text-xs text-neon-cyan underline-offset-4 hover:underline">why?</a></div>
                     <ul className="mt-1 space-y-0.5">
