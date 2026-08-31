@@ -18,6 +18,7 @@ const TableOfContents = () => {
   const [scrolled, setScrolled] = useState(false);
   const barRef = useRef<HTMLUListElement | null>(null);
   const chipRefs = useRef<Map<string, HTMLAnchorElement>>(new Map());
+  const lockUntil = useRef(0);
 
   // Keep the active chip visible inside the horizontal bar (mobile/tablet).
   useEffect(() => {
@@ -45,36 +46,53 @@ const TableOfContents = () => {
     };
   }, []);
 
+  // Reading-line rule: the active section is the last one whose top edge has
+  // passed a line ~a third down the viewport. Works for short sections too.
   useEffect(() => {
-    const els = sections
-      .map((s) => document.getElementById(s.id))
-      .filter((el): el is HTMLElement => Boolean(el));
+    let frame = 0;
 
-    if (els.length === 0) return;
+    const compute = () => {
+      frame = 0;
+      if (lockUntil.current > Date.now()) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((e) => e.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-        if (visible[0]) {
-          setActive(visible[0].target.id);
-        }
-      },
-      {
-        rootMargin: "-30% 0px -55% 0px",
-        threshold: [0, 0.25, 0.5, 0.75, 1],
-      },
-    );
+      const doc = document.documentElement;
+      const atBottom = window.scrollY + window.innerHeight >= doc.scrollHeight - 4;
+      if (atBottom) {
+        setActive(sections[sections.length - 1].id);
+        return;
+      }
 
-    els.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
+      const line = window.innerHeight * 0.33;
+      let current = sections[0].id;
+      for (const s of sections) {
+        const el = document.getElementById(s.id);
+        if (!el) continue;
+        if (el.getBoundingClientRect().top <= line) current = s.id;
+      }
+      setActive(current);
+    };
+
+    const onScroll = () => {
+      if (frame) return;
+      frame = requestAnimationFrame(compute);
+    };
+
+    compute();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll, { passive: true });
+    return () => {
+      if (frame) cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
   }, []);
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     const el = document.getElementById(id);
     if (!el) return;
     e.preventDefault();
+    lockUntil.current = Date.now() + 700;
+    setActive(id);
     el.scrollIntoView({ behavior: "smooth", block: "start" });
     history.replaceState(null, "", `#${id}`);
   };
