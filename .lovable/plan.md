@@ -16,4 +16,4 @@ Make every wired chain card use the same wording for its DAC bullet(s), so it is
 4. Preserve the existing math, links, and punctuation in each bullet; only change the label text.
 
 ## Result
-All chain cards that mention a DAC will use one of two consistent labels: `DAC (with PEQ):` or `DAC (no EQ):`. No more `DAC, alternative:` or `DAC, with the PEQ profile:` variants.
+All chain cards that mention a DAC will use one of two consistent labels: `DAC (with PEQ):` or `DAC (no EQ):`. Where a card lists both, the no-EQ option appears first. No more `DAC, alternative:` or `DAC, with the PEQ profile:` variants.
