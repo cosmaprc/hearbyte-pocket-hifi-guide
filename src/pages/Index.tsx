@@ -96,7 +96,7 @@ const Index = () => {
                       <li>Peak needed: 90 + 7 + 0 + 14 = <span className="text-neon-cyan">111 dB SPL</span></li>
                       <li>Power needed: <span className="text-neon-cyan">10 mW</span></li>
                       <li>Voltage needed: <span className="text-neon-cyan">~1.1 V</span></li>
-                      <li>Current pushed: <span className="text-neon-cyan">9.13 mA</span></li>
+                      <li>Current needed: <span className="text-neon-cyan">9.13 mA</span></li>
                       <li>Qudelix 5K on <span className="text-neon-cyan">2.5 mm balanced</span>: <span className="text-neon-cyan">133.3 mW / 4.00 V / 33.3 mA</span></li>
                       <li>Verdict: <span className="text-neon-cyan">yes</span></li>
                     </ul>
@@ -119,7 +119,7 @@ const Index = () => {
                       <li>Peak needed: 90 + 7 + 10 + 14 = <span className="text-neon-cyan">121 dB SPL</span></li>
                       <li>Power needed: <span className="text-neon-cyan">100 mW</span></li>
                       <li>Voltage needed: <span className="text-neon-cyan">~3.46 V</span></li>
-                      <li>Current pushed: <span className="text-neon-cyan">28.87 mA</span></li>
+                      <li>Current needed: <span className="text-neon-cyan">28.87 mA</span></li>
                       <li>Qudelix 5K on <span className="text-neon-cyan">2.5 mm balanced</span>: <span className="text-neon-cyan">133.3 mW / 4.00 V / 33.3 mA</span></li>
                       <li>Verdict: <span className="text-neon-cyan">yes</span></li>
                     </ul>
@@ -158,7 +158,7 @@ const Index = () => {
                       <li>Peak needed: 90 + 7 + 9 + 14 = <span className="text-neon-cyan">120 dB SPL</span></li>
                       <li>Power needed: <span className="text-neon-cyan">631 mW</span></li>
                       <li>Voltage needed: <span className="text-neon-cyan">~4.5 V</span></li>
-                      <li>Current pushed: <span className="text-neon-cyan">140.42 mA</span></li>
+                      <li>Current needed: <span className="text-neon-cyan">140.42 mA</span></li>
                       <li>FiiO QX13 on <span className="text-neon-cyan">4.4 mm balanced</span>: <span className="text-neon-cyan">900 mW / 5.37 V / 167.7 mA</span></li>
                       <li>Verdict: <span className="text-neon-cyan">yes</span></li>
                     </ul>
@@ -189,7 +189,7 @@ const Index = () => {
                       <li>Peak needed: 90 + 7 + 3 + 14 = <span className="text-neon-cyan">114 dB SPL</span></li>
                       <li>Power needed: <span className="text-neon-cyan">32 mW</span></li>
                       <li>Voltage needed: <span className="text-neon-cyan">~1.01 V</span></li>
-                      <li>Current pushed: <span className="text-neon-cyan">31.44 mA</span></li>
+                      <li>Current needed: <span className="text-neon-cyan">31.44 mA</span></li>
                       <li>FiiO JIEZI on <span className="text-neon-cyan">3.5 mm single-ended</span>: <span className="text-neon-cyan">34 mW / 1.04 V / 32.60 mA</span></li>
                       <li>Verdict: <span className="text-neon-cyan">yes</span></li>
                     </ul>
@@ -221,7 +221,7 @@ const Index = () => {
                       <li>Peak needed: 90 + 7 + 0 + 14 = <span className="text-neon-cyan">111 dB SPL</span></li>
                       <li>Power needed: <span className="text-neon-cyan">16 mW</span></li>
                       <li>Voltage needed: <span className="text-neon-cyan">~776 mV</span></li>
-                      <li>Current pushed: <span className="text-neon-cyan">20.42 mA</span></li>
+                      <li>Current needed: <span className="text-neon-cyan">20.42 mA</span></li>
                       <li>FiiO JIEZI on <span className="text-neon-cyan">3.5 mm single-ended</span>: <span className="text-neon-cyan">28.63 mW / 1.043 V / 27.45 mA</span></li>
                       <li>Verdict: <span className="text-neon-cyan">yes</span></li>
                     </ul>
