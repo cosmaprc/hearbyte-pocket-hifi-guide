@@ -245,7 +245,7 @@ const Index = () => {
             <div className="mt-4 rounded-lg border border-neon-magenta/40 bg-neon-magenta/5 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
               <p className="mt-2 text-sm text-foreground/85">
-                The 5K velcros to the headband. I run <span className="text-neon-cyan">LDAC 990 kbps</span> and usually leave the tuning stock. If you want correction, load the <span className="text-neon-cyan">PEQ</span> profile onto the 5K itself rather than relying on the phone. The balanced output gives more headroom if you want it, and plugging in over USB makes it wired and bit-perfect. The <a href="#demands" className="text-neon-cyan underline-offset-4 hover:underline">power notes</a> explain how much margin this pairing has.
+                The 5K velcros to the headband. I run <span className="text-neon-cyan">LDAC 990 kbps</span> and usually leave the tuning stock.
               </p>
 
             </div>
@@ -276,16 +276,16 @@ const Index = () => {
           <Card title="7 · Moondrop × Wuthering Waves U.C.T.S. — wireless">
             <Bullets
               items={[
-                <><span className="text-neon-magenta">Earphones:</span> <ExtLink href="https://moondroplab.com/en/products/u-c-t-s" className="text-neon-cyan">Moondrop × Wuthering Waves U.C.T.S.</ExtLink> open-ear (<GlossaryLink term="ows">OWS</GlossaryLink>) clip-ons.</>,
+                <><span className="text-neon-magenta">Earphones:</span> <ExtLink href="https://moondroplab.com/en/products/ucts" className="text-neon-cyan">Moondrop × Wuthering Waves U.C.T.S.</ExtLink> open-ear (<GlossaryLink term="ows">OWS</GlossaryLink>) clip-ons.</>,
                 <><span className="text-neon-magenta">EQ:</span> in the <span className="text-neon-cyan">Moondrop app</span> I keep the default bands, drop every Q to the minimum (<span className="text-neon-cyan">0.20</span>), then push all bands to max. That works out as a flat <span className="text-neon-cyan">+3 dB</span> lift across the board — on iPhone it buys about one volume step, so <span className="text-neon-cyan">85%</span> gets me where 100% used to.</>,
                 <><span className="text-neon-magenta">Connection:</span> <ExtLink href="https://www.tempotec.net/" className="text-neon-cyan">Tempotec LHDC One</ExtLink> Bluetooth adapter.</>,
               ]}
             />
           </Card>
-          <Card title="8 · Moondrop Pill / Pill S — wireless">
+          <Card title="8 · Moondrop Pill — wireless">
             <Bullets
               items={[
-                <><span className="text-neon-magenta">Earbuds:</span> <ExtLink href="https://moondroplab.com/en/products/pill" className="text-neon-cyan">Moondrop Pill</ExtLink> or <span className="text-neon-cyan">Pill S</span>.</>,
+                <><span className="text-neon-magenta">Earbuds:</span> <ExtLink href="https://moondroplab.com/en/products/pill" className="text-neon-cyan">Moondrop Pill</ExtLink>.</>,
                 <><span className="text-neon-magenta">EQ:</span> in the <span className="text-neon-cyan">Moondrop app</span> I keep the default bands, drop every Q to the minimum (<span className="text-neon-cyan">0.20</span>), then push all bands to max. That works out as a flat <span className="text-neon-cyan">+3 dB</span> lift across the board — on iPhone it buys about one volume step, so <span className="text-neon-cyan">85%</span> gets me where 100% used to.</>,
                 <><span className="text-neon-magenta">Connection:</span> Bluetooth <span className="text-neon-cyan">AAC</span> straight from the phone.</>,
               ]}
