@@ -6,8 +6,8 @@ In `src/pages/Index.tsx`, inside the Chain 5 card ("Sennheiser HD 560S — wirel
 Current full text:
 "The 5K velcros to the headband. I run LDAC 990 kbps and usually leave the tuning stock. If you want correction, load the PEQ profile onto the 5K itself rather than relying on the phone. The balanced output gives more headroom if you want it, and plugging in over USB makes it wired and bit-perfect. The power notes explain how much margin this pairing has."
 
-Keep only:
-"The 5K velcros to the headband."
+Keep only the first two sentences:
+"The 5K velcros to the headband. I run LDAC 990 kbps and usually leave the tuning stock."
 
 ## 2. Fix the Moondrop × Wuthering Waves U.C.T.S. link
 Replace the broken URL `https://moondroplab.com/en/products/u-c-t-s` with the verified working URL:
