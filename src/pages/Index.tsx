@@ -399,7 +399,7 @@ const Index = () => {
           </table>
         </div>
 
-        <SubHeading>Online tools for your amp capability steps</SubHeading>
+        <SubHeading>Amplification Calculation Tools</SubHeading>
         <p className="mb-4 max-w-2xl text-sm text-foreground/80">
           These calculators turn the numbers above into a straight yes/no answer for any headphone/source pairing.
         </p>
