@@ -448,7 +448,7 @@ const AmpCalculator = () => {
             />
             <span>
               <strong className="text-neon-magenta">Mode A: Multi-Power Specs</strong> (e.g.
-              FiiO QX13, FiiO JIEZI, Topping)
+              FiiO QX13, FiiO JIEZI)
             </span>
           </label>
           <label className="flex cursor-pointer items-start gap-2 text-sm text-foreground/90">
