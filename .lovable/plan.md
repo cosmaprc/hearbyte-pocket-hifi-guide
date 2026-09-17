@@ -1,68 +1,59 @@
-# Recheck every "Can it drive it?" panel against the new calculator
+# Rebuild every "Can it drive it?" panel from the calculator, at an 85 dB target
 
-I re-ran all five panels through the calculator's own formulas (demand: `P = 10^((peak − sens)/10)`, `V = √(P × Z)`, `I = V / Z`; amp ceiling: current cap vs voltage rail, then `SPL = sens + 10·log10(P)`, headroom = ceiling − peak).
+Three changes at once: the average loudness target drops from 90 to 85 dB SPL (the calculator's reference), every figure is recomputed with the calculator's own formulas, and each panel gains the calculator's saturation ceiling, headroom, and a link that opens the on-page calculator pre-filled.
 
-## What already matches
+Formulas used: peak = avg + Sound Check + PEQ preamp + crest; `P = 10^((peak − sens)/10)`; `V = √(P × Z)`; `I = V / Z`; amp ceiling = lower of current cap and voltage rail, then `SPL = sens + 10·log10(P)`; headroom = ceiling − peak.
 
-| Panel | Page says | Calculator |
-| --- | --- | --- |
-| Chain 2 — Sundara, Qudelix, no EQ | 79.43 mW / 1.59 V / 49.82 mA | identical |
-| Chain 2 — Sundara, QX13, PEQ | 631 mW / ~4.5 V / 140.42 mA | 630.96 mW / 4.49 V / 140.42 mA |
-| Chain 3 — K371, JIEZI | 32 mW / ~1.01 V / 31.44 mA | 31.62 mW / 1.006 V / 31.44 mA |
-| Chain 4 — M50x BT2, JIEZI | 16 mW / ~776 mV / 20.42 mA | 15.85 mW / 0.776 V / 20.42 mA |
+## New numbers for each panel
 
-## The two real differences (chain 1, HD 560S)
+| Panel | Peak needed | Power | Voltage | Current | Ceiling | Headroom |
+| --- | --- | --- | --- | --- | --- | --- |
+| Chain 1 — HD 560S, Qudelix, no EQ (85+7+0+14) | 106 dB | 3.31 mW | ~0.63 V | 5.25 mA | 122.05 dB | +16.05 dB |
+| Chain 1 — HD 560S, Qudelix, with PEQ (85+7+10+14) | 116 dB | 33.11 mW | ~1.99 V | 16.61 mA | 122.05 dB | +6.05 dB |
+| Chain 2 — Sundara, Qudelix, no EQ (85+7+0+14) | 106 dB | 25.12 mW | ~0.90 V | 28.02 mA | 115.80 dB | +9.80 dB |
+| Chain 2 — Sundara, QX13, with PEQ (85+7+9+14) | 115 dB | 199.53 mW | ~2.53 V | 78.96 mA | 121.82 dB | +6.82 dB |
+| Chain 3 — K371, JIEZI (85+7+3+14) | 109 dB | 10.00 mW | ~0.57 V | 17.68 mA | 114.31 dB | +5.31 dB |
+| Chain 4 — M50x BT2, JIEZI (85+7+0+14) | 106 dB | 5.01 mW | ~0.44 V | 11.48 mA | 113.57 dB | +7.57 dB |
 
-Both chain 1 panels were worked out from a rounded power figure rather than from the peak SPL, so they read slightly low:
+Every panel's "Target average loudness" line becomes 85 dB SPL and the peak arithmetic line is rewritten accordingly. All verdicts stay yes, and at 85 dB none are marginal any more, so no "only X dB spare" caveats are needed.
 
-| Chain 1 panel | Page says | Calculator |
-| --- | --- | --- |
-| Qudelix, no EQ (111 dB peak) | 10 mW / ~1.1 V / 9.13 mA | 10.47 mW / ~1.12 V / 9.34 mA |
-| Qudelix, with PEQ (121 dB peak) | 100 mW / ~3.46 V / 28.87 mA | 104.71 mW / ~3.55 V / 29.54 mA |
+## Differences found against the current page
 
-Fix: update those six numbers to the calculator's values. Verdicts stay yes.
+- **Chain 1 was slightly under-stated even at 90 dB.** It listed 10 mW / ~1.1 V / 9.13 mA and 100 mW / ~3.46 V / 28.87 mA; the calculator gives 10.47 mW / 9.34 mA and 104.71 mW / 29.54 mA, because the panels were derived from rounded power rather than from peak SPL. Both are replaced by the 85 dB figures above.
+- **Chains 2, 3 and 4 matched exactly at 90 dB** (79.43 mW / 1.59 V / 49.82 mA, 631 mW / 4.49 V / 140.42 mA, 31.62 mW / 1.006 V / 31.44 mA, 15.85 mW / 0.776 V / 20.42 mA), so those panels only change because of the new target.
+- **At 90 dB, three panels were within 2 dB of clipping** (K371 +0.31 dB, HD 560S with PEQ +1.05 dB, Sundara on QX13 +1.82 dB). Dropping to 85 dB is what removes that risk — worth one short sentence in the intro above the chain cards.
 
-## Add the ceiling and headroom to every panel
+## Two new lines per panel
 
-Each panel gains two lines after the dongle output line, matching the calculator's own result labels:
+After the dongle output line, each panel gains:
 
-| Panel | Peak needed | Saturation ceiling | Headroom left |
-| --- | --- | --- | --- |
-| Chain 1 — Qudelix, no EQ | 111 dB | 122.05 dB SPL | +11.05 dB |
-| Chain 1 — Qudelix, with PEQ | 121 dB | 122.05 dB SPL | +1.05 dB |
-| Chain 2 — Sundara, Qudelix, no EQ | 111 dB | 115.80 dB SPL | +4.80 dB |
-| Chain 2 — Sundara, QX13, PEQ | 120 dB | 121.82 dB SPL | +1.82 dB |
-| Chain 3 — K371, JIEZI | 114 dB | 114.31 dB SPL | +0.31 dB |
-| Chain 4 — M50x BT2, JIEZI | 111 dB | 113.57 dB SPL | +2.57 dB |
+- Saturation ceiling: X dB SPL
+- Headroom left: +X dB
 
-Headroom in cyan when positive, as in the calculator. Chain 2's no-EQ panel is currently one prose sentence rather than a list; it keeps that shape with the two figures appended.
+Headroom shown in cyan while positive, mirroring the calculator. Chain 2's no-EQ panel is a single prose sentence rather than a list; it keeps that shape with the same figures appended.
 
-Three of these are tighter than the flat "yes" suggests, so the verdict line gets the margin attached:
+## Link each panel into the on-page calculator
 
-- Chain 3 (K371 on the JIEZI): "yes, but only ~0.3 dB spare — trim the PEQ preamp or the target level for real margin."
-- Chain 1 with PEQ: "yes, ~1.0 dB spare."
-- Chain 2 with PEQ on the QX13: "yes, ~1.8 dB spare."
+The calculator can't currently be opened pre-filled. Add hash-parameter support so a link carries a complete case and runs it on arrival:
 
-## Link each panel straight into the calculator
+`#calculator?mode=A&pLow=49&zLow=16&pHigh=34&zHigh=32&z=32&sens=99&avg=85&crest=14&gain=3`
 
-The calculator currently has no way to be opened pre-filled. Add hash-parameter support so a link can carry a full case and run it on arrival:
+On load it fills the fields, calculates immediately, and scrolls the results into view. Each panel's "Run the numbers yourself" line gains a third option — "or open it in the calculator on this page, pre-filled and already worked out" — alongside the existing theaudiostuff.com and headphones.com links.
 
-`#calculator?mode=A&pLow=49&zLow=16&pHigh=34&zHigh=32&z=32&sens=99&avg=97&crest=14&gain=3`
-
-On load the component reads those parameters, fills the matching fields, calculates immediately, and scrolls the results into view. Each panel's "Run the numbers yourself" line then gains a third option: "or open it in the calculator on this page, pre-filled and already worked out." The two external calculators stay.
-
-Per-panel amp parameters, taken from the dongle tables already on the page:
+Amp parameters per dongle, from the tables already on the page:
 
 - Qudelix 5K — Mode B, 4.00 V rail, 240 mW at 32 Ω override
 - FiiO QX13 — Mode A, 480 mW at 16 Ω, 125 mW at 300 Ω
 - FiiO JIEZI — Mode A, 49 mW at 16 Ω, 34 mW at 32 Ω
 
+The external pre-filled theaudiostuff.com links also get their `spl` values updated from 97/107/106/100 to the new 85 dB averages (92, 102, 101, 95).
+
 ## Note on the Qudelix current figure
 
-The page quotes the Qudelix at 32 Ω as 240 mW / 2.77 V / 86.6 mA. The calculator's Mode B default (81.08 mA from Qudelix's spreadsheet) instead gives 210 mW / 2.59 V, about 0.6 dB lower. The links above use the 240 mW override so the calculator and the page agree; say the word if you'd rather the page follow the spreadsheet figure.
+The page quotes the Qudelix at 32 Ω as 240 mW / 2.77 V / 86.6 mA. The calculator's Mode B default (81.08 mA from Qudelix's spreadsheet) gives 210 mW / 2.59 V instead — about 0.6 dB lower. The links use the 240 mW override so page and calculator agree; say the word if you'd rather follow the spreadsheet figure.
 
 ## Technical notes
 
-- `src/pages/Index.tsx` — the five panels: number corrections, two new lines each, verdict wording, extra calculator link.
-- `src/components/hearbyte/AmpCalculator.tsx` — parse the location hash query on mount, seed state, auto-run `calculate`, focus/scroll the results region.
-- Verify with `bunx tsgo --noEmit -p tsconfig.app.json`, `bunx vitest run`, and a Playwright pass opening two of the pre-filled links to confirm the ceiling and headroom match the table above.
+- `src/pages/Index.tsx` — the five panels: target, peak arithmetic, power/voltage/current, two new result lines, updated calculator links.
+- `src/components/hearbyte/AmpCalculator.tsx` — parse the location hash query on mount, seed state, auto-run `calculate`, scroll the results region into view.
+- Verify with `bunx tsgo --noEmit -p tsconfig.app.json`, `bunx vitest run`, and a Playwright pass opening two pre-filled links to confirm the ceiling and headroom match the table above.
