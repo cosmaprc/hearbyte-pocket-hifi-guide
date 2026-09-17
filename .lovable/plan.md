@@ -56,4 +56,8 @@ The page quotes the Qudelix at 32 Ω as 240 mW / 2.77 V / 86.6 mA. The calculato
 
 - `src/pages/Index.tsx` — the five panels: target, peak arithmetic, power/voltage/current, two new result lines, updated calculator links.
 - `src/components/hearbyte/AmpCalculator.tsx` — parse the location hash query on mount, seed state, auto-run `calculate`, scroll the results region into view.
-- Verify with `bunx tsgo --noEmit -p tsconfig.app.json`, `bunx vitest run`, and a Playwright pass opening two pre-filled links to confirm the ceiling and headroom match the table above.
+- Verify with `bunx tsgo --noEmit -p tsconfig.app.json` and `bunx vitest run`.
+
+## Cross-check every panel against its own link
+
+Final step before reporting done: a Playwright pass that opens each of the six pre-filled calculator links in turn, reads the rendered results, and compares them against the matching panel — peak needed vs "Target peak volume", power/voltage/current vs "Max clean" figures where the panel is at the wall, and both the saturation ceiling and headroom line for line. Any mismatch is treated as a bug in the panel or the link parameters and fixed before finishing, and I'll report the comparison for all six.
