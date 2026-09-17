@@ -90,19 +90,21 @@ const Index = () => {
                     <ul className="mt-1 space-y-0.5">
                       <li>Sensitivity: <span className="text-neon-cyan">100.8 dB SPL/mW</span></li>
                       <li>Impedance: <span className="text-neon-cyan">120 Ω</span></li>
-                      <li>Target average loudness: <span className="text-neon-cyan">90 dB SPL</span></li>
+                      <li>Target average loudness: <span className="text-neon-cyan">85 dB SPL</span></li>
                       <li>Sound Check headroom: <span className="text-neon-cyan">7 dB</span></li>
                       <li><span className="text-neon-cyan">PEQ</span> preamp headroom: <span className="text-neon-cyan">0 dB</span> (no PEQ)</li>
                       <li>Crest factor, jazz/acoustic: <span className="text-neon-cyan">14 dB</span></li>
-                      <li>Peak needed: 90 + 7 + 0 + 14 = <span className="text-neon-cyan">111 dB SPL</span></li>
-                      <li>Power needed: <span className="text-neon-cyan">10 mW</span></li>
-                      <li>Voltage needed: <span className="text-neon-cyan">~1.1 V</span></li>
-                      <li>Current needed: <span className="text-neon-cyan">9.13 mA</span></li>
+                      <li>Peak needed: 85 + 7 + 0 + 14 = <span className="text-neon-cyan">106 dB SPL</span></li>
+                      <li>Power needed: <span className="text-neon-cyan">3.31 mW</span></li>
+                      <li>Voltage needed: <span className="text-neon-cyan">~0.63 V</span></li>
+                      <li>Current needed: <span className="text-neon-cyan">5.25 mA</span></li>
                       <li>Qudelix 5K on <span className="text-neon-cyan">2.5 mm balanced</span>: <span className="text-neon-cyan">133.3 mW / 4.00 V / 33.3 mA</span></li>
+                      <li>Saturation ceiling: <span className="text-neon-cyan">122.05 dB SPL</span></li>
+                      <li>Headroom left: <span className="text-neon-cyan">+16.05 dB</span></li>
                       <li>Verdict: <span className="text-neon-cyan">yes</span></li>
                     </ul>
                     <div className="mt-1">
-                      Run the numbers yourself: <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=100.8&u=dbmw&z=120&v=4&spl=97&hr=14" className="text-neon-cyan">theaudiostuff.com</ExtLink> opens pre-filled with these values but doesn't report current, while <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphones.com</ExtLink> gives you the <span className="text-neon-cyan">mA</span> figure but has to be filled in by hand.
+                      Run the numbers yourself: <a href="#calculator?mode=B&vRail=4&ampP=240&ampZ=32&z=120&sens=100.8&avg=85&crest=14&gain=7" className="text-neon-cyan underline-offset-4 hover:underline">the calculator on this page</a> opens pre-filled and already worked out, <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=100.8&u=dbmw&z=120&v=4&spl=92&hr=14" className="text-neon-cyan">theaudiostuff.com</ExtLink> also opens pre-filled but doesn't report current, and <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphones.com</ExtLink> gives you the <span className="text-neon-cyan">mA</span> figure but has to be filled in by hand.
                     </div>
                   </div>
                 </>,
@@ -113,19 +115,21 @@ const Index = () => {
                     <ul className="mt-1 space-y-0.5">
                       <li>Sensitivity: <span className="text-neon-cyan">100.8 dB SPL/mW</span></li>
                       <li>Impedance: <span className="text-neon-cyan">120 Ω</span></li>
-                      <li>Target average loudness: <span className="text-neon-cyan">90 dB SPL</span></li>
+                      <li>Target average loudness: <span className="text-neon-cyan">85 dB SPL</span></li>
                       <li>Sound Check headroom: <span className="text-neon-cyan">7 dB</span></li>
                       <li><span className="text-neon-cyan">PEQ</span> preamp headroom: <span className="text-neon-cyan">~10 dB</span></li>
                       <li>Crest factor, jazz/acoustic: <span className="text-neon-cyan">14 dB</span></li>
-                      <li>Peak needed: 90 + 7 + 10 + 14 = <span className="text-neon-cyan">121 dB SPL</span></li>
-                      <li>Power needed: <span className="text-neon-cyan">100 mW</span></li>
-                      <li>Voltage needed: <span className="text-neon-cyan">~3.46 V</span></li>
-                      <li>Current needed: <span className="text-neon-cyan">28.87 mA</span></li>
+                      <li>Peak needed: 85 + 7 + 10 + 14 = <span className="text-neon-cyan">116 dB SPL</span></li>
+                      <li>Power needed: <span className="text-neon-cyan">33.11 mW</span></li>
+                      <li>Voltage needed: <span className="text-neon-cyan">~1.99 V</span></li>
+                      <li>Current needed: <span className="text-neon-cyan">16.61 mA</span></li>
                       <li>Qudelix 5K on <span className="text-neon-cyan">2.5 mm balanced</span>: <span className="text-neon-cyan">133.3 mW / 4.00 V / 33.3 mA</span></li>
+                      <li>Saturation ceiling: <span className="text-neon-cyan">122.05 dB SPL</span></li>
+                      <li>Headroom left: <span className="text-neon-cyan">+6.05 dB</span></li>
                       <li>Verdict: <span className="text-neon-cyan">yes</span></li>
                     </ul>
                     <div className="mt-1">
-                      Run the numbers yourself: <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=100.8&u=dbmw&z=120&v=4&spl=107&hr=14" className="text-neon-cyan">theaudiostuff.com</ExtLink> opens pre-filled with these values but doesn't report current, while <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphones.com</ExtLink> gives you the <span className="text-neon-cyan">mA</span> figure but has to be filled in by hand.
+                      Run the numbers yourself: <a href="#calculator?mode=B&vRail=4&ampP=240&ampZ=32&z=120&sens=100.8&avg=85&crest=14&gain=17" className="text-neon-cyan underline-offset-4 hover:underline">the calculator on this page</a> opens pre-filled and already worked out, <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=100.8&u=dbmw&z=120&v=4&spl=102&hr=14" className="text-neon-cyan">theaudiostuff.com</ExtLink> also opens pre-filled but doesn't report current, and <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphones.com</ExtLink> gives you the <span className="text-neon-cyan">mA</span> figure but has to be filled in by hand.
                     </div>
                   </div>
                 </>,
@@ -142,7 +146,7 @@ const Index = () => {
                   <span className="text-neon-magenta">DAC (no EQ):</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> over <span className="text-neon-cyan">USB</span>, powered from <span className="text-neon-cyan">USB-C</span> rather than its internal battery — only with <span className="text-neon-cyan">no EQ</span>, since with the target <span className="text-neon-cyan">PEQ</span> profile it can run out of power on some genres.
                   <div className="mt-2 rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-3 text-sm">
                     <div className="flex items-baseline gap-2"><span className="text-neon-magenta">Can it drive it?</span> <a href="#demands" title="Why these numbers — do you have enough power?" className="text-xs text-neon-cyan underline-offset-4 hover:underline">why?</a></div>
-                    <p className="mt-1"><span className="text-neon-cyan">Yes</span> — without EQ it needs <span className="text-neon-cyan">1.59 V</span> / <span className="text-neon-cyan">79.43 mW</span> / <span className="text-neon-cyan">49.82 mA</span>, against the Qudelix 5K's <span className="text-neon-cyan">240.0 mW / 2.77 Vrms / 86.6 mArms</span> at <span className="text-neon-cyan">32 Ω</span>.</p>
+                    <p className="mt-1"><span className="text-neon-cyan">Yes</span> — at a <span className="text-neon-cyan">106 dB SPL</span> peak (85 + 7 + 0 + 14) it needs <span className="text-neon-cyan">0.90 V</span> / <span className="text-neon-cyan">25.12 mW</span> / <span className="text-neon-cyan">28.02 mA</span>, against the Qudelix 5K's <span className="text-neon-cyan">240.0 mW / 2.77 Vrms / 86.6 mArms</span> at <span className="text-neon-cyan">32 Ω</span> — a saturation ceiling of <span className="text-neon-cyan">115.80 dB SPL</span>, so <span className="text-neon-cyan">+9.80 dB</span> of headroom left. <a href="#calculator?mode=B&vRail=4&ampP=240&ampZ=32&z=32&sens=92&avg=85&crest=14&gain=7" className="text-neon-cyan underline-offset-4 hover:underline">Open it in the calculator on this page</a>, pre-filled and already worked out.</p>
                   </div>
                 </>,
                 <>
@@ -152,19 +156,21 @@ const Index = () => {
                     <ul className="mt-1 space-y-0.5">
                       <li>Sensitivity: <span className="text-neon-cyan">92 dB SPL/mW</span></li>
                       <li>Impedance: <span className="text-neon-cyan">32 Ω</span></li>
-                      <li>Target average loudness: <span className="text-neon-cyan">90 dB SPL</span></li>
+                      <li>Target average loudness: <span className="text-neon-cyan">85 dB SPL</span></li>
                       <li>Sound Check headroom: <span className="text-neon-cyan">7 dB</span></li>
                       <li><span className="text-neon-cyan">PEQ</span> preamp headroom: <span className="text-neon-cyan">~9 dB</span></li>
                       <li>Crest factor, jazz/acoustic: <span className="text-neon-cyan">14 dB</span></li>
-                      <li>Peak needed: 90 + 7 + 9 + 14 = <span className="text-neon-cyan">120 dB SPL</span></li>
-                      <li>Power needed: <span className="text-neon-cyan">631 mW</span></li>
-                      <li>Voltage needed: <span className="text-neon-cyan">~4.5 V</span></li>
-                      <li>Current needed: <span className="text-neon-cyan">140.42 mA</span></li>
+                      <li>Peak needed: 85 + 7 + 9 + 14 = <span className="text-neon-cyan">115 dB SPL</span></li>
+                      <li>Power needed: <span className="text-neon-cyan">199.53 mW</span></li>
+                      <li>Voltage needed: <span className="text-neon-cyan">~2.53 V</span></li>
+                      <li>Current needed: <span className="text-neon-cyan">78.96 mA</span></li>
                       <li>FiiO QX13 on <span className="text-neon-cyan">4.4 mm balanced</span>: <span className="text-neon-cyan">900 mW / 5.37 V / 167.7 mA</span></li>
+                      <li>Saturation ceiling: <span className="text-neon-cyan">121.82 dB SPL</span></li>
+                      <li>Headroom left: <span className="text-neon-cyan">+6.82 dB</span></li>
                       <li>Verdict: <span className="text-neon-cyan">yes</span></li>
                     </ul>
                     <div className="mt-1">
-                      Run the numbers yourself: <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=92&u=dbmw&z=32&v=5.37&spl=106&hr=14" className="text-neon-cyan">theaudiostuff.com</ExtLink> opens pre-filled with these values but doesn't report current, while <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphones.com</ExtLink> gives you the <span className="text-neon-cyan">mA</span> figure but has to be filled in by hand.
+                      Run the numbers yourself: <a href="#calculator?mode=A&pLow=480&zLow=16&pHigh=125&zHigh=300&z=32&sens=92&avg=85&crest=14&gain=16" className="text-neon-cyan underline-offset-4 hover:underline">the calculator on this page</a> opens pre-filled and already worked out, <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=92&u=dbmw&z=32&v=5.37&spl=101&hr=14" className="text-neon-cyan">theaudiostuff.com</ExtLink> also opens pre-filled but doesn't report current, and <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphones.com</ExtLink> gives you the <span className="text-neon-cyan">mA</span> figure but has to be filled in by hand.
                     </div>
                   </div>
                 </>,
@@ -183,19 +189,21 @@ const Index = () => {
                     <ul className="mt-1 space-y-0.5">
                       <li>Sensitivity: <span className="text-neon-cyan">99 dB SPL/mW</span></li>
                       <li>Impedance: <span className="text-neon-cyan">32 Ω</span></li>
-                      <li>Target average loudness: <span className="text-neon-cyan">90 dB SPL</span></li>
+                      <li>Target average loudness: <span className="text-neon-cyan">85 dB SPL</span></li>
                       <li>Sound Check headroom: <span className="text-neon-cyan">7 dB</span></li>
                       <li><span className="text-neon-cyan">PEQ</span> preamp headroom: <span className="text-neon-cyan">~3 dB</span></li>
                       <li>Crest factor, jazz/acoustic: <span className="text-neon-cyan">14 dB</span></li>
-                      <li>Peak needed: 90 + 7 + 3 + 14 = <span className="text-neon-cyan">114 dB SPL</span></li>
-                      <li>Power needed: <span className="text-neon-cyan">32 mW</span></li>
-                      <li>Voltage needed: <span className="text-neon-cyan">~1.01 V</span></li>
-                      <li>Current needed: <span className="text-neon-cyan">31.44 mA</span></li>
+                      <li>Peak needed: 85 + 7 + 3 + 14 = <span className="text-neon-cyan">109 dB SPL</span></li>
+                      <li>Power needed: <span className="text-neon-cyan">10.00 mW</span></li>
+                      <li>Voltage needed: <span className="text-neon-cyan">~0.57 V</span></li>
+                      <li>Current needed: <span className="text-neon-cyan">17.68 mA</span></li>
                       <li>FiiO JIEZI on <span className="text-neon-cyan">3.5 mm single-ended</span>: <span className="text-neon-cyan">34 mW / 1.04 V / 32.60 mA</span></li>
+                      <li>Saturation ceiling: <span className="text-neon-cyan">114.31 dB SPL</span></li>
+                      <li>Headroom left: <span className="text-neon-cyan">+5.31 dB</span></li>
                       <li>Verdict: <span className="text-neon-cyan">yes</span></li>
                     </ul>
                     <div className="mt-1">
-                      Run the numbers yourself: <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=99&u=dbmw&z=32&v=1.04&spl=100&hr=14" className="text-neon-cyan">theaudiostuff.com</ExtLink> opens pre-filled with these values but doesn't report current, while <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphones.com</ExtLink> gives you the <span className="text-neon-cyan">mA</span> figure but has to be filled in by hand.
+                      Run the numbers yourself: <a href="#calculator?mode=A&pLow=49&zLow=16&pHigh=34&zHigh=32&z=32&sens=99&avg=85&crest=14&gain=10" className="text-neon-cyan underline-offset-4 hover:underline">the calculator on this page</a> opens pre-filled and already worked out, <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=99&u=dbmw&z=32&v=1.04&spl=95&hr=14" className="text-neon-cyan">theaudiostuff.com</ExtLink> also opens pre-filled but doesn't report current, and <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphones.com</ExtLink> gives you the <span className="text-neon-cyan">mA</span> figure but has to be filled in by hand.
                     </div>
 
                   </div>
@@ -215,19 +223,21 @@ const Index = () => {
                     <ul className="mt-1 space-y-0.5">
                       <li>Sensitivity: <span className="text-neon-cyan">99 dB SPL/mW</span></li>
                       <li>Impedance: <span className="text-neon-cyan">38 Ω</span></li>
-                      <li>Target average loudness: <span className="text-neon-cyan">90 dB SPL</span></li>
+                      <li>Target average loudness: <span className="text-neon-cyan">85 dB SPL</span></li>
                       <li>Sound Check headroom: <span className="text-neon-cyan">7 dB</span></li>
                       <li><span className="text-neon-cyan">PEQ</span> preamp headroom: <span className="text-neon-cyan">0 dB</span> (no PEQ)</li>
                       <li>Crest factor, jazz/acoustic: <span className="text-neon-cyan">14 dB</span></li>
-                      <li>Peak needed: 90 + 7 + 0 + 14 = <span className="text-neon-cyan">111 dB SPL</span></li>
-                      <li>Power needed: <span className="text-neon-cyan">16 mW</span></li>
-                      <li>Voltage needed: <span className="text-neon-cyan">~776 mV</span></li>
-                      <li>Current needed: <span className="text-neon-cyan">20.42 mA</span></li>
+                      <li>Peak needed: 85 + 7 + 0 + 14 = <span className="text-neon-cyan">106 dB SPL</span></li>
+                      <li>Power needed: <span className="text-neon-cyan">5.01 mW</span></li>
+                      <li>Voltage needed: <span className="text-neon-cyan">~0.44 V</span></li>
+                      <li>Current needed: <span className="text-neon-cyan">11.48 mA</span></li>
                       <li>FiiO JIEZI on <span className="text-neon-cyan">3.5 mm single-ended</span>: <span className="text-neon-cyan">28.63 mW / 1.043 V / 27.45 mA</span></li>
+                      <li>Saturation ceiling: <span className="text-neon-cyan">113.57 dB SPL</span></li>
+                      <li>Headroom left: <span className="text-neon-cyan">+7.57 dB</span></li>
                       <li>Verdict: <span className="text-neon-cyan">yes</span></li>
                     </ul>
                     <div className="mt-1">
-                      Run the numbers yourself: <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=99&u=dbmw&z=38&v=1&spl=97&hr=14" className="text-neon-cyan">theaudiostuff.com</ExtLink> opens pre-filled with these values but doesn't report current, while <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphones.com</ExtLink> gives you the <span className="text-neon-cyan">mA</span> figure but has to be filled in by hand.
+                      Run the numbers yourself: <a href="#calculator?mode=A&pLow=49&zLow=16&pHigh=34&zHigh=32&z=38&sens=99&avg=85&crest=14&gain=7" className="text-neon-cyan underline-offset-4 hover:underline">the calculator on this page</a> opens pre-filled and already worked out, <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=99&u=dbmw&z=38&v=1.043&spl=92&hr=14" className="text-neon-cyan">theaudiostuff.com</ExtLink> also opens pre-filled but doesn't report current, and <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphones.com</ExtLink> gives you the <span className="text-neon-cyan">mA</span> figure but has to be filled in by hand.
                     </div>
 
                   </div>
