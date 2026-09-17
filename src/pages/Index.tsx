@@ -336,31 +336,6 @@ const Index = () => {
           Watch the units: <span className="text-neon-magenta">dB/mW</span> and <span className="text-neon-magenta">dB/V</span> are not interchangeable, and vendors quote whichever number flatters the product (<GlossaryLink term="sensitivity">how they convert</GlossaryLink>).
         </p>
 
-        <SubHeading>The current-first law</SubHeading>
-        <p className="mb-4 max-w-2xl text-sm text-foreground/80">
-          To reach a given volume (dB SPL), a headphone's driver needs a definite amount of electrical flow: <span className="text-neon-cyan">current</span> (mA). Current is what creates the magnetic force that moves the diaphragm and vibrates the air.
-        </p>
-        <p className="mb-4 max-w-2xl text-sm text-foreground/80">
-          How much current it takes comes from <GlossaryLink term="sensitivity">sensitivity</GlossaryLink> and impedance — how efficiently the voice coil turns milliamps into force. The figures below use a loud <span className="text-neon-magenta">110 dB SPL peak</span> so musical dynamics stay clean. Once the driver's target current is fixed, impedance decides how hard the amp has to work to deliver it:
-        </p>
-        <Bullets
-          items={[
-            <>
-              <span className="text-neon-magenta">Low impedance</span> needs a big volume of current (high mA). The amp doesn't need much voltage pressure, but its <span className="text-neon-cyan">current reserves</span> have to be large or it clips.
-            </>,
-            <>
-              <span className="text-neon-magenta">High impedance</span> needs very little current, because the tightly wound coil multiplies the magnetic force. But the wire resists electricity, so the amp needs a lot of <span className="text-neon-cyan">voltage</span> to force those few milliamps through.
-            </>,
-          ]}
-        />
-        <div className="mt-5 max-w-2xl rounded-md border border-border bg-background/40 p-4 text-sm">
-          <p className="font-display text-neon-cyan">The current-first pipeline</p>
-          <ul className="mt-2 space-y-1 font-mono text-xs text-foreground/90">
-            <li>I(mA) = √( P(mW) × 1000 / R(Ω) )  — required current</li>
-            <li>V = I(mA) × R(Ω) / 1000  — pressure to force it through</li>
-            <li>P(mW) = V × I(mA)  — total power</li>
-          </ul>
-        </div>
 
         <SubHeading>Headphone Power &amp; Signal Demand Comparison</SubHeading>
         <p className="mb-4 max-w-2xl text-sm text-foreground/80">
