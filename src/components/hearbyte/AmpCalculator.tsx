@@ -327,6 +327,91 @@ const AmpCalculator = () => {
     });
   };
 
+  const currentVals = (): Vals => ({
+    mode,
+    powerLow,
+    loadLow,
+    powerHigh,
+    loadHigh,
+    ampVoltage,
+    ampCurrent,
+    ampPower,
+    ampPowerLoad,
+    hpImpedance,
+    hpSensitivity,
+    targetAvg,
+    crestFactor,
+    digitalGain,
+  });
+
+  const calculate = (e: React.FormEvent) => {
+    e.preventDefault();
+    runWith(currentVals());
+  };
+
+  // Allow other parts of the page to deep-link a fully pre-filled case, e.g.
+  // #calculator?mode=A&pLow=49&zLow=16&pHigh=34&zHigh=32&z=32&sens=99&avg=85&crest=14&gain=3
+  useEffect(() => {
+    const applyFromHash = () => {
+      const hash = window.location.hash;
+      const qIndex = hash.indexOf("?");
+      if (!hash.startsWith("#calculator") || qIndex === -1) return;
+      const q = new URLSearchParams(hash.slice(qIndex + 1));
+      if (![...q.keys()].length) return;
+
+      const next: Vals = { ...currentVals() };
+      const modeParam = q.get("mode");
+      if (modeParam) next.mode = modeParam.toUpperCase() === "B" ? "direct" : "power";
+
+      const map: [string, keyof Vals][] = [
+        ["pLow", "powerLow"],
+        ["zLow", "loadLow"],
+        ["pHigh", "powerHigh"],
+        ["zHigh", "loadHigh"],
+        ["vRail", "ampVoltage"],
+        ["iCap", "ampCurrent"],
+        ["ampP", "ampPower"],
+        ["ampZ", "ampPowerLoad"],
+        ["z", "hpImpedance"],
+        ["sens", "hpSensitivity"],
+        ["avg", "targetAvg"],
+        ["crest", "crestFactor"],
+        ["gain", "digitalGain"],
+      ];
+      for (const [param, key] of map) {
+        const value = q.get(param);
+        if (value !== null && key !== "mode") next[key] = value;
+      }
+
+      setMode(next.mode);
+      setPowerLow(next.powerLow);
+      setLoadLow(next.loadLow);
+      setPowerHigh(next.powerHigh);
+      setLoadHigh(next.loadHigh);
+      setAmpVoltage(next.ampVoltage);
+      setAmpCurrent(next.ampCurrent);
+      setAmpPower(next.ampPower);
+      setAmpPowerLoad(next.ampPowerLoad);
+      setHpImpedance(next.hpImpedance);
+      setHpSensitivity(next.hpSensitivity);
+      setTargetAvg(next.targetAvg);
+      setCrestFactor(next.crestFactor);
+      setDigitalGain(next.digitalGain);
+      runWith(next);
+
+      window.requestAnimationFrame(() => {
+        resultsRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+    };
+
+    applyFromHash();
+    window.addEventListener("hashchange", applyFromHash);
+    return () => window.removeEventListener("hashchange", applyFromHash);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+
+
   return (
     <div className="max-w-3xl rounded-xl border border-border bg-card-gradient p-6">
       <form onSubmit={calculate} noValidate>
