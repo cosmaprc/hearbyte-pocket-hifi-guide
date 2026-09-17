@@ -372,7 +372,7 @@ const Index = () => {
                   i: "55.9 mA (massive)",
                   v: "1.79 V (moderate)",
                   power: "100.00 mW",
-                  demand: "Current-dominant demand.",
+                  demand: "Current-heavy demand — requires significant current flow, which can bottleneck compact dongle amps.",
                 },
                 {
                   type: "High Ω / mid sensitivity (studio open-back)",
