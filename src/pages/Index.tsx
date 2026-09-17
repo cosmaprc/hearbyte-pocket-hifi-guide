@@ -77,6 +77,9 @@ const Index = () => {
         </div>
 
         <SubHeading>Chains</SubHeading>
+        <p className="mb-5 max-w-3xl text-sm leading-relaxed text-foreground/80">
+          Every <span className="text-neon-magenta">Can it drive it?</span> panel below is worked out for an <span className="text-neon-cyan">85 dB SPL</span> average listening level, the reference the <a href="#calculator" className="text-neon-cyan underline-offset-4 hover:underline">calculator on this page</a> uses. Aim for <span className="text-neon-cyan">90 dB</span> instead and three of these chains land within <span className="text-neon-cyan">2 dB</span> of clipping.
+        </p>
         <div className="grid gap-5 md:grid-cols-2">
           <Card title="1 · Sennheiser HD 560S — wired">
             <Bullets
