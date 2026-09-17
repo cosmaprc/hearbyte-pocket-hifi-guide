@@ -140,6 +140,7 @@ const AmpCalculator = () => {
   const [digitalGain, setDigitalGain] = useState("0");
   const [results, setResults] = useState<Results | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const resultsRef = useRef<HTMLDivElement>(null);
 
   const runWith = (v: Vals) => {
     const {
