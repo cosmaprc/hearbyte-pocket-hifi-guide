@@ -417,25 +417,7 @@ const Index = () => {
                 <th scope="row" className="py-2 pr-3 font-semibold text-neon-magenta">Step 1</th>
                 <td className="py-2 pr-3 text-foreground/90">Target peak loudness (dB SPL calculation)</td>
                 <td className="py-2 text-foreground/90">
-                  Target Peak SPL = Target Avg SPL + Crest Factor + Sound Check Loss (dB) + PEQ Preamp Loss (dB)
-                  <p className="mt-2 text-foreground/70">
-                    Note: All loss values must be entered as positive numbers (e.g., enter a -9 dB Sound Check reduction as +9 dB). Digital volume attenuation reduces signal output, so the amplifier must deliver extra gain to reach your target average volume at the ear.
-                  </p>
-                  <div className="mt-2 font-display text-neon-cyan">Crest Factor Values by Genre</div>
-                  <ul className="mt-1 list-disc space-y-0.5 pl-4 text-foreground/80">
-                    <li>EDM / Hip-Hop / Modern Pop: 6 dB (heavily compressed, brickwall-limited mixes)</li>
-                    <li>Standard Pop / Rock / Metal: 10 dB to 12 dB (moderate dynamic range)</li>
-                    <li>Jazz / Acoustic / Folk: 14 dB (uncompressed live instrument transients)</li>
-                    <li>Classical / Film Scores: 18 dB (extreme dynamic range from solo passages to full orchestral peaks)</li>
-                  </ul>
-                  <div className="mt-2 font-display text-neon-cyan">Worked Calculation Example</div>
-                  <ul className="mt-1 list-disc space-y-0.5 pl-4 text-foreground/80">
-                    <li>Target Average Volume: 85 dB SPL</li>
-                    <li>Genre Crest Factor (Jazz): 14 dB</li>
-                    <li>Sound Check Normalization Loss: 9 dB (entered as +9)</li>
-                    <li>PEQ Preamp Reduction: 10 dB (entered as +10)</li>
-                    <li>Target Peak SPL = 85 + 14 + 9 + 10 = <span className="text-neon-cyan">118 dB SPL Peak Required</span></li>
-                  </ul>
+                  Use the <a href="#calculator" className="text-neon-cyan underline-offset-4 hover:underline">calculator on this page</a> for the full formula, crest-factor guide, and worked example.
                 </td>
               </tr>
               <tr className="border-b border-border/60 last:border-b-0">
