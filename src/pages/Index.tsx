@@ -78,7 +78,7 @@ const Index = () => {
 
         <SubHeading>Chains</SubHeading>
         <p className="mb-5 max-w-3xl text-sm leading-relaxed text-foreground/80">
-          Every <span className="text-neon-magenta">Can it drive it?</span> panel below is worked out for an <span className="text-neon-cyan">85 dB SPL</span> average listening level, the reference the <a href="#calculator" className="text-neon-cyan underline-offset-4 hover:underline">calculator on this page</a> uses. Aim for <span className="text-neon-cyan">90 dB</span> instead and three of these chains land within <span className="text-neon-cyan">2 dB</span> of clipping.
+          Every <span className="text-neon-magenta">Can it drive it?</span> panel below is worked out for an <span className="text-neon-cyan">85 dB SPL</span> average listening level, the reference the <a href="#calculator" className="text-neon-cyan underline-offset-4 hover:underline">calculator on this page</a> uses.
         </p>
         <div className="grid gap-5 md:grid-cols-2">
           <Card title="1 · Sennheiser HD 560S — wired">
@@ -333,9 +333,6 @@ const Index = () => {
           Two numbers decide how fussy a headphone is about its source: <span className="text-neon-cyan">impedance</span> (Ω) and <GlossaryLink term="sensitivity">sensitivity</GlossaryLink> (dB/mW or dB/V). Mismatch them and you get hiss, clipping, or not enough volume.
         </p>
         <p className="mb-6 max-w-2xl text-sm text-foreground/80">
-          One correction before the table, because you will read the opposite everywhere. Impedance is just the <span className="text-neon-cyan">ratio of voltage to current</span>, and that ratio does not change with level, so a headphone does not draw proportionally more current in the bass. If it plays <span className="text-neon-magenta">loud enough, it has enough bass</span>, and vice versa. When an amp runs short of current you get <span className="text-neon-magenta">clipping on peaks</span> across the whole signal, not weak or thin bass. <ExtLink href="https://www.reddit.com/r/headphones/s/vq4C1c1tvn" className="text-neon-cyan">oratory1990 explains it here</ExtLink>.
-        </p>
-        <p className="mb-6 max-w-2xl text-sm text-foreground/80">
           Watch the units: <span className="text-neon-magenta">dB/mW</span> and <span className="text-neon-magenta">dB/V</span> are not interchangeable, and vendors quote whichever number flatters the product (<GlossaryLink term="sensitivity">how they convert</GlossaryLink>).
         </p>
 
@@ -365,7 +362,7 @@ const Index = () => {
           </ul>
         </div>
 
-        <SubHeading>Current-centric output comparison</SubHeading>
+        <SubHeading>Headphone Power &amp; Signal Demand Comparison</SubHeading>
         <p className="mb-4 max-w-2xl text-sm text-foreground/80">
           Target volume: <span className="text-neon-cyan">110 dB SPL peak</span>.
         </p>
@@ -400,7 +397,7 @@ const Index = () => {
                   i: "55.9 mA (massive)",
                   v: "1.79 V (moderate)",
                   power: "100.00 mW",
-                  demand: "Current-dominant demand — needs roughly 7x more current than voltage, which chokes weak dongles.",
+                  demand: "Current-dominant demand.",
                 },
                 {
                   type: "High Ω / mid sensitivity (studio open-back)",
@@ -472,13 +469,23 @@ const Index = () => {
 
 
         <div className="mt-10 max-w-2xl rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-4 text-sm text-foreground/90">
-
-          <div className="font-display text-neon-magenta">Important · intersample clipping and headroom</div>
+          <div className="font-display text-neon-magenta">Intersample Clipping: What It Is &amp; Do You Need to Fix It?</div>
           <p className="mt-2">
-            Playing music from a computer or phone, the sound cannot distort or clip <span className="text-neon-cyan">digitally</span> unless you push the volume or EQ too high in software. Even when your software settings look safe, a hidden kind of distortion called <span className="text-neon-magenta">intersample clipping</span> can still happen inside the hardware. It occurs when the digital audio is turned back into a real waveform and the peaks of that waveform overshoot what the hardware can handle.
+            <span className="text-neon-magenta">Intersample clipping</span> happens during digital-to-analog conversion. When a <span className="text-neon-cyan">DAC</span> reconstructs a continuous analog wave from digital samples, the peak of that smooth curve can mathematically overshoot the maximum digital limit (<span className="text-neon-cyan">0 dBFS</span>) between two samples — even if neither individual sample exceeds <span className="text-neon-cyan">0 dBFS</span>. This causes the DAC's internal digital filter to clip the tops off those reconstructed peaks.
+          </p>
+          <div className="font-display mt-4 text-neon-cyan">How to Protect Against It</div>
+          <p className="mt-2">
+            <span className="text-neon-magenta">Lower Digital Preamp Gain:</span> Reduce your software volume or global EQ preamp by <span className="text-neon-cyan">-1 dB</span> to <span className="text-neon-cyan">-3 dB</span>. This gives the DAC's reconstruction filter the math room it needs to calculate overshoots without clipping.
           </p>
           <p className="mt-2">
-            To stay clear of it, run the numbers through a free <span className="text-neon-cyan">headphone power calculator</span>. Different music needs different amounts of breathing room, or <span className="text-neon-magenta">headroom</span>: rock wants around <span className="text-neon-cyan">10 dB</span>, while acoustic and jazz want around <span className="text-neon-cyan">14 dB</span> for sudden peaks like a drum hit. The calculator tells you whether your portable DAC/amp dongle has enough output left to handle your genres cleanly — after <GlossaryLink term="replaygain">loudness normalization</GlossaryLink> pulls the level down, and after you lower the preamp yourself to make room for an <span className="text-neon-cyan">EQ</span> bass boost.
+            <span className="text-neon-magenta">Enable True Peak Normalization:</span> If you use streaming services like <ExtLink href="https://open.spotify.com/" className="text-neon-cyan">Spotify</ExtLink> or <ExtLink href="https://music.apple.com/" className="text-neon-cyan">Apple Music</ExtLink>, keep loudness normalization turned on. Their processing automatically lowers the track's volume to prevent True Peak intersample clipping.
+          </p>
+          <div className="font-display mt-4 text-neon-cyan">Do You Actually Need to Do Anything?</div>
+          <p className="mt-2">
+            For most listeners, no. Intersample peaks usually last for microsecond bursts, making the resulting distortion practically inaudible during normal music playback. Additionally, many modern DACs are engineered with internal headroom (<span className="text-neon-cyan">+2 to +3 dBFS</span>) specifically to handle these peaks without clipping.
+          </p>
+          <p className="mt-2">
+            However, if you apply software EQ (such as a bass boost), you must lower your preamp gain by at least the amount of your boost to prevent standard digital clipping — which will resolve intersample clipping at the same time.
           </p>
         </div>
 
