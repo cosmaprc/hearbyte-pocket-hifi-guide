@@ -823,6 +823,16 @@ const Index = () => {
               <p>Two ways to publish <span className="text-neon-cyan">sensitivity</span>. dB/mW is loudness per milliwatt of power; dB/V is loudness per volt. They are not interchangeable — a 32 Ω headphone rated 114 dB/V is only about 99 dB/mW — and manufacturers quote whichever flatters the product.</p>
             </Card>
           </div>
+          <div id="g-crestfactor" className="scroll-mt-24">
+            <Card title="Crest factor">
+              <p><span className="text-neon-cyan">Peak SPL − Avg (RMS) SPL</span>. It measures how much short-term transient punch sits above the average level — roughly <span className="text-neon-cyan">6 dB</span> for heavily compressed EDM/hip-hop, <span className="text-neon-cyan">12 dB</span> for pop/rock, and <span className="text-neon-cyan">14–18 dB</span> for acoustic/jazz/classical.</p>
+            </Card>
+          </div>
+          <div id="g-dynamicrange" className="scroll-mt-24">
+            <Card title="Dynamic range">
+              <p>The span between the loudest peak a track reaches and its quietest audible detail down to the noise floor. It describes the long-term contrast of loud versus soft passages in a recording.</p>
+            </Card>
+          </div>
           <div id="g-dsp" className="scroll-mt-24">
             <Card title="DSP">
               <p><span className="text-neon-cyan">Digital Signal Processing</span> — software that reshapes audio in real time (<span className="text-neon-cyan">EQ</span>, <span className="text-neon-cyan">reverb</span>, <span className="text-neon-cyan">crossfeed</span>, <span className="text-neon-cyan">dynamics</span>).</p>
