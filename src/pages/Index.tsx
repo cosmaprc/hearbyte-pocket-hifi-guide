@@ -149,7 +149,25 @@ const Index = () => {
                   <span className="text-neon-magenta">DAC (no EQ):</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> over <span className="text-neon-cyan">USB</span>, powered from <span className="text-neon-cyan">USB-C</span> rather than its internal battery — only with <span className="text-neon-cyan">no EQ</span>, since with the target <span className="text-neon-cyan">PEQ</span> profile it can run out of power on some genres.
                   <div className="mt-2 rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-3 text-sm">
                     <div className="flex items-baseline gap-2"><span className="text-neon-magenta">Can it drive it?</span> <a href="#demands" title="Why these numbers — do you have enough power?" className="text-xs text-neon-cyan underline-offset-4 hover:underline">why?</a></div>
-                    <p className="mt-1"><span className="text-neon-cyan">Yes</span> — at a <span className="text-neon-cyan">106 dB SPL</span> peak (85 + 7 + 0 + 14) it needs <span className="text-neon-cyan">0.90 V</span> / <span className="text-neon-cyan">25.12 mW</span> / <span className="text-neon-cyan">28.02 mA</span>, against the Qudelix 5K's <span className="text-neon-cyan">240.0 mW / 2.77 Vrms / 86.6 mArms</span> at <span className="text-neon-cyan">32 Ω</span> — a saturation ceiling of <span className="text-neon-cyan">115.80 dB SPL</span>, so <span className="text-neon-cyan">+9.80 dB</span> of headroom left. <a href="#calculator?mode=B&vRail=4&ampP=240&ampZ=32&z=32&sens=92&avg=85&crest=14&gain=7" className="text-neon-cyan underline-offset-4 hover:underline">Open it in the calculator on this page</a>, pre-filled and already worked out.</p>
+                    <ul className="mt-1 space-y-0.5">
+                      <li>Sensitivity: <span className="text-neon-cyan">92 dB SPL/mW</span></li>
+                      <li>Impedance: <span className="text-neon-cyan">32 Ω</span></li>
+                      <li>Target average loudness: <span className="text-neon-cyan">85 dB SPL</span></li>
+                      <li>Sound Check headroom: <span className="text-neon-cyan">7 dB</span></li>
+                      <li><span className="text-neon-cyan">PEQ</span> preamp headroom: <span className="text-neon-cyan">0 dB</span> (no PEQ)</li>
+                      <li>Crest factor, jazz/acoustic: <span className="text-neon-cyan">14 dB</span></li>
+                      <li>Peak needed: 85 + 7 + 0 + 14 = <span className="text-neon-cyan">106 dB SPL</span></li>
+                      <li>Power needed: <span className="text-neon-cyan">25.12 mW</span></li>
+                      <li>Voltage needed: <span className="text-neon-cyan">~0.90 V</span></li>
+                      <li>Current needed: <span className="text-neon-cyan">28.02 mA</span></li>
+                      <li>Qudelix 5K on <span className="text-neon-cyan">2.5 mm balanced</span>: <span className="text-neon-cyan">240.0 mW / 2.77 V / 86.6 mA</span></li>
+                      <li>Saturation ceiling: <span className="text-neon-cyan">115.80 dB SPL</span></li>
+                      <li>Headroom left: <span className="text-neon-cyan">+9.80 dB</span></li>
+                      <li>Verdict: <span className="text-neon-cyan">yes</span></li>
+                    </ul>
+                    <div className="mt-1">
+                      Run the numbers yourself: <a href="#calculator?mode=B&vRail=4&ampP=240&ampZ=32&z=32&sens=92&avg=85&crest=14&gain=7" className="text-neon-cyan underline-offset-4 hover:underline">the calculator on this page</a> opens pre-filled and already worked out, <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=92&u=dbmw&z=32&v=2.77&spl=92&hr=14" className="text-neon-cyan">theaudiostuff.com</ExtLink> also opens pre-filled but doesn't report current, and <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphones.com</ExtLink> gives you the <span className="text-neon-cyan">mA</span> figure but has to be filled in by hand.
+                    </div>
                   </div>
                 </>,
                 <>
