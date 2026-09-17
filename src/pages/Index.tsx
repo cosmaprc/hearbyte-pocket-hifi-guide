@@ -160,9 +160,9 @@ const Index = () => {
                       <li>Power needed: <span className="text-neon-cyan">25.12 mW</span></li>
                       <li>Voltage needed: <span className="text-neon-cyan">~0.90 V</span></li>
                       <li>Current needed: <span className="text-neon-cyan">28.02 mA</span></li>
-                      <li>Qudelix 5K on <span className="text-neon-cyan">2.5 mm balanced</span>: <span className="text-neon-cyan">240.0 mW / 2.77 V / 86.6 mA</span></li>
-                      <li>Saturation ceiling: <span className="text-neon-cyan">115.80 dB SPL</span></li>
-                      <li>Headroom left: <span className="text-neon-cyan">+9.80 dB</span></li>
+                      <li>Qudelix 5K on <span className="text-neon-cyan">2.5 mm balanced</span>: <span className="text-neon-cyan">4.00 V rail / 81.08 mA</span></li>
+                      <li>Saturation ceiling: <span className="text-neon-cyan">115.23 dB SPL</span></li>
+                      <li>Headroom left: <span className="text-neon-cyan">+9.23 dB</span></li>
                       <li>Verdict: <span className="text-neon-cyan">yes</span></li>
                     </ul>
                     <div className="mt-1">
