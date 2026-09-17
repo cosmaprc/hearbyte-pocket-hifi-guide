@@ -124,8 +124,23 @@ const AmpCalculator = () => {
   const [results, setResults] = useState<Results | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  const calculate = (e: React.FormEvent) => {
-    e.preventDefault();
+  const runWith = (v: Vals) => {
+    const {
+      mode,
+      powerLow,
+      loadLow,
+      powerHigh,
+      loadHigh,
+      ampVoltage,
+      ampCurrent,
+      ampPower,
+      ampPowerLoad,
+      hpImpedance,
+      hpSensitivity,
+      targetAvg,
+      crestFactor,
+      digitalGain,
+    } = v;
     setError(null);
 
     const R_hp = parseFloat(hpImpedance);
@@ -133,6 +148,7 @@ const AmpCalculator = () => {
     const avg = parseFloat(targetAvg) || 0;
     const crest = parseFloat(crestFactor) || 0;
     const gain = parseFloat(digitalGain) || 0;
+
 
     let vRail = 0;
     let iCapMA = 0;
