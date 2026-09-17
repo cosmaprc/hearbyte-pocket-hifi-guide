@@ -96,7 +96,7 @@ const Index = () => {
                       <li>Target average loudness: <span className="text-neon-cyan">85 dB SPL</span></li>
                       <li>Sound Check headroom: <span className="text-neon-cyan">7 dB</span></li>
                       <li><span className="text-neon-cyan">PEQ</span> preamp headroom: <span className="text-neon-cyan">0 dB</span> (no PEQ)</li>
-                      <li>Crest factor, jazz/acoustic: <span className="text-neon-cyan">14 dB</span></li>
+                      <li><GlossaryLink term="crestfactor">Crest factor</GlossaryLink>, jazz/acoustic: <span className="text-neon-cyan">14 dB</span></li>
                       <li>Peak needed: 85 + 7 + 0 + 14 = <span className="text-neon-cyan">106 dB SPL</span></li>
                       <li>Power needed: <span className="text-neon-cyan">3.31 mW</span></li>
                       <li>Voltage needed: <span className="text-neon-cyan">~0.63 V</span></li>
@@ -734,7 +734,7 @@ const Index = () => {
 
       <Section id="replaygain" icon={Volume2} title="Using ReplayGain" tone="orange">
         <p className="mb-6 max-w-2xl text-base text-foreground/90">
-          <GlossaryLink term="replaygain">ReplayGain</GlossaryLink> is <span className="text-neon-magenta">volume normalization</span> done properly: applied correctly it leaves the <span className="text-neon-magenta">dynamic range</span> of your music alone. Scan your files once to write <span className="text-neon-cyan">track</span> and <span className="text-neon-cyan">album</span> tags and the players above will level everything for you. If you mostly shuffle across artists, use <span className="text-neon-magenta">track</span> mode. If you listen album-first, use <span className="text-neon-magenta">album</span> mode so the relative loudness within a record survives.
+          <GlossaryLink term="replaygain">ReplayGain</GlossaryLink> is <span className="text-neon-magenta">volume normalization</span> done properly: applied correctly it leaves the <GlossaryLink term="dynamicrange">dynamic range</GlossaryLink> of your music alone. Scan your files once to write <span className="text-neon-cyan">track</span> and <span className="text-neon-cyan">album</span> tags and the players above will level everything for you. If you mostly shuffle across artists, use <span className="text-neon-magenta">track</span> mode. If you listen album-first, use <span className="text-neon-magenta">album</span> mode so the relative loudness within a record survives.
         </p>
         <div className="grid gap-5 md:grid-cols-3">
           <Card title="foobar2000 on Windows" href="https://www.foobar2000.org/">
