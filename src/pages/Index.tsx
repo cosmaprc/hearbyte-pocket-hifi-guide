@@ -902,6 +902,7 @@ const Index = () => {
           <Card title="Online tools">
             <Bullets
               items={[
+                <>On this page: <a href="#calculator" className="text-neon-cyan underline-offset-4 hover:underline">Universal Amplifier & Saturation Calculator</a> — checks whether a dongle can cleanly drive a headphone and shows the <span className="text-neon-magenta">saturation ceiling</span> in dB SPL.</>,
                 <>Power calculators tell you whether a dongle has the <span className="text-neon-cyan">voltage</span> and <span className="text-neon-magenta">headroom</span> for a given headphone — see <a href="#demands" className="text-neon-cyan underline-offset-4 hover:underline">Do you have enough power?</a></>,
                 <><ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=97&u=dbv&z=300&v=1.0&spl=85&hr=10" className="text-neon-cyan">theaudiostuff.com headphone power calculator</ExtLink> — the one the <span className="text-neon-magenta">Can it drive it?</span> panels use, pre-filled with a 300 Ω, 97 dB/V example.</>,
                 <><ExtLink href="https://www.headphonesty.com/headphone-power-calculator/" className="text-neon-cyan">Headphonesty headphone power calculator</ExtLink>.</>,
