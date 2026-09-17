@@ -70,7 +70,7 @@ const Index = () => {
               items={[
                 <><span className="text-neon-magenta">Source:</span> <span className="text-neon-cyan">iPhone</span>.</>,
                 <><span className="text-neon-magenta">App:</span> <ExtLink href="https://music.apple.com/" className="text-neon-cyan">Apple Music</ExtLink> — <span className="text-neon-cyan">Lossless 24-bit / 48 kHz</span>, <GlossaryLink term="soundcheck">Sound Check</GlossaryLink> on.</>,
-                <><span className="text-neon-magenta">EQ:</span> when a chain below uses one, it's the <ExtLink href="https://www.rtings.com/headphones/learn/eq-repository" className="text-neon-cyan">rtings.com</ExtLink> target preference curve <span className="text-neon-cyan">PEQ</span> profile.</>,
+                <><span className="text-neon-magenta">EQ:</span> when a chain below uses one, it's the <ExtLink href="https://www.rtings.com/headphones/learn/eq-repository" className="text-neon-cyan">rtings.com</ExtLink> target preference curve <span className="text-neon-cyan">PEQ</span> profile — or one of <ExtLink href="https://reddit.com/r/oratory1990/wiki/index/list_of_presets" className="text-neon-cyan">oratory1990's profiles</ExtLink>.</>,
               ]}
             />
           </Card>
@@ -921,7 +921,7 @@ const Index = () => {
                 <><ExtLink href="https://autoeq.app/" className="text-neon-cyan">AutoEQ</ExtLink> builds a parametric EQ preset from measurement data to hit a target curve.</>,
                 <>Someone has often already built the preset you want; <ExtLink href="https://peqdb.com/" className="text-neon-cyan">PEQdb</ExtLink> is searchable by headphone and IEM.</>,
                 <><ExtLink href="https://opra.roon.app/" className="text-neon-cyan">OPRA</ExtLink> — Roon's headphone preference rating explorer.</>,
-                <>The preference-curve profiles I use come from the <ExtLink href="https://www.rtings.com/headphones/learn/eq-repository" className="text-neon-cyan">RTINGS EQ Repository</ExtLink>.</>,
+                <>The preference-curve profiles I use come from the <ExtLink href="https://www.rtings.com/headphones/learn/eq-repository" className="text-neon-cyan">RTINGS EQ Repository</ExtLink>, or from <ExtLink href="https://reddit.com/r/oratory1990/wiki/index/list_of_presets" className="text-neon-cyan">oratory1990's preset list</ExtLink>.</>,
               ]}
             />
           </Card>
