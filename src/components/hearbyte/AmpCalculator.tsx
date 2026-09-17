@@ -584,7 +584,7 @@ const AmpCalculator = () => {
         </button>
       </form>
 
-      <div aria-live="polite">
+      <div aria-live="polite" ref={resultsRef}>
         {results && (
           <div className="mt-6 rounded-lg border-l-4 border-neon-cyan bg-background/40 p-4">
             <h3 className="font-display text-base font-bold text-neon-magenta">
