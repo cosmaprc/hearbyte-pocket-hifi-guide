@@ -7,7 +7,8 @@ import Bullets from "@/components/hearbyte/Bullets";
 import Divider from "@/components/hearbyte/Divider";
 import SubHeading from "@/components/hearbyte/SubHeading";
 import TableOfContents from "@/components/hearbyte/TableOfContents";
-import { Smartphone, Sliders, Headphones, Volume2, BookOpen, Link, FolderInput, Zap, Gauge } from "lucide-react";
+import { Smartphone, Sliders, Headphones, Volume2, BookOpen, Link, FolderInput, Zap, Gauge, Calculator } from "lucide-react";
+import AmpCalculator from "@/components/hearbyte/AmpCalculator";
 import hd560sQudelixHeadband from "@/assets/hd560s-qudelix-headband.jpg";
 import hd560sQudelixFront from "@/assets/hd560s-qudelix-front.jpg";
 
@@ -491,6 +492,15 @@ const Index = () => {
           ))}
         </div>
 
+      </Section>
+
+      <Divider />
+
+      <Section id="calculator" icon={Calculator} title="Universal amplifier & saturation calculator" tone="cyan">
+        <p className="mb-6 max-w-2xl text-base text-foreground/90">
+          This turns the <a href="#demands" className="text-neon-cyan underline-offset-4 hover:underline">power theory above</a> into a yes/no answer for any amp and headphone pairing. Enter the amplifier's specs, the headphone's <span className="text-neon-cyan">impedance</span> and <span className="text-neon-cyan">sensitivity</span>, and it works out the <span className="text-neon-magenta">saturation ceiling</span> — the loudest clean volume the pairing can reach — and how much <span className="text-neon-magenta">headroom</span> is left over your listening target.
+        </p>
+        <AmpCalculator />
       </Section>
 
       <Divider />

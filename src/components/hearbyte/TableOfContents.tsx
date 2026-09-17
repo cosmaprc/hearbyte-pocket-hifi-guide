@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 const sections = [
   { id: "chain", label: "My preferred chains" },
   { id: "demands", label: "Enough power?" },
+  { id: "calculator", label: "Calculator" },
   { id: "phones", label: "Phones & Accessories" },
   { id: "software", label: "Software" },
   { id: "preferences", label: "Finding your preferences" },
