@@ -107,7 +107,7 @@ const Index = () => {
                       <li>Verdict: <span className="text-neon-cyan">yes</span></li>
                     </ul>
                     <div className="mt-1">
-                      Run the numbers yourself: <a href="#calculator?mode=B&vRail=4&ampP=240&ampZ=32&z=120&sens=100.8&avg=85&crest=14&gain=7" className="text-neon-cyan underline-offset-4 hover:underline">the calculator on this page</a> opens pre-filled and already worked out, <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=100.8&u=dbmw&z=120&v=4&spl=92&hr=14" className="text-neon-cyan">theaudiostuff.com</ExtLink> also opens pre-filled but doesn't report current, and <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphones.com</ExtLink> gives you the <span className="text-neon-cyan">mA</span> figure but has to be filled in by hand.
+                      Run the numbers yourself: <a href="#calculator?mode=B&vRail=4&z=120&sens=100.8&avg=85&crest=14&gain=7" className="text-neon-cyan underline-offset-4 hover:underline">the calculator on this page</a> opens pre-filled and already worked out, <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=100.8&u=dbmw&z=120&v=4&spl=92&hr=14" className="text-neon-cyan">theaudiostuff.com</ExtLink> also opens pre-filled but doesn't report current, and <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphones.com</ExtLink> gives you the <span className="text-neon-cyan">mA</span> figure but has to be filled in by hand.
                     </div>
                   </div>
                 </>,
@@ -132,7 +132,7 @@ const Index = () => {
                       <li>Verdict: <span className="text-neon-cyan">yes</span></li>
                     </ul>
                     <div className="mt-1">
-                      Run the numbers yourself: <a href="#calculator?mode=B&vRail=4&ampP=240&ampZ=32&z=120&sens=100.8&avg=85&crest=14&gain=17" className="text-neon-cyan underline-offset-4 hover:underline">the calculator on this page</a> opens pre-filled and already worked out, <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=100.8&u=dbmw&z=120&v=4&spl=102&hr=14" className="text-neon-cyan">theaudiostuff.com</ExtLink> also opens pre-filled but doesn't report current, and <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphones.com</ExtLink> gives you the <span className="text-neon-cyan">mA</span> figure but has to be filled in by hand.
+                      Run the numbers yourself: <a href="#calculator?mode=B&vRail=4&z=120&sens=100.8&avg=85&crest=14&gain=17" className="text-neon-cyan underline-offset-4 hover:underline">the calculator on this page</a> opens pre-filled and already worked out, <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=100.8&u=dbmw&z=120&v=4&spl=102&hr=14" className="text-neon-cyan">theaudiostuff.com</ExtLink> also opens pre-filled but doesn't report current, and <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphones.com</ExtLink> gives you the <span className="text-neon-cyan">mA</span> figure but has to be filled in by hand.
                     </div>
                   </div>
                 </>,
@@ -160,13 +160,13 @@ const Index = () => {
                       <li>Power needed: <span className="text-neon-cyan">25.12 mW</span></li>
                       <li>Voltage needed: <span className="text-neon-cyan">~0.90 V</span></li>
                       <li>Current needed: <span className="text-neon-cyan">28.02 mA</span></li>
-                      <li>Qudelix 5K on <span className="text-neon-cyan">2.5 mm balanced</span>: <span className="text-neon-cyan">240.0 mW / 2.77 V / 86.6 mA</span></li>
-                      <li>Saturation ceiling: <span className="text-neon-cyan">115.80 dB SPL</span></li>
-                      <li>Headroom left: <span className="text-neon-cyan">+9.80 dB</span></li>
+                      <li>Qudelix 5K on <span className="text-neon-cyan">2.5 mm balanced</span>: <span className="text-neon-cyan">4.00 V rail / 81.08 mA</span></li>
+                      <li>Saturation ceiling: <span className="text-neon-cyan">115.23 dB SPL</span></li>
+                      <li>Headroom left: <span className="text-neon-cyan">+9.23 dB</span></li>
                       <li>Verdict: <span className="text-neon-cyan">yes</span></li>
                     </ul>
                     <div className="mt-1">
-                      Run the numbers yourself: <a href="#calculator?mode=B&vRail=4&ampP=240&ampZ=32&z=32&sens=92&avg=85&crest=14&gain=7" className="text-neon-cyan underline-offset-4 hover:underline">the calculator on this page</a> opens pre-filled and already worked out, <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=92&u=dbmw&z=32&v=2.77&spl=92&hr=14" className="text-neon-cyan">theaudiostuff.com</ExtLink> also opens pre-filled but doesn't report current, and <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphones.com</ExtLink> gives you the <span className="text-neon-cyan">mA</span> figure but has to be filled in by hand.
+                      Run the numbers yourself: <a href="#calculator?mode=B&vRail=4&z=32&sens=92&avg=85&crest=14&gain=7" className="text-neon-cyan underline-offset-4 hover:underline">the calculator on this page</a> opens pre-filled and already worked out, <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=92&u=dbmw&z=32&v=2.77&spl=92&hr=14" className="text-neon-cyan">theaudiostuff.com</ExtLink> also opens pre-filled but doesn't report current, and <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphones.com</ExtLink> gives you the <span className="text-neon-cyan">mA</span> figure but has to be filled in by hand.
                     </div>
                   </div>
                 </>,
