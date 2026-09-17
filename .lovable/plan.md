@@ -1,13 +1,13 @@
-# Add a "Universal Amplifier & Saturation Calculator" section
+# Add the "Universal Amplifier & Saturation Calculator" as a native page section
 
-A new interactive section on the main page, placed immediately after "Do you have enough power?" (`#demands`) and before "Finding your own preferences". The calculator's HTML form and JavaScript are rebuilt as a native React component in the site's neon style — no iframe, no external file.
+The uploaded `main.html` calculator is rebuilt as a React component in the site's synthwave style and inserted as a new section immediately after "Do you have enough power?" (`#demands`), before "Finding your own preferences". No iframe, no external file; the light theme, system fonts, and blue/green result colors are replaced with the site's design tokens.
 
 ## Placement
 
 ```text
 My preferred audio chains
-Do you have enough power?          (#demands)
-Amplifier & Saturation Calculator  (new #calculator section)
+Do you have enough power?                  (#demands)
+Universal Amplifier & Saturation Calculator  (new #calculator)
 Finding your own preferences
 Phones & Accessories
 ...
@@ -15,21 +15,32 @@ Phones & Accessories
 
 ## What gets built
 
-1. **New component** `src/components/hearbyte/AmpCalculator.tsx`:
-   - The calculator's form fields (inputs, dropdowns, buttons) rebuilt with React state, styled with the existing design tokens: `bg-card-gradient` panel, `border-border`, cyan/magenta accents, matching the "Can it drive it?" panels and dongle output tables.
-   - The JavaScript calculation logic ported to a plain TypeScript function, run on input change (no form submit / page reload).
-   - Results area styled like the dongle output tables (cyan uppercase labels, magenta highlights for key figures).
-2. **New section in `src/pages/Index.tsx`** using the existing `Section` component with id `calculator`, a `Calculator` lucide icon, and cyan tone. One intro sentence links it back to the theory in `#demands`.
-3. **Table of contents** in `src/components/hearbyte/TableOfContents.tsx`: add a "Calculator" chip between "Enough power?" and "Preferences" so scroll highlighting stays in order.
-4. **Accessibility**: every input gets a real `<label>`, results announced via `aria-live="polite"`, and the form works on mobile widths like the rest of the page.
+**New component `src/components/hearbyte/AmpCalculator.tsx`** — one `bg-card-gradient` panel containing:
 
-## What is not decided yet
+1. **Amplifier input mode** — two radio options, restyled as neon-accented selector cards:
+   - *Mode A: Multi-Power Specs* — low-impedance spec (power mW + rated load Ω → current cap `I = √(P/Z)`) and high-impedance spec (→ voltage rail `V = √(P×Z)`). Defaults: 480 mW @ 16 Ω, 125 mW @ 300 Ω.
+   - *Mode B: Direct Rail & Current Limit* — max RMS voltage rail (default 4.0 V), max current (default 81.08 mA, Qudelix spreadsheet), plus the optional dashed override box that recalculates current from a power spec and load.
+2. **Headphone specifications** — impedance Ω (default 37) and sensitivity dB SPL/mW (default 94).
+3. **Listening & headroom targets** — target avg volume (85), crest factor (12), digital gain reduction (0), keeping the helper text with the per-genre crest guidance (6 dB EDM/hip-hop … 18 dB classical).
+4. **Calculate** button and **results panel** (revealed after submit, as in the original):
+   - Derived amp hardware limits (voltage rail, current cap).
+   - Output results: limiting wall (Current Saturation vs Voltage Rail Cap), max clean voltage/power/current, saturation ceiling dB SPL.
+   - Listening target analysis: target peak volume and remaining headroom — headroom shown in cyan when positive, magenta/destructive when negative (replacing the original green/red).
+   - The four-step "Calculation & Formula Breakdown" panel, rendered as the same mono-formula steps (`font-mono` formulas in bordered panels, like the current-first law block).
+5. **Reference Verification Bench** — the permanent table of the six verified headphones (Sundara original & 2022, K371, HD 560S, HD 660S, HD 600 × Mode A/B) restyled to match the dongle output tables: cyan uppercase headers, `overflow-x-auto` wrapper, magenta model names.
 
-The exact fields, formulas, and result wording come from your HTML file. Once you paste or upload it, the plan's component skeleton is filled in with your real inputs and maths — the placement, styling, and navigation work above stays the same. If the script uses anything unusual (e.g. canvas plots or external libraries), that may adjust step 1.
+All logic is ported 1:1 to TypeScript (`I_cap = √(P/Z)`, `V_rail = √(P×Z)`, bottleneck comparison `V = I×R` vs rail, `P = V²/R`, `SPL = sens + 10·log10(P)`, target = avg + crest + gain, headroom = ceiling − target). Results compute on submit like the original; `alert()` calls become inline validation messages.
+
+**Section in `src/pages/Index.tsx`** — existing `Section` component, id `calculator`, `Calculator` lucide icon, cyan tone, with a one-line intro tying it to the `#demands` theory above it.
+
+**Table of contents** — add a `{ id: "calculator", label: "Calculator" }` chip in `src/components/hearbyte/TableOfContents.tsx`, between "Enough power?" and "Phones & Accessories" (note: the chips list "phones" before "preferences" even though the sections render in the opposite order; the new chip follows the visual page order, inserted after "demands").
+
+## Accessibility
+
+Real `<label htmlFor>` on every input, `aria-live="polite"` on the results region, inputs usable at mobile width, Ω/√ symbols preserved.
 
 ## Technical notes
 
-- New file: `src/components/hearbyte/AmpCalculator.tsx`.
-- Edits: `src/pages/Index.tsx` (insert section after `#demands`), `src/components/hearbyte/TableOfContents.tsx` (new chip).
-- No routing, data, or dependency changes expected; page metadata and JSON-LD unchanged.
-- Verify with `bunx tsgo --noEmit -p tsconfig.app.json`, `bunx vitest run`, and a Playwright pass on desktop and mobile widths.
+- New file: `src/components/hearbyte/AmpCalculator.tsx`; edits: `src/pages/Index.tsx`, `src/components/hearbyte/TableOfContents.tsx`.
+- No dependencies, routing, or metadata changes.
+- Verify: `bunx tsgo --noEmit -p tsconfig.app.json`, `bunx vitest run`, plus a Playwright pass checking Mode A and Mode B results against the verification bench values (e.g. Sundara 37 Ω/94 dB → Mode A 124.06 dB, Mode B 117.86 dB) on desktop and mobile widths.
