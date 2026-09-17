@@ -1,6 +1,23 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type Mode = "power" | "direct";
+
+type Vals = {
+  mode: Mode;
+  powerLow: string;
+  loadLow: string;
+  powerHigh: string;
+  loadHigh: string;
+  ampVoltage: string;
+  ampCurrent: string;
+  ampPower: string;
+  ampPowerLoad: string;
+  hpImpedance: string;
+  hpSensitivity: string;
+  targetAvg: string;
+  crestFactor: string;
+  digitalGain: string;
+};
 
 type Results = {
   vRail: number;
