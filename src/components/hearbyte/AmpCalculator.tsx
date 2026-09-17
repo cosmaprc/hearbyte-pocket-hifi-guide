@@ -562,11 +562,37 @@ const AmpCalculator = () => {
             <Field id="digitalGain" label="Digital gain red. (dB)" value={digitalGain} onChange={setDigitalGain} placeholder="e.g. -6 or 0" />
           </div>
           <span className={subtextCls}>
-            Target Peak SPL = Target Avg (85 dB SPL reference) + Crest Factor (depending on
-            music genre, e.g. 6 dB for EDM/hip-hop, 10 dB for pop/rock, 14 dB for
-            jazz/acoustic, 18 dB for classical) + Digital Gain Reduction (ReplayGain volume
-            normalization, e.g. −9 from Apple Music Sound Check, plus PEQ preamp settings,
-            usually up to −10 dB).
+            Target Peak SPL = Target Avg SPL + Crest Factor + Sound Check Loss (dB) + PEQ
+            Preamp Loss (dB).
+            <br />
+            <strong>Note:</strong> All loss values must be entered as positive numbers (e.g.,
+            enter a -9 dB Sound Check reduction as +9 dB). Digital volume attenuation reduces
+            signal output, so the amplifier must deliver extra gain to reach your target
+            average volume at the ear.
+            <br />
+            <span className="font-display text-neon-cyan">Crest Factor Values by Genre</span>
+            <br />
+            EDM / Hip-Hop / Modern Pop: 6 dB (heavily compressed, brickwall-limited mixes)
+            <br />
+            Standard Pop / Rock / Metal: 10 dB to 12 dB (moderate dynamic range)
+            <br />
+            Jazz / Acoustic / Folk: 14 dB (uncompressed live instrument transients)
+            <br />
+            Classical / Film Scores: 18 dB (extreme dynamic range from solo passages to full
+            orchestral peaks)
+            <br />
+            <span className="font-display text-neon-cyan">Worked Calculation Example</span>
+            <br />
+            Target Average Volume: 85 dB SPL
+            <br />
+            Genre Crest Factor (Jazz): 14 dB
+            <br />
+            Sound Check Normalization Loss: 9 dB (entered as +9)
+            <br />
+            PEQ Preamp Reduction: 10 dB (entered as +10)
+            <br />
+            Target Peak SPL = 85 + 14 + 9 + 10 ={" "}
+            <span className="text-neon-cyan">118 dB SPL Peak Required</span>
           </span>
         </div>
 
