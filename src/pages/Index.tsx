@@ -81,7 +81,7 @@ const Index = () => {
           Every <span className="text-neon-magenta">Can it drive it?</span> panel below is worked out for an <span className="text-neon-cyan">85 dB SPL</span> average listening level, the reference the <a href="#calculator" className="text-neon-cyan underline-offset-4 hover:underline">calculator on this page</a> uses.
         </p>
         <div className="grid gap-5 md:grid-cols-2">
-          <Card title="1 · Sennheiser HD 560S — wired">
+          <Card title="1 · Sennheiser HD 560S — wired/wireless">
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink>.</>,
@@ -136,9 +136,29 @@ const Index = () => {
                     </div>
                   </div>
                 </>,
-
+                <><span className="text-neon-magenta">Wireless:</span> the same <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> as a <GlossaryLink term="ldac">LDAC</GlossaryLink> Bluetooth receiver, powered by a <ExtLink href="https://www.fiio.com/productinfo/1507720.html" className="text-neon-cyan">FiiO Estick</ExtLink> battery and fed by a <ExtLink href="https://www.fiio.com/airlink" className="text-neon-cyan">FiiO Air Link</ExtLink> adapter.</>,
               ]}
             />
+            <div className="mt-4 rounded-lg border border-neon-magenta/40 bg-neon-magenta/5 p-4">
+              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
+              <p className="mt-2 text-sm text-foreground/85">
+                The 5K velcros to the headband. I run <span className="text-neon-cyan">LDAC 990 kbps</span> and usually leave the tuning stock.
+              </p>
+            </div>
+            <div className="mt-4 grid grid-cols-2 gap-3">
+              <img
+                src={hd560sQudelixHeadband}
+                alt="Sennheiser HD 560S with a Qudelix 5K and its cable velcro-strapped to the headband"
+                loading="lazy"
+                className="h-40 w-full rounded-lg border border-border object-cover object-top md:h-48"
+              />
+              <img
+                src={hd560sQudelixFront}
+                alt="Sennheiser HD 560S held up front-on with the Qudelix 5K mounted on the headband"
+                loading="lazy"
+                className="h-40 w-full rounded-lg border border-border object-cover object-top md:h-48"
+              />
+            </div>
           </Card>
           <Card title="2 · HiFiMAN Sundara (2022) — wired">
             <Bullets
@@ -266,38 +286,8 @@ const Index = () => {
               ]}
             />
           </Card>
-          <Card title="5 · Sennheiser HD 560S — wireless">
-            <Bullets
-              items={[
-                <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink>.</>,
-                <><span className="text-neon-magenta">EQ:</span> stock tuning, or the <span className="text-neon-cyan">PEQ</span> profile above loaded onto the 5K itself.</>,
-                <><span className="text-neon-magenta">Receiver:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> as a <GlossaryLink term="ldac">LDAC</GlossaryLink> Bluetooth receiver, powered by a <ExtLink href="https://www.fiio.com/productinfo/1507720.html" className="text-neon-cyan">FiiO Estick</ExtLink> battery and fed by a <ExtLink href="https://www.fiio.com/airlink" className="text-neon-cyan">FiiO Air Link</ExtLink> adapter.</>,
-              ]}
-            />
-            <div className="mt-4 rounded-lg border border-neon-magenta/40 bg-neon-magenta/5 p-4">
-              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
-              <p className="mt-2 text-sm text-foreground/85">
-                The 5K velcros to the headband. I run <span className="text-neon-cyan">LDAC 990 kbps</span> and usually leave the tuning stock.
-              </p>
 
-            </div>
-            <div className="mt-4 grid grid-cols-2 gap-3">
-              <img
-                src={hd560sQudelixHeadband}
-                alt="Sennheiser HD 560S with a Qudelix 5K and its cable velcro-strapped to the headband"
-                loading="lazy"
-                className="h-40 w-full rounded-lg border border-border object-cover object-top md:h-48"
-              />
-              <img
-                src={hd560sQudelixFront}
-                alt="Sennheiser HD 560S held up front-on with the Qudelix 5K mounted on the headband"
-                loading="lazy"
-                className="h-40 w-full rounded-lg border border-border object-cover object-top md:h-48"
-              />
-            </div>
-          </Card>
-
-          <Card title="6 · Audio-Technica ATH-M50x BT2 — wireless">
+          <Card title="5 · Audio-Technica ATH-M50x BT2 — wireless">
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://www.audio-technica.com/en-us/ath-m50xbt2" className="text-neon-cyan">ATH-M50x BT2</ExtLink>.</>,
@@ -305,7 +295,7 @@ const Index = () => {
               ]}
             />
           </Card>
-          <Card title="7 · Moondrop × Wuthering Waves U.C.T.S. — wireless">
+          <Card title="6 · Moondrop × Wuthering Waves U.C.T.S. — wireless">
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Earphones:</span> <ExtLink href="https://moondroplab.com/en/products/ucts" className="text-neon-cyan">Moondrop × Wuthering Waves U.C.T.S.</ExtLink> open-ear (<GlossaryLink term="ows">OWS</GlossaryLink>) clip-ons.</>,
@@ -314,7 +304,7 @@ const Index = () => {
               ]}
             />
           </Card>
-          <Card title="8 · Moondrop Pill — wireless">
+          <Card title="7 · Moondrop Pill — wireless">
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Earbuds:</span> <ExtLink href="https://moondroplab.com/en/products/pill" className="text-neon-cyan">Moondrop Pill</ExtLink>.</>,
