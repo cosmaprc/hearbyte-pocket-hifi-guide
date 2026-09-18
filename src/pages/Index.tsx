@@ -30,7 +30,6 @@ const dongleOutputs = [
     rows: [
       { z: "16 Ω", power: "49.00 mW", voltage: "0.885 Vrms", current: "55.34 mArms", limit: "Current limit" },
       { z: "32 Ω", power: "34.00 mW", voltage: "1.043 Vrms", current: "32.60 mArms", limit: "Voltage rail" },
-      { z: "38 Ω", power: "28.63 mW", voltage: "1.043 Vrms", current: "27.45 mArms", limit: "Voltage rail" },
       { z: "120 Ω", power: "9.07 mW", voltage: "1.043 Vrms", current: "8.69 mArms", limit: "Voltage rail" },
     ],
   },
@@ -40,7 +39,6 @@ const dongleOutputs = [
     published: "Published: max 4 Vrms output, 240 mW per channel.",
     rows: [
       { z: "32 Ω", power: "240.0 mW", voltage: "2.77 Vrms", current: "86.6 mArms", limit: "Official power ceiling" },
-      { z: "38 Ω", power: "240.0 mW", voltage: "3.02 Vrms", current: "79.5 mArms", limit: "Official power ceiling" },
       { z: "120 Ω", power: "133.3 mW", voltage: "4.00 Vrms", current: "33.3 mArms", limit: "Official voltage ceiling" },
     ],
   },
@@ -51,7 +49,6 @@ const dongleOutputs = [
     rows: [
       { z: "16 Ω", power: "480.0 mW", voltage: "2.77 Vrms", current: "173.2 mArms", limit: "Current / thermal" },
       { z: "32 Ω", power: "900.0 mW", voltage: "5.37 Vrms", current: "167.7 mArms", limit: "Current limited" },
-      { z: "38 Ω", power: "986.8 mW", voltage: "6.12 Vrms", current: "161.2 mArms", limit: "Voltage limited" },
       { z: "120 Ω", power: "312.5 mW", voltage: "6.12 Vrms", current: "51.0 mArms", limit: "Voltage limited" },
       { z: "300 Ω", power: "125.0 mW", voltage: "6.12 Vrms", current: "20.4 mArms", limit: "Voltage limited" },
     ],
@@ -289,50 +286,22 @@ const Index = () => {
               ]}
             />
           </Card>
-          <Card title="4 · Audio-Technica ATH-M50x BT2 — wired">
+          <Card title="4 · EarFun Wave Pro X — wireless/wired" href="https://www.myearfun.com/eu/headphones/earfun-wave-pro-x-hi-res-hybrid-anc-true-wireless-headphones-black">
             <Bullets
               items={[
-                <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://www.audio-technica.com/en-us/ath-m50xbt2" className="text-neon-cyan">ATH-M50x BT2</ExtLink>, on the <span className="text-neon-cyan">3.5 mm</span> cable.</>,
-                <><span className="text-neon-magenta">EQ:</span> none.</>,
-                <>
-                  <span className="text-neon-magenta">DAC (no EQ):</span> <ExtLink href="https://fiio.com/newsinfo/1065510.html" className="text-neon-cyan">FiiO JIEZI</ExtLink>.
-                  <div className="mt-2 rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-3 text-sm">
-                    <div className="flex items-baseline gap-2"><span className="text-neon-magenta">Can it drive it?</span> <a href="#demands" title="Why these numbers — do you have enough power?" className="text-xs text-neon-cyan underline-offset-4 hover:underline">why?</a></div>
-                    <ul className="mt-1 space-y-0.5">
-                      <li>Sensitivity: <span className="text-neon-cyan">99 dB SPL/mW</span></li>
-                      <li>Impedance: <span className="text-neon-cyan">38 Ω</span></li>
-                      <li>Target average loudness: <span className="text-neon-cyan">85 dB SPL</span></li>
-                      <li>Sound Check headroom: <span className="text-neon-cyan">7 dB</span></li>
-                      <li><span className="text-neon-cyan">PEQ</span> preamp headroom: <span className="text-neon-cyan">0 dB</span> (no PEQ)</li>
-                      <li>Crest factor, jazz/acoustic: <span className="text-neon-cyan">14 dB</span></li>
-                      <li>Peak needed: 85 + 7 + 0 + 14 = <span className="text-neon-cyan">106 dB SPL</span></li>
-                      <li>Power needed: <span className="text-neon-cyan">5.01 mW</span></li>
-                      <li>Voltage needed: <span className="text-neon-cyan">~0.44 V</span></li>
-                      <li>Current needed: <span className="text-neon-cyan">11.48 mA</span></li>
-                      <li>FiiO JIEZI on <span className="text-neon-cyan">3.5 mm single-ended</span>: <span className="text-neon-cyan">28.63 mW / 1.043 V / 27.45 mA</span></li>
-                      <li>Saturation ceiling: <span className="text-neon-cyan">113.57 dB SPL</span></li>
-                      <li>Headroom left: <span className="text-neon-cyan">+7.57 dB</span></li>
-                      <li>Verdict: <span className="text-neon-cyan">yes</span></li>
-                    </ul>
-                    <div className="mt-1">
-                      Run the numbers yourself: <a href="#calculator?mode=A&pLow=49&zLow=16&pHigh=34&zHigh=32&z=38&sens=99&avg=85&crest=14&gain=7" className="text-neon-cyan underline-offset-4 hover:underline">the calculator on this page</a> opens pre-filled and already worked out, <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=99&u=dbmw&z=38&v=1.043&spl=92&hr=14" className="text-neon-cyan">theaudiostuff.com</ExtLink> also opens pre-filled but doesn't report current, and <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphones.com</ExtLink> gives you the <span className="text-neon-cyan">mA</span> figure but has to be filled in by hand.
-                    </div>
-
-                  </div>
-                </>,
+                <><span className="text-neon-magenta">Headphones:</span> <span className="text-neon-cyan">EarFun Wave Pro X</span>.</>,
+                <><span className="text-neon-magenta">Wireless:</span> Bluetooth with <GlossaryLink term="ldac">LDAC</GlossaryLink> and <span className="text-neon-cyan">aptX Lossless</span>.</>,
+                <><span className="text-neon-magenta">On iPhone:</span> I use a <ExtLink href="https://www.fiio.com/airlink" className="text-neon-cyan">FiiO Air Link</ExtLink> adapter to get <span className="text-neon-cyan">aptX Lossless</span> from the iPhone's USB-C port.</>,
+                <><span className="text-neon-magenta">App:</span> the <span className="text-neon-cyan">EarFun Audio App</span> is responsive and useful — 10-band <span className="text-neon-cyan">GEQ</span>, 10-band <span className="text-neon-cyan">PEQ</span>, EQ profiles, plus <span className="text-neon-cyan">Personalised Sound</span> and <span className="text-neon-cyan">My Sound Profile</span> features.</>,
+                <><span className="text-neon-magenta">ANC:</span> hybrid active noise cancellation.</>,
+                <><span className="text-neon-magenta">Controls:</span> physical buttons.</>,
+                <><span className="text-neon-magenta">Wear &amp; carry:</span> comfortable, foldable, and ships with a hard case.</>,
+                <><span className="text-neon-magenta">Wired fallback:</span> works over <span className="text-neon-cyan">USB-C</span> digital audio or a <span className="text-neon-cyan">3.5 mm</span> cable.</>,
+                <><span className="text-neon-magenta">Price:</span> well under <span className="text-neon-cyan">£150</span> (~€150).</>,
               ]}
             />
           </Card>
-
-          <Card title="5 · Audio-Technica ATH-M50x BT2 — wireless">
-            <Bullets
-              items={[
-                <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://www.audio-technica.com/en-us/ath-m50xbt2" className="text-neon-cyan">ATH-M50x BT2</ExtLink>.</>,
-                <><span className="text-neon-magenta">Connection:</span> Bluetooth <span className="text-neon-cyan">AAC</span> straight from the phone, or <GlossaryLink term="ldac">LDAC</GlossaryLink> via a <ExtLink href="https://www.fiio.com/airlink" className="text-neon-cyan">FiiO Air Link</ExtLink> adapter.</>,
-              ]}
-            />
-          </Card>
-          <Card title="6 · Moondrop × Wuthering Waves U.C.T.S. — wireless">
+          <Card title="5 · Moondrop × Wuthering Waves U.C.T.S. — wireless">
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Earphones:</span> <ExtLink href="https://moondroplab.com/en/products/ucts" className="text-neon-cyan">Moondrop × Wuthering Waves U.C.T.S.</ExtLink> open-ear (<GlossaryLink term="ows">OWS</GlossaryLink>) clip-ons.</>,
@@ -394,7 +363,7 @@ const Index = () => {
               </div>
             </div>
           </Card>
-          <Card title="7 · Moondrop Pill — wireless">
+          <Card title="6 · Moondrop Pill — wireless">
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Earbuds:</span> <ExtLink href="https://moondroplab.com/en/products/pill" className="text-neon-cyan">Moondrop Pill</ExtLink>.</>,
@@ -538,7 +507,7 @@ const Index = () => {
 
         <SubHeading>What the dongles actually output</SubHeading>
         <p className="mb-4 max-w-2xl text-sm text-foreground/80">
-          These are the figures the <span className="text-neon-magenta">Can it drive it?</span> panels in the <a href="#chain" className="text-neon-cyan underline-offset-4 hover:underline">chains section</a> compare against. The <span className="text-neon-cyan">32 Ω</span>, <span className="text-neon-cyan">38 Ω</span> and <span className="text-neon-cyan">120 Ω</span> rows are there because they are the loads I actually use: <span className="text-neon-magenta">AKG K371</span> / <span className="text-neon-magenta">HiFiMAN Sundara</span>, <span className="text-neon-magenta">ATH-M50x BT2</span> and <span className="text-neon-magenta">Sennheiser HD 560S</span>.
+          These are the figures the <span className="text-neon-magenta">Can it drive it?</span> panels in the <a href="#chain" className="text-neon-cyan underline-offset-4 hover:underline">chains section</a> compare against. The <span className="text-neon-cyan">32 Ω</span> and <span className="text-neon-cyan">120 Ω</span> rows are there because they are the loads I actually use: <span className="text-neon-magenta">AKG K371</span> / <span className="text-neon-magenta">HiFiMAN Sundara</span> and <span className="text-neon-magenta">Sennheiser HD 560S</span>.
         </p>
         <div className="grid gap-5 lg:grid-cols-3">
           {dongleOutputs.map((d) => (
