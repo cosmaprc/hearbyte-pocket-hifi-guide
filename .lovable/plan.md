@@ -1,4 +1,4 @@
-# Merge Chain 1 and Chain 5 for Sennheiser HD 560S
+# Merge Chain 1 and Chain 5 for Sennheiser HD 560S (wired/wireless)
 
 ## Goal
 Combine the separate wired HD 560S card (Chain 1) and wireless HD 560S card (Chain 5) into a single Sennheiser HD 560S chain card that covers both use cases.
@@ -9,7 +9,7 @@ Combine the separate wired HD 560S card (Chain 1) and wireless HD 560S card (Cha
 
 ## Plan
 
-1. **Create one merged card** titled "1 · Sennheiser HD 560S" (no wired/wireless qualifier in the title).
+1. **Create one merged card** titled "1 · Sennheiser HD 560S — wired/wireless".
    - Keep the existing headphone and EQ bullets from Chain 1.
    - Keep the two existing DAC/"Can it drive it?" panels (Qudelix no EQ and Qudelix with PEQ) unchanged.
    - Add the wireless receiver bullet from Chain 5: Qudelix 5K as LDAC Bluetooth receiver, powered by FiiO Estick battery, fed by FiiO Air Link adapter.
@@ -18,7 +18,7 @@ Combine the separate wired HD 560S card (Chain 1) and wireless HD 560S card (Cha
 2. **Remove the old Chain 5 card** entirely.
 
 3. **Renumber the remaining chains** so the sequence is continuous:
-   - 1 · Sennheiser HD 560S
+   - 1 · Sennheiser HD 560S — wired/wireless
    - 2 · HiFiMAN Sundara (2022) — wired
    - 3 · AKG K371 — wired
    - 4 · Audio-Technica ATH-M50x BT2 — wired
