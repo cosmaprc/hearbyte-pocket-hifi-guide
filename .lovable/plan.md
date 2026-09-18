@@ -1,4 +1,4 @@
-# Merge Chain 1 and Chain 5 for Sennheiser HD 560S
+# Merge Chain 1 and Chain 5 for Sennheiser HD 560S (wired/wireless)
 
 ## Goal
 Combine the separate wired HD 560S card (Chain 1) and wireless HD 560S card (Chain 5) into a single Sennheiser HD 560S chain card that covers both use cases.
