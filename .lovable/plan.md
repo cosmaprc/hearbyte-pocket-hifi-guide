@@ -14,6 +14,7 @@ Insert a new card titled `4 · EarFun Wave Pro X — wireless/wired` after Chain
 Bullets to include (wireless first, wired second, in site style with magenta labels and cyan values):
 - Headphones: EarFun Wave Pro X.
 - Wireless codecs: Bluetooth with LDAC and aptX Lossless.
+- On iPhone: use a FiiO Air Link adapter to get aptX Lossless from the iPhone's USB-C port.
 - App: EarFun Audio App — 10-band GEQ, 10-band PEQ, EQ profiles, plus Personalised Sound and My Sound Profile features.
 - ANC: hybrid active noise cancellation.
 - Controls: physical buttons.
