@@ -293,6 +293,31 @@ const Index = () => {
                 <><span className="text-neon-magenta">Wireless:</span> Bluetooth with <GlossaryLink term="ldac">LDAC</GlossaryLink> and <span className="text-neon-cyan">aptX Lossless</span>.</>,
                 <><span className="text-neon-magenta">On iPhone:</span> I use a <ExtLink href="https://www.fiio.com/airlink" className="text-neon-cyan">FiiO Air Link</ExtLink> adapter to get <span className="text-neon-cyan">aptX Lossless</span> from the iPhone's USB-C port.</>,
                 <><span className="text-neon-magenta">App:</span> the <span className="text-neon-cyan">EarFun Audio App</span> is responsive and useful — 10-band <span className="text-neon-cyan">GEQ</span>, 10-band <span className="text-neon-cyan">PEQ</span>, EQ profiles, plus <span className="text-neon-cyan">Personalised Sound</span> and <span className="text-neon-cyan">My Sound Profile</span> features.</>,
+                <>
+                  <span className="text-neon-magenta">Best GEQ profile to date:</span> use these 10-band values in the EarFun app.
+                  <div className="overflow-x-auto">
+                    <table className="mt-2 w-full min-w-[12rem] border-collapse text-left text-xs">
+                      <thead>
+                        <tr className="border-b border-border">
+                          <th scope="col" className="py-1.5 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Freq</th>
+                          <th scope="col" className="py-1.5 font-semibold uppercase tracking-widest text-neon-cyan">Gain</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr className="border-b border-border/60 last:border-b-0"><td className="py-1.5 pr-3 text-foreground/90">31.5 Hz</td><td className="py-1.5 text-neon-cyan">0 dB</td></tr>
+                        <tr className="border-b border-border/60 last:border-b-0"><td className="py-1.5 pr-3 text-foreground/90">63 Hz</td><td className="py-1.5 text-neon-cyan">-1 dB</td></tr>
+                        <tr className="border-b border-border/60 last:border-b-0"><td className="py-1.5 pr-3 text-foreground/90">125 Hz</td><td className="py-1.5 text-neon-cyan">-1 dB</td></tr>
+                        <tr className="border-b border-border/60 last:border-b-0"><td className="py-1.5 pr-3 text-foreground/90">250 Hz</td><td className="py-1.5 text-neon-cyan">-1 dB</td></tr>
+                        <tr className="border-b border-border/60 last:border-b-0"><td className="py-1.5 pr-3 text-foreground/90">500 Hz</td><td className="py-1.5 text-neon-cyan">0 dB</td></tr>
+                        <tr className="border-b border-border/60 last:border-b-0"><td className="py-1.5 pr-3 text-foreground/90">1 kHz</td><td className="py-1.5 text-neon-cyan">+1 dB</td></tr>
+                        <tr className="border-b border-border/60 last:border-b-0"><td className="py-1.5 pr-3 text-foreground/90">2 kHz</td><td className="py-1.5 text-neon-cyan">+1 dB</td></tr>
+                        <tr className="border-b border-border/60 last:border-b-0"><td className="py-1.5 pr-3 text-foreground/90">4 kHz</td><td className="py-1.5 text-neon-cyan">+3 dB</td></tr>
+                        <tr className="border-b border-border/60 last:border-b-0"><td className="py-1.5 pr-3 text-foreground/90">8 kHz</td><td className="py-1.5 text-neon-cyan">-3 dB</td></tr>
+                        <tr className="border-b border-border/60 last:border-b-0"><td className="py-1.5 pr-3 text-foreground/90">16 kHz</td><td className="py-1.5 text-neon-cyan">+1 dB</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </>,
                 <><span className="text-neon-magenta">ANC:</span> hybrid active noise cancellation.</>,
                 <><span className="text-neon-magenta">Controls:</span> physical buttons.</>,
                 <><span className="text-neon-magenta">Wear &amp; carry:</span> comfortable, foldable, and ships with a hard case.</>,
