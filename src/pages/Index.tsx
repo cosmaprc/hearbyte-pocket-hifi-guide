@@ -142,7 +142,7 @@ const Index = () => {
             <div className="mt-4 rounded-lg border border-neon-magenta/40 bg-neon-magenta/5 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
               <p className="mt-2 text-sm text-foreground/85">
-                The 5K velcros to the headband. I run <span className="text-neon-cyan">LDAC 990 kbps</span> and usually leave the tuning stock.
+                The 5K velcros to the headband. I run <span className="text-neon-cyan">LDAC 990 kbps</span>.
               </p>
             </div>
             <div className="mt-4 grid grid-cols-2 gap-3">
