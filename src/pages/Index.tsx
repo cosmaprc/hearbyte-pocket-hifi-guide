@@ -287,7 +287,7 @@ const Index = () => {
             />
           </Card>
 
-          <Card title="6 · Audio-Technica ATH-M50x BT2 — wireless">
+          <Card title="5 · Audio-Technica ATH-M50x BT2 — wireless">
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://www.audio-technica.com/en-us/ath-m50xbt2" className="text-neon-cyan">ATH-M50x BT2</ExtLink>.</>,
@@ -295,7 +295,7 @@ const Index = () => {
               ]}
             />
           </Card>
-          <Card title="7 · Moondrop × Wuthering Waves U.C.T.S. — wireless">
+          <Card title="6 · Moondrop × Wuthering Waves U.C.T.S. — wireless">
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Earphones:</span> <ExtLink href="https://moondroplab.com/en/products/ucts" className="text-neon-cyan">Moondrop × Wuthering Waves U.C.T.S.</ExtLink> open-ear (<GlossaryLink term="ows">OWS</GlossaryLink>) clip-ons.</>,
@@ -304,7 +304,7 @@ const Index = () => {
               ]}
             />
           </Card>
-          <Card title="8 · Moondrop Pill — wireless">
+          <Card title="7 · Moondrop Pill — wireless">
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Earbuds:</span> <ExtLink href="https://moondroplab.com/en/products/pill" className="text-neon-cyan">Moondrop Pill</ExtLink>.</>,
