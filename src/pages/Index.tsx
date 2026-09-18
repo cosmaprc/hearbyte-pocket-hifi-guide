@@ -11,6 +11,10 @@ import { Smartphone, Sliders, Headphones, Volume2, BookOpen, Link, FolderInput, 
 import AmpCalculator from "@/components/hearbyte/AmpCalculator";
 import hd560sQudelixHeadband from "@/assets/hd560s-qudelix-headband.jpg";
 import hd560sQudelixFront from "@/assets/hd560s-qudelix-front.jpg";
+import sundaraQudelixBack from "@/assets/sundara-qudelix-back.jpg";
+import sundaraQudelixSide from "@/assets/sundara-qudelix-side.jpg";
+import sundaraFrontStand from "@/assets/sundara-front-stand.jpg";
+import sundaraBackStand from "@/assets/sundara-back-stand.jpg";
 
 const GlossaryLink = ({ term, children }: { term: string; children: React.ReactNode }) => (
   <a href={`#g-${term}`} className="text-neon-cyan underline decoration-dotted underline-offset-4">
