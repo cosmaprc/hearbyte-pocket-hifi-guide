@@ -340,6 +340,60 @@ const Index = () => {
                 <><span className="text-neon-magenta">Connection:</span> <ExtLink href="https://www.tempotec.net/" className="text-neon-cyan">Tempotec LHDC One</ExtLink> Bluetooth adapter.</>,
               ]}
             />
+            <div className="mt-4 rounded-lg border border-neon-magenta/40 bg-neon-magenta/5 p-4">
+              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">Tips & tricks</p>
+              <div className="mt-3 space-y-3 text-sm text-foreground/85">
+                <p>
+                  <span className="font-semibold text-neon-magenta">HiRes on iPhone:</span> To get hi-res on an iPhone, try the <ExtLink href="https://www.tempotec.net/" className="text-neon-cyan">Tempotec LHDC One</ExtLink> USB-C Bluetooth dongle. Select <em>Other device</em> when first plugging in and raise the iPhone volume to max. Then open the Moondrop app and set a touch control for volume up and one for volume down. You now have hi-res with upsampling to <span className="text-neon-cyan">192 kHz</span> and independent earphone hardware volume control on iPhone.
+                </p>
+                <p>
+                  <span className="font-semibold text-neon-magenta">Not enough volume?</span> Try setting the standard tuning profile, then set all the default PEQ bands to the max <span className="text-neon-cyan">+3 dB</span> while using the minimum <span className="text-neon-cyan">Q value 0.20</span>. You should see the same frequency-response shape move up the graph, so you have now increased its overall volume/loudness — though I can't say for sure if or how much distortion this may introduce.
+                </p>
+                <div>
+                  <p className="mb-1">
+                    <span className="font-semibold text-neon-magenta">Want more bass?</span> Try this manual, easy-to-set-up PEQ:
+                  </p>
+                  <div className="overflow-x-auto">
+                    <table className="w-full min-w-[16rem] border-collapse text-left text-xs">
+                      <thead>
+                        <tr className="border-b border-border">
+                          <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Freq</th>
+                          <th scope="col" className="py-2 pr-3 font-semibold uppercase tracking-widest text-neon-cyan">Gain</th>
+                          <th scope="col" className="py-2 font-semibold uppercase tracking-widest text-neon-cyan">Q</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr className="border-b border-border/60 last:border-b-0">
+                          <td className="py-2 pr-3 text-foreground/90">20 Hz</td>
+                          <td className="py-2 pr-3 text-neon-cyan">-12 dB</td>
+                          <td className="py-2 text-foreground/90">0.71</td>
+                        </tr>
+                        <tr className="border-b border-border/60 last:border-b-0">
+                          <td className="py-2 pr-3 text-foreground/90">30 Hz</td>
+                          <td className="py-2 pr-3 text-neon-cyan">+3 dB</td>
+                          <td className="py-2 text-foreground/90">0.71</td>
+                        </tr>
+                        <tr className="border-b border-border/60 last:border-b-0">
+                          <td className="py-2 pr-3 text-foreground/90">50 Hz</td>
+                          <td className="py-2 pr-3 text-neon-cyan">+3 dB</td>
+                          <td className="py-2 text-foreground/90">0.71</td>
+                        </tr>
+                        <tr className="border-b border-border/60 last:border-b-0">
+                          <td className="py-2 pr-3 text-foreground/90">60 Hz</td>
+                          <td className="py-2 pr-3 text-neon-cyan">+3 dB</td>
+                          <td className="py-2 text-foreground/90">0.71</td>
+                        </tr>
+                        <tr className="border-b border-border/60 last:border-b-0">
+                          <td className="py-2 pr-3 text-foreground/90">70 Hz</td>
+                          <td className="py-2 pr-3 text-neon-cyan">+3 dB</td>
+                          <td className="py-2 text-foreground/90">0.71</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
           </Card>
           <Card title="7 · Moondrop Pill — wireless">
             <Bullets
