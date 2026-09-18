@@ -222,6 +222,38 @@ const Index = () => {
                 <><span className="text-neon-magenta">Untethered:</span> the <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> acts as a <GlossaryLink term="ldac">LDAC</GlossaryLink> Bluetooth receiver, fed by a <ExtLink href="https://www.fiio.com/airlink" className="text-neon-cyan">FiiO Air Link</ExtLink> adapter and powered by a <ExtLink href="https://www.fiio.com/productinfo/1507720.html" className="text-neon-cyan">FiiO Estick</ExtLink> battery instead of its internal battery.</>,
               ]}
             />
+            <div className="mt-4 rounded-lg border border-neon-magenta/40 bg-neon-magenta/5 p-4">
+              <p className="text-xs font-semibold uppercase tracking-widest text-neon-cyan">How I run it</p>
+              <p className="mt-2 text-sm text-foreground/85">
+                The 5K velcros to the headband. I run <span className="text-neon-cyan">LDAC 990 kbps</span>.
+              </p>
+            </div>
+            <div className="mt-4 grid grid-cols-2 gap-3">
+              <img
+                src={sundaraQudelixBack}
+                alt="HiFiMAN Sundara with the Qudelix 5K and cable velcro-strapped to the headband, back view"
+                loading="lazy"
+                className="h-40 w-full rounded-lg border border-border object-cover object-top md:h-48"
+              />
+              <img
+                src={sundaraQudelixSide}
+                alt="HiFiMAN Sundara with the Qudelix 5K mounted on the headband, side view"
+                loading="lazy"
+                className="h-40 w-full rounded-lg border border-border object-cover object-top md:h-48"
+              />
+              <img
+                src={sundaraFrontStand}
+                alt="HiFiMAN Sundara held up front-on, showing the SUNDARA branding"
+                loading="lazy"
+                className="h-40 w-full rounded-lg border border-border object-cover object-top md:h-48"
+              />
+              <img
+                src={sundaraBackStand}
+                alt="HiFiMAN Sundara on its stand, back view with the HIFIMAN logo"
+                loading="lazy"
+                className="h-40 w-full rounded-lg border border-border object-cover object-top md:h-48"
+              />
+            </div>
           </Card>
           <Card title="3 · AKG K371 — wired">
             <Bullets
