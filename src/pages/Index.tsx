@@ -366,7 +366,7 @@ const Index = () => {
               </div>
             </div>
           </Card>
-          <Card title="7 · Moondrop Pill — wireless">
+          <Card title="6 · Moondrop Pill — wireless">
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Earbuds:</span> <ExtLink href="https://moondroplab.com/en/products/pill" className="text-neon-cyan">Moondrop Pill</ExtLink>.</>,
