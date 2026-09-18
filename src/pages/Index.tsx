@@ -81,13 +81,13 @@ const Index = () => {
           Every <span className="text-neon-magenta">Can it drive it?</span> panel below is worked out for an <span className="text-neon-cyan">85 dB SPL</span> average listening level, the reference the <a href="#calculator" className="text-neon-cyan underline-offset-4 hover:underline">calculator on this page</a> uses.
         </p>
         <div className="grid gap-5 md:grid-cols-2">
-          <Card title="1 · Sennheiser HD 560S — wired/untethered">
+          <Card title="1 · Sennheiser HD 560S — untethered">
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://en-uk.sennheiser.com/hd-560s" className="text-neon-cyan">Sennheiser HD 560S</ExtLink>.</>,
-                <><span className="text-neon-magenta">EQ:</span> none, otherwise the <span className="text-neon-cyan">PEQ</span> profile above.</>,
+                <><span className="text-neon-magenta">DAC:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink>.</>,
                 <>
-                  <span className="text-neon-magenta">DAC (no EQ):</span> the <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> over <span className="text-neon-cyan">USB</span>, set to draw power from <span className="text-neon-cyan">USB-C</span> rather than its internal battery — with <span className="text-neon-cyan">no EQ</span>, since that leaves more headroom than the PEQ profile above.
+                  <span className="text-neon-magenta">No EQ:</span>
                   <div className="mt-2 rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-3 text-sm">
                     <div className="flex items-baseline gap-2"><span className="text-neon-magenta">Can it drive it?</span> <a href="#demands" title="Why these numbers — do you have enough power?" className="text-xs text-neon-cyan underline-offset-4 hover:underline">why?</a></div>
                     <ul className="mt-1 space-y-0.5">
@@ -112,7 +112,7 @@ const Index = () => {
                   </div>
                 </>,
                 <>
-                  <span className="text-neon-magenta">DAC (with PEQ):</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> over <span className="text-neon-cyan">USB</span>, set to draw power from <span className="text-neon-cyan">USB-C</span> rather than its internal battery.
+                  <span className="text-neon-magenta">With EQ:</span> the <span className="text-neon-cyan">PEQ</span> profile above.
                   <div className="mt-2 rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-3 text-sm">
                     <div className="flex items-baseline gap-2"><span className="text-neon-magenta">Can it drive it?</span> <a href="#demands" title="Why these numbers — do you have enough power?" className="text-xs text-neon-cyan underline-offset-4 hover:underline">why?</a></div>
                     <ul className="mt-1 space-y-0.5">
@@ -136,7 +136,7 @@ const Index = () => {
                     </div>
                   </div>
                 </>,
-                <><span className="text-neon-magenta">Untethered:</span> the same <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> as a <GlossaryLink term="ldac">LDAC</GlossaryLink> Bluetooth receiver, powered by a <ExtLink href="https://www.fiio.com/productinfo/1507720.html" className="text-neon-cyan">FiiO Estick</ExtLink> battery and fed by a <ExtLink href="https://www.fiio.com/airlink" className="text-neon-cyan">FiiO Air Link</ExtLink> adapter.</>,
+                <><span className="text-neon-magenta">Untethered:</span> the <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> acts as a <GlossaryLink term="ldac">LDAC</GlossaryLink> Bluetooth receiver, fed by a <ExtLink href="https://www.fiio.com/airlink" className="text-neon-cyan">FiiO Air Link</ExtLink> adapter and powered by a <ExtLink href="https://www.fiio.com/productinfo/1507720.html" className="text-neon-cyan">FiiO Estick</ExtLink> battery instead of its internal battery.</>,
               ]}
             />
             <div className="mt-4 rounded-lg border border-neon-magenta/40 bg-neon-magenta/5 p-4">
@@ -160,13 +160,13 @@ const Index = () => {
               />
             </div>
           </Card>
-          <Card title="2 · HiFiMAN Sundara (2022) — wired">
+          <Card title="2 · HiFiMAN Sundara (2022) — untethered">
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Headphones:</span> <ExtLink href="https://hifiman.com/products/detail/305" className="text-neon-cyan">HiFiMAN Sundara (2022)</ExtLink>.</>,
-                <><span className="text-neon-magenta">EQ:</span> none, otherwise the <span className="text-neon-cyan">PEQ</span> profile above.</>,
+                <><span className="text-neon-magenta">DAC:</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink>.</>,
                 <>
-                  <span className="text-neon-magenta">DAC (no EQ):</span> <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> over <span className="text-neon-cyan">USB</span>, powered from <span className="text-neon-cyan">USB-C</span> rather than its internal battery — only with <span className="text-neon-cyan">no EQ</span>.
+                  <span className="text-neon-magenta">No EQ:</span>
                   <div className="mt-2 rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-3 text-sm">
                     <div className="flex items-baseline gap-2"><span className="text-neon-magenta">Can it drive it?</span> <a href="#demands" title="Why these numbers — do you have enough power?" className="text-xs text-neon-cyan underline-offset-4 hover:underline">why?</a></div>
                     <ul className="mt-1 space-y-0.5">
@@ -191,7 +191,7 @@ const Index = () => {
                   </div>
                 </>,
                 <>
-                  <span className="text-neon-magenta">DAC (with PEQ):</span> the <ExtLink href="https://www.fiio.com/qx13" className="text-neon-cyan">FiiO QX13</ExtLink> paired with the <ExtLink href="https://www.fiio.com/productinfo/1507720.html" className="text-neon-cyan">FiiO Estick</ExtLink> battery.
+                  <span className="text-neon-magenta">With EQ:</span> the <span className="text-neon-cyan">PEQ</span> profile above.
                   <div className="mt-2 rounded-md border border-neon-magenta/25 bg-neon-magenta/5 p-3 text-sm">
                     <div className="flex items-baseline gap-2"><span className="text-neon-magenta">Can it drive it?</span> <a href="#demands" title="Why these numbers — do you have enough power?" className="text-xs text-neon-cyan underline-offset-4 hover:underline">why?</a></div>
                     <ul className="mt-1 space-y-0.5">
@@ -205,16 +205,17 @@ const Index = () => {
                       <li>Power needed: <span className="text-neon-cyan">199.53 mW</span></li>
                       <li>Voltage needed: <span className="text-neon-cyan">~2.53 V</span></li>
                       <li>Current needed: <span className="text-neon-cyan">78.96 mA</span></li>
-                      <li>FiiO QX13 on <span className="text-neon-cyan">4.4 mm balanced</span>: <span className="text-neon-cyan">900 mW / 5.37 V / 167.7 mA</span></li>
-                      <li>Saturation ceiling: <span className="text-neon-cyan">121.82 dB SPL</span></li>
-                      <li>Headroom left: <span className="text-neon-cyan">+6.82 dB</span></li>
+                      <li>Qudelix 5K on <span className="text-neon-cyan">2.5 mm balanced</span>: <span className="text-neon-cyan">4.00 V rail / 81.08 mA</span></li>
+                      <li>Saturation ceiling: <span className="text-neon-cyan">115.23 dB SPL</span></li>
+                      <li>Headroom left: <span className="text-neon-cyan">+0.23 dB</span></li>
                       <li>Verdict: <span className="text-neon-cyan">yes</span></li>
                     </ul>
                     <div className="mt-1">
-                      Run the numbers yourself: <a href="#calculator?mode=A&pLow=480&zLow=16&pHigh=125&zHigh=300&z=32&sens=92&avg=85&crest=14&gain=16" className="text-neon-cyan underline-offset-4 hover:underline">the calculator on this page</a> opens pre-filled and already worked out, <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=92&u=dbmw&z=32&v=5.37&spl=101&hr=14" className="text-neon-cyan">theaudiostuff.com</ExtLink> also opens pre-filled but doesn't report current, and <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphones.com</ExtLink> gives you the <span className="text-neon-cyan">mA</span> figure but has to be filled in by hand.
+                      Run the numbers yourself: <a href="#calculator?mode=B&vRail=4&z=32&sens=92&avg=85&crest=14&gain=16" className="text-neon-cyan underline-offset-4 hover:underline">the calculator on this page</a> opens pre-filled and already worked out, <ExtLink href="https://theaudiostuff.com/tools/headphone-power-calculator/#sens=92&u=dbmw&z=32&v=2.59&spl=101&hr=14" className="text-neon-cyan">theaudiostuff.com</ExtLink> also opens pre-filled but doesn't report current, and <ExtLink href="https://headphones.com/pages/headphones-power-calculator" className="text-neon-cyan">headphones.com</ExtLink> gives you the <span className="text-neon-cyan">mA</span> figure but has to be filled in by hand.
                     </div>
                   </div>
                 </>,
+                <><span className="text-neon-magenta">Untethered:</span> the <ExtLink href="https://www.qudelix.com/products/qudelix-5k" className="text-neon-cyan">Qudelix 5K</ExtLink> acts as a <GlossaryLink term="ldac">LDAC</GlossaryLink> Bluetooth receiver, fed by a <ExtLink href="https://www.fiio.com/airlink" className="text-neon-cyan">FiiO Air Link</ExtLink> adapter and powered by a <ExtLink href="https://www.fiio.com/productinfo/1507720.html" className="text-neon-cyan">FiiO Estick</ExtLink> battery instead of its internal battery.</>,
               ]}
             />
           </Card>
