@@ -18,7 +18,7 @@ Combine the separate wired HD 560S card (Chain 1) and wireless HD 560S card (Cha
 2. **Remove the old Chain 5 card** entirely.
 
 3. **Renumber the remaining chains** so the sequence is continuous:
-   - 1 · Sennheiser HD 560S
+   - 1 · Sennheiser HD 560S — wired/wireless
    - 2 · HiFiMAN Sundara (2022) — wired
    - 3 · AKG K371 — wired
    - 4 · Audio-Technica ATH-M50x BT2 — wired
