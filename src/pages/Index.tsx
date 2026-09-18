@@ -304,7 +304,7 @@ const Index = () => {
               ]}
             />
           </Card>
-          <Card title="6 · Moondrop × Wuthering Waves U.C.T.S. — wireless">
+          <Card title="5 · Moondrop × Wuthering Waves U.C.T.S. — wireless">
             <Bullets
               items={[
                 <><span className="text-neon-magenta">Earphones:</span> <ExtLink href="https://moondroplab.com/en/products/ucts" className="text-neon-cyan">Moondrop × Wuthering Waves U.C.T.S.</ExtLink> open-ear (<GlossaryLink term="ows">OWS</GlossaryLink>) clip-ons.</>,
