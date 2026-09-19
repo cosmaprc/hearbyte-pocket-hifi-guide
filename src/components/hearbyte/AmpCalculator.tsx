@@ -593,6 +593,12 @@ const AmpCalculator = () => {
             <br />
             Target Peak SPL = 85 + 14 + 9 + 10 ={" "}
             <span className="text-neon-cyan">118 dB SPL Peak Required</span>
+            <br />
+            <br />
+            <strong>Note:</strong> The target calculated above is a worst-case scenario.
+            Due to how real music crest factors and digital attenuation overlap, your
+            actual peak volume in daily listening will likely be roughly 5 to 6 dB lower
+            than this number.
           </span>
         </div>
 
